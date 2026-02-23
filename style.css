@@ -489,7 +489,30 @@ section {
 
 @media (max-width: 768px) {
 
-    /* STACK HORIZONTAL TRACK ON MOBILE */
+    /* ─── GLOBAL ─── */
+    body,
+    html {
+        overflow-x: hidden;
+        cursor: auto;
+        /* disable crosshair on mobile */
+    }
+
+    /* ─── HERO ─── */
+    .hero-section {
+        min-height: 100svh !important;
+    }
+
+    .sticky-element h1 {
+        font-size: 20vw !important;
+    }
+
+    /* ─── NAV HEADER ─── */
+    header {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    /* ─── HORIZONTAL SCROLL → STACK ─── */
     .horizontal-scroll-section {
         height: auto !important;
     }
@@ -517,41 +540,46 @@ section {
         padding: 2rem;
     }
 
-    /* GRID ADAPTATIONS */
+    /* ─── CASE STUDIES ─── */
     .case-study-grid {
         grid-template-columns: 1fr !important;
     }
 
     .case-card {
         margin-top: 0 !important;
-        padding: 3rem !important;
+        padding: 2rem !important;
+        min-height: auto !important;
     }
 
-    /* GLOBAL OVERFLOW FIX */
-    body,
-    html {
-        overflow-x: hidden;
-    }
-
-    /* SPECIFIC GRID OVERRIDES */
+    /* ─── PROTOCOL / WHAT TO EXPECT ─── */
     #protocol>div {
         grid-template-columns: 1fr !important;
     }
 
-    /* FIXED UI ADJUSTMENTS */
-    .social-proof-toast {
-        width: 90vw !important;
-        left: 5vw !important;
-        right: 5vw !important;
+    /* ─── COSMIC HUB ─── */
+    .fun-addons-container {
+        grid-template-columns: 1fr !important;
     }
 
-    #frank-global-popup {
-        width: 200px !important;
-        right: 1rem !important;
-        transform: scale(0.9);
-        transform-origin: bottom right;
+    .horoscopes-col {
+        border-right: none !important;
+        border-bottom: 1px solid #222;
     }
 
+    .horoscope-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    .horoscope-card {
+        padding: 0.8rem !important;
+        aspect-ratio: 1;
+    }
+
+    .ailment-item {
+        font-size: 1.3rem !important;
+    }
+
+    /* ─── FRANK WINDOW ─── */
     #frank-container {
         height: auto !important;
         padding-bottom: 50px;
@@ -559,13 +587,132 @@ section {
 
     .frank-window {
         width: 90% !important;
-        max-width: 280px;
+        max-width: 300px;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        position: relative !important;
+        top: auto !important;
     }
 
+    /* ─── CLIPPY GLOBAL POPUP ─── */
+    #clippy-global-popup {
+        width: 220px !important;
+        right: 0.5rem !important;
+        transform: scale(0.9);
+        transform-origin: bottom right;
+    }
 
-    /* TYPOGRAPHY */
+    /* ─── BLOG / EDITORIAL ─── */
+    .blog-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* ─── SOCIAL WIDGET (Instagram) ─── */
+    .social-widget-container {
+        padding: 2vh 2vw !important;
+        min-height: 300px !important;
+    }
+
+    /* ─── CLUBHOUSE GRID ─── */
+    .clubhouse-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .club-card {
+        padding: 2.5rem !important;
+        min-height: auto !important;
+    }
+
+    .club-card h3 {
+        font-size: 2rem !important;
+    }
+
+    /* ─── SOCIAL PROOF TOAST ─── */
+    .social-proof-toast {
+        width: 90vw !important;
+        left: 5vw !important;
+        right: 5vw !important;
+        bottom: 1rem !important;
+    }
+
+    /* ─── BOOKING TERMINAL (EXIT SECTION) ─── */
+    .exit-section {
+        padding: 10vh 5vw !important;
+    }
+
+    #booking-terminal h2 {
+        font-size: clamp(2.5rem, 12vw, 5rem) !important;
+        line-height: 1 !important;
+    }
+
+    #booking-terminal .reveal>div[style*="border: 3px solid #00ff00"] {
+        padding: 1.5rem 1rem !important;
+        margin: 2rem auto !important;
+    }
+
+    /* Stack CTA buttons vertically on mobile */
+    #booking-terminal div[style*="flex-wrap: wrap"] {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    #booking-terminal a[href="#contact-brief"],
+    #booking-terminal a[href^="mailto"] {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 1.2rem !important;
+        font-size: 1rem !important;
+    }
+
+    /* ─── AIM AWAY MESSAGE POPUP ─── */
+    .exit-section .parallax-layer[style*="position: absolute"] {
+        display: none !important;
+        /* hide floating decorative popup on mobile */
+    }
+
+    /* ─── FORM ─── */
+    .elite-intake-wrap {
+        grid-template-columns: 1fr !important;
+    }
+
+    .form-field {
+        padding: 1.2rem !important;
+    }
+
+    /* ─── TYPOGRAPHY ─── */
     .halftone-text {
         font-size: 15vw !important;
+    }
+
+    .mono-label {
+        font-size: 0.6rem !important;
+        letter-spacing: 0.1em !important;
+    }
+
+    /* ─── SECTION PADDING ─── */
+    section {
+        padding-left: 5vw !important;
+        padding-right: 5vw !important;
+    }
+}
+
+/* ─── EXTRA SMALL PHONES (< 400px) ─── */
+@media (max-width: 400px) {
+    .horoscope-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .frank-window {
+        max-width: 260px !important;
+    }
+
+    #clippy-global-popup {
+        width: 180px !important;
+        transform: scale(0.8) !important;
+    }
+
+    .halftone-text {
+        font-size: 18vw !important;
     }
 }
 
