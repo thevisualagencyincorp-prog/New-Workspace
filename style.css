@@ -490,20 +490,30 @@ section {
 @media (max-width: 768px) {
 
     /* ─── GLOBAL ─── */
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
     body,
     html {
-        overflow-x: hidden;
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
         cursor: auto;
-        /* disable crosshair on mobile */
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
 
     /* ─── HERO ─── */
     .hero-section {
         min-height: 100svh !important;
+        overflow: hidden !important;
     }
 
-    .sticky-element h1 {
-        font-size: 20vw !important;
+    /* Do NOT upsize the h1 — leave at its 15vw inline value which already fits */
+    .sticky-element {
+        overflow: hidden !important;
     }
 
     /* ─── NAV HEADER ─── */
