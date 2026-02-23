@@ -76,12 +76,18 @@ const observer = new IntersectionObserver((entries) => {
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // HORIZONTAL SCROLL LOGIC (SMOOTH & RELIABLE)
+    // HORIZONTAL SCROLL LOGIC (DESKTOP ONLY — CSS handles mobile stacking)
     const horizontalSection = document.getElementById('horizontal-section');
     const horizontalTrack = document.querySelector('.horizontal-track');
 
     if (horizontalSection && horizontalTrack) {
         const updateHorizontal = () => {
+            // Skip horizontal scroll on mobile — let CSS handle it
+            if (window.innerWidth <= 768) {
+                horizontalTrack.style.transform = 'none';
+                return;
+            }
+
             const rect = horizontalSection.getBoundingClientRect();
             const sectionHeight = horizontalSection.offsetHeight;
             const windowHeight = window.innerHeight;
