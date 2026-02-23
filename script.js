@@ -368,9 +368,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // SOCIAL PROOF TOAST LOGIC
     const toast = document.getElementById('socialToast');
     const toastContent = document.getElementById('toastContent');
-    const names = ['SARA_G.', 'MIKE_R.', 'ELENA_V.', 'CHRIS_K.', 'MAYA_Z.', 'LEO_P.'];
-    const actions = ['JUST SECURED THE BAG', 'INITIATED THE PROTOCOL', 'JOINED THE CLUBHOUSE', 'UNLOCKED ABUNDANCE'];
-    const locations = ['IN BAKERSFIELD', 'IN TEHACHAPI', 'IN LA', 'FROM THE ARCHIVE'];
+    const names = ['JESSICA_M.', 'DEREK_S.', 'AMANDA_R.', 'CARLOS_V.', 'KRISTEN_L.', 'TYLER_B.', 'NATALIE_A.'];
+    const actions = ['JUST BOOKED A BRANDING SESSION', 'LAUNCHED THEIR NEW WEBSITE', 'SIGNED UP FOR THE MONTHLY ART DEPT', 'SUBMITTED A PROJECT BRIEF', 'JOINED THE NEWSLETTER', 'SECURED A CUSTOM QUOTE'];
+    const locations = ['IN BAKERSFIELD', 'IN TEHACHAPI', 'IN KERN COUNTY', 'IN LOS ANGELES', 'IN THE CENTRAL VALLEY'];
 
     function showNotification() {
         if (!toast) return;
@@ -385,9 +385,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setTimeout(() => {
-        setInterval(showNotification, 12000);
+        setInterval(showNotification, 45000);
         showNotification();
-    }, 10000);
+    }, 25000);
 
     // DRAGGABLE AND CLOSABLE RETRO WINDOWS
     const titleBars = document.querySelectorAll('div[style*="background: darkblue;"], div[style*="background: darkgreen;"], div[style*="background: darkred;"], div[style*="background: #a00;"], div[style*="background: var(--pop-green);"]');
@@ -396,6 +396,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // Ensure it looks like a window title bar (has color white)
         if (!bar.style.color.includes('white')) return;
         const win = bar.parentElement;
+
+        // Skip Frank's interactive pet window and the Oracle ball — those need to stay open
+        if (win.closest('#frank-window') || win.id === 'frank-window' || win.id === 'oracleVisual') return;
+
+        // Helper: fade the window out
+        function closeWindow() {
+            win.style.transition = 'opacity 0.25s ease';
+            win.style.opacity = '0';
+            setTimeout(() => win.style.display = 'none', 250);
+        }
 
         // Find close buttons (spans with cursor: pointer or X or _ etc)
         const spans = bar.querySelectorAll('span');
@@ -406,9 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
             closeBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                win.style.transition = 'opacity 0.2s';
-                win.style.opacity = '0';
-                setTimeout(() => win.style.display = 'none', 200);
+                closeWindow();
             });
         }
 
@@ -416,21 +424,39 @@ document.addEventListener('DOMContentLoaded', () => {
         const buttons = win.querySelectorAll('button');
         buttons.forEach(btn => {
             const text = btn.textContent.trim().toUpperCase();
-            if (['CANCEL', 'IGNORE', 'ACCEPT FATE', 'OK', 'NO'].includes(text)) {
+            if (['YES', 'NO', 'CANCEL', 'IGNORE', 'ACCEPT FATE', 'OK'].includes(text)) {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
-                    win.style.transition = 'opacity 0.2s';
-                    win.style.opacity = '0';
-                    setTimeout(() => win.style.display = 'none', 200);
+                    closeWindow();
                 });
             }
         });
 
+        // CLICK ANYWHERE ON THE WINDOW BODY TO DISMISS
+        // Skip if clicking on something interactive (links, form fields, buttons, title bar)
+        win.addEventListener('click', (e) => {
+            const tag = e.target.tagName.toUpperCase();
+            const interactiveTags = ['A', 'BUTTON', 'INPUT', 'SELECT', 'TEXTAREA', 'LABEL'];
+            if (interactiveTags.includes(tag)) return;      // let interactive elements do their thing
+            if (bar.contains(e.target)) return;             // title bar is for dragging, not closing
+            if (e.target.closest('form')) return;           // don't close over form areas
+            closeWindow();
+        });
+
+        // Show a pointer cursor on the window body so it's obvious it's clickable
+        win.style.cursor = 'pointer';
+        // But restore default cursor over interactive elements so it doesn't look wrong
+        win.querySelectorAll('a, button, input, select, textarea').forEach(el => {
+            el.style.cursor = '';
+        });
+
         // DRAGGING LOGIC
         bar.style.cursor = 'grab';
+        win.style.cursor = 'default'; // override pointer for the draggable bar's parent
 
         let isDragging = false;
         let startX, startY;
+        let dragMoved = false;
         let initialTransform = '';
 
         bar.addEventListener('mousedown', (e) => {
@@ -438,6 +464,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.target.closest('span:last-child') || e.target.tagName === 'BUTTON') return;
 
             isDragging = true;
+            dragMoved = false;
             bar.style.cursor = 'grabbing';
             win.style.transition = 'none';
             // Disable parallax effect on this window so it doesn't fight our dragging
@@ -465,6 +492,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isDragging) return;
             const dx = e.clientX - startX;
             const dy = e.clientY - startY;
+            if (Math.abs(dx) > 3 || Math.abs(dy) > 3) dragMoved = true;
 
             // Append translation to preserved transform (like rotation)
             win.style.transform = `${initialTransform} translate(${dx}px, ${dy}px)`;
@@ -505,8 +533,25 @@ if (clockEl) {
 const globalClippy = document.getElementById('clippy-global-popup');
 if (globalClippy) {
     let clippyTriggered = false;
+    let clippyDismissTimer = null;
     // Add transform animation transition for the bounce
     globalClippy.style.transition = 'bottom 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.3s ease-in-out';
+
+    function dismissClippy() {
+        globalClippy.style.bottom = '-500px';
+    }
+
+    function startClippyDismissTimer() {
+        clearTimeout(clippyDismissTimer);
+        clippyDismissTimer = setTimeout(dismissClippy, 8000);
+    }
+
+    // Hovering resets the timer so it doesn't vanish while being read
+    globalClippy.addEventListener('mouseenter', () => clearTimeout(clippyDismissTimer));
+    globalClippy.addEventListener('mouseleave', () => startClippyDismissTimer());
+
+    // Touch: reset on tap (mobile)
+    globalClippy.addEventListener('touchstart', () => startClippyDismissTimer(), { passive: true });
 
     window.addEventListener('scroll', () => {
         if (!clippyTriggered) {
@@ -532,6 +577,8 @@ if (globalClippy) {
                         globalClippy.style.transform = 'translateY(5px) rotate(-2deg)';
                         setTimeout(() => {
                             globalClippy.style.transform = 'translateY(0) rotate(0deg)';
+                            // Start the auto-dismiss countdown after bounce settles
+                            startClippyDismissTimer();
                         }, 250);
                     }, 250);
                 }, 800);
