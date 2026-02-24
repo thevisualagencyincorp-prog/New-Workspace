@@ -585,36 +585,3 @@ if (globalClippy) {
     });
 }
 
-// ----------------------------------------------------
-// BSOD DESKTOP ICON LOGIC
-// ----------------------------------------------------
-const icons = document.querySelectorAll('.desktop-icon');
-const bsodOverlay = document.getElementById('bsod-overlay');
-
-if (icons && bsodOverlay) {
-    icons.forEach(icon => {
-        let isDouble = false;
-        icon.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (isDouble) {
-                // Trigger BSOD on double tap/click
-                document.body.style.overflow = 'hidden';
-                bsodOverlay.style.display = 'block';
-
-                // Cheeky reset after a few seconds
-                setTimeout(() => {
-                    bsodOverlay.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }, 4000);
-            } else {
-                isDouble = true;
-                icon.style.filter = 'brightness(0.7)';
-                setTimeout(() => {
-                    isDouble = false;
-                    icon.style.filter = 'none';
-                }, 400); // 400ms double click window
-            }
-        });
-    });
-}
