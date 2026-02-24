@@ -457,8 +457,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let isDragging = false;
         let startX, startY;
         let dragMoved = false;
-        let currentLeft = parseFloat(getComputedStyle(win).left) || 0;
-        let currentTop = parseFloat(getComputedStyle(win).top) || 0;
+        let initialTransform = '';
 
         bar.addEventListener('mousedown', (e) => {
             // Ignore if clicked on close button or other buttons
@@ -471,18 +470,19 @@ document.addEventListener('DOMContentLoaded', () => {
             // Disable parallax effect on this window so it doesn't fight our dragging
             win.classList.remove('parallax-layer');
 
-            // Force relative or absolute so top/left works
+            // If it's a grid/flex item, switch to relative for dragging offset
             const compStyle = window.getComputedStyle(win);
             if (compStyle.position === 'static') {
                 win.style.position = 'relative';
+                win.style.left = '0px';
+                win.style.top = '0px';
             }
-
-            // Re-read current position in case window was resized
-            currentLeft = parseFloat(compStyle.left) || 0;
-            currentTop = parseFloat(compStyle.top) || 0;
 
             startX = e.clientX;
             startY = e.clientY;
+
+            // Remember original transform rotation/position
+            initialTransform = win.style.transform || '';
 
             win.style.zIndex = '1000'; // Bring to front
             e.preventDefault(); // Prevents text selection
@@ -494,14 +494,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const dy = e.clientY - startY;
             if (Math.abs(dx) > 3 || Math.abs(dy) > 3) dragMoved = true;
 
-            win.style.left = (currentLeft + dx) + 'px';
-            win.style.top = (currentTop + dy) + 'px';
+            // Append translation to preserved transform (like rotation)
+            win.style.transform = `${initialTransform} translate(${dx}px, ${dy}px)`;
         });
 
         document.addEventListener('mouseup', () => {
             if (isDragging) {
                 isDragging = false;
                 bar.style.cursor = 'grab';
+                // Lock the new transform as the initial for next time
+                initialTransform = win.style.transform;
             }
         });
     });
@@ -582,39 +584,5 @@ if (globalClippy) {
                 }, 800);
             }
         }
-    });
-}
-
-// ----------------------------------------------------
-// BSOD DESKTOP ICON LOGIC
-// ----------------------------------------------------
-const icons = document.querySelectorAll('.desktop-icon');
-const bsodOverlay = document.getElementById('bsod-overlay');
-
-if (icons && bsodOverlay) {
-    icons.forEach(icon => {
-        let isDouble = false;
-        icon.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (isDouble) {
-                // Trigger BSOD on double tap/click
-                document.body.style.overflow = 'hidden';
-                bsodOverlay.style.display = 'block';
-
-                // Cheeky reset after a few seconds
-                setTimeout(() => {
-                    bsodOverlay.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }, 4000);
-            } else {
-                isDouble = true;
-                icon.style.filter = 'brightness(0.7)';
-                setTimeout(() => {
-                    isDouble = false;
-                    icon.style.filter = 'none';
-                }, 400); // 400ms double click window
-            }
-        });
     });
 }

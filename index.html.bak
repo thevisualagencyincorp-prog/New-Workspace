@@ -148,34 +148,34 @@
             </div>
             <div
               style="font-family: var(--font-serif); font-size: clamp(1.4rem, 2.5vw, 2.2rem); font-style: italic; color: var(--pop-pink);">
-              Founders:</div>Ash & Brittany
+              Founders Ash & Brittany</div>
           </div>
-        </div>
-        <div class="mock-card"
-          style="background: rgba(0,0,0,0.7); color: #fff; backdrop-filter: blur(10px); padding: 2rem 5vw;">
-          <div class="mock-card-header"
-            style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 1rem; padding-bottom: 0.5rem;">
-            <span class="mono-label" style="font-size: 0.6rem; opacity: 0.5;">CREATIVE CODE BY</span>
-          </div>
-          <div
-            style="font-family: var(--font-serif); font-size: clamp(1.4rem, 2.5vw, 2.2rem); font-style: italic; color: var(--pop-lime);">
-            The Agency</div>
-          <div class="mono-label" style="margin-top: 0.5rem; opacity: 0.4; font-size: 0.6rem;">EST. 2006</div>
-        </div>
 
-        <div class="mock-card"
-          style="background: rgba(0,0,0,0.7); color: #fff; backdrop-filter: blur(10px); padding: 2rem 5vw;">
-          <div class="mock-card-header"
-            style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 1rem; padding-bottom: 0.5rem;">
-            <span class="mono-label" style="font-size: 0.6rem; opacity: 0.5;">ARCHIVE_SCAN_V18</span>
+          <div class="mock-card"
+            style="background: rgba(0,0,0,0.7); color: #fff; backdrop-filter: blur(10px); padding: 2rem 5vw;">
+            <div class="mock-card-header"
+              style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 1rem; padding-bottom: 0.5rem;">
+              <span class="mono-label" style="font-size: 0.6rem; opacity: 0.5;">CREATIVE CODE BY</span>
+            </div>
+            <div
+              style="font-family: var(--font-serif); font-size: clamp(1.4rem, 2.5vw, 2.2rem); font-style: italic; color: var(--pop-lime);">
+              The Agency</div>
+            <div class="mono-label" style="margin-top: 0.5rem; opacity: 0.4; font-size: 0.6rem;">EST. 2006</div>
           </div>
-          <div style="display: flex; gap: 1.5rem; align-items: center;">
-            <div style="font-size: 3rem; font-weight: 900; color: var(--pop-lime); line-height: 1;">888</div>
-            <div class="mono-label" style="font-size: 0.6rem; line-height: 1.4; opacity: 0.6;">Your behind-the-scenes
-              team<br></div>
+
+          <div class="mock-card"
+            style="background: rgba(0,0,0,0.7); color: #fff; backdrop-filter: blur(10px); padding: 2rem 5vw;">
+            <div class="mock-card-header"
+              style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 1rem; padding-bottom: 0.5rem;">
+              <span class="mono-label" style="font-size: 0.6rem; opacity: 0.5;">ARCHIVE_SCAN_V18</span>
+            </div>
+            <div style="display: flex; gap: 1.5rem; align-items: center;">
+              <div style="font-size: 3rem; font-weight: 900; color: var(--pop-lime); line-height: 1;">888</div>
+              <div class="mono-label" style="font-size: 0.6rem; line-height: 1.4; opacity: 0.6;">Your behind-the-scenes
+                team<br>Ready for input.</div>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </section>
 
@@ -1695,27 +1695,7 @@
 
 
 
-    <!-- DESKTOP EASTER EGG -->
-    <div class="desktop-icon" style="bottom: 5vh; left: 5vw;">
-      <img src="images/icon_computer.png" alt="My Computer">
-      <span>My Computer</span>
-    </div>
   </main>
-
-  <!-- BSOD EASTER EGG OVERLAY -->
-  <div id="bsod-overlay">
-    <div class="bsod-heading">Windows</div>
-    <p>A fatal exception 0E has occurred at 0028:C0011E36 in VXD VMM(01) + <br>
-      00010E36. The current application will be terminated.</p>
-    <br>
-    <p>* Press any key to terminate the current application.<br>
-      * Press CTRL+ALT+DEL again to restart your computer. You will<br>
-      lose any unsaved information in all applications.</p>
-    <br><br>
-    <p style="text-align: center;">just kidding sending you back to where you came from...</p>
-    <br><br>
-    <p style="text-align: center;">Press any key to continue _</p>
-  </div>
 
   <!--
     [ END_OF_TRANSMISSION ]
