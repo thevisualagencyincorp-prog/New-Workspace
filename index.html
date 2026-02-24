@@ -1350,7 +1350,7 @@
               <label>HOW CAN WE HELP?</label>
               <select name="objective"
                 style="border: none; border-bottom: 2px solid #000; background: transparent; padding: 1rem 0; font-family: var(--font-mono); width: 100%;">
-                <option value="">SELECT_MISSION</option>
+                <option value="">SELECT_SERVICE</option>
                 <option value="art-dept">MONTHLY ART DEPARTMENT (SUBSCRIPTION)</option>
                 <option value="gov-contracts">GOVERNMENT CONTRACTING</option>
                 <option value="agency-collab">AGENCY COLLABORATION / WHITE-LABEL</option>
@@ -1859,9 +1859,9 @@
       font-family: var(--font-mono);
       font-weight: bold;
       font-size: 1.2rem;
-      color: #000;
+
       display: none;
-      animation: floatZ 2s infinite linear;
+      animation: floatZ 4s infinite linear;
     }
 
     @keyframes floatZ {
@@ -1918,6 +1918,7 @@
       transform: translateX(-50%);
       width: 230px;
       background: white;
+      color: black;
       border: 2px solid black;
       box-shadow: 4px 4px 0 black;
       padding: 8px;
@@ -2089,7 +2090,7 @@
       if (frank) frank.className = "pet";
       frankState = "pet"; // lock state
       sparkle();
-      showPopup("Purrr... I love being pet! Ready to scale.");
+      showPopup("Purrr...");
       setTimeout(() => {
         frankState = "sitting";
         setFrankState("sitting");
@@ -2102,7 +2103,7 @@
       if (frankZzz) frankZzz.style.display = "none";
       if (frank) frank.className = "sitting";
       frankState = "eating"; // lock state
-      showPopup("Yum! System optimized and Frank is full.");
+      showPopup("Yum! Yum!");
 
       // Visual feedback: click bounce
       if (frank) {
