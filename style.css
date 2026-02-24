@@ -1489,19 +1489,35 @@ section {
     grid-template-columns: repeat(3, 1fr);
     background: #000;
     gap: 1px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
 }
 
 .blog-post {
     background: #fff;
-    padding: 3rem;
-    min-height: 450px;
+    padding: 4rem 3rem;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    transition: all 0.4s ease;
+    justify-content: flex-start;
+    transition: background 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
     text-decoration: none;
     color: #000;
+}
+
+.blog-post img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid #000;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+    margin-bottom: 2rem;
+}
+
+.blog-post:hover img {
+    filter: grayscale(0%);
 }
 
 .blog-post:hover {
@@ -1517,9 +1533,16 @@ section {
 .blog-post h3 {
     font-family: var(--font-serif);
     font-style: italic;
-    font-size: 2.5rem;
-    line-height: 1.1;
-    margin: 2rem 0;
+    font-size: 2.2rem;
+    line-height: 1.15;
+    margin: 1rem 0;
+    font-weight: 900;
+}
+
+.blog-post .mono-label {
+    margin-top: auto;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
 }
 
 /* FEEDBACK TICKER (CHAPTER VIII) */
@@ -2375,23 +2398,35 @@ section {
         width: 100% !important;
     }
 
-    /* ── BLOG: Single column ──────────────────────────── */
+    /* ── BLOG: Editorial Dossier Format ───────────────── */
     .blog-grid {
         grid-template-columns: 1fr !important;
-        gap: 1.5rem !important;
+        gap: 0 !important;
+        background: transparent !important;
+        border: none !important;
     }
 
     .blog-post {
         min-height: unset !important;
-        padding: 0 !important;
+        padding: 4rem 1.5rem !important;
+        background: transparent !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .blog-post:last-child {
+        border-bottom: none !important;
     }
 
     .blog-post h3 {
-        font-size: 1.6rem !important;
+        font-size: 2.5rem !important;
+        margin: 1.5rem 0 !important;
     }
 
     .blog-post img {
-        height: 220px !important;
+        height: 280px !important;
+        margin-bottom: 1.5rem !important;
+        filter: grayscale(0%) !important;
+        /* Always color on mobile for impact */
     }
 
     /* ── CONTACT FORM: Single column ──────────────────── */
