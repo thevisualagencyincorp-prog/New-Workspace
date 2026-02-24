@@ -2187,12 +2187,70 @@ section {
     #feedback,
     #contact-brief,
     #clubhouse {
-        padding: 8vh 5vw !important;
+        padding: 5vh 5vw !important;
     }
 
-    /* ── HERO ─────────────────────────────────────────── */
+    /* ── MOBILE SCANLINE ── */
+    .mobile-scanline {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, transparent 50%, rgba(18, 16, 16, 0.1) 51%);
+        background-size: 100% 4px;
+        z-index: 10;
+        pointer-events: none;
+        animation: scanline 10s linear infinite;
+        opacity: 0.3;
+    }
+
+    @keyframes scanline {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(100%);
+        }
+    }
+
+    /* ── HEADER & HERO ──────────────────────────────── */
+    header[role="banner"] {
+        padding: 1.5rem 5vw !important;
+    }
+
     .pixel-header {
-        font-size: clamp(4rem, 18vw, 14rem) !important;
+        font-size: clamp(3.5rem, 15vw, 8rem) !important;
+        line-height: 0.8 !important;
+    }
+
+    #magazine-time {
+        top: 1rem !important;
+        font-size: 0.6rem !important;
+    }
+
+    /* ── HERO CREDITS: 2x2 Grid ────────────────────── */
+    .hero-credits-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0 !important;
+    }
+
+    .header-credit-card {
+        padding: 1.5rem !important;
+        border-bottom: 1px solid #222 !important;
+        border-right: 1px solid #222 !important;
+        min-height: unset !important;
+    }
+
+    .header-credit-card:nth-child(even) {
+        border-right: none !important;
+    }
+
+    .header-credit-card .halftone-text,
+    .header-credit-card h3 {
+        font-size: 1.5rem !important;
+    }
+
+    .header-credit-card .mono-label {
+        font-size: 0.9rem !important;
     }
 
     /* ── PHILOSOPHY: Notepad window ───────────────────── */
@@ -2216,8 +2274,9 @@ section {
     .horizontal-track {
         display: flex !important;
         flex-direction: column !important;
-        gap: 1px !important;
-        padding: 0 !important;
+        gap: 1.5rem !important;
+        padding: 1.5rem !important;
+        background: transparent !important;
     }
 
     .chapter-header-wrap {
@@ -2238,7 +2297,9 @@ section {
 
     .horizontal-item .mock-card {
         min-height: unset !important;
-        padding: 2rem !important;
+        padding: 1.8rem !important;
+        border: 1px solid #222 !important;
+        box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.4);
     }
 
     .horizontal-item .halftone-img-wrap {
@@ -2282,12 +2343,40 @@ section {
         gap: 1rem !important;
     }
 
-    .protocol-row .halftone-text {
-        font-size: 4rem !important;
+    /* ── ARCHIVE (FOLDERS): Preserve Metaphor ────────── */
+    .desktop-case-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2rem !important;
+        padding: 4rem 5vw !important;
     }
 
-    .protocol-row .desktop-only {
-        display: none !important;
+    .desktop-folder-icon {
+        width: 100% !important;
+    }
+
+    .desktop-folder-icon svg {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .desktop-folder-label {
+        font-size: 0.55rem !important;
+        max-width: 90%;
+    }
+
+    .desktop-folder-content {
+        position: fixed !important;
+        inset: 10vw !important;
+        width: 80vw !important;
+        height: auto !important;
+        max-height: 80vh !important;
+        z-index: 1000 !important;
+        overflow-y: auto !important;
+    }
+
+    .note-paper {
+        padding: 2rem 1.5rem !important;
     }
 
     /* ── CASE STUDIES: Single column ──────────────────── */
