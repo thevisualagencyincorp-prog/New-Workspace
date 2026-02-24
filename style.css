@@ -2600,13 +2600,13 @@ section {
 
 .desktop-folder-content {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 0px);
+    transform: translate(-50%, -50%);
     width: 800px;
     max-width: 90vw;
-    z-index: 100;
+    z-index: 99999;
     pointer-events: none;
 }
 
@@ -2624,18 +2624,19 @@ section {
     border-bottom-color: black;
     border-right-color: black;
     box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.8);
-    max-height: 80vh;
-    overflow-y: auto;
+    max-height: 85vh;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
 }
 
 @keyframes folderPop {
     0% {
-        transform: translate(-50%, 0) scale(0.95);
+        transform: translate(-50%, -45%) scale(0.95);
         opacity: 0;
     }
 
     100% {
-        transform: translate(-50%, 20px) scale(1);
+        transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
 }
@@ -2643,22 +2644,25 @@ section {
 @media (max-width: 900px) {
     .desktop-folder-content {
         position: fixed;
-        top: 10vh;
-        left: 5vw;
-        width: 90vw;
+        top: 50%;
+        left: 50%;
+        width: 95vw;
         max-width: none;
-        transform: none;
-        max-height: 80vh;
+        max-height: 90vh;
+    }
+
+    .desktop-folder-content .case-card {
+        max-height: 90vh;
     }
 
     @keyframes folderPop {
         0% {
-            transform: scale(0.95);
+            transform: translate(-50%, -45%) scale(0.95);
             opacity: 0;
         }
 
         100% {
-            transform: scale(1);
+            transform: translate(-50%, -50%) scale(1);
             opacity: 1;
         }
     }
