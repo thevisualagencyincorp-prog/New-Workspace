@@ -74,6 +74,17 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 document.addEventListener('DOMContentLoaded', () => {
+    function updateMagazineTime() {
+        const timeEl = document.getElementById('magazine-time');
+        if (!timeEl) return;
+        const now = new Date();
+        const options = { month: 'long', day: 'numeric', year: 'numeric' };
+        const dateStr = now.toLocaleDateString('en-US', options).toUpperCase();
+        const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }).toUpperCase();
+        timeEl.textContent = `VOL. 1 // ${dateStr} // ${timeStr}`;
+    }
+    updateMagazineTime();
+    setInterval(updateMagazineTime, 60000);
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
     // HORIZONTAL SCROLL LOGIC (DESKTOP ONLY — CSS handles mobile stacking)
@@ -442,6 +453,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // CLICK ANYWHERE ON THE WINDOW BODY TO DISMISS
         // Skip if clicking on something interactive (links, form fields, buttons, title bar)
         win.addEventListener('click', (e) => {
+            // Check for explicit 'no-click-close' opt-out
+            if (win.dataset.noClickClose === 'true' || win.getAttribute('data-no-click-close') === 'true') return;
+
             if (e.target.closest('a') || e.target.closest('button') || e.target.closest('input') ||
                 e.target.closest('select') || e.target.closest('textarea') || e.target.closest('label') ||
                 e.target.closest('summary') || e.target.closest('details')) return;      // let interactive elements do their thing

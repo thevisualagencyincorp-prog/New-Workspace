@@ -940,6 +940,32 @@ section {
         padding-left: 5vw !important;
         padding-right: 5vw !important;
     }
+
+    /* ─── HEADER CREDITS MOBILE ─── */
+    .hero-section header {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 1.5rem 5vw !important;
+    }
+
+    #magazine-time {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        margin: 1.5rem 0 !important;
+    }
+
+    .header-credit-card {
+        padding: 2.5rem !important;
+        border-right: none !important;
+        border-bottom: 1px solid #222 !important;
+    }
+
+    .hero-section h1 {
+        font-size: 18vw !important;
+    }
 }
 
 /* ─── EXTRA SMALL PHONES (< 400px) ─── */
