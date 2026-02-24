@@ -2537,3 +2537,129 @@ section {
 .footer-meta-cell a:hover {
     color: var(--pop-pink);
 }
+
+/* ════════════════════════════════════════
+   DESKTOP METAPHOR CASE STUDIES
+   ════════════════════════════════════════ */
+.desktop-case-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: 8rem 5vw;
+    background: transparent;
+    justify-content: center;
+    position: relative;
+    min-height: 500px;
+}
+
+.desktop-folder-group {
+    position: relative;
+    display: inline-block;
+}
+
+.desktop-folder-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: filter 0.2s;
+    width: 140px;
+    outline: none;
+}
+
+.desktop-folder-icon:hover,
+.desktop-folder-icon:focus {
+    filter: brightness(1.2);
+}
+
+.desktop-folder-icon svg {
+    width: 65px;
+    height: 65px;
+    fill: var(--pop-blue, #000080);
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.8));
+}
+
+.desktop-folder-label {
+    font-family: var(--font-mono);
+    color: white;
+    background: #000080;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border: 1px dotted rgba(255, 255, 255, 0.3);
+    word-break: break-all;
+    line-height: 1.2;
+}
+
+.desktop-folder-group:hover .desktop-folder-label,
+.desktop-folder-icon:focus .desktop-folder-label {
+    background: white;
+    color: #000080;
+}
+
+.desktop-folder-content {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    width: 800px;
+    max-width: 90vw;
+    z-index: 100;
+    pointer-events: none;
+}
+
+/* Show folder content when hovered or focused */
+.desktop-folder-group:hover .desktop-folder-content,
+.desktop-folder-icon:focus+.desktop-folder-content,
+.desktop-folder-content:hover {
+    display: block;
+    pointer-events: auto;
+    animation: folderPop 0.2s ease-out forwards;
+}
+
+.desktop-folder-content .case-card {
+    border: 3px solid white;
+    border-bottom-color: black;
+    border-right-color: black;
+    box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.8);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+@keyframes folderPop {
+    0% {
+        transform: translate(-50%, 0) scale(0.95);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, 20px) scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    .desktop-folder-content {
+        position: fixed;
+        top: 10vh;
+        left: 5vw;
+        width: 90vw;
+        max-width: none;
+        transform: none;
+        max-height: 80vh;
+    }
+
+    @keyframes folderPop {
+        0% {
+            transform: scale(0.95);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
