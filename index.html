@@ -664,7 +664,7 @@
             Letter to the Editor: The Top 5 Searched Inquiries</h2>
 
 
-          <div class="faq-accordion" style="margin-top: 2rem; font-family: var(--font-mono);">
+          <div class="faq-accordion" style="margin-top: 2rem; font-family: var(--font-mono); overflow-anchor: none;">
             <details style="margin-bottom: 1rem; border-bottom: 1px solid #ccc; padding-bottom: 1rem;">
               <summary
                 style="font-weight: bold; cursor: pointer; padding: 0.5rem 0; list-style: none; display: flex; justify-content: space-between; align-items: center; text-transform: uppercase; font-size: 0.9rem;">
@@ -2429,12 +2429,22 @@
     // FAQ Accordion Jump Fix
     document.querySelectorAll('.faq-accordion details summary').forEach(summary => {
       summary.addEventListener('click', function (e) {
-        const scrollPos = window.scrollY;
-        setTimeout(() => {
-          if (Math.abs(window.scrollY - scrollPos) > 10) {
-            window.scrollTo({ top: scrollPos, behavior: 'instant' });
+        // Stop the jump specifically toward 'Selected Works'
+        const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Use a slightly longer timeout and multiple checks if needed
+        const fixScroll = () => {
+          if (window.scrollY !== scrollPos) {
+            window.scrollTo(0, scrollPos);
           }
-        }, 1);
+        };
+
+        // Run immediately after layout cycle
+        requestAnimationFrame(() => {
+          fixScroll();
+          setTimeout(fixScroll, 10);
+          setTimeout(fixScroll, 50);
+        });
       });
     });
 
