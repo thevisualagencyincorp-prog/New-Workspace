@@ -2216,6 +2216,20 @@ section {
         max-width: 100% !important;
     }
 
+    /* ── PROTOCOL ROWS ── */
+    .protocol-row>div {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    .protocol-row .halftone-text {
+        font-size: 4rem !important;
+    }
+
+    .protocol-row .desktop-only {
+        display: none !important;
+    }
+
     /* ── CASE STUDIES: Single column ──────────────────── */
     .case-study-grid {
         grid-template-columns: 1fr !important;
