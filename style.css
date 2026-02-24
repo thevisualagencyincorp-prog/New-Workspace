@@ -441,8 +441,7 @@ p {
     line-height: 1.7;
     letter-spacing: -0.01em;
     font-size: 1.05rem;
-    color: rgba(255, 255, 255, 0.85);
-    /* Default for dark sections */
+    color: inherit;
 }
 
 /* Utility for actual readable body paragraphs */
