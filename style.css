@@ -1910,10 +1910,57 @@ section {
     }
 }
 
+/* ── MID-RANGE DESKTOP ADAPTABILITY (901px - 1150px) ──────────────── */
+@media (min-width: 901px) and (max-width: 1150px) {
+    .horizontal-item {
+        flex: 0 0 92vw !important;
+        /* Take more room to prevent text cut-off */
+    }
+
+    #core-systems-header {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        padding: 5vh 5vw !important;
+        background: #000;
+    }
+
+    .horizontal-sticky {
+        display: block !important;
+        height: auto !important;
+        overflow-y: auto !important;
+    }
+
+    .horizontal-track {
+        flex-direction: column !important;
+        transform: none !important;
+    }
+
+    .bg-graph-dark section {
+        padding: 5vh 2vw !important;
+    }
+
+    /* Prevent Welcome Modals from Overlapping Mid-screen */
+    #vibe-check-modal {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        margin: 2rem auto !important;
+        max-width: 350px !important;
+        transform: rotate(-2deg) !important;
+    }
+
+    #welcome-doc-modal {
+        max-width: 90vw !important;
+        margin: 0 auto !important;
+    }
+}
 
 
-/* DESKTOP RE-ENFORCEMENT (Ensure 900px+ gets horizontal) */
-@media (min-width: 901px) {
+
+/* DESKTOP RE-ENFORCEMENT (Ensure 1151px+ gets horizontal) */
+@media (min-width: 1151px) {
     .horizontal-scroll-section {
         height: 800vh !important;
         display: block !important;

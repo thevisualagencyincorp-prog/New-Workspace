@@ -369,7 +369,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const toast = document.getElementById('socialToast');
     const toastContent = document.getElementById('toastContent');
     const names = ['JESSICA_M.', 'DEREK_S.', 'AMANDA_R.', 'CARLOS_V.', 'KRISTEN_L.', 'TYLER_B.', 'NATALIE_A.'];
-    const actions = ['JUST BOOKED A BRANDING SESSION', 'LAUNCHED THEIR NEW WEBSITE', 'SIGNED UP FOR THE MONTHLY ART DEPT', 'SUBMITTED A PROJECT BRIEF', 'JOINED THE NEWSLETTER', 'SECURED A CUSTOM QUOTE'];
+    const actions = [
+        'RESERVED A CREATIVE FEATURE',
+        'LAUNCHED A CURATED BRAND IDENTITY',
+        'SECURED AN EDITORIAL PHOTOSHOOT',
+        'SUBMITTED A STRATEGIC BRIEF',
+        'JOINED THE MASTERCLASS DISPATCH',
+        'CALIBRATED THEIR DIGITAL ASSETS'
+    ];
     const locations = ['IN BAKERSFIELD', 'IN TEHACHAPI', 'IN KERN COUNTY', 'IN LOS ANGELES', 'IN THE CENTRAL VALLEY'];
 
     function showNotification() {
