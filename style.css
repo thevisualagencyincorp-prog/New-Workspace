@@ -530,12 +530,22 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.8;
-    filter: contrast(1.2) grayscale(0.5);
+    opacity: 0.7;
+    /* Louder grayscale base */
+    filter: contrast(1.1) grayscale(100%);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     -webkit-mask-image: radial-gradient(circle, #000 1.2px, transparent 1.2px);
     mask-image: radial-gradient(circle, #000 1.2px, transparent 1.2px);
     -webkit-mask-size: 3px 3px;
     mask-size: 3px 3px;
+}
+
+/* Core Systems / Horizontal Items: Hover to Color */
+.horizontal-item:hover .halftone-img-wrap img,
+.horizontal-item:active .halftone-img-wrap img,
+.horizontal-item:focus-within .halftone-img-wrap img {
+    opacity: 1;
+    filter: contrast(1) grayscale(0%);
 }
 
 /* HOLOGRAPHIC GRID BACKGROUND -> WINDOWS 95 TEAL/NAVY */
