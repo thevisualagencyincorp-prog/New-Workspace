@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const buttons = win.querySelectorAll('button');
         buttons.forEach(btn => {
             const text = btn.textContent.trim().toUpperCase();
-            if (['YES', 'NO', 'CANCEL', 'IGNORE', 'ACCEPT FATE', 'OK'].includes(text)) {
+            if (['YES', 'NO', 'CANCEL', 'IGNORE', 'ACCEPT FATE', 'OK', "I'M READY", "NOT YET", "ACCEPT OUR STRATEGY"].includes(text)) {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
                     closeWindow();
@@ -442,9 +442,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // CLICK ANYWHERE ON THE WINDOW BODY TO DISMISS
         // Skip if clicking on something interactive (links, form fields, buttons, title bar)
         win.addEventListener('click', (e) => {
-            const tag = e.target.tagName.toUpperCase();
-            const interactiveTags = ['A', 'BUTTON', 'INPUT', 'SELECT', 'TEXTAREA', 'LABEL', 'SUMMARY', 'DETAILS'];
-            if (interactiveTags.includes(tag)) return;      // let interactive elements do their thing
+            if (e.target.closest('a') || e.target.closest('button') || e.target.closest('input') ||
+                e.target.closest('select') || e.target.closest('textarea') || e.target.closest('label') ||
+                e.target.closest('summary') || e.target.closest('details')) return;      // let interactive elements do their thing
             if (bar.contains(e.target)) return;             // title bar is for dragging, not closing
             if (e.target.closest('form')) return;           // don't close over form areas
             closeWindow();
