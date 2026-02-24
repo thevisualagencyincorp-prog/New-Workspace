@@ -2245,6 +2245,14 @@ section {
         height: 200px !important;
     }
 
+    .card-highlight {
+        padding: 1.5rem !important;
+    }
+
+    .card-highlight h2 {
+        font-size: 1.8rem !important;
+    }
+
     /* ── PROCESS (PROTOCOL): Single column ────────────── */
     .mobile-grid-stack {
         grid-template-columns: 1fr !important;
@@ -2864,4 +2872,87 @@ section {
     background: rgba(255, 255, 255, 0.4);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     z-index: 10;
+}
+
+/* ════════════════════════════════════════
+   DECORATIVE STICKERS & STAMPS
+   ════════════════════════════════════════ */
+.sticker {
+    position: absolute;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-mono);
+    font-weight: 900;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    z-index: 5;
+    pointer-events: none;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.1em;
+}
+
+.sticker-postit {
+    background: #ffffc2;
+    color: #000;
+    width: 120px;
+    height: 120px;
+    padding: 1rem;
+    font-size: 0.7rem;
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.1);
+    line-height: 1.2;
+    text-align: left;
+    display: block;
+}
+
+.sticker-urgent {
+    background: #ff0000;
+    color: #fff;
+    border: 3px double #fff;
+}
+
+.sticker-approved {
+    background: transparent;
+    color: #008000;
+    border: 4px solid #008000;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    font-size: 0.6rem;
+    transform: rotate(-15deg);
+    opacity: 0.7;
+    flex-direction: column;
+}
+
+.sticker-classified {
+    background: #000;
+    color: var(--pop-lime);
+    border: 1px solid var(--pop-lime);
+}
+
+.sticker-bestie {
+    background: var(--pop-pink);
+    color: #fff;
+    border-radius: 20px;
+    padding: 0.4rem 1.2rem;
+}
+
+.sticker-cyan {
+    background: #00ffff;
+    color: #000;
+}
+
+.sticker-yellow {
+    background: #ffff00;
+    color: #000;
+}
+
+.sticker-stamp {
+    font-family: var(--font-serif);
+    font-style: italic;
+    border: 2px solid currentColor;
+    padding: 2px 8px;
+    opacity: 0.8;
 }
