@@ -2394,6 +2394,14 @@ section {
         min-height: 54px !important;
         padding: 1rem !important;
     }
+
+    #backToTop {
+        width: 40px !important;
+        height: 40px !important;
+        bottom: 20px !important;
+        right: 20px !important;
+        font-size: 1.2rem !important;
+    }
 }
 
 /* ═══════════════════════════════════════════════════════
