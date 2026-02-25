@@ -407,8 +407,8 @@ body {
 
     h1.halftone-text,
     .pixel-header {
-        font-size: clamp(3rem, 5vw, 6rem) !important;
-        line-height: 0.9 !important;
+        font-size: clamp(4rem, 10vw, 9rem) !important;
+        line-height: 0.8 !important;
         white-space: normal !important;
     }
 
@@ -741,9 +741,9 @@ section {
 
     h1.halftone-text,
     .pixel-header {
-        font-size: clamp(2rem, 10vw, 3rem) !important;
+        font-size: clamp(2.5rem, 15vw, 4.5rem) !important;
         white-space: normal !important;
-        line-height: 1 !important;
+        line-height: 0.9 !important;
     }
 
     h2.halftone-text,
