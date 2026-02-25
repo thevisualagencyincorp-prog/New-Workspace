@@ -3133,6 +3133,60 @@
     style="position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: var(--pop-lime); color: #000; display: none; align-items: center; justify-content: center; text-decoration: none; border: 2px solid #000; box-shadow: 4px 4px 0px #000; z-index: 999999; font-size: 1.5rem; transition: transform 0.2s;">
     &uarr;
   </a>
+  <!-- INFOMERCIAL POPUP -->
+  <style>
+    @keyframes infoFlash {
+      0% { background: red; color: yellow; border-color: yellow; }
+      100% { background: yellow; color: red; border-color: red; }
+    }
+  </style>
+  <div id="infomercial-popup" class="reveal"
+    style="position: fixed; bottom: -500px; right: 5%; width: 100%; max-width: 440px; background: yellow; border: 4px ridge #fff; border-bottom-color: #888; border-right-color: #888; padding: 4px; z-index: 100000; font-family: var(--font-serif); color: #000; box-shadow: 15px 15px 0px rgba(0,0,0,0.8); transition: bottom 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.2s; transform: rotate(-2deg); display: block;">
+    <div
+      style="background: red; color: yellow; padding: 8px 10px; font-family: var(--font-mono); font-weight: bold; font-size: 1.2rem; display: flex; justify-content: space-between; align-items: center; border: 4px dashed yellow; text-shadow: 2px 2px 0px #000; animation: infoFlash 0.5s infinite alternate;">
+      <span>🚨 BUT WAIT, THERE'S MORE! 🚨</span>
+      <span onclick="document.getElementById('infomercial-popup').style.bottom='-500px';" 
+        style="background: silver; color: black; padding: 0 6px; border: 2px outset #fff; cursor: pointer; text-shadow: none; font-size: 1rem;">X</span>
+    </div>
+    <div style="padding: 1.5rem; border: 2px inset #fff; background: #fff; text-align: center; border-top: none;">
+      <h3 style="color: red; font-size: 2.5rem; margin-bottom: 0.5rem; text-transform: uppercase; font-family: var(--font-serif); font-style: italic; line-height: 1;">Act Now!</h3>
+      <p style="font-family: var(--font-mono); font-size: 1rem; margin-bottom: 1rem; font-weight: bold; text-transform: uppercase;">
+        SUBMIT YOUR INQUIRY TODAY AND WE'LL THROW IN <span style="text-decoration: line-through; opacity: 0.5;">ONE</span> <span style="color: var(--pop-blue); font-size: 1.2rem;">THREE</span> FREE VIBE CHECKS, ABSOLUTELY FREE!*
+      </p>
+      <div style="font-size: 0.6rem; color: #666; font-family: var(--font-mono); margin-bottom: 1.5rem; line-height: 1.3; text-align: justify;">
+        *Value estimated at a gazillion dollars. Not valid in the metaverse. Side effects of partnering with The Agency may include rapid scaling, extreme brand clarity, unprecedented ROI, skyrocketing conversion rates, and a sudden desire to wear black turtlenecks. Operators are standing by.
+      </div>
+      <a href="#contact-brief" onclick="document.getElementById('infomercial-popup').style.bottom='-500px';" class="btn-elite-submit"
+        style="background: #000; color: #fff; padding: 1rem 2rem; font-family: var(--font-mono); font-size: 1.2rem; text-decoration: none; display: inline-block; box-shadow: 4px 4px 0px red; text-transform: uppercase; border: 2px solid #fff; transition: transform 0.1s;">
+        CLAIM THIS OFFER
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const infoPopup = document.getElementById('infomercial-popup');
+      let infomercialTriggered = false;
+
+      window.addEventListener('scroll', () => {
+        if (!infomercialTriggered && infoPopup) {
+          // Trigger when within 600px of bottom
+          if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 600) {
+            infomercialTriggered = true;
+            
+            // Pop it up
+            infoPopup.style.bottom = '50px';
+            infoPopup.style.transform = 'rotate(-3deg) scale(1.05)';
+            
+            // Settle it down after the bounce
+            setTimeout(() => {
+              infoPopup.style.transform = 'rotate(-2deg) scale(1)';
+            }, 400);
+          }
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
