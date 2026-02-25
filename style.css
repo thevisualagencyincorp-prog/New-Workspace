@@ -3086,6 +3086,10 @@ section {
     background-image: url('images/realty.jpg');
 }
 
+.desktop-folder-group:nth-child(9) .desktop-folder-icon {
+    background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=400&q=80');
+}
+
 .desktop-folder-group:hover .desktop-folder-label,
 .desktop-folder-icon:focus .desktop-folder-label {
     background: #fff;
