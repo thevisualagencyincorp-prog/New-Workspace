@@ -2218,7 +2218,7 @@ section {
     }
 
     .pixel-header {
-        font-size: clamp(3.5rem, 15vw, 8rem) !important;
+        font-size: clamp(4rem, 15vw, 8rem) !important;
         line-height: 0.8 !important;
     }
 
@@ -2231,26 +2231,39 @@ section {
     .hero-credits-grid {
         grid-template-columns: 1fr 1fr !important;
         gap: 0 !important;
+        border-bottom: 1px solid #222 !important;
     }
 
     .header-credit-card {
-        padding: 1.5rem !important;
+        padding: 1.2rem !important;
         border-bottom: 1px solid #222 !important;
         border-right: 1px solid #222 !important;
-        min-height: unset !important;
+        min-height: 140px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
     }
 
     .header-credit-card:nth-child(even) {
         border-right: none !important;
     }
 
-    .header-credit-card .halftone-text,
-    .header-credit-card h3 {
-        font-size: 1.5rem !important;
+    /* Target the large serif text in credit cards */
+    .header-credit-card>div[style*="font-size: 2rem"],
+    .header-credit-card>div[style*="font-size: 1.8rem"],
+    .header-credit-card>div[style*="font-size: 3.5rem"] {
+        font-size: 1.4rem !important;
     }
 
-    .header-credit-card .mono-label {
-        font-size: 0.9rem !important;
+    .header-credit-card .mono-label,
+    .header-credit-card div[style*="font-family: var(--font-sans)"] {
+        font-size: 0.8rem !important;
+    }
+
+    .header-credit-card .star-icon {
+        font-size: 1rem !important;
+        bottom: 0.5rem !important;
+        left: 1.2rem !important;
     }
 
     /* ── PHILOSOPHY: Notepad window ───────────────────── */
@@ -2505,7 +2518,7 @@ section {
 
     .blog-post {
         min-height: unset !important;
-        padding: 4rem 1.5rem !important;
+        padding: 2.5rem 1.5rem !important;
         background: transparent !important;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
     }
@@ -2515,7 +2528,7 @@ section {
     }
 
     .blog-post h3 {
-        font-size: 2.5rem !important;
+        font-size: 1.8rem !important;
         margin: 1.5rem 0 !important;
     }
 
@@ -2524,6 +2537,19 @@ section {
         margin-bottom: 1.5rem !important;
         filter: grayscale(0%) !important;
         /* Always color on mobile for impact */
+    }
+
+    /* ── SOCIAL: The Gram ────────────────────────────── */
+    .social-widget-container {
+        padding: 1.5rem !important;
+        min-height: 500px !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    #curator-feed-default-feed-layout {
+        width: 100% !important;
+        height: auto !important;
     }
 
     /* ── CONTACT FORM: Single column ──────────────────── */
