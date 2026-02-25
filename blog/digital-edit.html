@@ -125,7 +125,8 @@
 
 <body>
     <div class="article-container">
-        <a href="../index.html#blog" class="back-link" onclick="if(window.history.length > 1) { window.history.back(); return false; }">&larr; BACK_TO_ARCHIVE</a>
+        <a href="../index.html#blog" class="back-link"
+            onclick="if(window.history.length > 1) { window.history.back(); return false; }">&larr; BACK_TO_ARCHIVE</a>
 
         <header class="article-header">
             <span class="article-meta">DEC 2025 // CASE_FILE_04 // DIGITAL_EDITORIAL</span>
@@ -171,15 +172,30 @@
                     engineering</b>—setting a mood that matches the premium experience you provide off-screen.</p>
 
             <div class="cta-section">
-                <h3 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 1rem;">Ready for Digital
+                <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.8rem;">Ready for Digital
                     Dominance?</h3>
-                <p style="margin-bottom: 2rem;">Let us handle the edit so you can focus on the empire.</p>
-                <a href="../index.html#contact-brief" class="btn-elite-submit"
-                    style="background: #000; color: #fff; padding: 1rem 2rem; text-decoration: none; display: inline-block;">BOOK
+                <p style="margin-bottom: 1.5rem; font-size: 1rem;">Let us handle the edit so you can focus on the
+                    empire.</p>
+                <a href="../index.html#contact-brief"
+                    style="background: #000; color: #fff; padding: 0.6rem 1.4rem; text-decoration: none; display: inline-block; font-family: var(--font-mono); font-weight: bold; font-size: 0.8rem; border: 2px solid #fff; letter-spacing: 1px;">BOOK
                     A CONTENT STRATEGY</a>
             </div>
         </main>
     </div>
+
+    <!-- BOTTOM ARTICLE NAV -->
+    <nav
+        style="background: #111; border-top: 1px solid #222; padding: 2rem 5vw; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 0.8rem;">
+        <a href="../index.html#blog"
+            style="color: var(--pop-lime); text-decoration: none; border: 1px solid #333; padding: 0.7rem 1.2rem; transition: all 0.2s; display: flex; align-items: center; gap: 0.5rem;">
+            &larr; BACK_TO_ARCHIVE
+        </a>
+        <span style="color: #444; font-size: 0.6rem; letter-spacing: 2px;">EDITORIAL_LOG // OCT 2025</span>
+        <a href="status-service.html"
+            style="color: var(--pop-pink); text-decoration: none; border: 1px solid #333; padding: 0.7rem 1.2rem; transition: all 0.2s; display: flex; align-items: center; gap: 0.5rem;">
+            NEXT_ARTICLE &rarr;
+        </a>
+    </nav>
 
     <script>
         window.addEventListener('scroll', () => {

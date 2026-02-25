@@ -125,7 +125,8 @@
 
 <body>
     <div class="article-container">
-        <a href="../index.html#blog" class="back-link" onclick="if(window.history.length > 1) { window.history.back(); return false; }">&larr; BACK_TO_ARCHIVE</a>
+        <a href="../index.html#blog" class="back-link"
+            onclick="if(window.history.length > 1) { window.history.back(); return false; }">&larr; BACK_TO_ARCHIVE</a>
 
         <header class="article-header">
             <span class="article-meta">FEB 2026 // CASE_FILE_06 // AI_SOVEREIGNTY</span>
@@ -168,19 +169,33 @@
                 matters: <b>High-Value Alliances</b> and market capture.</p>
 
             <div class="cta-section">
-                <h3 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 1rem;">Ready to Reclaim Your
+                <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.8rem;">Ready to Reclaim
+                    Your
                     Market Sovereignty?</h3>
-                <p style="margin-bottom: 2rem;">Stop renting space in the search results. Start owning the conversation.
-                    Let's build your AI legacy.</p>
-                <a href="../index.html#contact-brief" class="btn-elite-submit"
-                    style="background: #000; color: #fff; padding: 1rem 2rem; text-decoration: none; display: inline-block; font-weight: bold;">SECURE
+                <p style="margin-bottom: 1.5rem; font-size: 1rem;">Stop renting space in the search results. Start
+                    owning the conversation. Let's build your AI legacy.</p>
+                <a href="../index.html#contact-brief"
+                    style="background: #000; color: #fff; padding: 0.6rem 1.4rem; text-decoration: none; display: inline-block; font-family: var(--font-mono); font-weight: bold; font-size: 0.8rem; border: 2px solid #fff; letter-spacing: 1px;">SECURE
                     YOUR PROTOCOL</a>
             </div>
         </main>
     </div>
 
+    <!-- BOTTOM ARTICLE NAV -->
+    <nav
+        style="background: #111; border-top: 1px solid #222; padding: 2rem 5vw; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 0.8rem;">
+        <a href="../index.html#blog"
+            style="color: var(--pop-lime); text-decoration: none; border: 1px solid #333; padding: 0.7rem 1.2rem; transition: all 0.2s; display: flex; align-items: center; gap: 0.5rem;">
+            &larr; BACK_TO_ARCHIVE
+        </a>
+        <span style="color: #444; font-size: 0.6rem; letter-spacing: 2px;">EDITORIAL_LOG // FEB 2026</span>
+        <a href="psychology-branding.html"
+            style="color: var(--pop-pink); text-decoration: none; border: 1px solid #333; padding: 0.7rem 1.2rem; transition: all 0.2s; display: flex; align-items: center; gap: 0.5rem;">
+            NEXT_ARTICLE &rarr;
+        </a>
+    </nav>
+
     <script>
-        // Parallax effect for featured image
         window.addEventListener('scroll', () => {
             const img = document.querySelector('.featured-img-wrap img');
             const scrollValue = window.scrollY;
