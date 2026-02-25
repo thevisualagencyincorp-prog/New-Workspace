@@ -2053,6 +2053,91 @@
                 <option value="custom">CUSTOM QUOTE (A_LA_CARTE)</option>
               </select>
             </div>
+
+            <!-- THE MIND-READING PSYCHOLOGY MODULE -->
+            <div class="form-field full" style="margin-top: 1rem;">
+              <label>VIBE CALIBRATION (SELECT ALL THAT APPLY)</label>
+              <style>
+                .vibe-card {
+                  border: 2px solid #000;
+                  padding: 15px 5px;
+                  text-align: center;
+                  cursor: pointer;
+                  background: #fff;
+                  transition: all 0.2s;
+                  user-select: none;
+                }
+
+                .vibe-card:has(input:checked) {
+                  background: #000;
+                  color: #fff;
+                  border-color: var(--pop-pink);
+                  box-shadow: inset 0 0 10px var(--pop-pink);
+                }
+
+                .vibe-card:hover {
+                  transform: translateY(-3px);
+                  box-shadow: 4px 4px 0 #000;
+                }
+
+                /* Subtle invert for emojis/icons to match dark bg when selected */
+                .vibe-card:has(input:checked) .vibe-icon {
+                  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+                }
+              </style>
+              <div class="vibe-selector-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-top: 10px;">
+                <label class="vibe-card">
+                  <input type="checkbox" name="vibe_luxury" value="Luxury / High-End" style="display:none;">
+                  <div class="vibe-icon" style="font-size: 2rem; margin-bottom: 5px;">💎</div>
+                  <div style="font-size: 0.65rem; font-family: var(--font-mono); font-weight: bold;">LUXURY / ELITE
+                  </div>
+                </label>
+                <label class="vibe-card">
+                  <input type="checkbox" name="vibe_tech" value="Cyber / Tech" style="display:none;">
+                  <div class="vibe-icon" style="font-size: 2rem; margin-bottom: 5px;">💻</div>
+                  <div style="font-size: 0.65rem; font-family: var(--font-mono); font-weight: bold;">CYBER / TECH</div>
+                </label>
+                <label class="vibe-card">
+                  <input type="checkbox" name="vibe_editorial" value="Editorial / Magazine" style="display:none;">
+                  <div class="vibe-icon" style="font-size: 2rem; margin-bottom: 5px;">📸</div>
+                  <div style="font-size: 0.65rem; font-family: var(--font-mono); font-weight: bold;">EDITORIAL / MAG
+                  </div>
+                </label>
+                <label class="vibe-card">
+                  <input type="checkbox" name="vibe_organic" value="Organic / Warm" style="display:none;">
+                  <div class="vibe-icon" style="font-size: 2rem; margin-bottom: 5px;">🌿</div>
+                  <div style="font-size: 0.65rem; font-family: var(--font-mono); font-weight: bold;">ORGANIC / WARM
+                  </div>
+                </label>
+                <label class="vibe-card">
+                  <input type="checkbox" name="vibe_bold" value="Bold / Disruption" style="display:none;">
+                  <div class="vibe-icon" style="font-size: 2rem; margin-bottom: 5px;">🔥</div>
+                  <div style="font-size: 0.65rem; font-family: var(--font-mono); font-weight: bold;">BOLD / DISRUPT
+                  </div>
+                </label>
+                <label class="vibe-card">
+                  <input type="checkbox" name="vibe_corporate" value="Corporate Asset" style="display:none;">
+                  <div class="vibe-icon" style="font-size: 2rem; margin-bottom: 5px;">🏛️</div>
+                  <div style="font-size: 0.65rem; font-family: var(--font-mono); font-weight: bold;">CORP / AUTHORITY
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-field full" style="margin-top: 1rem;">
+              <label style="color: darkred; font-weight: bold;">DIAGNOSIS: WHAT IS THE GREATEST PAIN POINT?</label>
+              <select name="pain_point"
+                style="border: none; border-bottom: 2px dashed darkred; background: transparent; padding: 1rem 0; font-family: var(--font-mono); width: 100%; color: #000; font-weight: bold;">
+                <option value="">[ DECODE_MY_STRUGGLE ]</option>
+                <option value="looks-cheap">"My brand looks cheaper than what I actually charge."</option>
+                <option value="no-traffic">"I have an incredible product, but zero organic traffic or SEO."</option>
+                <option value="embarrassed">"I'm literally embarrassed to send people my current website."</option>
+                <option value="outdated">"The market evolved, and my brand is stuck in the past."</option>
+                <option value="next-level">"I'm already successful, but I'm ready to dominate at the highest elite
+                  level."</option>
+              </select>
+            </div>
             <div class="form-field full">
               <label>PROJECT DETAILS</label>
               <textarea name="full_brief"
