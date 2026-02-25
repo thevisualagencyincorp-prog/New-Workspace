@@ -2155,7 +2155,21 @@ section {
         display: none !important;
     }
 
-    /* Magazine date — adjusted for mobile visibility instead of hiding */
+    /* ── GLOBAL MOBILE TYPOGRAPHY & SPACING ─────── */
+    .halftone-text {
+        font-size: clamp(2rem, 9vw, 3.5rem) !important;
+        white-space: normal !important;
+        line-height: 1 !important;
+        word-break: normal !important;
+        padding-top: 0.2em !important;
+        padding-bottom: 0.2em !important;
+    }
+
+    section {
+        padding: 10vh 5vw !important;
+        margin-bottom: 4rem !important;
+    }
+
     #magazine-time {
         display: block !important;
         width: 100% !important;
@@ -2551,15 +2565,17 @@ section {
 
     /* ── SOCIAL: The Gram ────────────────────────────── */
     .social-widget-container {
-        padding: 1rem !important;
-        min-height: 650px !important;
+        padding: 0.5rem !important;
+        min-height: 850px !important;
         height: auto !important;
         overflow: visible !important;
+        background: #000 !important;
     }
 
     #curator-feed-default-feed-layout {
         width: 100% !important;
         height: auto !important;
+        min-height: 800px !important;
     }
 
     /* ── CONTACT FORM: Single column ──────────────────── */
