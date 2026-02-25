@@ -2317,7 +2317,7 @@ section {
         padding: 0 !important;
         flex-direction: column !important;
         background: #000;
-        border-bottom: 3px solid #fff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
 
     header[role="banner"] a {
@@ -2326,14 +2326,15 @@ section {
         padding: 2.5rem 5vw !important;
         text-align: center !important;
         order: 2;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, transparent 100%);
+        background: transparent !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
 
     header[role="banner"] a .halftone-text {
-        font-size: 3.5rem !important;
+        font-size: clamp(3rem, 16vw, 5rem) !important;
         text-align: center !important;
         margin: 0 auto !important;
-        letter-spacing: -1px;
+        letter-spacing: -2px;
         text-transform: uppercase;
         font-weight: 950 !important;
     }
@@ -2344,15 +2345,15 @@ section {
         left: auto !important;
         transform: none !important;
         width: 100% !important;
-        background: #fff;
-        color: #000 !important;
-        padding: 0.6rem !important;
-        font-size: 0.65rem !important;
-        font-weight: 900;
-        letter-spacing: 3px !important;
-        border-bottom: 2px solid #000;
+        background: transparent !important;
+        color: #fff !important;
+        padding: 0.8rem !important;
+        font-size: 0.6rem !important;
+        font-weight: normal;
+        letter-spacing: 2px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
         order: 1;
-        opacity: 1 !important;
+        opacity: 0.8 !important;
         pointer-events: auto !important;
         text-transform: uppercase;
     }
@@ -2360,15 +2361,15 @@ section {
     header[role="banner"] .mono-label[style*="var(--pop-lime)"] {
         width: 100% !important;
         text-align: center !important;
-        padding: 1.2rem 5vw !important;
-        background: #111;
+        padding: 1.5rem 5vw !important;
+        background: transparent !important;
         color: var(--pop-lime) !important;
-        font-size: 0.75rem !important;
+        font-size: 0.85rem !important;
         font-weight: bold;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
         order: 3;
         line-height: 1.4 !important;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: none !important;
     }
 
     header[role="banner"] .mono-label span {
@@ -2519,22 +2520,27 @@ section {
     .desktop-case-grid {
         display: grid !important;
         grid-template-columns: 1fr 1fr !important;
-        gap: 2rem !important;
-        padding: 4rem 5vw !important;
+        gap: 1.5rem !important;
+        padding: 2rem 5vw !important;
     }
 
     .desktop-folder-icon {
         width: 100% !important;
+        aspect-ratio: 1 !important;
     }
 
     .desktop-folder-icon svg {
-        width: 50px !important;
-        height: 50px !important;
+        display: none !important;
     }
 
     .desktop-folder-label {
-        font-size: 0.55rem !important;
-        max-width: 90%;
+        font-size: 0.9rem !important;
+        font-family: var(--font-serif) !important;
+        font-style: italic !important;
+        padding: 0.5rem !important;
+        text-align: center !important;
+        margin-top: 0 !important;
+        background: rgba(0, 0, 0, 0.8) !important;
     }
 
     .desktop-folder-content {
@@ -2985,12 +2991,12 @@ section {
 }
 
 /* ════════════════════════════════════════
-   DESKTOP METAPHOR CASE STUDIES
+   DESKTOP METAPHOR CASE STUDIES -> MAGAZINE GALLERY
    ════════════════════════════════════════ */
 .desktop-case-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
     padding: 6rem 10vw;
     background: transparent;
     justify-items: center;
@@ -3000,7 +3006,7 @@ section {
 
 .desktop-folder-group {
     position: relative;
-    display: inline-block;
+    width: 100%;
 }
 
 .desktop-folder-icon {
@@ -3009,39 +3015,73 @@ section {
     align-items: center;
     text-align: center;
     cursor: pointer;
-    transition: filter 0.2s;
-    width: 140px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    aspect-ratio: 4/5;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
     outline: none;
+    justify-content: flex-end;
+}
+
+.desktop-folder-icon svg {
+    display: none !important;
 }
 
 .desktop-folder-icon:hover,
 .desktop-folder-icon:focus {
-    filter: brightness(1.2);
-}
-
-.desktop-folder-icon svg {
-    width: 65px;
-    height: 65px;
-    fill: var(--pop-blue, #000080);
-    margin-bottom: 0.5rem;
-    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.8));
+    filter: grayscale(0%);
+    transform: scale(1.02);
+    border-color: #fff;
 }
 
 .desktop-folder-label {
-    font-family: var(--font-mono);
-    color: white;
-    background: #000080;
-    font-size: 0.75rem;
-    padding: 2px 6px;
-    border: 1px dotted rgba(255, 255, 255, 0.3);
-    word-break: break-all;
-    line-height: 1.2;
+    background: #000;
+    color: #fff;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-style: italic;
+    padding: 1rem;
+    border: none;
+    margin-top: 0;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    opacity: 0.9;
+}
+
+/* THUMBNAIL ASSIGNMENTS */
+.desktop-folder-group:nth-child(1) .desktop-folder-icon {
+    background-image: url('images/lady and palms.webp');
+}
+
+.desktop-folder-group:nth-child(2) .desktop-folder-icon {
+    background-image: url('images/dr_safir_website.png');
+}
+
+.desktop-folder-group:nth-child(3) .desktop-folder-icon {
+    background-image: url('images/artists-doing-touch-ups-model.jpg');
+}
+
+.desktop-folder-group:nth-child(4) .desktop-folder-icon {
+    background-image: url('images/agency_office_vibe_1771445625493.png');
+}
+
+.desktop-folder-group:nth-child(5) .desktop-folder-icon {
+    background-image: url('images/realty.jpg');
+}
+
+.desktop-folder-group:nth-child(6) .desktop-folder-icon {
+    background-image: url('images/dentist.jpeg');
 }
 
 .desktop-folder-group:hover .desktop-folder-label,
 .desktop-folder-icon:focus .desktop-folder-label {
-    background: white;
-    color: #000080;
+    background: #fff;
+    color: #000;
 }
 
 .desktop-folder-content {
