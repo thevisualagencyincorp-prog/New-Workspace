@@ -379,7 +379,7 @@ body::after {
 }
 
 body {
-    background-color: #000;
+    background-color: var(--bg-paper);
     color: var(--text-primary);
     font-family: var(--font-sans);
     line-height: 1.2;
@@ -407,13 +407,14 @@ body {
 
     h1.halftone-text,
     .pixel-header {
-        font-size: clamp(8rem, 25vw, 24rem) !important;
+        font-size: clamp(5rem, 14vw, 15rem) !important;
         line-height: 0.8 !important;
+        white-space: nowrap !important;
     }
 
     h2.halftone-text,
     #booking-terminal h2 {
-        font-size: clamp(6rem, 15vw, 15rem) !important;
+        font-size: clamp(4.5rem, 8vw, 10rem) !important;
         line-height: 0.85 !important;
     }
 
@@ -425,7 +426,7 @@ body {
     .horoscopes-col h2,
     .oracle-col h2,
     .blog-post h3 {
-        font-size: clamp(4.5rem, 10vw, 10rem) !important;
+        font-size: clamp(3.5rem, 6vw, 7rem) !important;
         line-height: 0.9 !important;
     }
 }
@@ -730,7 +731,7 @@ section {
         cursor: auto;
         word-break: normal;
         overflow-wrap: break-word;
-        background-color: #000 !important;
+        background-color: var(--bg-paper) !important;
     }
 
     /* ─── HERO ─── */
