@@ -370,7 +370,7 @@
           <div class="horizontal-item">
             <div class="mock-card" style="background: #111; color: #fff; border-color: #222;">
               <div class="halftone-img-wrap" style="height: 300px; margin-bottom: 2rem;">
-                <img src="images/realty.jpg"
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
                   alt="Luxury real estate branding and high-end identity design by The Agency in Bakersfield"
                   loading="lazy">
                 <div class="sticker sticker-urgent"
@@ -389,7 +389,7 @@
           <div class="horizontal-item">
             <div class="mock-card" style="background: var(--pop-pink); color: #fff; border-color: #000;">
               <div class="halftone-img-wrap" style="height: 300px; margin-bottom: 2rem;">
-                <img src="images/law.jpeg" alt="Custom law firm web design and elite UX/UI development in Kern County"
+                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80" alt="Custom law firm web design and elite UX/UI development in Kern County"
                   loading="lazy">
                 <div class="sticker sticker-approved" style="bottom: 10px; right: 10px; transform: scale(0.6);">
                   <span>VERIFIED</span><span>CODE</span>
@@ -405,7 +405,7 @@
           <div class="horizontal-item">
             <div class="mock-card" style="background: #111; color: #fff; border-color: #222;">
               <div class="halftone-img-wrap" style="height: 300px; margin-bottom: 2rem;">
-                <img src="images/collab copy.jpg"
+                <img src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?auto=format&fit=crop&w=800&q=80"
                   alt="Art directed business photography and cinematic brand storytelling" loading="lazy">
               </div>
               <h3 style="font-family: var(--font-serif); font-style: italic;">
@@ -437,8 +437,7 @@
           <div class="horizontal-item">
             <div class="mock-card" style="background: #111; color: #fff; border-color: #222;">
               <div class="halftone-img-wrap" style="height: 300px; margin-bottom: 2rem;">
-                <img src="images/law.jpeg" alt="AI Content Strategy and Synthetic Media" loading="lazy"
-                  style="filter: hue-rotate(290deg) grayscale(100%);">
+                <img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=800&q=80" alt="AI Content Strategy and Synthetic Media" loading="lazy">
                 <div class="sticker sticker-classified" style="top: 10px; right: 10px; transform: rotate(5deg);">
                   BETA_ACCESS</div>
               </div>
@@ -1688,14 +1687,25 @@
             <div class="zoltar-lucky-item">LUCKY NUMBERS: <span id="cardLuckyNums">4, 8, 15, 16, 23, 42</span></div>
             <div class="zoltar-lucky-item">LUCKY COLOR: <span id="cardLuckyColor">NEON PINK</span></div>
           </div>
-          <div class="zoltar-keep" style="margin-bottom: 5px;">KEEP THIS CARD FOR GOOD LUCK</div>
+          <div class="zoltar-keep" style="margin-bottom: 5px; line-height: 1.4;">
+            📸 SCREENSHOT TO SAVE THE TRANSMISSION<br>
+            <span style="color: var(--pop-blue); font-size: 0.75rem;">SHARE WITH <b style="color: #000; text-decoration: underline;">#meet_the_agency</b></span>
+          </div>
           <div
             style="font-family: var(--font-mono); font-size: 0.5rem; color: #8B1A1A; opacity: 0.6; font-weight: bold; letter-spacing: 1px; display: flex; align-items: center; gap: 4px;">
             © 1988 THE AGENCY INTERNATIONAL
           </div>
         </div>
         <div class="zoltar-stub-right">
-          <button class="btn-zoltar-action" onclick="window.print()">🪙 SAVE FORTUNE</button>
+          <style>
+             @media print { 
+               #physicalCard { box-shadow: none !important; margin: 0 !important; width: 100% !important; border: none !important; top: 0 !important; left: 0 !important; transform: none !important; position: static !important; }
+               body * { visibility: hidden; }
+               #physicalCard, #physicalCard * { visibility: visible; }
+               .btn-zoltar-action { display: none !important; }
+             }
+          </style>
+          <button class="btn-zoltar-action" onclick="window.print()">🖨️ PRINT RECORD</button>
           <button class="btn-zoltar-action" id="closeCard">✕ CLOSE</button>
         </div>
       </div>
