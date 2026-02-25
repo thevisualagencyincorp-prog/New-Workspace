@@ -3127,6 +3127,29 @@ section {
     overflow-x: hidden !important;
 }
 
+@media (min-width: 900px) {
+    .desktop-folder-content .case-card {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 2rem;
+        align-items: start;
+        padding-top: 3.5rem;
+        /* room for the close button */
+    }
+
+    .desktop-folder-content .case-card>.halftone-img-wrap {
+        grid-column: 1;
+        grid-row: 1 / span 10;
+        margin-top: 0 !important;
+        position: sticky;
+        top: 0;
+    }
+
+    .desktop-folder-content .case-card>*:not(.halftone-img-wrap):not(.tape-decor):not(.case-card-close) {
+        grid-column: 2;
+    }
+}
+
 @keyframes folderPop {
     0% {
         transform: translate(-50%, -45%) scale(0.95);
