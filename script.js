@@ -96,15 +96,20 @@ document.addEventListener('DOMContentLoaded', () => {
             // Skip horizontal scroll on mobile — let CSS handle it
             if (window.innerWidth <= 768) {
                 horizontalTrack.style.transform = 'none';
-                return;
-            }
+            } else {
+                const rect = horizontalSection.getBoundingClientRect();
+                const sectionHeight = horizontalSection.offsetHeight;
+                const windowHeight = window.innerHeight;
 
-            const rect = horizontalSection.getBoundingClientRect();
-            const sectionHeight = horizontalSection.offsetHeight;
-            const windowHeight = window.innerHeight;
+                let totalProgress = 0;
+                if (rect.top > 0) {
+                    totalProgress = 0;
+                } else if (rect.bottom < windowHeight) {
+                    totalProgress = 1;
+                } else {
+                    totalProgress = Math.abs(rect.top) / (sectionHeight - windowHeight);
+                }
 
-            if (rect.top <= 0 && rect.bottom >= windowHeight) {
-                const totalProgress = Math.abs(rect.top) / (sectionHeight - windowHeight);
                 const trackWidth = horizontalTrack.scrollWidth;
                 const windowWidth = window.innerWidth;
 
@@ -115,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             requestAnimationFrame(updateHorizontal);
         };
+        // Start the loop
         updateHorizontal();
     }
 
