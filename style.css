@@ -3078,6 +3078,14 @@ section {
     background-image: url('images/dentist.jpeg');
 }
 
+.desktop-folder-group:nth-child(7) .desktop-folder-icon {
+    background-image: url('images/twisted_lens_gear_flatlay_1771447231386.png');
+}
+
+.desktop-folder-group:nth-child(8) .desktop-folder-icon {
+    background-image: url('images/realty.jpg');
+}
+
 .desktop-folder-group:hover .desktop-folder-label,
 .desktop-folder-icon:focus .desktop-folder-label {
     background: #fff;
