@@ -407,14 +407,14 @@ body {
 
     h1.halftone-text,
     .pixel-header {
-        font-size: clamp(4.5rem, 8vw, 8rem) !important;
-        line-height: 0.8 !important;
-        white-space: nowrap !important;
+        font-size: clamp(3rem, 5vw, 6rem) !important;
+        line-height: 0.9 !important;
+        white-space: normal !important;
     }
 
     h2.halftone-text,
     #booking-terminal h2 {
-        font-size: clamp(3.5rem, 6vw, 6rem) !important;
+        font-size: clamp(2.5rem, 4.5vw, 5rem) !important;
         line-height: 0.85 !important;
     }
 
@@ -426,7 +426,7 @@ body {
     .horoscopes-col h2,
     .oracle-col h2,
     .blog-post h3 {
-        font-size: clamp(2.5rem, 4vw, 4rem) !important;
+        font-size: clamp(2rem, 3.5vw, 4rem) !important;
         line-height: 0.9 !important;
     }
 }
@@ -452,7 +452,7 @@ body {
 }
 
 .pixel-header {
-    font-size: clamp(5rem, 18vw, 18rem);
+    font-size: clamp(3rem, 8vw, 6rem);
     text-transform: uppercase;
 }
 
@@ -741,14 +741,14 @@ section {
 
     h1.halftone-text,
     .pixel-header {
-        font-size: clamp(2.2rem, 12vw, 4rem) !important;
+        font-size: clamp(2rem, 10vw, 3rem) !important;
         white-space: normal !important;
-        line-height: 0.9 !important;
+        line-height: 1 !important;
     }
 
     h2.halftone-text,
     #booking-terminal h2.halftone-text {
-        font-size: clamp(1.8rem, 8vw, 3.2rem) !important;
+        font-size: clamp(1.6rem, 7vw, 2.5rem) !important;
         line-height: 1 !important;
         word-break: break-word !important;
     }
@@ -756,7 +756,7 @@ section {
     h3.halftone-text,
     .mock-card h3,
     .horizontal-item h3 {
-        font-size: clamp(1.5rem, 6vw, 2.5rem) !important;
+        font-size: clamp(1.4rem, 5vw, 2rem) !important;
         line-height: 1.1 !important;
     }
 

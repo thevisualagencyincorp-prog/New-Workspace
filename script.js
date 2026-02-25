@@ -627,8 +627,8 @@ if (globalClippy) {
 }
 
 // FRANK THE DIGITAL PET LOGIC
-let frankHunger = 100;
-let frankLove = 80;
+let frankHunger = 90;
+let frankLove = 70;
 let frankActionTimeout = null;
 
 function updateFrankUI() {
