@@ -2155,9 +2155,14 @@ section {
         display: none !important;
     }
 
-    /* Magazine date — overflows the header bar */
+    /* Magazine date — adjusted for mobile visibility instead of hiding */
     #magazine-time {
-        display: none !important;
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        left: 0 !important;
+        right: 0 !important;
+        transform: none !important;
     }
 
     /* Static inline Clippy in FAQ — global Clippy still pops */
@@ -2223,8 +2228,10 @@ section {
     }
 
     #magazine-time {
-        top: 1rem !important;
-        font-size: 0.6rem !important;
+        top: 0.5rem !important;
+        font-size: 0.5rem !important;
+        letter-spacing: 1px !important;
+        opacity: 0.5 !important;
     }
 
     /* ── HERO CREDITS: 2x2 Grid ────────────────────── */
