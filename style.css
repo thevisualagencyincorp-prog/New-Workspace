@@ -984,9 +984,6 @@ section {
     }
 
     /* ─── TYPOGRAPHY ─── */
-    .halftone-text {
-        font-size: 15vw !important;
-    }
 
     .mono-label {
         font-size: 0.6rem !important;
@@ -1041,9 +1038,6 @@ section {
         transform: scale(0.8) !important;
     }
 
-    .halftone-text {
-        font-size: 18vw !important;
-    }
 }
 
 /* FUN ADDITIONS WRAPPER (COMBINED) */
@@ -2209,10 +2203,32 @@ section {
     }
 
     /* ── GLOBAL MOBILE TYPOGRAPHY & SPACING ─────── */
+    h1.halftone-text,
+    .pixel-header {
+        font-size: clamp(4.5rem, 16vw, 7rem) !important;
+        line-height: 0.8 !important;
+    }
+
+    h2.halftone-text,
+    #booking-terminal h2 {
+        font-size: clamp(3.5rem, 12vw, 5.5rem) !important;
+        line-height: 0.85 !important;
+    }
+
+    h3.halftone-text,
+    .mock-card h3,
+    .horizontal-item h3,
+    .protocol-row h3,
+    .case-card h3,
+    .horoscopes-col h2,
+    .oracle-col h2,
+    .blog-post h3 {
+        font-size: clamp(2.8rem, 10vw, 4rem) !important;
+        line-height: 0.9 !important;
+    }
+
     .halftone-text {
-        font-size: clamp(2rem, 9vw, 3.5rem) !important;
         white-space: normal !important;
-        line-height: 1 !important;
         word-break: normal !important;
         padding-top: 0.2em !important;
         padding-bottom: 0.2em !important;
