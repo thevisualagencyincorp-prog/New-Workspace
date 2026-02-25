@@ -137,8 +137,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 const randomIndex = Math.floor(Math.random() * fortuneSpans.length);
                 const fortune = fortuneSpans[randomIndex].getAttribute('data-fortune');
 
+                // Update content
                 cardText.textContent = fortune;
                 cardSerial.textContent = `#${Math.floor(1000 + Math.random() * 9000)}-${Math.floor(10 + Math.random() * 89)}`;
+
+                // Randomize Lucky Numbers
+                const luckies = [];
+                while (luckies.length < 5) {
+                    const n = Math.floor(Math.random() * 99) + 1;
+                    if (!luckies.includes(n)) luckies.push(n);
+                }
+                document.getElementById('cardLuckyNums').textContent = luckies.sort((a, b) => a - b).join(', ');
+
+                // Randomize Lucky Color
+                const colors = ['NEON PINK', 'CYBER TEAL', 'COBALT BLUE', 'ELECTRIC LIME', 'VINTAGE GOLD', 'CRIMSON RED', 'ULTRA VIOLET'];
+                document.getElementById('cardLuckyColor').textContent = colors[Math.floor(Math.random() * colors.length)];
+
                 card.classList.add('active');
                 overlay.classList.add('active');
             }
@@ -606,3 +620,55 @@ if (globalClippy) {
     });
 }
 
+// FRANK THE DIGITAL PET LOGIC
+let frankHunger = 100;
+let frankLove = 80;
+let frankActionTimeout = null;
+
+function updateFrankUI() {
+    const hungerBar = document.getElementById('frank-battery-bar');
+    const hungerVal = document.getElementById('frank-battery-val');
+    const loveBar = document.getElementById('frank-help-bar');
+    const loveVal = document.getElementById('frank-help-val');
+
+    if (hungerBar) hungerBar.style.width = frankHunger + '%';
+    if (hungerVal) hungerVal.textContent = frankHunger + '%';
+    if (loveBar) loveBar.style.width = frankLove + '%';
+    if (loveVal) loveVal.textContent = frankLove + '%';
+}
+
+function frankEmotion(emotion) {
+    const img = document.getElementById('frank-img');
+    const wrap = document.getElementById('frank-wrap');
+    if (!img || !wrap) return;
+
+    // Clear previous emotions
+    img.className = emotion;
+
+    // Add temporary animation class
+    wrap.classList.add('action-bounce');
+    clearTimeout(frankActionTimeout);
+    frankActionTimeout = setTimeout(() => {
+        wrap.classList.remove('action-bounce');
+        img.className = 'sitting';
+    }, 2000);
+}
+
+function petFrank() {
+    frankLove = Math.min(100, frankLove + 10);
+    frankEmotion('happy');
+    updateFrankUI();
+}
+
+function feedFrank() {
+    frankHunger = Math.min(100, frankHunger + 20);
+    frankEmotion('eating');
+    updateFrankUI();
+}
+
+// Slow decay
+setInterval(() => {
+    frankHunger = Math.max(0, frankHunger - 1);
+    frankLove = Math.max(0, frankLove - 1);
+    updateFrankUI();
+}, 10000);

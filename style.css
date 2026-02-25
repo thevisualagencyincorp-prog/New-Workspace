@@ -379,7 +379,7 @@ body::after {
 }
 
 body {
-    background-color: var(--bg-paper);
+    background-color: #000;
     color: var(--text-primary);
     font-family: var(--font-sans);
     line-height: 1.2;
@@ -400,6 +400,34 @@ body {
     mask-image: radial-gradient(circle, #000 1.5px, transparent 1.5px);
     -webkit-mask-size: 4px 4px;
     mask-size: 4px 4px;
+}
+
+/* ── DESKTOP TYPOGRAPHY BOOST ──────────────────── */
+@media (min-width: 900px) {
+
+    h1.halftone-text,
+    .pixel-header {
+        font-size: clamp(8rem, 25vw, 24rem) !important;
+        line-height: 0.8 !important;
+    }
+
+    h2.halftone-text,
+    #booking-terminal h2 {
+        font-size: clamp(6rem, 15vw, 15rem) !important;
+        line-height: 0.85 !important;
+    }
+
+    h3.halftone-text,
+    .mock-card h3,
+    .horizontal-item h3,
+    .protocol-row h3,
+    .case-card h3,
+    .horoscopes-col h2,
+    .oracle-col h2,
+    .blog-post h3 {
+        font-size: clamp(4.5rem, 10vw, 10rem) !important;
+        line-height: 0.9 !important;
+    }
 }
 
 .animated-gradient {
@@ -702,6 +730,7 @@ section {
         cursor: auto;
         word-break: normal;
         overflow-wrap: break-word;
+        background-color: #000 !important;
     }
 
     /* ─── HERO ─── */
@@ -1790,12 +1819,15 @@ section {
 .card-fortune-text {
     font-family: 'Playfair Display', Georgia, serif;
     font-style: italic;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    min-height: 100px;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    min-height: 120px;
     text-align: center;
     color: #2C1010;
-    padding: 0.5rem 2rem 1.2rem;
+    padding: 0.5rem 2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Perforated ticket divider */
@@ -1849,13 +1881,34 @@ section {
     letter-spacing: 0.1em;
 }
 
+.zoltar-lucky-wrap {
+    margin: 0.5rem 0;
+    border-top: 1px dotted rgba(139, 26, 26, 0.3);
+    padding-top: 0.4rem;
+}
+
+.zoltar-lucky-item {
+    font-family: 'Courier New', monospace;
+    font-size: 0.55rem;
+    color: #8B1A1A;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-bottom: 2px;
+}
+
+.zoltar-lucky-item span {
+    color: #C9A84C;
+}
+
 .zoltar-keep {
     font-family: Georgia, serif;
     font-style: italic;
-    font-size: 0.55rem;
+    font-size: 0.5rem;
     color: #8B1A1A;
-    opacity: 0.5;
-    margin-top: 0.2rem;
+    opacity: 0.6;
+    margin-top: 0.4rem;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .zoltar-stub-right {
@@ -2167,7 +2220,7 @@ section {
 
     section {
         padding: 10vh 5vw !important;
-        margin-bottom: 4rem !important;
+        margin-bottom: 0 !important;
     }
 
     #magazine-time {
@@ -2193,6 +2246,7 @@ section {
     section {
         padding: 8vh 5vw !important;
         min-height: unset !important;
+        margin-bottom: 0 !important;
     }
 
     /* Hero does NOT need min-height preservation — sticky is disabled on mobile */
@@ -2233,19 +2287,76 @@ section {
 
     /* ── HEADER & HERO ──────────────────────────────── */
     header[role="banner"] {
-        padding: 1.5rem 5vw !important;
+        padding: 0 !important;
+        flex-direction: column !important;
+        background: #000;
+        border-bottom: 3px solid #fff;
     }
 
-    .pixel-header {
-        font-size: clamp(4rem, 15vw, 8rem) !important;
-        line-height: 0.8 !important;
+    header[role="banner"] a {
+        display: block !important;
+        width: 100% !important;
+        padding: 2.5rem 5vw !important;
+        text-align: center !important;
+        order: 2;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, transparent 100%);
+    }
+
+    header[role="banner"] a .halftone-text {
+        font-size: 3.5rem !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        font-weight: 950 !important;
     }
 
     #magazine-time {
-        top: 0.5rem !important;
-        font-size: 0.5rem !important;
-        letter-spacing: 1px !important;
-        opacity: 0.5 !important;
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        background: #fff;
+        color: #000 !important;
+        padding: 0.6rem !important;
+        font-size: 0.65rem !important;
+        font-weight: 900;
+        letter-spacing: 3px !important;
+        border-bottom: 2px solid #000;
+        order: 1;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        text-transform: uppercase;
+    }
+
+    header[role="banner"] .mono-label[style*="var(--pop-lime)"] {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 1.2rem 5vw !important;
+        background: #111;
+        color: var(--pop-lime) !important;
+        font-size: 0.75rem !important;
+        font-weight: bold;
+        letter-spacing: 1px;
+        order: 3;
+        line-height: 1.4 !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header[role="banner"] .mono-label span {
+        display: block;
+        margin-top: 6px;
+        color: #fff;
+        opacity: 0.6;
+        font-size: 0.55rem;
+        letter-spacing: 2px;
+    }
+
+    .pixel-header {
+        font-size: clamp(3.5rem, 15vw, 7rem) !important;
+        line-height: 0.8 !important;
+        margin: 2rem 0 !important;
     }
 
     /* ── HERO CREDITS: 2x2 Grid ────────────────────── */
