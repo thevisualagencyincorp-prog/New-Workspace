@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
         f.addEventListener('submit', (e) => {
             if (f.id === 'agencyBrief') return; // Brief has special logic
             e.preventDefault();
-            const btn = f.querySelector('button');
+            const btn = f.querySelector('button[type="submit"]') || f.querySelector('button');
             const originalText = btn.textContent;
             btn.textContent = "SENDING_SIGNAL...";
             btn.disabled = true;
@@ -222,18 +222,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 method: 'POST',
                 body: new FormData(f),
                 headers: { 'Accept': 'application/json' }
-            }).then(() => {
-                if (destructMini) {
-                    f.style.display = "none";
-                    destructMini.style.display = "block";
-                    startMiniDestruct(destructMini, f);
+            }).then(response => {
+                if (response.ok) {
+                    if (destructMini) {
+                        f.style.display = "none";
+                        destructMini.style.display = "block";
+                        startMiniDestruct(destructMini, f);
+                    } else {
+                        btn.textContent = "SIGNAL_SENT_✓";
+                        f.reset();
+                        setTimeout(() => {
+                            btn.textContent = originalText;
+                            btn.disabled = false;
+                        }, 3000);
+                    }
                 } else {
-                    btn.textContent = "SIGNAL_SENT_✓";
-                    f.reset();
-                    setTimeout(() => {
-                        btn.textContent = originalText;
-                        btn.disabled = false;
-                    }, 3000);
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            alert(data["errors"].map(error => error["message"]).join(", "));
+                        } else {
+                            alert("Oops! There was a problem submitting your form");
+                        }
+                    });
+                    btn.textContent = "SIGNAL_ERROR";
+                    btn.disabled = false;
                 }
             }).catch(error => {
                 console.error('Signal Failure:', error);
@@ -275,21 +287,71 @@ document.addEventListener('DOMContentLoaded', () => {
     if (briefForm && destructMsg) {
         briefForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const btn = briefForm.querySelector('button');
-            btn.textContent = "DRAFING_BRIEF...";
+
+            if (!briefForm.checkValidity()) {
+                // Determine which step has the invalid input to help the user
+                let invalidStep = 1;
+                const steps = document.querySelectorAll('.form-step');
+                steps.forEach((step, index) => {
+                    if (step.querySelector(':invalid')) {
+                        invalidStep = index + 1;
+                    }
+                });
+
+                alert(`Please complete the required fields on Step ${invalidStep} before submitting.`);
+
+                // If there's a nextStep function, try to navigate them there
+                if (typeof nextStep === 'function') {
+                    nextStep(invalidStep);
+                    setTimeout(() => briefForm.reportValidity(), 100);
+                } else {
+                    briefForm.reportValidity();
+                }
+                return;
+            }
+
+            const btn = briefForm.querySelector('button[type="submit"]');
+            const originalText = btn.textContent;
+            btn.textContent = "DRAFTING_BRIEF...";
+            btn.disabled = true;
+
+            const formData = new FormData(briefForm);
 
             fetch(briefForm.action, {
                 method: 'POST',
-                body: new FormData(briefForm),
+                body: formData,
                 headers: { 'Accept': 'application/json' }
-            }).then(() => {
-                briefForm.style.opacity = "0";
-                setTimeout(() => {
-                    briefForm.style.display = "none";
-                    destructMsg.style.display = "block";
-                    destructMsg.style.opacity = "1";
-                    startDestructSequence();
-                }, 500);
+            }).then(response => {
+                if (response.ok) {
+                    briefForm.style.opacity = "0";
+                    setTimeout(() => {
+                        briefForm.style.display = "none";
+                        destructMsg.style.display = "block";
+                        destructMsg.style.opacity = "1";
+                        startDestructSequence();
+                    }, 500);
+                } else {
+                    response.json().then(data => {
+                        if (data && data.errors) {
+                            alert(data.errors.map(error => error.message).join(", "));
+                        } else if (data && data.error) {
+                            alert(data.error);
+                        } else {
+                            alert("Oops! There was a problem submitting your brief. It might be rejected by the server.");
+                        }
+                    }).catch(() => {
+                        alert("Oops! There was a problem submitting your brief. Status: " + response.status);
+                    });
+                    btn.textContent = "SYSTEM_ERROR";
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.disabled = false;
+                    }, 3000);
+                }
+            }).catch(error => {
+                console.error('Submission error:', error);
+                btn.textContent = "SIGNAL_ERROR";
+                btn.disabled = false;
             });
         });
     }
@@ -309,6 +371,27 @@ document.addEventListener('DOMContentLoaded', () => {
                     setTimeout(() => {
                         briefForm.reset();
                         briefForm.style.opacity = "1";
+                        // Restore button state
+                        const btnSubmit = briefForm.querySelector('button[type="submit"]');
+                        if (btnSubmit) {
+                            btnSubmit.textContent = "SUBMIT INQUIRY";
+                            btnSubmit.disabled = false;
+                        }
+                        // Reset to Step 1
+                        if (typeof nextStep === 'function') {
+                            nextStep(1);
+                        } else {
+                            document.querySelectorAll('.form-step').forEach(el => el.style.display = 'none');
+                            const firstStep = document.getElementById('step1');
+                            if (firstStep) firstStep.style.display = 'block';
+                            ['tab1', 'tab2', 'tab3'].forEach((t, i) => {
+                                const tab = document.getElementById(t);
+                                if (tab) {
+                                    tab.style.background = i === 0 ? '#e5e5e0' : '#ccc';
+                                    tab.style.opacity = i === 0 ? '1' : '0.7';
+                                }
+                            });
+                        }
                     }, 50);
                 }, 500);
             }
