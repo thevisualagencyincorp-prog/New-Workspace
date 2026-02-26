@@ -1513,16 +1513,20 @@ section {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    z-index: 10000;
+    z-index: 9990;
     max-width: 220px;
     font-size: 0.8rem;
     transform: translateY(250%);
-    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
     box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.4);
 }
 
 .social-proof-toast.active {
     transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .toast-avatar {
@@ -2804,7 +2808,6 @@ section {
         width: 240px !important;
         right: 0.5rem !important;
         left: auto !important;
-        bottom: 4rem !important;
         transform: scale(0.75) !important;
         transform-origin: bottom right !important;
     }
