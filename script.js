@@ -51,15 +51,7 @@ window.addEventListener('load', () => {
 
     function finishPreloader() {
         pre.classList.add('finish');
-        setTimeout(() => {
-            pre.remove();
-            // Show intro summary modal after boot
-            const modal = document.getElementById('intro-resume-modal');
-            if (modal) {
-                modal.style.display = 'flex';
-                setTimeout(() => modal.style.opacity = '1', 50);
-            }
-        }, 1200);
+        setTimeout(() => pre.remove(), 1200);
     }
 
     // Start with a small delay for the logo reveal animation
@@ -172,24 +164,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Fun hover effect on the Zoltar Cabinet
+        // Fun hover effect on the crystal ball
         oracleVisual.addEventListener('mouseenter', () => {
-            const ball = oracleVisual.querySelector('.zoltar-ball');
-            if (ball) ball.style.filter = 'drop-shadow(0 0 80px rgba(255,200,255,1)) contrast(1.2)';
+            oracleVisual.style.transform = 'scale(1.05) translateY(-5px)';
+            oracleVisual.querySelector('img').style.filter = 'drop-shadow(0 0 80px rgba(255,200,255,1)) contrast(1.2)';
+            const label = oracleVisual.querySelector('.mono-label');
+            if (label) label.style.color = '#fff';
         });
 
         oracleVisual.addEventListener('mouseleave', () => {
-            const ball = oracleVisual.querySelector('.zoltar-ball');
-            if (ball) ball.style.filter = 'drop-shadow(0 0 50px var(--pop-orange)) contrast(1.1)';
+            oracleVisual.style.transform = 'scale(1) translateY(0)';
+            oracleVisual.querySelector('img').style.filter = 'drop-shadow(0 0 50px var(--pop-orange)) contrast(1.1)';
+            const label = oracleVisual.querySelector('.mono-label');
+            if (label) label.style.color = 'var(--pop-orange)';
         });
 
         oracleVisual.addEventListener('mousedown', () => {
-            oracleVisual.style.transform = 'scale(0.98) translateY(2px)';
+            oracleVisual.style.transform = 'scale(0.95) translateY(5px)';
             oracleVisual.style.transition = 'all 0.1s ease';
         });
 
         oracleVisual.addEventListener('mouseup', () => {
-            oracleVisual.style.transform = 'scale(1) translateY(0)';
+            oracleVisual.style.transform = 'scale(1.05) translateY(-5px)';
             oracleVisual.style.transition = 'all 0.3s ease';
         });
     }
@@ -216,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const btn = f.querySelector('button[type="submit"]') || f.querySelector('button');
             const originalText = btn.textContent;
-            btn.textContent = "SENDING_INQUIRY...";
+            btn.textContent = "SENDING_SIGNAL...";
             btn.disabled = true;
 
             const container = f.parentElement;
@@ -233,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         destructMini.style.display = "block";
                         startMiniDestruct(destructMini, f);
                     } else {
-                        btn.textContent = "INQUIRY_SENT_✓";
+                        btn.textContent = "SIGNAL_SENT_✓";
                         f.reset();
                         setTimeout(() => {
                             btn.textContent = originalText;
@@ -248,12 +244,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             alert("Oops! There was a problem submitting your form");
                         }
                     });
-                    btn.textContent = "SUBMISSION_ERROR";
+                    btn.textContent = "SIGNAL_ERROR";
                     btn.disabled = false;
                 }
             }).catch(error => {
-                console.error('Submission Failure:', error);
-                btn.textContent = "SUBMISSION_ERROR";
+                console.error('Signal Failure:', error);
+                btn.textContent = "SIGNAL_ERROR";
                 btn.disabled = false;
             });
         });
@@ -273,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 form.style.display = "block";
                 form.reset();
                 if (btn) {
-                    btn.textContent = "INQUIRY_SENT_✓";
+                    btn.textContent = "SIGNAL_SENT_✓";
                     btn.disabled = false;
                     setTimeout(() => {
                         btn.textContent = btn.getAttribute('data-original') || btn.textContent;
@@ -354,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }).catch(error => {
                 console.error('Submission error:', error);
-                btn.textContent = "SUBMISSION_ERROR";
+                btn.textContent = "SIGNAL_ERROR";
                 btn.disabled = false;
             });
         });
@@ -416,7 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scorpio: { title: "Scorpio", read: "INTENSITY BREEDS LOYALTY. DIVE DEEPER INTO CONSUMER PSYCHOLOGY. YOUR SECRETS ARE YOUR STRATEGIC ADVANTAGE.", lucky: "04", animal: "SNAKE", vibe: "SHADOW WORK" },
         sagittarius: { title: "Sagittarius", read: "SCALE GLOBALLY. YOUR CURRENT DIGITAL UX IS TOO LOCAL FOR YOUR AMBITION. EXPLORE NEW FRONTIERS IN YOUR AD COPY.", lucky: "08", animal: "RAT", vibe: "GLOBAL REACH" },
         capricorn: { title: "Capricorn", read: "THE VIEW IS BEST FROM THE TOP. STRATEGIZE FOR THE LONG HORIZON. YOUR AMBITION IS THE ONLY FUEL YOU NEED.", lucky: "00", animal: "ROOSTER", vibe: "ZENITH GOALS" },
-        aquarius: { title: "Aquarius", read: "THE FUTURE IS NOW. BREAK THE TRADITIONAL RULES OF YOUR INDUSTRY. RADICAL AUTHENTICITY IS YOUR CURRENT FREQUENCY.", lucky: "11", animal: "DOG", vibe: "NEO VISION" },
+        aquarius: { title: "Aquarius", read: "THE FUTURE IS NOW. BREAK THE TRADITIONAL RULES OF YOUR INDUSTRY. RADICAL AUTHENTICITY IS YOUR CURRENT SIGNAL.", lucky: "11", animal: "DOG", vibe: "NEO VISION" },
         pisces: { title: "Pisces", read: "ABUNDANCE COINCIDES WITH CLARITY. CLEAN YOUR DIGITAL LENS. TRUST THE INTUITION OF YOUR BRAND IDENTITY.", lucky: "22", animal: "CAT", vibe: "VIVID DREAM" }
     };
 
@@ -711,23 +707,6 @@ if (globalClippy) {
             }
         }
     });
-}
-
-// INTRO MODAL CONTROLS
-function closeIntroModal() {
-    const modal = document.getElementById('intro-resume-modal');
-    if (modal) {
-        modal.style.opacity = '0';
-        setTimeout(() => modal.style.display = 'none', 300);
-    }
-}
-
-function bypassExperience() {
-    closeIntroModal();
-    const contact = document.getElementById('contact-brief');
-    if (contact) {
-        contact.scrollIntoView({ behavior: 'smooth' });
-    }
 }
 
 // End of script
