@@ -718,13 +718,14 @@ section {
 }
 
 .horizontal-item {
-    flex: 0 0 60vw;
-    height: 75vh;
+    flex: 0 0 35vw;
+    height: auto;
+    min-height: 80vh;
 }
 
 @media (max-width: 1024px) {
     .horizontal-item {
-        flex: 0 0 80vw;
+        flex: 0 0 55vw;
     }
 }
 
@@ -2486,7 +2487,8 @@ section {
     }
 
     .horizontal-item .halftone-img-wrap {
-        height: 200px !important;
+        height: auto !important;
+        aspect-ratio: 4 / 5 !important;
     }
 
     .card-highlight {
