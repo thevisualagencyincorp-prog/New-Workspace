@@ -236,151 +236,591 @@
       </div>
     </div>
 
-    <!-- SECTION 02: THE WELCOME DISPATCH (RETRO WINDOW) -->
-    <section class="bg-graph"
-      style="position: relative; overflow: hidden; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 15vh 5vw;">
-
-      <!-- RETRO ERROR WINDOW OVERLAY (SQUARE & REPOSITIONED) -->
-      <div class="parallax-layer" data-speed="0.1" id="vibe-check-modal"
-        style="position: absolute; top: 5%; right: 5%; width: 240px; height: 260px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; z-index: 10; box-shadow: 5px 5px 0px rgba(0,0,0,0.5); display: flex; flex-direction: column;">
-        <div
-          style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; display: flex; justify-content: space-between; flex-shrink: 0;">
-          <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">✨</span>
-            VALUABLE_INSIGHT.EXE</span><span onclick="this.closest('#vibe-check-modal').style.display='none'"
-            style="background: silver; color: black; padding: 0 4px; cursor: pointer; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
+    <!-- SECTION 05: THE ARCHIVE (CASE STUDIES) -->
+    <section id="archive" class="bg-graph-dark" style="padding: 8vh 0; border-top: 1px solid #000;">
+      <div style="text-align: center; margin-bottom: 6vh; position: relative; z-index: 2;">
+        <span class="chapter-mark" style="color: white; border-color: white; white-space: nowrap;">CHAPTER I: THE
+          ARCHIVE / CASE STUDIES</span>
+        <h2 class="halftone-text" style="color: white; position: relative; z-index: 10;">Selected Works.</h2>
+        <!-- Background Stickers -->
+        <div class="sticker sticker-classified" style="top: -20px; right: 5%; transform: rotate(10deg);">ACCESS:
+          GRANTED
         </div>
-        <div
-          style="padding: 1.5rem; color: black; font-family: var(--font-mono); font-size: 0.82rem; background: #fff; border: 2px inset #fff; flex: 1; display: flex; flex-direction: column; justify-content: center;">
-          <b>ARE YOU READY TO DISRUPT?</b><br><br>Warning: Continued scrolling may result in extreme brand clarity and
-          market authority.<br><br>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-            <button onclick="document.getElementById('vibe-check-modal').style.display='none'"
-              style="background: silver; font-family: var(--font-mono); border: 2px solid white; border-bottom-color: black; border-right-color: black; padding: 8px; cursor: pointer; font-weight: bold; font-size: 0.7rem;">I'M
-              READY</button>
-            <button onclick="document.getElementById('vibe-check-modal').style.display='none'"
-              style="background: silver; font-family: var(--font-mono); border: 2px solid white; border-bottom-color: black; border-right-color: black; padding: 8px; cursor: pointer; font-size: 0.7rem;">NOT
-              YET</button>
-          </div>
+        <div class="sticker sticker-postit" style="top: -30px; left: 10%; transform: rotate(-5deg); z-index: 20;">
+          <b>NOTE:</b><br>We fix things. Yes, even that...
         </div>
       </div>
 
-      <div class="reveal" id="welcome-doc-modal"
-        style="text-align: center; max-width: 800px; padding: 2.5rem 1.5rem; position: relative; z-index: 2; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; box-shadow: 10px 10px 0px rgba(0,0,0,0.5);">
-        <div
-          style="position: absolute; top: 0; left: 0; width: 100%; background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; text-align: left; display: flex; justify-content: space-between;">
-          <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">💎</span>
-            SYSTEM_ACCESS: BRAND_DRAFTS.DOC</span><span
-            onclick="this.closest('#welcome-doc-modal').style.display='none'"
-            style="background: silver; color: black; padding: 0 4px; cursor: pointer; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
-        </div>
+      <div class="desktop-case-grid">
+        <!-- 01: Wax Therapy -->
+        <div class="desktop-folder-group">
+          <div class="desktop-folder-icon" tabindex="0">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="65" height="65"
+              style="fill: #000080; filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.8)); margin-bottom: 0.5rem; flex-shrink: 0;">
+              <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
+            </svg>
+            <span class="desktop-folder-label">WAX_THERAPY_ASSETS</span>
+          </div>
+          <div class="desktop-folder-content">
+            <div class="case-card note-paper">
+              <!-- Close Button -->
+              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'">X</div>
 
-        <span class="chapter-mark" style="margin-top: 2rem;">CHAPTER I: THE PROLOGUE</span>
-        <h2 class="halftone-text blend-difference animated-gradient"
-          style="font-size: clamp(1.5rem, 6vw, 3.8rem); color: #000; mix-blend-mode: normal; line-height: 1.1; word-break: normal;">
-          Welcome<br>Industry Icons!</h2>
-        <p class="mono-label blend-difference"
-          style="margin-top: 3rem; font-size: 1.2rem; line-height: 1.6; text-transform: none; letter-spacing: normal; color: #000; mix-blend-mode: normal; font-weight: bold;">
-          Your behind-the-scenes creative partners.<br>
-          We scale ambitious brands with strategy, identity, and content.</p>
-        <div class="floating-cursor"
-          style="position: absolute; top: 20%; right: 10%; color: var(--pop-pink); font-size: 2.5rem; text-shadow: 0 0 10px rgba(255,255,255,0.5);">
-          ✦</div>
-        <div class="floating-cursor"
-          style="position: absolute; bottom: 20%; left: 15%; color: var(--pop-aqua); font-size: 2.5rem; text-shadow: 0 0 10px rgba(255,255,255,0.5);">
-          ★</div>
-        <div
-          style="margin-top: 3rem; display: inline-flex; align-items: center; justify-content: center; position: relative; gap: 1rem; flex-wrap: wrap;">
-          
-          <button onclick="document.getElementById('cv-modal').style.display='flex';"
-            style="background: #000; color: #fff; padding: 0.8rem 2rem; border: 2px solid #000; font-family: var(--font-mono); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; cursor: pointer; box-shadow: 4px 4px 0 var(--pop-lime); display: flex; align-items: center; gap: 10px; transition: transform 0.1s;">
-            <span style="font-size: 1.2rem;">⚡</span>
-            VIEW AGENCY CV
-          </button>
+              <!-- Retro Tape Decor -->
+              <div class="tape-decor" style="top: -10px; left: 20%; transform: rotate(-2deg);"></div>
+              <div class="tape-decor" style="bottom: 20px; right: 10%; transform: rotate(1deg); width: 80px;"></div>
 
-          <button onclick="this.closest('#welcome-doc-modal').style.display='none'"
-            style="background: silver; color: #000; padding: 0.8rem 2rem; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; font-family: var(--font-mono); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; cursor: pointer; box-shadow: 4px 4px 0 rgba(0,0,0,0.5); display: flex; align-items: center; gap: 10px; transition: transform 0.1s;">
-            <span
-              style="display:inline-block; border: 1px dashed #000; padding: 0 4px; font-size: 0.7rem; background: #fff;">OK</span>
-            ENTER EXPERIENCE
-          </button>
+              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1;">[ 01 / PSYCHOLOGY +
+                BRANDING ]</div>
+              <h3 class="halftone-text"
+                style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 0.5rem; line-height: 1.2;">Wax Therapy.
+              </h3>
+              <p class="mono-label"
+                style="opacity: 0.8; font-weight: bold; margin-bottom: 1rem; color: var(--pop-pink); line-height: 1.2;">
+                STATUS: ELEVATED</p>
 
-          <div
-            style="position: absolute; bottom: -15px; right: -25px; transform: rotate(12deg); background: var(--pop-pink); color: #fff; border: 1px solid #000; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.55rem; font-weight: bold; white-space: nowrap; box-shadow: 2px 2px 0 #000; pointer-events: none; z-index: 5;">
-            ACCESS CLEARED
+              <div style="font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.5; margin-bottom: 2rem;">
+                > [ x ] Restructured brand psychology and market positioning<br>
+                > [ x ] Designed cohesive, high end visual identity system, moodboards & social media strategy<br>
+                > [ x ] Full-stack responsive web design & e-commerce integration<br>
+                > [ x ] Optimized campaign components & website for local visibility<br>
+                > [ x ] In-house content production and aesthetic direction<br><br>
+                <b>OUTCOME:</b> 90% increase in bookings within 14 days and an immediate commanding presence in a
+                crowded market.
+              </div>
+
+              <div class="halftone-img-wrap"
+                style="height: auto; margin-top: 2rem; position: relative; border: 1px solid #ddd; background: #fff; padding: 5px; transform: rotate(1deg);">
+                <img src="images/lady and palms.webp" alt="Wax Therapy visual aesthetic design deck" loading="lazy" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+                <!-- Tape on photo -->
+                <div class="tape-decor"
+                  style="top: -15px; right: -20px; width: 60px; height: 25px; transform: rotate(45deg);"></div>
+              </div>
+            </div>
           </div>
         </div>
+        <!-- 02: Dr. Safir -->
+        <div class="desktop-folder-group">
+          <div class="desktop-folder-icon" tabindex="0">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="65" height="65"
+              style="fill: #000080; filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.8)); margin-bottom: 0.5rem; flex-shrink: 0;">
+              <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
+            </svg>
+            <span class="desktop-folder-label">DR_SAFIR_UX</span>
+          </div>
+          <div class="desktop-folder-content">
+            <div class="case-card note-paper">
+              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'">X</div>
+              <div class="tape-decor" style="top: -10px; right: 20%; transform: rotate(2deg);"></div>
+
+              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1;">[ 02 / WEB + CLINICAL
+                AUTHORITY ]</div>
+              <h3 class="halftone-text"
+                style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 0.5rem; line-height: 1.2;">Dr. Safir.</h3>
+              <p class="mono-label"
+                style="opacity: 0.8; font-weight: bold; margin-bottom: 1rem; color: var(--pop-pink); line-height: 1.2;">
+                STATUS: OPTIMIZED</p>
+
+              <div style="font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.5; margin-bottom: 2rem;">
+                > [ x ] Developed elite digital infrastructure and UI/UX<br>
+                > [ x ] Built streamlined patient intake architecture & appointment scheduling<br>
+                > [ x ] Clinical authority copywriting and omni-channel SEO<br>
+                > [ x ] Professional photography and headshot direction<br>
+                > [ x ] Deployed a patient portal with HIPAA compliance and telehealth integration.<br><br>
+                <b>OUTCOME:</b> Redefined trust and secured clinical authority positioning as an industry
+                leader.<br><br>
+                <a href="https://www.drpaulajimenezsafir.com/" target="_blank" class="mono-label"
+                  style="color: var(--pop-pink); text-decoration: underline; font-weight: bold; font-size: 0.7rem;">VIEW
+                  WEB_SITE.EXE →</a>
+              </div>
+
+              <div class="halftone-img-wrap"
+                style="height: auto; margin-top: 2rem; position: relative; border: 1px solid #ddd; background: #fff; padding: 5px; transform: rotate(-1deg);">
+                <img src="images/dr_safir_website.png" alt="Medical and dental specialized marketing systems" loading="lazy" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; object-position: top;">
+                <div class="tape-decor" style="bottom: -15px; left: 10%; width: 70px; transform: rotate(-15deg);">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 03: A&B Fashion -->
+        <div class="desktop-folder-group">
+          <div class="desktop-folder-icon" tabindex="0">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="65" height="65"
+              style="fill: #000080; filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.8)); margin-bottom: 0.5rem; flex-shrink: 0;">
+              <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
+            </svg>
+            <span class="desktop-folder-label">TWISTED_LENS_STUDIOS</span>
+          </div>
+          <div class="desktop-folder-content">
+            <div class="case-card note-paper">
+              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'">X</div>
+              <div class="tape-decor" style="top: -15px; left: 30%; width: 120px; transform: rotate(-1deg);"></div>
+
+              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1;">[ 03 / FILM +
+                STORYTELLING
+                ]</div>
+              <h3 class="halftone-text"
+                style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 0.5rem; line-height: 1.2;">Twisted Lens.
+              </h3>
+              <p class="mono-label"
+                style="opacity: 0.8; font-weight: bold; margin-bottom: 1rem; color: var(--pop-pink); line-height: 1.2;">
+                STATUS: ICONIC</p>
+
+              <div style="font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.5; margin-bottom: 2rem;">
+                > [ x ] Built cinematic brand narratives for 2,000+ clients<br>
+                > [ x ] Engineered audience loyalty through premium visual storytelling<br>
+                > [ x ] Art direction, set design, and commercial photography<br>
+                > [ x ] Multi-platform media distribution strategy<br>
+                > [ x ] Deployed high-end film assets (Twisted Lens Presents)<br><br>
+                <b>OUTCOME:</b> Transformed messy creative parts into beautifully organized, high-impact legacy
+                campaigns.
+              </div>
+
+              <div class="halftone-img-wrap"
+                style="height: auto; margin-top: 2rem; position: relative; border: 1px solid #ddd; background: #fff; padding: 5px; transform: rotate(2deg);">
+                <img src="images/twisted_lens_studio_shoot_1771447248254.png" alt="Twisted Lens Cinematic Film"
+                  style="width: 100%; aspect-ratio: 16/9; object-fit: cover;" loading="lazy">
+                <div class="tape-decor" style="top: 10px; right: -30px; width: 80px; transform: rotate(90deg);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 04: KerenHart -->
+        <div class="desktop-folder-group">
+          <div class="desktop-folder-icon" tabindex="0">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="65" height="65"
+              style="fill: #000080; filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.8)); margin-bottom: 0.5rem; flex-shrink: 0;">
+              <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
+            </svg>
+            <span class="desktop-folder-label">KERENHART_PROMO</span>
+          </div>
+          <div class="desktop-folder-content">
+            <div class="case-card note-paper">
+              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'">X</div>
+              <div class="tape-decor" style="top: 0; left: 10%; width: 60px; transform: rotate(-10deg);"></div>
+
+              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1;">[ 04 / BRAND +
+                CONSULTING ]</div>
+              <h3 class="halftone-text"
+                style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 0.5rem; line-height: 1.2;">Keren Hart.
+              </h3>
+              <p class="mono-label"
+                style="opacity: 0.8; font-weight: bold; margin-bottom: 1rem; color: var(--pop-pink); line-height: 1.2;">
+                STATUS: PRO</p>
+
+              <div style="font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.5; margin-bottom: 2rem;">
+                > [ x ] Strategic brand development and commercial positioning<br>
+                > [ x ] High-end boutique fashion art direction<br>
+                > [ x ] E-commerce infrastructure and aesthetic scaling<br>
+                > [ x ] Omni-channel content strategy and visual storytelling<br><br>
+                <b>OUTCOME:</b> Elevated market positioning and consistent aesthetic authority across all
+                segments.
+              </div>
+
+              <div class="halftone-img-wrap"
+                style="height: auto; margin-top: 2rem; position: relative; border: 1px solid #ddd; background: #fff; padding: 5px; transform: rotate(-1deg);">
+                <img src="images/artists-doing-touch-ups-model.jpg" alt="Keren Hart Brand Development"
+                  style="width: 100%; aspect-ratio: 16/9; object-fit: cover;" loading="lazy">
+                <div class="tape-decor" style="top: -10px; right: 10%; width: 90px; transform: rotate(5deg);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 05: The Loft -->
+        <div class="desktop-folder-group">
+          <div class="desktop-folder-icon" tabindex="0">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="65" height="65"
+              style="fill: #000080; filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.8)); margin-bottom: 0.5rem; flex-shrink: 0;">
+              <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
+            </svg>
+            <span class="desktop-folder-label">THE_LOFT_REBRAND</span>
+            <div class="sticker sticker-stamp"
+              style="position: absolute; bottom: 0; right: -20px; transform: rotate(15deg); color: #fff; background: var(--pop-green); border: none; font-size: 0.5rem; border-radius: 4px; z-index: 5;">
+              SUCCESS</div>
+          </div>
+          <div class="desktop-folder-content">
+            <div class="case-card note-paper">
+              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'">X</div>
+              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1;">[ 05 / INTERIOR + SCALE
+                ]
+              </div>
+              <h3 class="halftone-text"
+                style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 0.5rem; line-height: 1.2;">The Loft Studios.
+              </h3>
+              <p class="mono-label" style="color: var(--pop-pink); font-weight: bold; margin-bottom: 1rem;">STATUS:
+                ARCHIVED</p>
+              <div
+                style="font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.5; margin-bottom: 2rem; color: #000;">
+                > [ x ] Complete visual overhaul for high-end studio spaces<br>
+                > [ x ] Environmental design and interior branding integration<br>
+                > [ x ] Custom booking platform UI mapping and development<br>
+                > [ x ] Market capture of elite creative demographics via targeted ad campaigns<br>
+                > [ x ] Digital presence optimization for Central Valley premium tiers<br><br>
+                <b>OUTCOME:</b> Immediate waitlist status post-rebrand and 100% occupancy within 30 days.
+              </div>
+              <div class="halftone-img-wrap"
+                style="height: auto; margin-top: 2rem; position: relative; border: 1px solid #ddd; background: #fff; padding: 5px; transform: rotate(1deg);">
+                <img src="images/realty.jpg" alt="The Loft Studios real estate spaces" loading="lazy" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 06: CV Wellness -->
+        <div class="desktop-folder-group">
+          <div class="desktop-folder-icon" tabindex="0">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="65" height="65"
+              style="fill: #000080; filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.8)); margin-bottom: 0.5rem; flex-shrink: 0;">
+              <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
+            </svg>
+            <span class="desktop-folder-label">WELLNESS_COLLECTIVE</span>
+            <div class="sticker sticker-urgent"
+              style="position: absolute; top: -10px; left: -20px; font-size: 0.4rem; padding: 2px 6px;">TOP SECRET
+            </div>
+          </div>
+          <div class="desktop-folder-content">
+            <div class="case-card note-paper">
+              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'">X</div>
+              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1;">[ 06 / HEALTHCARE +
+                TRUST
+                ]</div>
+              <h3 class="halftone-text"
+                style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 0.5rem; line-height: 1.2;">Wellness
+                Collective.
+              </h3>
+              <p class="mono-label" style="color: var(--pop-pink); font-weight: bold; margin-bottom: 1rem;">STATUS:
+                LIVE
+              </p>
+              <div
+                style="font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.5; margin-bottom: 2rem; color: #000;">
+                > [ x ] Patient-first digital experience design<br>
+                > [ x ] Strategic trust-building through visual tone & alignment<br>
+                > [ x ] Go-to-market rollout strategy and patient enrollment campaigns<br>
+                > [ x ] Brand messaging and clinical authority marketing deployment<br><br>
+                <b>RESULT:</b> 45% increase in online inquiries and optimized conversion funnels for new patients.
+              </div>
+              <div class="halftone-img-wrap"
+                style="height: auto; margin-top: 2rem; position: relative; border: 1px solid #ddd; background: #fff; padding: 5px; transform: rotate(-1deg);">
+                <img src="images/yoga.webp" alt="Wellness Collective patient intake overhaul"
+                  style="width: 100%; aspect-ratio: 16/9; object-fit: cover;" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 07: Designer Process -->
+        <div class="desktop-folder-group">
+          <div class="desktop-folder-icon" tabindex="0">
+            <span class="desktop-folder-label">BRAND_SYSTEMS_R&D</span>
+            <div class="sticker sticker-approved"
+              style="position: absolute; top: -10px; right: -10px; transform: rotate(10deg); font-size: 0.5rem; padding: 2px 6px;">
+              NEW</div>
+          </div>
+          <div class="desktop-folder-content">
+            <div class="case-card note-paper">
+              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'">X</div>
+              <div class="tape-decor" style="top: -15px; left: 40%; width: 100px; transform: rotate(2deg);"></div>
+
+              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1;">[ 07 / IDENTITY + DESIGN
+                PROCESS ]</div>
+              <h3 class="halftone-text"
+                style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 0.5rem; line-height: 1.2;">Behind The
+                Aesthetics.</h3>
+              <p class="mono-label" style="color: var(--pop-aqua); font-weight: bold; margin-bottom: 1rem;">STATUS:
+                MOODBOARDS</p>
+
+              <div
+                style="font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1.5rem; color: #000;">
+                > [ x ] Psychology-first visual mapping<br>
+                > [ x ] Custom typography and vector engineering<br>
+                > [ x ] We build the DNA of market-dominating brands.<br><br>
+                <b>THE PALETTE:</b>
+              </div>
+
+              <div style="display: flex; gap: 10px; margin-bottom: 1.5rem;">
+                <div
+                  style="width: 40px; height: 40px; background: #FF00FF; border: 2px solid #000; box-shadow: 2px 2px 0 #000; border-radius: 50%;">
+                </div>
+                <div
+                  style="width: 40px; height: 40px; background: #00FF00; border: 2px solid #000; box-shadow: 2px 2px 0 #000; border-radius: 50%;">
+                </div>
+                <div
+                  style="width: 40px; height: 40px; background: #000080; border: 2px solid #000; box-shadow: 2px 2px 0 #000; border-radius: 50%;">
+                </div>
+                <div
+                  style="width: 40px; height: 40px; background: #000000; border: 2px solid #000; box-shadow: 2px 2px 0 #000; border-radius: 50%;">
+                </div>
+                <div
+                  style="font-family: var(--font-mono); font-size: 0.6rem; margin-left: auto; align-self: center; transform: rotate(-5deg); color: var(--pop-pink); border: 1px dashed var(--pop-pink); padding: 4px;">
+                  CMYK + NEON</div>
+              </div>
+
+              <div class="halftone-img-wrap"
+                style="height: auto; position: relative; border: 1px solid #ddd; background: #fff; padding: 5px; transform: rotate(-2deg);">
+                <img src="images/ash_and_brittany_portrait.jpg" alt="Aesthetic Engineering Team" loading="lazy">
+                <!-- doodle text -->
+                <div
+                  style="position: absolute; bottom: 20px; right: -10px; font-family: 'Comic Sans MS', cursive; color: var(--pop-lime); font-size: 1.2rem; transform: rotate(-15deg); background: #000; padding: 2px 8px; border: 1px solid var(--pop-lime);">
+                  "Make it pop!"</div>
+                <!-- circle doodle -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 08: Top Secret -->
+        <div class="desktop-folder-group">
+          <div class="desktop-folder-icon" tabindex="0" style="filter: grayscale(100%) contrast(1.5);">
+            <span class="desktop-folder-label" style="background: red;">CLASSIFIED_WORK</span>
+            <div class="sticker sticker-urgent"
+              style="position: absolute; top: -10px; left: -20px; font-size: 0.4rem; padding: 2px 6px;">TOP SECRET</div>
+          </div>
+          <div class="desktop-folder-content">
+            <div class="case-card note-paper"
+              style="background: #111 !important; color: #fff !important; border: 4px solid red; box-shadow: 10px 10px 0 red;">
+              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'"
+                style="color: #fff; border-color: #fff;">X</div>
+
+              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1; color: red;">[ ERROR:
+                CLEARANCE REQUIRED ]</div>
+              <h3 class="pixel-header"
+                style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; color: #fff; line-height: 1;">
+                Access<br>Denied.</h3>
+
+              <div
+                style="font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.5; margin-bottom: 2rem; color: #ccc;">
+                > This project is currently under NDA or restricted for High-End Retainer clients only.<br>
+                > Bypassing security protocols is impossible.<br><br>
+                <b>SOLUTION:</b> Contact the agency to request clearance or schedule a vibe check to view our complete
+                private portfolio.
+              </div>
+
+              <div style="text-align: center; margin-top: 2rem;">
+                <a href="#contact-brief" onclick="this.closest('.desktop-folder-content').style.display='none'"
+                  class="btn-elite-submit"
+                  style="background: red; color: #fff; border: 2px solid #fff; padding: 1rem 2rem; display: inline-block; font-family: var(--font-mono); font-weight: bold; text-decoration: none; box-shadow: 4px 4px 0 rgba(255,255,255,0.3);">
+                  REQUEST ACCESS
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 09: Gov Contract & SEO -->
+        <div class="desktop-folder-group">
+          <div class="desktop-folder-icon" tabindex="0">
+            <span class="desktop-folder-label">FEDERAL_SEO_DEV</span>
+            <div class="sticker sticker-approved"
+              style="position: absolute; top: -10px; left: -10px; transform: rotate(-5deg); font-size: 0.5rem; padding: 2px 6px;">
+              DEPLOYED</div>
+          </div>
+          <div class="desktop-folder-content">
+            <div class="case-card note-paper">
+              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'">X</div>
+              <div class="tape-decor" style="top: -15px; right: 20%; width: 80px; transform: rotate(-3deg);"></div>
+
+              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1;">[ 09 / GOV + SEO
+                OPTIMIZATION ]</div>
+              <h3 class="halftone-text"
+                style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 0.5rem; line-height: 1.2;">Project Kern.</h3>
+              <p class="mono-label" style="color: var(--pop-green); font-weight: bold; margin-bottom: 1rem;">STATUS:
+                RANKING #1</p>
+
+              <div
+                style="font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1.5rem; color: #000; position: relative;">
+                > [ x ] Compliant federal web architecture and deployment<br>
+                > [ x ] Deep-level Generative Engine Optimization (GEO)<br>
+                > [ x ] Omni-channel structural SEO yielding massive organic traffic<br><br>
+                <b>OUTCOME:</b> Secured top indexation across all major search nodes within 30 days.
+
+                <!-- Sneaky little code snippet -->
+                <div
+                  style="position: absolute; bottom: 0; right: 0; transform: rotate(-5deg); background: rgba(0,255,0,0.2); border: 1px dotted #000; padding: 2px 4px; font-size: 0.6rem; color: #000; opacity: 0.7;">
+                  let <span style="color: var(--pop-blue);">rank</span> = await indexer.crawl();<br>
+                  assert(<span style="color: var(--pop-blue);">rank</span> === 1);
+                </div>
+              </div>
+
+              <div class="halftone-img-wrap"
+                style="height: auto; margin-top: 2rem; position: relative; border: 1px solid #ddd; background: #fff; padding: 5px; transform: rotate(1deg);">
+                <img src="images/retro_world_net.png" alt="Cyber security server infrastructure"
+                  style="width: 100%; image-rendering: pixelated; margin-bottom: 1rem;">
+                <div class="sticker sticker-postit"
+                  style="position: absolute; bottom: 10px; left: -10px; width: 80px; transform: rotate(-10deg); font-size: 0.5rem; padding: 5px; background: yellow; color: black;">
+                  // Update schema.org ASAP
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 4rem; padding: 0 5vw;">
+        <a href="#contact-brief" class="btn-elite-submit"
+          style="background: #00ff00; color: #000; text-decoration: none; box-shadow: 8px 8px 0 #fff; transition: transform 0.2s;">
+          START YOUR PROJECT
+        </a>
       </div>
     </section>
 
+    <!-- SECTION 09: THE VOUCH (FEEDBACK) -->
+    <section id="feedback" class="bg-vouch" style="padding: 8vh 0; position: relative;">
 
+      <!-- Decorative Stickers -->
+      <div class="parallax-layer tooltip-target" data-speed="0.3"
+        style="position: absolute; top: 10%; right: 10%; font-size: clamp(2.5rem, 5vw, 4rem); transform: rotate(15deg); z-index: 10; filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));">
+        ⭐</div>
+      <div class="parallax-layer tooltip-target" data-speed="-0.2"
+        style="position: absolute; bottom: 20%; left: 5%; font-size: 5rem; transform: rotate(-20deg); z-index: 10; filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));">
+        🔥</div>
+      <div class="parallax-layer tooltip-target" data-speed="0.1"
+        style="position: absolute; top: 40%; left: 8%; font-size: 3rem; transform: rotate(10deg); z-index: 10; filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));">
+        💿</div>
 
+      <div style="padding: 0 10vw; margin-bottom: 8vh; position: relative; z-index: 2;">
+        <span class="chapter-mark" style="color: #fff; border-color: #fff;">CHAPTER II: THE VOUCH</span>
+        <h2 class="halftone-text" style="color: #fff;">Word on the Web.</h2>
+      </div>
 
-    <!-- SECTION 03: THE PHILOSOPHY -->
-    <section class="bg-grid-holo" style="padding: 15vh 10vw; border-top: 1px solid #000;">
       <div
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(2rem, 5vw, 10vw); align-items: start; position: relative;">
-        <!-- DECORATIVE ARROW -->
-        <div class="annotation-graphic" style="top: -50px; right: 10%;">
-          <svg class="arrow-vector" viewBox="0 0 100 100">
-            <path d="M10,50 L90,50 M70,30 L90,50 L70,70" fill="none" stroke="currentColor" stroke-width="2" />
-          </svg>
-          <span style="display: block; margin-top: 10px;">VIBE_CHECK_STATION</span>
-        </div>
-        <div>
-          <span class="chapter-mark">CHAPTER II: THE PHILOSOPHY</span>
-          <h2 class="halftone-text pixel-header" style="color: var(--pop-green);">Ash
-            &<br>Brittany</h2>
-          <div class="mono-label" style="margin-top: 2rem; color: var(--pop-pink);">TEHACHAPI // BAKERSFIELD // LA //
-            &
-            BEYOND</div>
-          <div class="mono-label" style="opacity: 0.9; font-size: 0.75rem; color: #fff;">FEMALE VETERAN OWNED</div>
+        style="position: relative; max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 4rem; padding: 0 5vw;">
 
-          <!-- Cute Polaroid Photo -->
-          <div class="parallax-layer" data-speed="0.1"
-            style="position: relative; margin-top: 3rem; transform: rotate(-3deg); width: fit-content; max-width: 80%;">
-            <!-- Retro tape -->
-            <div
-              style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%) rotate(2deg); width: 80px; height: 30px; background: rgba(255,255,255,0.6); box-shadow: 0 1px 3px rgba(0,0,0,0.1); z-index: 10; border-radius: 2px;">
-            </div>
-            <!-- Polaroid body -->
-            <div style="background: #fff; padding: 10px 10px 50px 10px; box-shadow: 5px 5px 15px rgba(0,0,0,0.5);">
-              <img src="images/ash_and_brittany_portrait.jpg" alt="Ash and Brittany Polaroid"
-                style="width: 100%; border: 1px solid #ccc; filter: grayscale(100%) contrast(1.2);">
-              <div
-                style="font-family: 'Comic Sans MS', cursive, sans-serif; color: #000; text-align: center; font-size: 1.2rem; transform: rotate(-2deg); position: absolute; bottom: 10px; width: 100%; left: 0;">
-                xoxox Your Business Besties</div>
-            </div>
-          </div>
-        </div>
-        <div class="parallax-layer window-modal" data-speed="0.2"
-          style="margin-top: 15vh; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); z-index: 10;">
+        <!-- Retro Review Box 1 -->
+        <div class="reveal"
+          style="align-self: flex-start; width: 100%; max-width: 600px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); z-index: 5;">
           <div
             style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; display: flex; justify-content: space-between;">
-            <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">📝</span>
-              NOTEPAD.EXE</span><span
-              style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
+            <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">📁</span>
+              REVIEWS/WAX_THERAPY.TXT</span><span
+              style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">_</span>
           </div>
-          <div style="padding: 2rem; background: #fff; color: #000;">
-            <p style="font-size: 1.2rem; line-height: 1.5; text-transform: none; font-weight: bold; color: #000; margin: 0;">
-              Your business besties and aesthetic engineers. 
-              Ash & Brittany lead this female veteran-owned powerhouse across California.
-            </p>
-            <p class="mono-label"
-              style="margin-top: 1.5rem; opacity: 0.8; text-transform: none; letter-spacing: normal; color: #000; font-size: 1rem; line-height: 1.5;">
-              Brand therapy meets tactical execution. We help ambitious ideas stand out and scale strategically. No burnout. Just absolute dominance.
-            </p>
-            <div style="margin-top: 2.5rem; display: flex; justify-content: flex-start; gap: 1rem;">
-              <button onclick="document.getElementById('cv-modal').style.display='flex';"
-                style="background: #000; color: var(--pop-lime); font-family: var(--font-mono); font-weight: bold; padding: 0.8rem 1.5rem; border: 2px solid #000; box-shadow: 4px 4px 0 var(--pop-lime); cursor: pointer; display: flex; align-items: center; gap: 8px;">
-                <span style="font-size: 1.2rem;">⚡</span> VIEW AGENCY CV
-              </button>
-            </div>
-            <div class="mono-label"
-              style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px dashed #999; text-align: center; color: var(--pop-pink);">
-              TEHACHAPI // BAKERSFIELD // LA // & BEYOND
-            </div>
+          <div style="padding: 2rem; background: #fff; color: #000; font-family: var(--font-mono);">
+            <p style="font-size: 1.2rem; line-height: 1.6; text-transform: none; font-weight: bold; color: #000;">"The
+              Agency didn't
+              just rebrand us. They gave us an entire market authority. Bookings haven't stopped."</p>
+            <br>
+            <span style="opacity: 0.5; font-size: 0.8rem;">[✓] VERIFIED SENDER: WAX THERAPY</span>
           </div>
         </div>
+
+        <!-- Retro Review Box 2 -->
+        <div class="reveal"
+          style="align-self: flex-end; width: 100%; max-width: 600px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); z-index: 6;">
+          <div
+            style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; display: flex; justify-content: space-between;">
+            <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">📁</span>
+              REVIEWS/DR_SAFIR.TXT</span><span
+              style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
+          </div>
+          <div style="padding: 2rem; background: #fff; color: #000; font-family: var(--font-mono);">
+            <p style="font-size: 1.2rem; line-height: 1.6; text-transform: none; font-weight: bold; color: #000;">"Ash
+              &
+              Brittany are
+              strategic wizards. They read our minds and built exactly what our brand needed."</p>
+            <br>
+            <span style="opacity: 0.5; font-size: 0.8rem;">[✓] VERIFIED SENDER: DR. SAFIR</span>
+          </div>
+        </div>
+
+        <!-- Retro Review Box 3 -->
+        <div class="reveal"
+          style="align-self: flex-start; width: 100%; max-width: 650px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); z-index: 7; margin-left: 10%;">
+          <div
+            style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; display: flex; justify-content: space-between;">
+            <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">📁</span>
+              REVIEWS/KERENHART_APPAREL.TXT</span><span
+              style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">_</span>
+          </div>
+          <div style="padding: 2rem; background: #fff; color: #000; font-family: var(--font-mono);">
+            <p style="font-size: 1.2rem; line-height: 1.6; text-transform: none; font-weight: bold; color: #000;">
+              "Cinematic
+              production that actually converts. They are our secret weapon for scaling and capturing the essence of
+              our
+              seasonal lines."</p>
+            <br>
+            <span style="opacity: 0.5; font-size: 0.8rem;">[✓] VERIFIED SENDER: KERENHART</span>
+          </div>
+        </div>
+
+        <!-- Retro Review Box 4 -->
+        <div class="reveal"
+          style="align-self: flex-end; width: 100%; max-width: 550px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); z-index: 8; margin-right: 5%;">
+          <div
+            style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; display: flex; justify-content: space-between;">
+            <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">📁</span>
+              REVIEWS/NEW_CLIENT.TXT</span><span
+              style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
+          </div>
+          <div style="padding: 2rem; background: #fff; color: #000; font-family: var(--font-mono);">
+            <p style="font-size: 1.2rem; line-height: 1.6; text-transform: none; font-weight: bold; color: #000;">"We
+              handed them our
+              scattered ideas and they handed us back a full-blown empire. Cannot recommend them enough for high-end
+              web
+              dev."</p>
+            <br>
+            <span style="opacity: 0.5; font-size: 0.8rem;">[✓] VERIFIED SENDER: ELITE PARTNER</span>
+          </div>
+        </div>
+
+        <!-- Retro Review Box 5 -->
+        <div class="reveal"
+          style="align-self: flex-start; width: 100%; max-width: 580px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); z-index: 9; margin-left: 15%;">
+          <div
+            style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; display: flex; justify-content: space-between;">
+            <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">📁</span>
+              REVIEWS/THE_LOFT_STUDIOS.TXT</span><span
+              style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">_</span>
+          </div>
+          <div style="padding: 2rem; background: #fff; color: #000; font-family: var(--font-mono);">
+            <p style="font-size: 1.2rem; line-height: 1.6; text-transform: none; font-weight: bold; color: #000;">"The
+              Agency
+              transformed our digital footprint. Their eye for detail and focus on conversion psychology is unmatched
+              in
+              the Central Valley."</p>
+            <br>
+            <span style="opacity: 0.5; font-size: 0.8rem;">[✓] VERIFIED SENDER: THE LOFT STUDIOS</span>
+          </div>
+        </div>
+
+        <!-- Pop up error -->
+        <div class="reveal"
+          style="align-self: center; width: 100%; max-width: 400px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; z-index: 10; font-family: var(--font-mono); font-size: 0.7rem; box-shadow: 5px 5px 0px rgba(0,0,0,0.5);">
+          <div
+            style="background: #a00; color: white; padding: 2px 6px; font-weight: bold; display: flex; justify-content: space-between;">
+            <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">❌</span> ERROR //
+              JEALOUSY.SYS</span><span
+              style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
+          </div>
+          <div style="padding: 1rem; color: black; background: #fff;">COMPETITORS ARE CRYING.<br>OVERFLOW IN REVENUE
+            PORT.<br><br><button
+              style="background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; cursor: pointer;"
+              onclick="this.closest('.reveal').style.display='none'">IGNORE</button>
+          </div>
+        </div>
+
+        <!-- Pop up error 2 (Infected with Creativity) -->
+        <div class="reveal parallax-layer" data-speed="0.15"
+          style="position: relative; align-self: flex-start; width: 95%; max-width: 400px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; z-index: 50; font-family: var(--font-mono); font-size: 0.7rem; box-shadow: 5px 5px 0px rgba(0,0,0,0.5); transform: rotate(-5deg); margin-top: 2rem; margin-bottom: 2rem; margin-left: auto; margin-right: auto;">
+          <div
+            style="background: darkred; color: white; padding: 2px 6px; font-weight: bold; display: flex; justify-content: space-between;">
+            <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">💀</span> WARNING //
+              INFECTION.EXE</span><span
+              style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
+          </div>
+          <div style="padding: 1.5rem; color: black; background: #fff; text-align: center; border: 2px inset #fff;">
+            <img
+              src="data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L16 17H11L16 26L13 28L8 18L3 23V1Z' fill='%23ff00ff' stroke='black' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E"
+              style="width: 40px; margin-bottom: 1rem; animation: float 2s infinite;" alt="cursor"><br>
+            <b style="font-size: 1rem; color: darkred;">SYSTEM OVERLOAD:</b><br><br>Your aesthetic calibration has
+            exceeded the maximum permissible threshold. <br><br><b>PROGNOSIS:</b> Iconic status is inevitable.<br><br>
+            <button
+              style="background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 6px 12px; cursor: pointer; text-transform: uppercase; font-weight: bold;"
+              onclick="this.closest('.reveal').style.display='none'">Accept Our Strategy</button>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -405,11 +845,16 @@
                 </div>
               </div>
               <h3 style="font-family: var(--font-serif); font-size: 3rem; font-style: italic;">Branding.</h3>
-              <p class="mono-label" style="margin-top: 1rem; opacity: 0.8;">Identity systems that command authority.
-              </p>
-              <p class="mono-label" style="margin-top: 1rem; opacity: 0.5; font-size: 0.8rem; text-transform:none;">
-                Turning ambitious ideas into positioned, profitable brands. We build your boldest brand yet through
-                smart strategy and scroll-stopping creative.</p>
+              <p class="mono-label" style="margin-top: 1rem; opacity: 0.8; font-weight: bold; color: var(--pop-lime);">STARTS AT $5k</p>
+              <details style="margin-top: 1rem; cursor: pointer;">
+                <summary style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: bold; outline: none; padding-bottom: 0.5rem; border-bottom: 1px dashed #333;">[+] VIEW DETAILS</summary>
+                <div style="padding-top: 1rem;">
+                  <p class="mono-label" style="opacity: 0.8; margin-bottom: 1rem;">Identity systems that command authority.</p>
+                  <p class="mono-label" style="opacity: 0.5; font-size: 0.8rem; text-transform:none; margin-bottom: 0;">
+                    Turning ambitious ideas into positioned, profitable brands. We build your boldest brand yet through smart strategy and scroll-stopping creative.
+                  </p>
+                </div>
+              </details>
             </div>
           </div>
           <div class="horizontal-item">
@@ -422,10 +867,16 @@
                 </div>
               </div>
               <h3 style="font-family: var(--font-serif); font-size: 3rem; font-style: italic;">Web & UX/UI.</h3>
-              <p class="mono-label" style="margin-top: 1rem; opacity: 0.9;">Strategic websites & app development.</p>
-              <p class="mono-label" style="margin-top: 1rem; opacity: 0.6; font-size: 0.8rem; text-transform:none;">
-                Elite digital architecture & custom code. We decrease latency with precision speed optimization and
-                ensure high-end UX/UI conversions.</p>
+              <p class="mono-label" style="margin-top: 1rem; opacity: 0.8; font-weight: bold; color: var(--pop-pink);">STARTS AT $8k</p>
+              <details style="margin-top: 1rem; cursor: pointer;">
+                <summary style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: bold; outline: none; padding-bottom: 0.5rem; border-bottom: 1px dashed #333;">[+] VIEW DETAILS</summary>
+                <div style="padding-top: 1rem;">
+                  <p class="mono-label" style="opacity: 0.9; margin-bottom: 1rem;">Strategic websites & app development.</p>
+                  <p class="mono-label" style="opacity: 0.6; font-size: 0.8rem; text-transform:none; margin-bottom: 0;">
+                    Elite digital architecture & custom code. We decrease latency with precision speed optimization and ensure high-end UX/UI conversions. SEO optimized & mobile friendly.
+                  </p>
+                </div>
+              </details>
             </div>
           </div>
           <div class="horizontal-item">
@@ -434,13 +885,17 @@
                 <img src="images/twisted_lens_gear_flatlay_1771447231386.png"
                   alt="Art directed business photography and cinematic brand storytelling" loading="lazy">
               </div>
-              <h3 style="font-family: var(--font-serif); font-style: italic;">
-                Production.</h3>
-              <p class="mono-label" style="margin-top: 1rem; opacity: 0.8;">Business photography &
-                videography.</p>
-              <p class="mono-label" style="margin-top: 1rem; opacity: 0.5; font-size: 0.8rem; text-transform:none;">
-                Cinematic production that feels human and performs strategically. Full-service, in-house content
-                creation directly from our California headquarters.</p>
+              <h3 style="font-family: var(--font-serif); font-style: italic;">Production.</h3>
+              <p class="mono-label" style="margin-top: 1rem; opacity: 0.8; font-weight: bold; color: var(--pop-blue);">STARTS AT $2k</p>
+              <details style="margin-top: 1rem; cursor: pointer;">
+                <summary style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: bold; outline: none; padding-bottom: 0.5rem; border-bottom: 1px dashed #333;">[+] VIEW DETAILS</summary>
+                <div style="padding-top: 1rem;">
+                  <p class="mono-label" style="opacity: 0.8; margin-bottom: 1rem;">Business photography & videography.</p>
+                  <p class="mono-label" style="opacity: 0.5; font-size: 0.8rem; text-transform:none; margin-bottom: 0;">
+                    Cinematic production that feels human and performs strategically. Full-service, in-house content creation directly from our California headquarters.
+                  </p>
+                </div>
+              </details>
             </div>
           </div>
           <div class="horizontal-item">
@@ -448,15 +903,17 @@
               <div class="halftone-img-wrap" style="aspect-ratio: 3 / 4; height: auto; margin-bottom: 2rem;">
                 <img src="images/social_ad.png" alt="Social media strategy and content creation audit" loading="lazy">
               </div>
-              <h3 style="font-family: var(--font-serif); font-style: italic;">
-                Digital Gov.</h3>
-              <p class="mono-label" style="margin-top: 1rem; opacity: 0.8;">Digital marketing, SEO & local
-                advertising.
-              </p>
-              <p class="mono-label" style="margin-top: 1rem; opacity: 0.5; font-size: 0.8rem; text-transform:none;">No
-                guesswork. No fluff. Just data-backed marketing campaigns driving measurable growth across Kern
-                County,
-                Bakersfield, and Los Angeles.</p>
+              <h3 style="font-family: var(--font-serif); font-style: italic;">Digital Gov.</h3>
+              <p class="mono-label" style="margin-top: 1rem; opacity: 0.8; font-weight: bold; color: var(--pop-green);">STARTS AT $3.5k/MO</p>
+              <details style="margin-top: 1rem; cursor: pointer;">
+                <summary style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: bold; outline: none; padding-bottom: 0.5rem; border-bottom: 1px dashed #333;">[+] VIEW DETAILS</summary>
+                <div style="padding-top: 1rem;">
+                  <p class="mono-label" style="opacity: 0.8; margin-bottom: 1rem;">Digital marketing, SEO & local advertising.</p>
+                  <p class="mono-label" style="opacity: 0.5; font-size: 0.8rem; text-transform:none; margin-bottom: 0;">
+                    No guesswork. No fluff. Just data-backed marketing campaigns driving measurable growth across Kern County, Bakersfield, and Los Angeles.
+                  </p>
+                </div>
+              </details>
             </div>
           </div>
           <div class="horizontal-item">
@@ -466,13 +923,17 @@
                 <div class="sticker sticker-classified" style="top: 10px; right: 10px; transform: rotate(5deg);">
                   BETA_ACCESS</div>
               </div>
-              <h3 style="font-family: var(--font-serif); font-style: italic;">
-                AI Systems & GEO.</h3>
-              <p class="mono-label" style="margin-top: 1rem; opacity: 0.8;">AI Branding Strategy & Synthetic Media.
-              </p>
-              <p class="mono-label" style="margin-top: 1rem; opacity: 0.5; font-size: 0.8rem; text-transform:none;">
-                We engineer elite Search Generative Experience (SGE) tuning and AI-driven content pipelines to secure
-                absolute market authority in the zero-click era.</p>
+              <h3 style="font-family: var(--font-serif); font-style: italic;">AI Systems & GEO.</h3>
+              <p class="mono-label" style="margin-top: 1rem; opacity: 0.8; font-weight: bold; color: var(--pop-pink);">CUSTOM QUOTE</p>
+              <details style="margin-top: 1rem; cursor: pointer;">
+                <summary style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: bold; outline: none; padding-bottom: 0.5rem; border-bottom: 1px dashed #333;">[+] VIEW DETAILS</summary>
+                <div style="padding-top: 1rem;">
+                  <p class="mono-label" style="opacity: 0.8; margin-bottom: 1rem;">AI Branding Strategy & Synthetic Media.</p>
+                  <p class="mono-label" style="opacity: 0.5; font-size: 0.8rem; text-transform:none; margin-bottom: 0;">
+                    We engineer elite Search Generative Experience (SGE) tuning and AI-driven content pipelines to secure absolute market authority in the zero-click era.
+                  </p>
+                </div>
+              </details>
             </div>
           </div>
           <div class="horizontal-item">
@@ -481,11 +942,14 @@
                 <img src="images/collab copy.jpg" alt="Subscription-based monthly art department services"
                   loading="lazy">
               </div>
-              <h3 style="font-family: var(--font-serif); font-style: italic;">
-                Monthly Art Dept.</h3>
-              <p class="mono-label" style="margin-top: 1rem; opacity: 0.6;">Your in-house creative engine. No
-                overhead,
-                just elite scale.</p>
+              <h3 style="font-family: var(--font-serif); font-style: italic;">Monthly Art Dept.</h3>
+              <p class="mono-label" style="margin-top: 1rem; opacity: 0.8; font-weight: bold; color: var(--pop-lime);">STARTS AT $1k/MO</p>
+              <details style="margin-top: 1rem; cursor: pointer;">
+                <summary style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: bold; outline: none; padding-bottom: 0.5rem; border-bottom: 1px dashed #333;">[+] VIEW DETAILS</summary>
+                <div style="padding-top: 1rem;">
+                  <p class="mono-label" style="opacity: 0.6; margin-bottom: 0;">Your in-house creative engine. No overhead, just elite scale.</p>
+                </div>
+              </details>
             </div>
           </div>
           <div class="horizontal-item">
@@ -494,24 +958,27 @@
                 <img src="images/brew copy.jpeg" alt="Food and beverage branding and menu design" loading="lazy">
               </div>
               <h3 style="font-family: var(--font-serif); font-size: 3rem; font-style: italic;">Alliances.</h3>
-              <p class="mono-label" style="margin-top: 1rem; opacity: 0.6;">Gov contracts & elite agency white-label
-                collaborations.</p>
+              <p class="mono-label" style="margin-top: 1rem; opacity: 0.8; font-weight: bold; color: var(--pop-blue);">AVAILABLE FOR BID</p>
+              <details style="margin-top: 1rem; cursor: pointer;">
+                <summary style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: bold; outline: none; padding-bottom: 0.5rem; border-bottom: 1px dashed #333;">[+] VIEW DETAILS</summary>
+                <div style="padding-top: 1rem;">
+                  <p class="mono-label" style="opacity: 0.6; margin-bottom: 0;">Gov contracts & elite agency white-label collaborations.</p>
+                </div>
+              </details>
             </div>
           </div>
           <div class="horizontal-item">
             <div class="mock-card card-highlight"
               style="background: var(--pop-lime); color: #000; border: none; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
-              <div class="sticker sticker-bestie" style="top: -15px; right: -15px; transform: rotate(15deg);">ELITE
-              </div>
+              <div class="sticker sticker-bestie" style="top: -15px; right: -15px; transform: rotate(15deg);">ELITE</div>
               <span class="mono-label" style="color: #000; font-weight: 800;">FULL SERVICE IN-HOUSE</span>
-              <h2 class="halftone-text"
-                style="font-size: clamp(1.4rem, 5vw, 2.5rem); line-height: 1; margin-top: 1rem;">FULL<br>COVERAGE.
-              </h2>
-              <p class="mono-label" style="margin-top: 1.5rem; border-top: 1px solid #000; padding-top: 1rem;">From
-                seed
-                to scale, we handle it all.</p>
-              <a href="#contact-brief" class="mono-label"
-                style="margin-top: 2rem; text-decoration: underline; color: #000;">CONTACT FOR A CUSTOM QUOTE →</a>
+              <h2 class="halftone-text" style="font-size: clamp(1.4rem, 5vw, 2.5rem); line-height: 1; margin-top: 1rem;">FULL<br>COVERAGE.</h2>
+              <p class="mono-label" style="margin-top: 1.5rem; border-top: 1px solid #000; padding-top: 1rem;">
+                From seed to scale, we handle it all. <br><br><b>Need something not listed?</b> Contact us for custom quotes & proposals tailored to your specific timeline and scope.
+              </p>
+              <a href="#contact-brief" class="btn-elite-submit" style="margin-top: 2rem; background: #000; color: #fff; width: 100%; border: 2px solid #000; padding: 1rem; font-family: var(--font-mono); font-weight: bold; font-size: 0.9rem; transition: transform 0.1s; text-decoration: none;">
+                CONTACT FOR A CUSTOM QUOTE →
+              </a>
             </div>
           </div>
         </div>
@@ -620,7 +1087,7 @@
           <div>
             <div class="mono-label" style="color: var(--pop-pink); margin-bottom: 0.5rem; font-weight: bold;">[ SYSTEM_NOTE: TIMELINE_PROTOCOL ]</div>
             <p style="font-family: var(--font-sans); font-size: 0.95rem; line-height: 1.5; margin: 0; color: #fff; opacity: 0.9;">
-              Project timelines depend entirely on client turnaround. We move at your speed—no pressure. Rush/expedited services are available for a premium fee. We also offer ongoing support after your initial project through our monthly retainer services.
+              Project timelines depend entirely on client turnaround. We move at your speed; no pressure. Rush/expedited services are available for a premium fee. We also offer ongoing support after your initial project through our monthly retainer services.
             </p>
           </div>
         </div>
@@ -648,7 +1115,7 @@
               <p class="body-text" style="margin-bottom: 2rem; max-width: 700px;">
                 We kick
                 things off with a deep-dive coffee chat (on us) or a high-energy zoom strategy call. This isn't just a
-                meeting—it's about aligning our souls and your goals. No corporate stiff vibes here—just two business
+                meeting; it's about aligning our souls and your goals. No corporate stiff vibes here. Just two business
                 besties plotting a takeover.</p>
               <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                 <span
@@ -923,7 +1390,7 @@
                 style="color: #666; padding: 1rem; border-left: 2px solid var(--pop-pink); font-size: 0.85rem; line-height: 1.6; text-transform: none;">
                 A: If only it were that simple. A logo is just the handle to your door; branding is the entire
                 architecture of the house. We engineer the psychological triggers, the unapologetic voice, and the
-                entire ecosystem your clients interact with. It's not decoration—it's market dominance.
+                entire ecosystem your clients interact with. It's not decoration. It's market dominance.
               </div>
             </details>
 
@@ -1004,7 +1471,7 @@
             discipline,
             "calm-in-the-chaos" leadership, attention to detail, and a steadfast dedication to protecting your time,
             mental peace, and
-            budget. When you hire us, you aren't just getting freelancers—you're acquiring an entire in-house creative
+            budget. When you hire us, you aren't just getting freelancers. You're acquiring an entire in-house creative
             department and two business besties who will go to print for your vision.
           </p>
         </div>
@@ -1012,432 +1479,151 @@
       </div>
     </section>
 
-    <!-- SECTION 05: THE ARCHIVE (CASE STUDIES) -->
-    <section id="archive" class="bg-graph-dark" style="padding: 8vh 0; border-top: 1px solid #000;">
-      <div style="text-align: center; margin-bottom: 6vh; position: relative; z-index: 2;">
-        <span class="chapter-mark" style="color: white; border-color: white; white-space: nowrap;">CHAPTER VII: THE
-          ARCHIVE / CASE STUDIES</span>
-        <h2 class="halftone-text" style="color: white; position: relative; z-index: 10;">Selected Works.</h2>
-        <!-- Background Stickers -->
-        <div class="sticker sticker-classified" style="top: -20px; right: 5%; transform: rotate(10deg);">ACCESS:
-          GRANTED
+    <!-- SECTION 02: THE WELCOME DISPATCH (RETRO WINDOW) -->
+    <section class="bg-graph"
+      style="position: relative; overflow: hidden; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 15vh 5vw;">
+
+      <!-- RETRO ERROR WINDOW OVERLAY (SQUARE & REPOSITIONED) -->
+      <div class="parallax-layer" data-speed="0.1" id="vibe-check-modal"
+        style="position: absolute; top: 5%; right: 5%; width: 240px; height: 260px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; z-index: 10; box-shadow: 5px 5px 0px rgba(0,0,0,0.5); display: flex; flex-direction: column;">
+        <div
+          style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; display: flex; justify-content: space-between; flex-shrink: 0;">
+          <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">✨</span>
+            VALUABLE_INSIGHT.EXE</span><span onclick="this.closest('#vibe-check-modal').style.display='none'"
+            style="background: silver; color: black; padding: 0 4px; cursor: pointer; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
         </div>
-        <div class="sticker sticker-postit" style="top: -30px; left: 10%; transform: rotate(-5deg); z-index: 20;">
-          <b>NOTE:</b><br>We fix things. Yes, even that...
+        <div
+          style="padding: 1.5rem; color: black; font-family: var(--font-mono); font-size: 0.82rem; background: #fff; border: 2px inset #fff; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+          <b>ARE YOU READY TO DISRUPT?</b><br><br>Warning: Continued scrolling may result in extreme brand clarity and
+          market authority.<br><br>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+            <button onclick="document.getElementById('vibe-check-modal').style.display='none'"
+              style="background: silver; font-family: var(--font-mono); border: 2px solid white; border-bottom-color: black; border-right-color: black; padding: 8px; cursor: pointer; font-weight: bold; font-size: 0.7rem;">I'M
+              READY</button>
+            <button onclick="document.getElementById('vibe-check-modal').style.display='none'"
+              style="background: silver; font-family: var(--font-mono); border: 2px solid white; border-bottom-color: black; border-right-color: black; padding: 8px; cursor: pointer; font-size: 0.7rem;">NOT
+              YET</button>
+          </div>
         </div>
       </div>
 
-      <div class="desktop-case-grid">
-        <!-- 01: Wax Therapy -->
-        <div class="desktop-folder-group">
-          <div class="desktop-folder-icon" tabindex="0">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="65" height="65"
-              style="fill: #000080; filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.8)); margin-bottom: 0.5rem; flex-shrink: 0;">
-              <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
-            </svg>
-            <span class="desktop-folder-label">WAX_THERAPY_ASSETS</span>
-          </div>
-          <div class="desktop-folder-content">
-            <div class="case-card note-paper">
-              <!-- Close Button -->
-              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'">X</div>
-
-              <!-- Retro Tape Decor -->
-              <div class="tape-decor" style="top: -10px; left: 20%; transform: rotate(-2deg);"></div>
-              <div class="tape-decor" style="bottom: 20px; right: 10%; transform: rotate(1deg); width: 80px;"></div>
-
-              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1;">[ 01 / PSYCHOLOGY +
-                BRANDING ]</div>
-              <h3 class="halftone-text"
-                style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 0.5rem; line-height: 1.2;">Wax Therapy.
-              </h3>
-              <p class="mono-label"
-                style="opacity: 0.8; font-weight: bold; margin-bottom: 1rem; color: var(--pop-pink); line-height: 1.2;">
-                STATUS: ELEVATED</p>
-
-              <div style="font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.5; margin-bottom: 2rem;">
-                > [ x ] Restructured brand psychology and market positioning<br>
-                > [ x ] Designed cohesive, high end visual identity system, moodboards & social media strategy<br>
-                > [ x ] Full-stack responsive web design & e-commerce integration<br>
-                > [ x ] Optimized campaign components & website for local visibility<br>
-                > [ x ] In-house content production and aesthetic direction<br><br>
-                <b>OUTCOME:</b> 90% increase in bookings within 14 days and an immediate commanding presence in a
-                crowded market.
-              </div>
-
-              <div class="halftone-img-wrap"
-                style="height: auto; margin-top: 2rem; position: relative; border: 1px solid #ddd; background: #fff; padding: 5px; transform: rotate(1deg);">
-                <img src="images/lux_crystal_ball.png" alt="Interactive fortune telling experience" loading="lazy">
-                <!-- Tape on photo -->
-                <div class="tape-decor"
-                  style="top: -15px; right: -20px; width: 60px; height: 25px; transform: rotate(45deg);"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- 02: Dr. Safir -->
-        <div class="desktop-folder-group">
-          <div class="desktop-folder-icon" tabindex="0">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="65" height="65"
-              style="fill: #000080; filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.8)); margin-bottom: 0.5rem; flex-shrink: 0;">
-              <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
-            </svg>
-            <span class="desktop-folder-label">DR_SAFIR_UX</span>
-          </div>
-          <div class="desktop-folder-content">
-            <div class="case-card note-paper">
-              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'">X</div>
-              <div class="tape-decor" style="top: -10px; right: 20%; transform: rotate(2deg);"></div>
-
-              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1;">[ 02 / WEB + CLINICAL
-                AUTHORITY ]</div>
-              <h3 class="halftone-text"
-                style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 0.5rem; line-height: 1.2;">Dr. Safir.</h3>
-              <p class="mono-label"
-                style="opacity: 0.8; font-weight: bold; margin-bottom: 1rem; color: var(--pop-pink); line-height: 1.2;">
-                STATUS: OPTIMIZED</p>
-
-              <div style="font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.5; margin-bottom: 2rem;">
-                > [ x ] Developed elite digital infrastructure and UI/UX<br>
-                > [ x ] Built streamlined patient intake architecture & appointment scheduling<br>
-                > [ x ] Clinical authority copywriting and omni-channel SEO<br>
-                > [ x ] Professional photography and headshot direction<br>
-                > [ x ] Deployed a patient portal with HIPAA compliance and telehealth integration.<br><br>
-                <b>OUTCOME:</b> Redefined trust and secured clinical authority positioning as an industry
-                leader.<br><br>
-                <a href="https://www.drpaulajimenezsafir.com/" target="_blank" class="mono-label"
-                  style="color: var(--pop-pink); text-decoration: underline; font-weight: bold; font-size: 0.7rem;">VIEW
-                  WEB_SITE.EXE →</a>
-              </div>
-
-              <div class="halftone-img-wrap"
-                style="height: auto; margin-top: 2rem; position: relative; border: 1px solid #ddd; background: #fff; padding: 5px; transform: rotate(-1deg);">
-                <img src="images/dentist.jpeg" alt="Medical and dental specialized marketing systems" loading="lazy">
-                <div class="tape-decor" style="bottom: -15px; left: 10%; width: 70px; transform: rotate(-15deg);">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- 03: A&B Fashion -->
-        <div class="desktop-folder-group">
-          <div class="desktop-folder-icon" tabindex="0">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="65" height="65"
-              style="fill: #000080; filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.8)); margin-bottom: 0.5rem; flex-shrink: 0;">
-              <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
-            </svg>
-            <span class="desktop-folder-label">TWISTED_LENS_STUDIOS</span>
-          </div>
-          <div class="desktop-folder-content">
-            <div class="case-card note-paper">
-              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'">X</div>
-              <div class="tape-decor" style="top: -15px; left: 30%; width: 120px; transform: rotate(-1deg);"></div>
-
-              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1;">[ 03 / FILM +
-                STORYTELLING
-                ]</div>
-              <h3 class="halftone-text"
-                style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 0.5rem; line-height: 1.2;">Twisted Lens.
-              </h3>
-              <p class="mono-label"
-                style="opacity: 0.8; font-weight: bold; margin-bottom: 1rem; color: var(--pop-pink); line-height: 1.2;">
-                STATUS: ICONIC</p>
-
-              <div style="font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.5; margin-bottom: 2rem;">
-                > [ x ] Built cinematic brand narratives for 2,000+ clients<br>
-                > [ x ] Engineered audience loyalty through premium visual storytelling<br>
-                > [ x ] Art direction, set design, and commercial photography<br>
-                > [ x ] Multi-platform media distribution strategy<br>
-                > [ x ] Deployed high-end film assets (Twisted Lens Presents)<br><br>
-                <b>OUTCOME:</b> Transformed messy creative parts into beautifully organized, high-impact legacy
-                campaigns.
-              </div>
-
-              <div class="halftone-img-wrap"
-                style="height: auto; margin-top: 2rem; position: relative; border: 1px solid #ddd; background: #fff; padding: 5px; transform: rotate(2deg);">
-                <img src="images/twisted_lens_studio_shoot_1771447248254.png" alt="Twisted Lens Cinematic Film"
-                  style="width: 100%; object-fit: cover;" loading="lazy">
-                <div class="tape-decor" style="top: 10px; right: -30px; width: 80px; transform: rotate(90deg);"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- 04: KerenHart -->
-        <div class="desktop-folder-group">
-          <div class="desktop-folder-icon" tabindex="0">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="65" height="65"
-              style="fill: #000080; filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.8)); margin-bottom: 0.5rem; flex-shrink: 0;">
-              <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
-            </svg>
-            <span class="desktop-folder-label">KERENHART_PROMO</span>
-          </div>
-          <div class="desktop-folder-content">
-            <div class="case-card note-paper">
-              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'">X</div>
-              <div class="tape-decor" style="top: 0; left: 10%; width: 60px; transform: rotate(-10deg);"></div>
-
-              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1;">[ 04 / BRAND +
-                CONSULTING ]</div>
-              <h3 class="halftone-text"
-                style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 0.5rem; line-height: 1.2;">Keren Hart.
-              </h3>
-              <p class="mono-label"
-                style="opacity: 0.8; font-weight: bold; margin-bottom: 1rem; color: var(--pop-pink); line-height: 1.2;">
-                STATUS: PRO</p>
-
-              <div style="font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.5; margin-bottom: 2rem;">
-                > [ x ] Strategic brand development and commercial positioning<br>
-                > [ x ] High-end boutique fashion art direction<br>
-                > [ x ] E-commerce infrastructure and aesthetic scaling<br>
-                > [ x ] Omni-channel content strategy and visual storytelling<br><br>
-                <b>OUTCOME:</b> Elevated market positioning and consistent aesthetic authority across all
-                segments.
-              </div>
-
-              <div class="halftone-img-wrap"
-                style="height: auto; margin-top: 2rem; position: relative; border: 1px solid #ddd; background: #fff; padding: 5px; transform: rotate(-1deg);">
-                <img src="images/agency_office_vibe_1771445625493.png" alt="Keren Hart Brand Development"
-                  style="width: 100%; object-fit: cover;" loading="lazy">
-                <div class="tape-decor" style="top: -10px; right: 10%; width: 90px; transform: rotate(5deg);"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- 05: The Loft -->
-        <div class="desktop-folder-group">
-          <div class="desktop-folder-icon" tabindex="0">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="65" height="65"
-              style="fill: #000080; filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.8)); margin-bottom: 0.5rem; flex-shrink: 0;">
-              <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
-            </svg>
-            <span class="desktop-folder-label">THE_LOFT_REBRAND</span>
-            <div class="sticker sticker-stamp"
-              style="position: absolute; bottom: 0; right: -20px; transform: rotate(15deg); color: #fff; background: var(--pop-green); border: none; font-size: 0.5rem; border-radius: 4px; z-index: 5;">
-              SUCCESS</div>
-          </div>
-          <div class="desktop-folder-content">
-            <div class="case-card note-paper">
-              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'">X</div>
-              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1;">[ 05 / INTERIOR + SCALE
-                ]
-              </div>
-              <h3 class="halftone-text"
-                style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 0.5rem; line-height: 1.2;">The Loft Studios.
-              </h3>
-              <p class="mono-label" style="color: var(--pop-pink); font-weight: bold; margin-bottom: 1rem;">STATUS:
-                ARCHIVED</p>
-              <div
-                style="font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.5; margin-bottom: 2rem; color: #000;">
-                > [ x ] Complete visual overhaul for high-end studio spaces<br>
-                > [ x ] Environmental design and interior branding integration<br>
-                > [ x ] Custom booking platform UI mapping and development<br>
-                > [ x ] Market capture of elite creative demographics via targeted ad campaigns<br>
-                > [ x ] Digital presence optimization for Central Valley premium tiers<br><br>
-                <b>OUTCOME:</b> Immediate waitlist status post-rebrand and 100% occupancy within 30 days.
-              </div>
-              <div class="halftone-img-wrap"
-                style="height: auto; margin-top: 2rem; position: relative; border: 1px solid #ddd; background: #fff; padding: 5px; transform: rotate(1deg);">
-                <img src="images/lady and palms.webp" alt="Beauty and aesthetics visual systems" loading="lazy">
-              </div>
-            </div>
-          </div>
+      <div class="reveal" id="welcome-doc-modal"
+        style="text-align: center; max-width: 800px; padding: 2.5rem 1.5rem; position: relative; z-index: 2; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; box-shadow: 10px 10px 0px rgba(0,0,0,0.5);">
+        <div
+          style="position: absolute; top: 0; left: 0; width: 100%; background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; text-align: left; display: flex; justify-content: space-between;">
+          <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">💎</span>
+            SYSTEM_ACCESS: BRAND_DRAFTS.DOC</span><span
+            onclick="this.closest('#welcome-doc-modal').style.display='none'"
+            style="background: silver; color: black; padding: 0 4px; cursor: pointer; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
         </div>
 
-        <!-- 06: CV Wellness -->
-        <div class="desktop-folder-group">
-          <div class="desktop-folder-icon" tabindex="0">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="65" height="65"
-              style="fill: #000080; filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.8)); margin-bottom: 0.5rem; flex-shrink: 0;">
-              <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
-            </svg>
-            <span class="desktop-folder-label">WELLNESS_COLLECTIVE</span>
-            <div class="sticker sticker-urgent"
-              style="position: absolute; top: -10px; left: -20px; font-size: 0.4rem; padding: 2px 6px;">TOP SECRET
-            </div>
-          </div>
-          <div class="desktop-folder-content">
-            <div class="case-card note-paper">
-              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'">X</div>
-              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1;">[ 06 / HEALTHCARE +
-                TRUST
-                ]</div>
-              <h3 class="halftone-text"
-                style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 0.5rem; line-height: 1.2;">Wellness
-                Collective.
-              </h3>
-              <p class="mono-label" style="color: var(--pop-pink); font-weight: bold; margin-bottom: 1rem;">STATUS:
-                LIVE
-              </p>
-              <div
-                style="font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.5; margin-bottom: 2rem; color: #000;">
-                > [ x ] Patient-first digital experience design<br>
-                > [ x ] Strategic trust-building through visual tone & alignment<br>
-                > [ x ] Go-to-market rollout strategy and patient enrollment campaigns<br>
-                > [ x ] Brand messaging and clinical authority marketing deployment<br><br>
-                <b>RESULT:</b> 45% increase in online inquiries and optimized conversion funnels for new patients.
-              </div>
-              <div class="halftone-img-wrap"
-                style="height: auto; margin-top: 2rem; position: relative; border: 1px solid #ddd; background: #fff; padding: 5px; transform: rotate(-1deg);">
-                <img src="images/dentist-glove copy.jpeg" alt="Wellness Collective patient intake overhaul"
-                  style="width: 100%; object-fit: cover;" loading="lazy">
-              </div>
-            </div>
+        <span class="chapter-mark" style="margin-top: 2rem;">CHAPTER VII: THE PROLOGUE</span>
+        <h2 class="halftone-text blend-difference animated-gradient"
+          style="font-size: clamp(1.5rem, 6vw, 3.8rem); color: #000; mix-blend-mode: normal; line-height: 1.1; word-break: normal;">
+          Welcome<br>Industry Icons!</h2>
+        <p class="mono-label blend-difference"
+          style="margin-top: 3rem; font-size: 1.2rem; line-height: 1.6; text-transform: none; letter-spacing: normal; color: #000; mix-blend-mode: normal; font-weight: bold;">
+          Your behind-the-scenes creative partners.<br>
+          We scale ambitious brands with strategy, identity, and content.</p>
+        <div class="floating-cursor"
+          style="position: absolute; top: 20%; right: 10%; color: var(--pop-pink); font-size: 2.5rem; text-shadow: 0 0 10px rgba(255,255,255,0.5);">
+          ✦</div>
+        <div class="floating-cursor"
+          style="position: absolute; bottom: 20%; left: 15%; color: var(--pop-aqua); font-size: 2.5rem; text-shadow: 0 0 10px rgba(255,255,255,0.5);">
+          ★</div>
+        <div
+          style="margin-top: 3rem; display: inline-flex; align-items: center; justify-content: center; position: relative; gap: 1rem; flex-wrap: wrap;">
+          
+          <button onclick="document.getElementById('cv-modal').style.display='flex';"
+            style="background: #000; color: #fff; padding: 0.8rem 2rem; border: 2px solid #000; font-family: var(--font-mono); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; cursor: pointer; box-shadow: 4px 4px 0 var(--pop-lime); display: flex; align-items: center; gap: 10px; transition: transform 0.1s;">
+            <span style="font-size: 1.2rem;">⚡</span>
+            VIEW AGENCY CV
+          </button>
+
+          <button onclick="this.closest('#welcome-doc-modal').style.display='none'"
+            style="background: silver; color: #000; padding: 0.8rem 2rem; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; font-family: var(--font-mono); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; cursor: pointer; box-shadow: 4px 4px 0 rgba(0,0,0,0.5); display: flex; align-items: center; gap: 10px; transition: transform 0.1s;">
+            <span
+              style="display:inline-block; border: 1px dashed #000; padding: 0 4px; font-size: 0.7rem; background: #fff;">OK</span>
+            ENTER EXPERIENCE
+          </button>
+
+          <div
+            style="position: absolute; bottom: -15px; right: -25px; transform: rotate(12deg); background: var(--pop-pink); color: #fff; border: 1px solid #000; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.55rem; font-weight: bold; white-space: nowrap; box-shadow: 2px 2px 0 #000; pointer-events: none; z-index: 5;">
+            ACCESS CLEARED
           </div>
         </div>
-
-        <!-- 07: Designer Process -->
-        <div class="desktop-folder-group">
-          <div class="desktop-folder-icon" tabindex="0">
-            <span class="desktop-folder-label">BRAND_SYSTEMS_R&D</span>
-            <div class="sticker sticker-approved"
-              style="position: absolute; top: -10px; right: -10px; transform: rotate(10deg); font-size: 0.5rem; padding: 2px 6px;">
-              NEW</div>
-          </div>
-          <div class="desktop-folder-content">
-            <div class="case-card note-paper">
-              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'">X</div>
-              <div class="tape-decor" style="top: -15px; left: 40%; width: 100px; transform: rotate(2deg);"></div>
-
-              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1;">[ 07 / IDENTITY + DESIGN
-                PROCESS ]</div>
-              <h3 class="halftone-text"
-                style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 0.5rem; line-height: 1.2;">Behind The
-                Aesthetics.</h3>
-              <p class="mono-label" style="color: var(--pop-aqua); font-weight: bold; margin-bottom: 1rem;">STATUS:
-                MOODBOARDS</p>
-
-              <div
-                style="font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1.5rem; color: #000;">
-                > [ x ] Psychology-first visual mapping<br>
-                > [ x ] Custom typography and vector engineering<br>
-                > [ x ] We build the DNA of market-dominating brands.<br><br>
-                <b>THE PALETTE:</b>
-              </div>
-
-              <div style="display: flex; gap: 10px; margin-bottom: 1.5rem;">
-                <div
-                  style="width: 40px; height: 40px; background: #FF00FF; border: 2px solid #000; box-shadow: 2px 2px 0 #000; border-radius: 50%;">
-                </div>
-                <div
-                  style="width: 40px; height: 40px; background: #00FF00; border: 2px solid #000; box-shadow: 2px 2px 0 #000; border-radius: 50%;">
-                </div>
-                <div
-                  style="width: 40px; height: 40px; background: #000080; border: 2px solid #000; box-shadow: 2px 2px 0 #000; border-radius: 50%;">
-                </div>
-                <div
-                  style="width: 40px; height: 40px; background: #000000; border: 2px solid #000; box-shadow: 2px 2px 0 #000; border-radius: 50%;">
-                </div>
-                <div
-                  style="font-family: var(--font-mono); font-size: 0.6rem; margin-left: auto; align-self: center; transform: rotate(-5deg); color: var(--pop-pink); border: 1px dashed var(--pop-pink); padding: 4px;">
-                  CMYK + NEON</div>
-              </div>
-
-              <div class="halftone-img-wrap"
-                style="height: auto; position: relative; border: 1px solid #ddd; background: #fff; padding: 5px; transform: rotate(-2deg);">
-                <img src="images/ash_and_brittany_portrait.jpg" alt="Aesthetic Engineering Team" loading="lazy">
-                <!-- doodle text -->
-                <div
-                  style="position: absolute; bottom: 20px; right: -10px; font-family: 'Comic Sans MS', cursive; color: var(--pop-lime); font-size: 1.2rem; transform: rotate(-15deg); background: #000; padding: 2px 8px; border: 1px solid var(--pop-lime);">
-                  "Make it pop!"</div>
-                <!-- circle doodle -->
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 08: Top Secret -->
-        <div class="desktop-folder-group">
-          <div class="desktop-folder-icon" tabindex="0" style="filter: grayscale(100%) contrast(1.5);">
-            <span class="desktop-folder-label" style="background: red;">CLASSIFIED_WORK</span>
-            <div class="sticker sticker-urgent"
-              style="position: absolute; top: -10px; left: -20px; font-size: 0.4rem; padding: 2px 6px;">TOP SECRET</div>
-          </div>
-          <div class="desktop-folder-content">
-            <div class="case-card note-paper"
-              style="background: #111 !important; color: #fff !important; border: 4px solid red; box-shadow: 10px 10px 0 red;">
-              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'"
-                style="color: #fff; border-color: #fff;">X</div>
-
-              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1; color: red;">[ ERROR:
-                CLEARANCE REQUIRED ]</div>
-              <h3 class="pixel-header"
-                style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; color: #fff; line-height: 1;">
-                Access<br>Denied.</h3>
-
-              <div
-                style="font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.5; margin-bottom: 2rem; color: #ccc;">
-                > This project is currently under NDA or restricted for High-End Retainer clients only.<br>
-                > Bypassing security protocols is impossible.<br><br>
-                <b>SOLUTION:</b> Contact the agency to request clearance or schedule a vibe check to view our complete
-                private portfolio.
-              </div>
-
-              <div style="text-align: center; margin-top: 2rem;">
-                <a href="#contact-brief" onclick="this.closest('.desktop-folder-content').style.display='none'"
-                  class="btn-elite-submit"
-                  style="background: red; color: #fff; border: 2px solid #fff; padding: 1rem 2rem; display: inline-block; font-family: var(--font-mono); font-weight: bold; text-decoration: none; box-shadow: 4px 4px 0 rgba(255,255,255,0.3);">
-                  REQUEST ACCESS
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 09: Gov Contract & SEO -->
-        <div class="desktop-folder-group">
-          <div class="desktop-folder-icon" tabindex="0">
-            <span class="desktop-folder-label">FEDERAL_SEO_DEV</span>
-            <div class="sticker sticker-approved"
-              style="position: absolute; top: -10px; left: -10px; transform: rotate(-5deg); font-size: 0.5rem; padding: 2px 6px;">
-              DEPLOYED</div>
-          </div>
-          <div class="desktop-folder-content">
-            <div class="case-card note-paper">
-              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'">X</div>
-              <div class="tape-decor" style="top: -15px; right: 20%; width: 80px; transform: rotate(-3deg);"></div>
-
-              <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1;">[ 09 / GOV + SEO
-                OPTIMIZATION ]</div>
-              <h3 class="halftone-text"
-                style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 0.5rem; line-height: 1.2;">Project Kern.</h3>
-              <p class="mono-label" style="color: var(--pop-green); font-weight: bold; margin-bottom: 1rem;">STATUS:
-                RANKING #1</p>
-
-              <div
-                style="font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1.5rem; color: #000; position: relative;">
-                > [ x ] Compliant federal web architecture and deployment<br>
-                > [ x ] Deep-level Generative Engine Optimization (GEO)<br>
-                > [ x ] Omni-channel structural SEO yielding massive organic traffic<br><br>
-                <b>OUTCOME:</b> Secured top indexation across all major search nodes within 30 days.
-
-                <!-- Sneaky little code snippet -->
-                <div
-                  style="position: absolute; bottom: 0; right: 0; transform: rotate(-5deg); background: rgba(0,255,0,0.2); border: 1px dotted #000; padding: 2px 4px; font-size: 0.6rem; color: #000; opacity: 0.7;">
-                  let <span style="color: var(--pop-blue);">rank</span> = await indexer.crawl();<br>
-                  assert(<span style="color: var(--pop-blue);">rank</span> === 1);
-                </div>
-              </div>
-
-              <div class="halftone-img-wrap"
-                style="height: auto; margin-top: 2rem; position: relative; border: 1px solid #ddd; background: #fff; padding: 5px; transform: rotate(1deg);">
-                <img src="images/retro_world_net.png" alt="Cyber security server infrastructure"
-                  style="width: 100%; image-rendering: pixelated; margin-bottom: 1rem;">
-                <div class="sticker sticker-postit"
-                  style="position: absolute; bottom: 10px; left: -10px; width: 80px; transform: rotate(-10deg); font-size: 0.5rem; padding: 5px; background: yellow; color: black;">
-                  // Update schema.org ASAP
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
+    </section>
 
-      <div style="text-align: center; margin-top: 4rem; padding: 0 5vw;">
-        <a href="#contact-brief" class="btn-elite-submit"
-          style="background: #00ff00; color: #000; text-decoration: none; box-shadow: 8px 8px 0 #fff; transition: transform 0.2s;">
-          START YOUR PROJECT
-        </a>
+
+
+
+    <!-- SECTION 03: THE PHILOSOPHY -->
+    <section class="bg-grid-holo" style="padding: 15vh 10vw; border-top: 1px solid #000;">
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(2rem, 5vw, 10vw); align-items: start; position: relative;">
+        <!-- DECORATIVE ARROW -->
+        <div class="annotation-graphic" style="top: -50px; right: 10%;">
+          <svg class="arrow-vector" viewBox="0 0 100 100">
+            <path d="M10,50 L90,50 M70,30 L90,50 L70,70" fill="none" stroke="currentColor" stroke-width="2" />
+          </svg>
+          <span style="display: block; margin-top: 10px;">VIBE_CHECK_STATION</span>
+        </div>
+        <div>
+          <span class="chapter-mark">CHAPTER VIII: THE PHILOSOPHY</span>
+          <h2 class="halftone-text pixel-header" style="color: var(--pop-green);">Ash
+            &<br>Brittany</h2>
+          <div class="mono-label" style="margin-top: 2rem; color: var(--pop-pink);">TEHACHAPI // BAKERSFIELD // LA //
+            &
+            BEYOND</div>
+          <div class="mono-label" style="opacity: 0.9; font-size: 0.75rem; color: #fff;">FEMALE VETERAN OWNED</div>
+
+          <!-- Cute Polaroid Photo -->
+          <div class="parallax-layer" data-speed="0.1"
+            style="position: relative; margin-top: 3rem; transform: rotate(-3deg); width: fit-content; max-width: 80%;">
+            <!-- Retro tape -->
+            <div
+              style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%) rotate(2deg); width: 80px; height: 30px; background: rgba(255,255,255,0.6); box-shadow: 0 1px 3px rgba(0,0,0,0.1); z-index: 10; border-radius: 2px;">
+            </div>
+            <!-- Polaroid body -->
+            <div style="background: #fff; padding: 10px 10px 50px 10px; box-shadow: 5px 5px 15px rgba(0,0,0,0.5);">
+              <img src="images/ash_and_brittany_portrait.jpg" alt="Ash and Brittany Polaroid"
+                style="width: 100%; border: 1px solid #ccc; filter: grayscale(100%) contrast(1.2);">
+              <div
+                style="font-family: 'Comic Sans MS', cursive, sans-serif; color: #000; text-align: center; font-size: 1.2rem; transform: rotate(-2deg); position: absolute; bottom: 10px; width: 100%; left: 0;">
+                xoxox Your Business Besties</div>
+            </div>
+          </div>
+        </div>
+        <div class="parallax-layer window-modal" data-speed="0.2"
+          style="margin-top: 15vh; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); z-index: 10;">
+          <div
+            style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; display: flex; justify-content: space-between;">
+            <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">📝</span>
+              NOTEPAD.EXE</span><span
+              style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
+          </div>
+          <div style="padding: 2rem; background: #fff; color: #000;">
+            <p style="font-size: 1.2rem; line-height: 1.5; text-transform: none; font-weight: bold; color: #000; margin: 0;">
+              Your business besties and aesthetic engineers. 
+              Ash & Brittany lead this female veteran-owned powerhouse across California.
+            </p>
+            <p class="mono-label"
+              style="margin-top: 1.5rem; opacity: 0.8; text-transform: none; letter-spacing: normal; color: #000; font-size: 1rem; line-height: 1.5;">
+              Brand therapy meets tactical execution. We help ambitious ideas stand out and scale strategically. No burnout. Just absolute dominance.
+            </p>
+            <div style="margin-top: 2.5rem; display: flex; justify-content: flex-start; gap: 1rem;">
+              <button onclick="document.getElementById('cv-modal').style.display='flex';"
+                style="background: #000; color: var(--pop-lime); font-family: var(--font-mono); font-weight: bold; padding: 0.8rem 1.5rem; border: 2px solid #000; box-shadow: 4px 4px 0 var(--pop-lime); cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.2rem;">⚡</span> VIEW AGENCY CV
+              </button>
+            </div>
+            <div class="mono-label"
+              style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px dashed #999; text-align: center; color: var(--pop-pink);">
+              TEHACHAPI // BAKERSFIELD // LA // & BEYOND
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1455,7 +1641,7 @@
         <div class="fun-column horoscopes-col">
           <div style="margin-bottom: 5vh; display: flex; justify-content: space-between; align-items: flex-end;">
             <div>
-              <span class="chapter-mark" style="color: var(--pop-lime); border-color: var(--pop-lime);">CHAPTER VIII:
+              <span class="chapter-mark" style="color: var(--pop-lime); border-color: var(--pop-lime);">CHAPTER IX:
                 THE COSMIC
                 HUB</span>
               <h2 class="halftone-text" style="font-size: clamp(2rem, 5vw, 4rem); color: #fff;">Success Grid.</h2>
@@ -1509,30 +1695,29 @@
         <!-- COLUMN 2: THE ORACLE (CRYSTAL BALL) -->
         <div class="fun-column oracle-col">
           <div style="margin-bottom: 5vh;">
-            <span class="chapter-mark" style="color: var(--pop-pink); border-color: var(--pop-pink);">CHAPTER IX: THE
+            <span class="chapter-mark" style="color: var(--pop-pink); border-color: var(--pop-pink);">CHAPTER X: THE
               ORACLE</span>
             <h2 class="halftone-text" style="font-size: clamp(2rem, 5vw, 4rem); color: #fff;">Zoltar Speaks.
             </h2>
           </div>
 
           <div id="oracleVisual" class="crystal-ball-container parallax-layer" data-speed="0.1"
-            style="cursor: pointer; transition: all 0.3s ease; text-align: center; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); width: 100%; max-width: 450px; z-index: 20;">
+            style="cursor: pointer; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-align: center; width: 100%; max-width: 400px; z-index: 20; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem;">
 
-            <div
-              style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; text-align: left; display: flex; justify-content: space-between;">
-              <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">🔮</span>
-                ZOLTAR_MACHINE.EXE</span><span
-                style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
+            <div style="position: relative; display: inline-block;">
+              <!-- Glass reflection highlight -->
+              <div style="position: absolute; top: 15%; left: 20%; width: 40%; height: 30%; background: radial-gradient(ellipse at top left, rgba(255,255,255,0.4) 0%, transparent 60%); border-radius: 50%; z-index: 2; pointer-events: none; transform: rotate(-30deg);"></div>
+              
+              <img src="images/lux_crystal_ball.png" alt="Luxurious 3D Crystal Ball" loading="lazy" id="crystalBallImg"
+                style="width: 320px; border-radius: 50%; filter: drop-shadow(0 0 40px rgba(255,100,0,0.4)) contrast(1.2) brightness(1.1); animation: float 5s ease-in-out infinite, pulseGlow 4s infinite alternate; transition: filter 0.3s ease;">
+                
+              <!-- Base shadow -->
+              <div style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); width: 180px; height: 20px; background: radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, transparent 70%); border-radius: 50%; z-index: -1;"></div>
             </div>
 
-            <div
-              style="background: #000; padding: 3rem 1rem; position: relative; display: inline-block; width: 100%; margin-top: 4px; border: 2px inset #fff;">
-              <img src="images/lux_crystal_ball.png" alt="Luxurious 3D Crystal Ball" loading="lazy"
-                style="width: 280px; border-radius: 50%; filter: drop-shadow(0 0 50px var(--pop-orange)) contrast(1.1); animation: float 4s ease-in-out infinite;">
-              <div class="mono-label"
-                style="margin-top: 2rem; color: var(--pop-orange); font-size: 1rem; letter-spacing: 2px; text-shadow: 0 0 10px rgba(255,100,0,0.5); animation: pulseStatus 1.5s infinite;">
-                CLICK TO RECEIVE YOUR VIBE TRANSMISSION</div>
-            </div>
+            <div class="mono-label" id="oracleStatusText"
+              style="margin-top: 2.5rem; color: var(--pop-orange); font-size: 0.9rem; letter-spacing: 3px; text-shadow: 0 0 15px rgba(255,100,0,0.8); animation: pulseStatus 2s infinite; font-weight: 900; background: rgba(0,0,0,0.4); padding: 0.5rem 1rem; border-radius: 5px; border: 1px solid rgba(255,100,0,0.3);">
+              [ GAZE INTO THE ORB ]</div>
           </div>
 
           <div id="frank-container">
@@ -1772,7 +1957,7 @@
     <!-- SECTION 08: THE DISPATCH (BLOG) -->
     <section id="blog" style="background: var(--bg-paper); padding: 15vh 0;">
       <div class="section-header-wrap" style="padding: 0 10vw; margin-bottom: 8vh;">
-        <span class="chapter-mark">CHAPTER X: THE DISPATCH</span>
+        <span class="chapter-mark">CHAPTER XI: THE DISPATCH</span>
         <h2 class="halftone-text">Editorial Insights.
         </h2>
       </div>
@@ -1863,165 +2048,6 @@
           <a href="#blog"
             style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--pop-blue); text-decoration: none; border-bottom: 1px dashed var(--pop-blue); padding-bottom: 2px; transition: all 0.2s;">AGENCY_BLUEPRINTS.TXT</a>
         </div>
-      </div>
-    </section>
-
-    <!-- SECTION 09: THE VOUCH (FEEDBACK) -->
-    <section id="feedback" class="bg-graph-dark" style="padding: 8vh 0; position: relative;">
-
-      <!-- Decorative Stickers -->
-      <div class="parallax-layer tooltip-target" data-speed="0.3"
-        style="position: absolute; top: 10%; right: 10%; font-size: clamp(2.5rem, 5vw, 4rem); transform: rotate(15deg); z-index: 10; filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));">
-        ⭐</div>
-      <div class="parallax-layer tooltip-target" data-speed="-0.2"
-        style="position: absolute; bottom: 20%; left: 5%; font-size: 5rem; transform: rotate(-20deg); z-index: 10; filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));">
-        🔥</div>
-      <div class="parallax-layer tooltip-target" data-speed="0.1"
-        style="position: absolute; top: 40%; left: 8%; font-size: 3rem; transform: rotate(10deg); z-index: 10; filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));">
-        💿</div>
-
-      <div style="padding: 0 10vw; margin-bottom: 8vh; position: relative; z-index: 2;">
-        <span class="chapter-mark" style="color: #fff; border-color: #fff;">CHAPTER XI: THE VOUCH</span>
-        <h2 class="halftone-text" style="color: #fff;">Word on the Web.</h2>
-      </div>
-
-      <div
-        style="position: relative; max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 4rem; padding: 0 5vw;">
-
-        <!-- Retro Review Box 1 -->
-        <div class="reveal"
-          style="align-self: flex-start; width: 100%; max-width: 600px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); z-index: 5;">
-          <div
-            style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; display: flex; justify-content: space-between;">
-            <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">📁</span>
-              REVIEWS/WAX_THERAPY.TXT</span><span
-              style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">_</span>
-          </div>
-          <div style="padding: 2rem; background: #fff; color: #000; font-family: var(--font-mono);">
-            <p style="font-size: 1.2rem; line-height: 1.6; text-transform: none; font-weight: bold; color: #000;">"The
-              Agency didn't
-              just rebrand us—they gave us an entire market authority. Bookings haven't stopped."</p>
-            <br>
-            <span style="opacity: 0.5; font-size: 0.8rem;">[✓] VERIFIED SENDER — WAX THERAPY</span>
-          </div>
-        </div>
-
-        <!-- Retro Review Box 2 -->
-        <div class="reveal"
-          style="align-self: flex-end; width: 100%; max-width: 600px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); z-index: 6;">
-          <div
-            style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; display: flex; justify-content: space-between;">
-            <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">📁</span>
-              REVIEWS/DR_SAFIR.TXT</span><span
-              style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
-          </div>
-          <div style="padding: 2rem; background: #fff; color: #000; font-family: var(--font-mono);">
-            <p style="font-size: 1.2rem; line-height: 1.6; text-transform: none; font-weight: bold; color: #000;">"Ash
-              &
-              Brittany are
-              strategic wizards. They read our minds and built exactly what our brand needed."</p>
-            <br>
-            <span style="opacity: 0.5; font-size: 0.8rem;">[✓] VERIFIED SENDER — DR. SAFIR</span>
-          </div>
-        </div>
-
-        <!-- Retro Review Box 3 -->
-        <div class="reveal"
-          style="align-self: flex-start; width: 100%; max-width: 650px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); z-index: 7; margin-left: 10%;">
-          <div
-            style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; display: flex; justify-content: space-between;">
-            <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">📁</span>
-              REVIEWS/KERENHART_APPAREL.TXT</span><span
-              style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">_</span>
-          </div>
-          <div style="padding: 2rem; background: #fff; color: #000; font-family: var(--font-mono);">
-            <p style="font-size: 1.2rem; line-height: 1.6; text-transform: none; font-weight: bold; color: #000;">
-              "Cinematic
-              production that actually converts. They are our secret weapon for scaling and capturing the essence of
-              our
-              seasonal lines."</p>
-            <br>
-            <span style="opacity: 0.5; font-size: 0.8rem;">[✓] VERIFIED SENDER — KERENHART</span>
-          </div>
-        </div>
-
-        <!-- Retro Review Box 4 -->
-        <div class="reveal"
-          style="align-self: flex-end; width: 100%; max-width: 550px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); z-index: 8; margin-right: 5%;">
-          <div
-            style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; display: flex; justify-content: space-between;">
-            <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">📁</span>
-              REVIEWS/NEW_CLIENT.TXT</span><span
-              style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
-          </div>
-          <div style="padding: 2rem; background: #fff; color: #000; font-family: var(--font-mono);">
-            <p style="font-size: 1.2rem; line-height: 1.6; text-transform: none; font-weight: bold; color: #000;">"We
-              handed them our
-              scattered ideas and they handed us back a full-blown empire. Cannot recommend them enough for high-end
-              web
-              dev."</p>
-            <br>
-            <span style="opacity: 0.5; font-size: 0.8rem;">[✓] VERIFIED SENDER — ELITE PARTNER</span>
-          </div>
-        </div>
-
-        <!-- Retro Review Box 5 -->
-        <div class="reveal"
-          style="align-self: flex-start; width: 100%; max-width: 580px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); z-index: 9; margin-left: 15%;">
-          <div
-            style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; display: flex; justify-content: space-between;">
-            <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">📁</span>
-              REVIEWS/THE_LOFT_STUDIOS.TXT</span><span
-              style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">_</span>
-          </div>
-          <div style="padding: 2rem; background: #fff; color: #000; font-family: var(--font-mono);">
-            <p style="font-size: 1.2rem; line-height: 1.6; text-transform: none; font-weight: bold; color: #000;">"The
-              Agency
-              transformed our digital footprint. Their eye for detail and focus on conversion psychology is unmatched
-              in
-              the Central Valley."</p>
-            <br>
-            <span style="opacity: 0.5; font-size: 0.8rem;">[✓] VERIFIED SENDER — THE LOFT STUDIOS</span>
-          </div>
-        </div>
-
-        <!-- Pop up error -->
-        <div class="reveal"
-          style="align-self: center; width: 100%; max-width: 400px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; z-index: 10; font-family: var(--font-mono); font-size: 0.7rem; box-shadow: 5px 5px 0px rgba(0,0,0,0.5);">
-          <div
-            style="background: #a00; color: white; padding: 2px 6px; font-weight: bold; display: flex; justify-content: space-between;">
-            <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">❌</span> ERROR //
-              JEALOUSY.SYS</span><span
-              style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
-          </div>
-          <div style="padding: 1rem; color: black; background: #fff;">COMPETITORS ARE CRYING.<br>OVERFLOW IN REVENUE
-            PORT.<br><br><button
-              style="background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; cursor: pointer;"
-              onclick="this.closest('.reveal').style.display='none'">IGNORE</button>
-          </div>
-        </div>
-
-        <!-- Pop up error 2 (Infected with Creativity) -->
-        <div class="reveal parallax-layer" data-speed="0.15"
-          style="position: relative; align-self: flex-start; width: 95%; max-width: 400px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; z-index: 50; font-family: var(--font-mono); font-size: 0.7rem; box-shadow: 5px 5px 0px rgba(0,0,0,0.5); transform: rotate(-5deg); margin-top: 2rem; margin-bottom: 2rem; margin-left: auto; margin-right: auto;">
-          <div
-            style="background: darkred; color: white; padding: 2px 6px; font-weight: bold; display: flex; justify-content: space-between;">
-            <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">💀</span> WARNING //
-              INFECTION.EXE</span><span
-              style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
-          </div>
-          <div style="padding: 1.5rem; color: black; background: #fff; text-align: center; border: 2px inset #fff;">
-            <img
-              src="data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L16 17H11L16 26L13 28L8 18L3 23V1Z' fill='%23ff00ff' stroke='black' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E"
-              style="width: 40px; margin-bottom: 1rem; animation: float 2s infinite;" alt="cursor"><br>
-            <b style="font-size: 1rem; color: darkred;">SYSTEM OVERLOAD:</b><br><br>Your aesthetic calibration has
-            exceeded the maximum permissible threshold. <br><br><b>PROGNOSIS:</b> Iconic status is inevitable.<br><br>
-            <button
-              style="background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 6px 12px; cursor: pointer; text-transform: uppercase; font-weight: bold;"
-              onclick="this.closest('.reveal').style.display='none'">Accept Our Strategy</button>
-          </div>
-        </div>
-
       </div>
     </section>
 

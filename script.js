@@ -165,15 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Fun hover effect on the crystal ball
-        oracleVisual.addEventListener('mouseenter', () => {
-            oracleVisual.style.transform = 'scale(1.05) translateY(-5px)';
-            oracleVisual.querySelector('img').style.filter = 'drop-shadow(0 0 80px rgba(255,200,255,1)) contrast(1.2)';
-            const label = oracleVisual.querySelector('.mono-label');
-            if (label) label.style.color = '#fff';
-        });
-
-        oracleVisual.addEventListener('mouseleave', () => {
-            oracleVisual.style.transform = 'scale(1) translateY(0)';
             oracleVisual.querySelector('img').style.filter = 'drop-shadow(0 0 50px var(--pop-orange)) contrast(1.1)';
             const label = oracleVisual.querySelector('.mono-label');
             if (label) label.style.color = 'var(--pop-orange)';
