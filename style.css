@@ -3373,3 +3373,45 @@ section {
         background-position: 550px 550px, 390px 410px, 380px 520px, 220px 250px;
     }
 }
+
+/* BACK TO TOP BUTTON */
+.back-to-top {
+    position: fixed;
+    bottom: -100px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: var(--pop-lime);
+    color: #000;
+    border: 3px solid #000;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 6px 6px 0px #000;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.back-to-top.visible {
+    bottom: 30px;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 0px #000;
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    .back-to-top.visible {
+        bottom: 20px;
+    }
+}

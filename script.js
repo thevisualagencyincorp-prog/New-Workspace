@@ -707,4 +707,24 @@ if (globalClippy) {
     });
 }
 
+// BACK TO TOP BUTTON LOGIC
+const backToTopBtn = document.getElementById('back-to-top');
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        // Show button halfway down the page
+        if (window.scrollY > (document.documentElement.scrollHeight / 2)) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
 // End of script
