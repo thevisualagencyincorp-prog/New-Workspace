@@ -910,8 +910,9 @@ section {
     }
 
     /* ─── CASE STUDIES ─── */
-    .case-study-grid {
+    .desktop-case-grid {
         grid-template-columns: 1fr !important;
+        padding: 2rem 5vw !important;
     }
 
     .case-card {
@@ -3039,6 +3040,7 @@ section {
     position: relative;
     outline: none;
     justify-content: flex-end;
+    overflow: hidden;
 }
 
 .desktop-folder-icon svg {
@@ -3053,23 +3055,24 @@ section {
 }
 
 .desktop-folder-label {
-    background: #000;
+    background: rgba(0, 0, 0, 0.85);
     color: #fff;
     font-family: var(--font-serif);
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.8vw, 1.4rem);
     font-style: italic;
-    padding: 1rem;
+    padding: 0.8rem 0.5rem;
     border: none;
     margin-top: 0;
     width: 100%;
-    text-align: left;
+    text-align: center;
     box-sizing: border-box;
-    opacity: 0.9;
+    opacity: 1;
+    word-wrap: break-word;
 }
 
-/* THUMBNAIL ASSIGNMENTS */
+/* THUMBNAIL ASSIGNMENTS - ALIGNED WITH CONTENT */
 .desktop-folder-group:nth-child(1) .desktop-folder-icon {
-    background-image: url('images/lady and palms.webp');
+    background-image: url('images/lux_crystal_ball.png');
 }
 
 .desktop-folder-group:nth-child(2) .desktop-folder-icon {
@@ -3085,11 +3088,11 @@ section {
 }
 
 .desktop-folder-group:nth-child(5) .desktop-folder-icon {
-    background-image: url('images/realty.jpg');
+    background-image: url('images/collab copy.jpg');
 }
 
 .desktop-folder-group:nth-child(6) .desktop-folder-icon {
-    background-image: url('images/dentist.jpeg');
+    background-image: url('images/dentist-glove copy.jpeg');
 }
 
 .desktop-folder-group:nth-child(7) .desktop-folder-icon {
@@ -3097,11 +3100,11 @@ section {
 }
 
 .desktop-folder-group:nth-child(8) .desktop-folder-icon {
-    background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=400&q=80');
+    background-image: url('images/realty.jpg');
 }
 
 .desktop-folder-group:nth-child(9) .desktop-folder-icon {
-    background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=400&q=80');
+    background-image: url('images/retro_world_net.png');
 }
 
 .desktop-folder-group:hover .desktop-folder-label,
