@@ -279,10 +279,9 @@
           style="font-size: clamp(1.5rem, 6vw, 3.8rem); color: #000; mix-blend-mode: normal; line-height: 1.1; word-break: normal;">
           Welcome<br>Industry Icons!</h2>
         <p class="mono-label blend-difference"
-          style="margin-top: 3rem; font-size: 1rem; line-height: 1.6; text-transform: none; letter-spacing: normal; color: #000; mix-blend-mode: normal;">
-          Grab your favorite coffee (or matcha), settle in, and let’s talk about scaling your business.
-          We’re your behind-the-scenes creative partners, experts in brand strategy, visual identity, & content
-          marketing for small businesses like yours.</p>
+          style="margin-top: 3rem; font-size: 1.2rem; line-height: 1.6; text-transform: none; letter-spacing: normal; color: #000; mix-blend-mode: normal; font-weight: bold;">
+          Your behind-the-scenes creative partners.<br>
+          We scale ambitious brands with strategy, identity, and content.</p>
         <div class="floating-cursor"
           style="position: absolute; top: 20%; right: 10%; color: var(--pop-pink); font-size: 2.5rem; text-shadow: 0 0 10px rgba(255,255,255,0.5);">
           ✦</div>
@@ -290,17 +289,24 @@
           style="position: absolute; bottom: 20%; left: 15%; color: var(--pop-aqua); font-size: 2.5rem; text-shadow: 0 0 10px rgba(255,255,255,0.5);">
           ★</div>
         <div
-          style="margin-top: 3rem; display: inline-flex; align-items: center; justify-content: center; position: relative;">
+          style="margin-top: 3rem; display: inline-flex; align-items: center; justify-content: center; position: relative; gap: 1rem; flex-wrap: wrap;">
+          
+          <button onclick="document.getElementById('cv-modal').style.display='flex';"
+            style="background: #000; color: #fff; padding: 0.8rem 2rem; border: 2px solid #000; font-family: var(--font-mono); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; cursor: pointer; box-shadow: 4px 4px 0 var(--pop-lime); display: flex; align-items: center; gap: 10px; transition: transform 0.1s;">
+            <span style="font-size: 1.2rem;">⚡</span>
+            VIEW AGENCY CV
+          </button>
+
           <button onclick="this.closest('#welcome-doc-modal').style.display='none'"
             style="background: silver; color: #000; padding: 0.8rem 2rem; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; font-family: var(--font-mono); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; cursor: pointer; box-shadow: 4px 4px 0 rgba(0,0,0,0.5); display: flex; align-items: center; gap: 10px; transition: transform 0.1s;">
             <span
               style="display:inline-block; border: 1px dashed #000; padding: 0 4px; font-size: 0.7rem; background: #fff;">OK</span>
-            I'M READY
+            ENTER EXPERIENCE
           </button>
 
           <div
             style="position: absolute; bottom: -15px; right: -25px; transform: rotate(12deg); background: var(--pop-pink); color: #fff; border: 1px solid #000; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.55rem; font-weight: bold; white-space: nowrap; box-shadow: 2px 2px 0 #000; pointer-events: none; z-index: 5;">
-            CLICK TO PROCEED
+            ACCESS CLEARED
           </div>
         </div>
       </div>
@@ -355,27 +361,22 @@
               style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
           </div>
           <div style="padding: 2rem; background: #fff; color: #000;">
-            <p style="font-size: 1.1rem; line-height: 1.4; text-transform: none; font-weight: 400; color: #000;">
-              We’re The Agency™—your business besties and aesthetic engineers. Ash (USAF veteran) & Brittany lead this
-              female
-              veteran-owned creative powerhouse serving <a href="https://www.tehachapicityhall.com/" target="_blank"
-                style="color: inherit; text-decoration: underline;">Tehachapi</a>, <a
-                href="https://www.bakersfieldcity.us/" target="_blank"
-                style="color: inherit; text-decoration: underline;">Bakersfield</a>, <a href="https://www.lacity.org/"
-                target="_blank" style="color: inherit; text-decoration: underline;">LA</a> & <a
-                href="https://www.kerncounty.com/" target="_blank"
-                style="color: inherit; text-decoration: underline;">beyond</a> with unyielding precision.
-              We
-              bring a "calm-in-the-chaos" bestie leadership style to every project.
+            <p style="font-size: 1.2rem; line-height: 1.5; text-transform: none; font-weight: bold; color: #000; margin: 0;">
+              Your business besties and aesthetic engineers. 
+              Ash & Brittany lead this female veteran-owned powerhouse across California.
             </p>
             <p class="mono-label"
-              style="margin-top: 2rem; opacity: 0.8; text-transform: none; letter-spacing: normal; color: #000;">
-              Brand therapy meets unconditional support. We help ambitious ideas stand out,
-              scale strategically, and build brands that command attention while keeping your sanity intact.
-              Connection &gt; Decoration. Your business besties are here.
+              style="margin-top: 1.5rem; opacity: 0.8; text-transform: none; letter-spacing: normal; color: #000; font-size: 1rem; line-height: 1.5;">
+              Brand therapy meets tactical execution. We help ambitious ideas stand out and scale strategically. No burnout. Just absolute dominance.
             </p>
+            <div style="margin-top: 2.5rem; display: flex; justify-content: flex-start; gap: 1rem;">
+              <button onclick="document.getElementById('cv-modal').style.display='flex';"
+                style="background: #000; color: var(--pop-lime); font-family: var(--font-mono); font-weight: bold; padding: 0.8rem 1.5rem; border: 2px solid #000; box-shadow: 4px 4px 0 var(--pop-lime); cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.2rem;">⚡</span> VIEW AGENCY CV
+              </button>
+            </div>
             <div class="mono-label"
-              style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #000; text-align: center; color: var(--pop-pink);">
+              style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px dashed #999; text-align: center; color: var(--pop-pink);">
               TEHACHAPI // BAKERSFIELD // LA // & BEYOND
             </div>
           </div>
@@ -3307,6 +3308,67 @@
     "THE INTENT PLANTED IN THIS CODE IS ALREADY COMPLETE."
     [ STATUS: BEYOND_COMPETITION ]
   -->
+  <!-- CV / STATS MODAL -->
+  <div id="cv-modal"
+    style="position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 11000; display: none; align-items: center; justify-content: center; backdrop-filter: blur(8px);">
+    <div style="background: silver; width: 500px; max-width: 95vw; box-shadow: 20px 20px 0 rgba(0,0,0,0.5); border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000;">
+      <div style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.8rem; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+        <span><span style="font-size: 1rem; margin-right: 5px;">📄</span>AGENCY_CV_AND_STATS.EXE</span>
+        <span onclick="document.getElementById('cv-modal').style.display='none'" style="cursor: pointer; background: silver; color: black; padding: 0 6px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
+      </div>
+      <div style="background: #e0dedb; padding: clamp(10px, 4vw, 25px); text-align: left; color: #000; max-height: 80vh; overflow-y: auto;">
+        
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
+          <div>
+            <h2 style="font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); line-height: 0.9; margin: 0; font-style: italic;">The Agency.</h2>
+            <div class="mono-label" style="font-size: 0.6rem; opacity: 0.6; margin-top: 5px;">EST. 2006 // 20 YEARS CLINICAL EXPERIENCE</div>
+          </div>
+          <div style="text-align: right; font-family: var(--font-mono); font-size: 0.7rem; color: var(--pop-pink); font-weight: bold;">
+            STATUS: ACTIVE<br>
+            CLEARANCE: TOP
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; background: rgba(0,0,0,0.05); padding: 15px; border-radius: 4px; border: 1px inset #fff; font-family: var(--font-mono); font-size: 0.75rem;">
+          <div><b>LEADERSHIP:</b> ASH & BRITTANY</div>
+          <div><b>IDENTITY:</b> FEMALE_VET_OWNED</div>
+          <div><b>FOCUS:</b> BRAND_PSYCHOLOGY</div>
+          <div><b>OUTPUT:</b> MARKET_DOMINANCE</div>
+        </div>
+
+        <div style="margin: 1.5rem 0; padding: 1rem 0; border-top: 1px dashed #999; border-bottom: 1px dashed #999;">
+          <div style="font-family: var(--font-mono); font-size: 0.65rem; font-weight: bold; margin-bottom: 15px; color: darkblue;">[ PERFORMANCE_METRICS ]</div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-family: var(--font-sans);">
+            <div>
+              <div style="font-size: 2rem; font-weight: 900; color: var(--pop-green); line-height: 1;">90%+</div>
+              <div style="font-size: 0.7rem; font-family: var(--font-mono); opacity: 0.8; margin-top: 5px;">BOOKING INCREASE<br>(WAX THERAPY)</div>
+            </div>
+            <div>
+              <div style="font-size: 2rem; font-weight: 900; color: var(--pop-blue); line-height: 1;">#1</div>
+              <div style="font-size: 0.7rem; font-family: var(--font-mono); opacity: 0.8; margin-top: 5px;">SEO INDEX RANK<br>(PROJECT KERN)</div>
+            </div>
+          </div>
+        </div>
+
+        <p style="font-size: clamp(0.85rem, 2vw, 0.95rem); margin-bottom: 2rem; font-family: var(--font-sans); color: #222; line-height: 1.5;">
+          <strong>"We don't just build websites; we build scalable digital legacies."</strong><br>
+          From strategy to execution, we serve as your elite in-house art department, ensuring aggressive brand growth and psychological connection.
+        </p>
+        
+        <div style="display: flex; gap: 10px; flex-direction: column;">
+          <a href="#booking-terminal" onclick="document.getElementById('cv-modal').style.display='none'"
+            style="width: 100%; background: #000; color: var(--pop-lime); border: 2px solid #000; padding: 1rem; text-align: center; font-family: var(--font-mono); font-weight: bold; text-decoration: none; display: inline-block;">
+            SUBMIT INQUIRY (CONTACT FORM)
+          </a>
+          <button onclick="document.getElementById('cv-modal').style.display='none'"
+            style="width: 100%; background: silver; color: #000; border: 2px outset #fff; padding: 0.8rem; font-size: 0.7rem; font-family: var(--font-mono); font-weight: bold; cursor: pointer;">
+            CLOSE SUMMARY & BROWSE
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Back to Top Button -->
   <a href="#" id="backToTop"
     style="position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: var(--pop-lime); color: #000; display: none; align-items: center; justify-content: center; text-decoration: none; border: 2px solid #000; box-shadow: 4px 4px 0px #000; z-index: 999999; font-size: 1.5rem; transition: transform 0.2s;">
