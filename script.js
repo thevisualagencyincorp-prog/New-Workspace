@@ -165,9 +165,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Fun hover effect on the crystal ball
+        oracleVisual.addEventListener('mouseenter', () => {
             oracleVisual.querySelector('img').style.filter = 'drop-shadow(0 0 50px var(--pop-orange)) contrast(1.1)';
             const label = oracleVisual.querySelector('.mono-label');
             if (label) label.style.color = 'var(--pop-orange)';
+        });
+
+        oracleVisual.addEventListener('mouseleave', () => {
+            oracleVisual.querySelector('img').style.filter = '';
+            const label = oracleVisual.querySelector('.mono-label');
+            if (label) label.style.color = '';
         });
 
         oracleVisual.addEventListener('mousedown', () => {
