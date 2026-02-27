@@ -582,6 +582,7 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 25%;
     opacity: 0.7;
     /* Louder grayscale base */
     filter: contrast(1.1) grayscale(100%);
@@ -718,9 +719,8 @@ section {
 }
 
 .horizontal-item {
-    flex: 0 0 35vw;
+    flex: 0 0 clamp(300px, 28vw, 450px);
     height: auto;
-    min-height: 80vh;
 }
 
 @media (max-width: 1024px) {
@@ -2488,7 +2488,7 @@ section {
 
     .horizontal-item .halftone-img-wrap {
         height: auto !important;
-        aspect-ratio: 4 / 5 !important;
+        aspect-ratio: 3 / 4 !important;
     }
 
     .card-highlight {
