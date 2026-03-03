@@ -285,13 +285,33 @@ body::after {
 }
 
 .boot-logo {
-    font-size: 8vw;
+    font-size: clamp(3rem, 10vw, 8rem);
     color: var(--pop-lime);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     letter-spacing: -0.05em;
     opacity: 0;
     transform: scale(0.9);
-    animation: bootReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation:
+        bootReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+        crtFlicker 0.1s infinite alternate;
+    text-shadow:
+        3px 0 rgba(255, 0, 255, 0.4),
+        -3px 0 rgba(0, 255, 255, 0.4);
+    /* Chromatic Aberration */
+    position: relative;
+    padding-right: 20px;
+}
+
+@keyframes crtFlicker {
+    0% {
+        opacity: 0.95;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.002);
+    }
 }
 
 @keyframes bootReveal {
@@ -403,6 +423,9 @@ html {
     mask-image: radial-gradient(circle, #000 1.5px, transparent 1.5px);
     -webkit-mask-size: 4px 4px;
     mask-size: 4px 4px;
+    padding-right: 0.2em;
+    /* Prevent italic clipping of the last letter like 'y' */
+    display: inline-block;
 }
 
 /* ── DESKTOP TYPOGRAPHY BOOST ──────────────────── */
