@@ -3073,8 +3073,10 @@ section {
 .desktop-folder-icon:hover,
 .desktop-folder-icon:focus {
     filter: grayscale(0%);
-    transform: scale(1.02);
+    transform: scale(1.05);
+    /* Slightly more prominent on hover */
     border-color: #fff;
+    z-index: 5;
 }
 
 .desktop-folder-label {
@@ -3148,11 +3150,17 @@ section {
     pointer-events: none;
 }
 
-/* Case study content now opens via JS click and dark overlay */
+/* Case study content now ONLY opens via JS click and dark overlay */
 .desktop-folder-content.active {
-    display: block;
+    display: block !important;
+    /* Ensure it overrides any inline display: none */
     pointer-events: auto;
     animation: folderPop 0.2s ease-out forwards;
+}
+
+/* Explicitly disable any hover-triggered display if it's lurking in older browsers */
+.desktop-folder-group:hover .desktop-folder-content:not(.active) {
+    display: none !important;
 }
 
 .desktop-folder-content .case-card {
