@@ -208,43 +208,49 @@
         style="position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; min-height: 100vh; margin: 0;">
         <!-- TOP NAV LOGO -->
         <header role="banner" aria-label="The Agency — Site Navigation"
-          style="padding: 2.5rem 5vw; display: flex; justify-content: space-between; align-items: flex-start;">
-          <a href="#main-content" aria-label="The Agency Homepage" style="text-decoration: none;">
-            <div class="halftone-text" style="font-size: clamp(2.5rem, 5vw, 4rem); color: #fff; line-height: 0.8;">
-              The<br>Agency.</div>
-          </a>
+          style="padding: 2.5rem 5vw; display: grid; grid-template-columns: 1fr auto 1fr; align-items: flex-start; gap: 2rem; position: relative; z-index: 100;">
+          
+          <!-- LEFT: LOGO -->
+          <div style="justify-self: start;">
+            <a href="#main-content" aria-label="The Agency Homepage" style="text-decoration: none;">
+              <div class="halftone-text" style="font-size: clamp(2.5rem, 5vw, 4rem); color: #fff; line-height: 0.8;">
+                The<br>Agency.</div>
+            </a>
+          </div>
 
-          <!-- TOP NAVIGATION MENU -->
-          <nav class="desktop-only"
-            style="display: flex; gap: 2.5rem; font-family: var(--font-mono); font-size: 0.75rem; font-weight: bold; padding-top: 1.5rem;">
-            <a href="#archive"
-              style="color: #fff; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s;"
-              onmouseenter="this.style.borderBottom='2px solid var(--pop-lime)'"
-              onmouseleave="this.style.borderBottom='2px solid transparent'">[ ARCHIVE ]</a>
-            <a href="#horizontal-section"
-              style="color: #fff; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s;"
-              onmouseenter="this.style.borderBottom='2px solid var(--pop-pink)'"
-              onmouseleave="this.style.borderBottom='2px solid transparent'">[ COLLECTION ]</a>
-            <a href="#protocol"
-              style="color: #fff; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s;"
-              onmouseenter="this.style.borderBottom='2px solid var(--pop-blue)'"
-              onmouseleave="this.style.borderBottom='2px solid transparent'">[ PROCESS ]</a>
-            <a href="#contact-brief"
-              style="color: #fff; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s;"
-              onmouseenter="this.style.borderBottom='2px solid var(--pop-aqua)'"
-              onmouseleave="this.style.borderBottom='2px solid transparent'">[ CONTACT ]</a>
-          </nav>
-
-          <!-- MAGAZINE DATE/TIME HEADER -->
+          <!-- CENTER: MAGAZINE DATE/TIME HEADER -->
           <div id="magazine-time" class="mono-label"
-            style="position: absolute; left: 50%; top: 3rem; transform: translateX(-50%); color: #fff; opacity: 0.8; text-align: center; font-size: 0.65rem; pointer-events: none; white-space: nowrap; letter-spacing: 2.5px; display: flex; flex-direction: column; gap: 4px;">
+            style="justify-self: center; text-align: center; font-size: 0.65rem; pointer-events: none; white-space: nowrap; letter-spacing: 2.5px; display: flex; flex-direction: column; gap: 4px; color: #fff; opacity: 0.8;">
             <div id="magazine-editorial-top">VOL. 1 // FREQUENCY: 888 // BAKERSFIELD, CA</div>
             <div id="magazine-clock-line" style="color: var(--pop-lime);">LOADING_SYSTEM_CLOCK...</div>
           </div>
 
-          <div class="mono-label" style="color: var(--pop-lime); text-align: right; line-height: 1.4;">YOUR BUSINESS
-            BESTIES<br><span style="color: #fff; opacity: 0.5; font-size: 0.6rem; letter-spacing: 1px;">KERN COUNTY
-              MARKETING AGENCY</span></div>
+          <!-- RIGHT: DESKTOP NAV + TAGLINE -->
+          <div style="justify-self: end; text-align: right; display: flex; flex-direction: column; gap: 1rem;">
+            <!-- TOP NAVIGATION MENU -->
+            <nav class="desktop-only"
+              style="display: flex; gap: 2.5rem; font-family: var(--font-mono); font-size: 0.75rem; font-weight: bold; justify-content: flex-end;">
+              <a href="#archive"
+                style="color: #fff; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s;"
+                onmouseenter="this.style.borderBottom='2px solid var(--pop-lime)'"
+                onmouseleave="this.style.borderBottom='2px solid transparent'">[ ARCHIVE ]</a>
+              <a href="#horizontal-section"
+                style="color: #fff; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s;"
+                onmouseenter="this.style.borderBottom='2px solid var(--pop-pink)'"
+                onmouseleave="this.style.borderBottom='2px solid transparent'">[ COLLECTION ]</a>
+              <a href="#protocol"
+                style="color: #fff; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s;"
+                onmouseenter="this.style.borderBottom='2px solid var(--pop-blue)'"
+                onmouseleave="this.style.borderBottom='2px solid transparent'">[ PROCESS ]</a>
+              <a href="#contact-brief"
+                style="color: #fff; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s;"
+                onmouseenter="this.style.borderBottom='2px solid var(--pop-aqua)'"
+                onmouseleave="this.style.borderBottom='2px solid transparent'">[ CONTACT ]</a>
+            </nav>
+            <div class="mono-label" style="color: var(--pop-lime); line-height: 1.4;">YOUR BUSINESS
+              BESTIES<br><span style="color: #fff; opacity: 0.5; font-size: 0.6rem; letter-spacing: 1px;">KERN COUNTY
+                MARKETING AGENCY</span></div>
+          </div>
         </header>
 
         <!-- CENTER CONTENT -->

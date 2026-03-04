@@ -16,25 +16,38 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.addEventListener('DOMContentLoaded', () => {
-    function updateMagazineTime() {
-        const topEl = document.getElementById('magazine-editorial-top');
-        const clockEl = document.getElementById('magazine-clock-line');
-        if (!topEl || !clockEl) return;
-
-        const now = new Date();
-        const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
-        const dateStr = now.toLocaleDateString('en-US', options).toUpperCase();
-        const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' }).toUpperCase();
-
-        // Premium editorial line formatting
-        topEl.textContent = `VOL. 1 // ISSUE: 001 // BAKERSFIELD, CA // PRICE: $0.00`;
-        clockEl.textContent = `${dateStr} // ${timeStr} // SIGNAL: STABLE`;
+function updateMagazineTime() {
+    const topEl = document.getElementById('magazine-editorial-top');
+    const clockEl = document.getElementById('magazine-clock-line');
+    if (!topEl || !clockEl) {
+        console.warn("✦ THE AGENCY: Magazine clock elements not found.");
+        return;
     }
+
+    const now = new Date();
+    const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+    const dateStr = now.toLocaleDateString('en-US', options).toUpperCase();
+    const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' }).toUpperCase();
+
+    // Premium editorial line formatting
+    topEl.textContent = `VOL. 1 // ISSUE: 001 // BAKERSFIELD, CA // PRICE: $0.00`;
+    clockEl.textContent = `${dateStr} // ${timeStr} // SIGNAL: STABLE`;
+}
+
+const init = () => {
+    console.log("✦ THE AGENCY: Tactical Initialization...");
     updateMagazineTime();
     setInterval(updateMagazineTime, 1000); // Update every second for the clock style
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+};
 
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+} else {
+    init();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
     // HORIZONTAL SCROLL LOGIC (DESKTOP ONLY — CSS handles mobile stacking)
     const horizontalSection = document.getElementById('horizontal-section');
     const horizontalTrack = document.querySelector('.horizontal-track');
