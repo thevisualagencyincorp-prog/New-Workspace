@@ -42,10 +42,10 @@ window.addEventListener('load', () => {
             }
 
             step++;
-            const delay = 400 + Math.random() * 600;
+            const delay = 150 + Math.random() * 250;
             setTimeout(runNextStep, delay);
         } else {
-            setTimeout(finishPreloader, 800);
+            setTimeout(finishPreloader, 300);
         }
     }
 
@@ -55,7 +55,7 @@ window.addEventListener('load', () => {
     }
 
     // Start with a small delay for the logo reveal animation
-    setTimeout(runNextStep, 500);
+    setTimeout(runNextStep, 300);
 });
 
 // SCROLL ENGINES (HORIZONTAL + REVEAL)
@@ -526,22 +526,24 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => win.style.display = 'none', 250);
         }
 
-        // Find close buttons (spans with cursor: pointer or X or _ etc)
-        const spans = bar.querySelectorAll('span');
-        const closeBtn = spans[spans.length - 1]; // typically the last span is the controls container
-
-        if (closeBtn) {
-            closeBtn.style.cursor = 'pointer';
-            closeBtn.addEventListener('click', (e) => {
-                e.preventDefault();
+        // Find close buttons (spans with cursor: pointer or X or _ etc, AND elements with btn-retro-close)
+        const closeSelectors = '.btn-retro-close, span:last-child';
+        win.querySelectorAll(closeSelectors).forEach(btn => {
+            btn.style.cursor = 'pointer';
+            btn.addEventListener('click', (e) => {
+                // If it has its own logic (like scrolling) let it run, but then close the window
+                // Don't preventDefault unless it's strictly a closer
+                // e.preventDefault(); 
                 e.stopPropagation();
                 closeWindow();
             });
-        }
+        });
 
         // Also make extra inner buttons close the window (like "Cancel", "IGNORE", "Accept Fate")
         const buttons = win.querySelectorAll('button');
         buttons.forEach(btn => {
+            if (btn.classList.contains('btn-retro-close')) return; // handled above
+
             const text = btn.textContent.trim().toUpperCase();
             if (['YES', 'NO', 'CANCEL', 'IGNORE', 'ACCEPT FATE', 'OK', "I'M READY", "NOT YET", "ACCEPT OUR STRATEGY"].includes(text)) {
                 btn.addEventListener('click', (e) => {
@@ -727,4 +729,102 @@ if (backToTopBtn) {
     });
 }
 
-// End of script
+// CASE STUDY MODAL ENGINE
+document.addEventListener('DOMContentLoaded', () => {
+    const folders = document.querySelectorAll('.desktop-folder-icon');
+    const closeButtons = document.querySelectorAll('.case-card-close');
+    const overlay = document.getElementById('oracleOverlay');
+
+    folders.forEach(folder => {
+        folder.addEventListener('click', (e) => {
+            e.preventDefault();
+            const group = folder.closest('.desktop-folder-group');
+            const content = group.querySelector('.desktop-folder-content');
+            if (content) {
+                if (overlay) overlay.classList.add('active');
+                content.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Lock scroll
+            }
+        });
+    });
+
+    const closeAllModals = () => {
+        document.querySelectorAll('.desktop-folder-content.active').forEach(modal => {
+            modal.classList.remove('active');
+        });
+        if (overlay) overlay.classList.remove('active');
+        document.body.style.overflow = ''; // Unlock scroll
+    };
+
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeAllModals();
+        });
+    });
+
+    if (overlay) {
+        overlay.addEventListener('click', closeAllModals);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeAllModals();
+    });
+});
+
+// FRANK THE PET INTERACTION
+const frank = document.getElementById("frank-pet");
+if (frank) {
+    frank.addEventListener("click", () => {
+        const popup = document.getElementById("frank-chat-bubble");
+        if (popup) {
+            popup.textContent = "Would you like help with that? Purr...";
+            popup.style.display = "block";
+            setTimeout(() => popup.style.display = "none", 4000);
+        }
+    });
+}
+
+// FAQ ACCORDION SCROLL JUMP FIX
+document.querySelectorAll('.faq-accordion details summary').forEach(summary => {
+    summary.addEventListener('click', function (e) {
+        // Prevent layout jump when details expand
+        const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+        requestAnimationFrame(() => {
+            window.scrollTo(0, scrollPos);
+            setTimeout(() => window.scrollTo(0, scrollPos), 10);
+            setTimeout(() => window.scrollTo(0, scrollPos), 50);
+        });
+    });
+});
+
+// CLUBHOUSE FORM HANDLERS
+document.querySelectorAll('.club-form').forEach(form => {
+    form.addEventListener('submit', (e) => {
+        const container = form.closest('.club-card');
+        const destruct = container ? container.querySelector('.destruct-mini') : null;
+        const timerEl = destruct ? destruct.querySelector('.timer-mini') : null;
+
+        if (destruct) {
+            form.style.display = 'none';
+            destruct.style.display = 'block';
+            let timeLeft = 5;
+            if (timerEl) timerEl.textContent = timeLeft;
+            const countdown = setInterval(() => {
+                timeLeft--;
+                if (timerEl) timerEl.textContent = timeLeft;
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                    destruct.style.opacity = '0';
+                    setTimeout(() => {
+                        destruct.style.display = 'none';
+                        form.style.display = 'block';
+                        form.style.opacity = '1';
+                        // Keep success state or reset
+                        form.reset();
+                    }, 500);
+                }
+            }, 1000);
+        }
+    });
+});

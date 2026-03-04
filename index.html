@@ -88,7 +88,7 @@
   <div class="preloader" id="preloader">
     <div class="scanlines"></div>
     <div class="boot-center-brand">
-      <div class="boot-logo halftone-text" style="font-weight: 900;">THE AGENCY</div>
+      <div class="boot-logo halftone-text" style="font-weight: 900; padding: 0 10px; line-height: 1.2;">THE AGENCY</div>
       <div class="boot-progress-wrap">
         <div class="boot-progress-bar" id="bootProgress"></div>
       </div>
@@ -134,6 +134,27 @@
             <div class="halftone-text" style="font-size: clamp(2.5rem, 5vw, 4rem); color: #fff; line-height: 0.8;">
               The<br>Agency.</div>
           </a>
+
+          <!-- TOP NAVIGATION MENU -->
+          <nav class="desktop-only"
+            style="display: flex; gap: 2.5rem; font-family: var(--font-mono); font-size: 0.75rem; font-weight: bold; padding-top: 1.5rem;">
+            <a href="#archive"
+              style="color: #fff; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s;"
+              onmouseenter="this.style.borderBottom='2px solid var(--pop-lime)'"
+              onmouseleave="this.style.borderBottom='2px solid transparent'">[ ARCHIVE ]</a>
+            <a href="#horizontal-section"
+              style="color: #fff; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s;"
+              onmouseenter="this.style.borderBottom='2px solid var(--pop-pink)'"
+              onmouseleave="this.style.borderBottom='2px solid transparent'">[ COLLECTION ]</a>
+            <a href="#protocol"
+              style="color: #fff; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s;"
+              onmouseenter="this.style.borderBottom='2px solid var(--pop-blue)'"
+              onmouseleave="this.style.borderBottom='2px solid transparent'">[ PROCESS ]</a>
+            <a href="#contact-brief"
+              style="color: #fff; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s;"
+              onmouseenter="this.style.borderBottom='2px solid var(--pop-aqua)'"
+              onmouseleave="this.style.borderBottom='2px solid transparent'">[ CONTACT ]</a>
+          </nav>
 
           <!-- MAGAZINE DATE/TIME HEADER -->
           <div id="magazine-time" class="mono-label"
@@ -243,10 +264,10 @@
           <b>ARE YOU READY TO DISRUPT?</b><br><br>Warning: Continued scrolling may result in extreme brand clarity and
           market authority.<br><br>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-            <button onclick="document.getElementById('vibe-check-modal').style.display='none'"
+            <button class="btn-retro-close"
               style="background: silver; font-family: var(--font-mono); border: 2px solid white; border-bottom-color: black; border-right-color: black; padding: 8px; cursor: pointer; font-weight: bold; font-size: 0.7rem;">I'M
               READY</button>
-            <button onclick="document.getElementById('vibe-check-modal').style.display='none'"
+            <button class="btn-retro-close"
               style="background: silver; font-family: var(--font-mono); border: 2px solid white; border-bottom-color: black; border-right-color: black; padding: 8px; cursor: pointer; font-size: 0.7rem;">NOT
               YET</button>
           </div>
@@ -258,8 +279,7 @@
         <div
           style="position: absolute; top: 0; left: 0; width: 100%; background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; text-align: left; display: flex; justify-content: space-between;">
           <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">💎</span>
-            SYSTEM_ACCESS: BRAND_DRAFTS.DOC</span><span
-            onclick="this.closest('#welcome-doc-modal').style.display='none'"
+            SYSTEM_ACCESS: BRAND_DRAFTS.DOC</span><span class="btn-retro-close"
             style="background: silver; color: black; padding: 0 4px; cursor: pointer; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
         </div>
 
@@ -286,7 +306,8 @@
             VIEW AGENCY CV
           </button>
 
-          <button onclick="this.closest('#welcome-doc-modal').style.display='none'"
+          <button onclick="document.getElementById('archive').scrollIntoView({behavior: 'smooth'});"
+            class="btn-retro-close"
             style="background: silver; color: #000; padding: 0.8rem 2rem; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; font-family: var(--font-mono); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; cursor: pointer; box-shadow: 4px 4px 0 rgba(0,0,0,0.5); display: flex; align-items: center; gap: 10px; transition: transform 0.1s;">
             <span
               style="display:inline-block; border: 1px dashed #000; padding: 0 4px; font-size: 0.7rem; background: #fff;">OK</span>
@@ -657,8 +678,7 @@
           <div class="desktop-folder-content">
             <div class="case-card note-paper"
               style="background: #111 !important; color: #fff !important; border: 4px solid red; box-shadow: 10px 10px 0 red;">
-              <div class="case-card-close" onclick="this.parentElement.parentElement.style.display='none'"
-                style="color: #fff; border-color: #fff;">X</div>
+              <div class="case-card-close" style="color: #fff; border-color: #fff;">X</div>
 
               <div class="case-label mono-label" style="margin-bottom: 1rem; line-height: 1; color: red;">[ ERROR:
                 CLEARANCE REQUIRED ]</div>
@@ -1976,89 +1996,73 @@
           <!-- PROT: 777 // 444 // 111 -->
         </div>
 
-        <!-- NEWEST: RADICAL MAGNETISM -->
-        <a href="blog/radical-magnetism.html" class="blog-post reveal parallax-layer" data-speed="0.06">
-          <img src="images/twisted_lens_studio_shoot_1771447248254.png" alt="Radical Magnetism"
-            style="object-position: top;">
-          <div>
-            <span class="date">MAY 2026 // 09</span>
-            <h3>Radical Magnetism: Attracting Elite Clients.</h3>
-          </div>
-          <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
-        </a>
-
-        <!-- NEWEST: IMMERSIVE EXPERIENCES -->
-        <a href="blog/immersive-experiences.html" class="blog-post reveal parallax-layer" data-speed="0.03">
-          <img src="images/man.webp" alt="Immersive Experiences" style="object-position: center;">
-          <div>
-            <span class="date">APR 2026 // 08</span>
-            <h3>Beyond the Screen: Immersive Brand Realities.</h3>
-          </div>
-          <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
-        </a>
-
         <!-- DYNAMIC BRANDS (NEWEST) -->
         <a href="blog/geo-brand-evolution.html" class="blog-post reveal parallax-layer" data-speed="0.04">
-          <img src="images/retro_world_net.png" alt="Generative Engine Optimization"
+          <img src="images/retro_world_net.png" alt="AI Search Optimization and GEO"
             style="image-rendering: pixelated; object-position: center;">
           <div>
             <span class="date">MAR 2026 // 07</span>
-            <h3>The Era of GEO: How AI Search is Rewriting Branding.</h3>
+            <h3>The Era of GEO: How AI Search is Rewriting Bakersfield Branding.</h3>
           </div>
           <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
         </a>
 
         <!-- SOVEREIGN STRATEGY -->
         <a href="blog/sovereign-strategy.html" class="blog-post reveal parallax-layer" data-speed="0.07">
-          <img src="images/car copy.webp" alt="Manifesting Market Dominance workspace">
+          <img src="images/car copy.webp" alt="Elite Branding Strategy Kern County">
           <div>
             <span class="date">FEB 2026 // 06</span>
-            <h3>Manifesting Market Dominance: The Sovereign Strategy.</h3>
+            <h3>Market Dominance: Elite Branding Strategies for Kern County Founders.</h3>
           </div>
           <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
         </a>
 
+        <!-- PSYCHOLOGY BRANDING -->
         <a href="blog/psychology-branding.html" class="blog-post reveal parallax-layer" data-speed="0.05">
-          <img src="images/mic copy.jpeg" alt="Psychological Branding">
+          <img src="images/mic copy.jpeg" alt="High-End Brand Psychology">
           <div>
             <span class="date">JAN 2026 // 05</span>
-            <h3>The Power of Psychological Branding.</h3>
+            <h3>High-End Brand Psychology: The Science of Market Authority.</h3>
           </div>
           <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
         </a>
 
+        <!-- BAKERSFIELD DISRUPTION -->
         <a href="blog/bakersfield-disruption.html" class="blog-post reveal parallax-layer" data-speed="0.1">
-          <img src="images/groovy.webp" alt="Bakersfield Disruption">
+          <img src="images/groovy.webp" alt="Website Design Bakersfield">
           <div>
             <span class="date">DEC 2025 // 04</span>
-            <h3>Bakersfield's New Guard: Local Disruption.</h3>
+            <h3>Website Design Bakersfield: Disrupting the Local Landscape.</h3>
           </div>
           <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
         </a>
 
+        <!-- LUXURY MINIMALISM -->
         <a href="blog/luxury-minimalism.html" class="blog-post reveal parallax-layer" data-speed="0.15">
-          <img src="images/coffee copy.jpg" alt="Luxury Minimalism">
+          <img src="images/coffee copy.jpg" alt="Luxury Minimalist Web Design">
           <div>
             <span class="date">NOV 2025 // 03</span>
-            <h3>The Luxury Minimalist: Why Less Is More.</h3>
+            <h3>Luxury Minimalist Web Design: Why Less is More for Premium Brands.</h3>
           </div>
           <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
         </a>
 
+        <!-- DIGITAL EDIT -->
         <a href="blog/digital-edit.html" class="blog-post reveal parallax-layer" data-speed="0.08">
-          <img src="images/cofee-dude copy.jpg" alt="The Digital Edit">
+          <img src="images/cofee-dude copy.jpg" alt="Social Media Curation Strategy">
           <div>
             <span class="date">OCT 2025 // 02</span>
-            <h3>Decoding the Digital Edit: Content as Art.</h3>
+            <h3>The Digital Edit: Social Media Curation for High-Value Leads.</h3>
           </div>
           <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
         </a>
 
+        <!-- STATUS SERVICE -->
         <a href="blog/status-service.html" class="blog-post reveal parallax-layer" data-speed="0.12">
-          <img src="images/man.webp" alt="Status as a Service">
+          <img src="images/man.webp" alt="Status-Driven Marketing">
           <div>
             <span class="date">SEP 2025 // 01</span>
-            <h3>Status as a Service: The New Social Club.</h3>
+            <h3>Status-Driven Marketing: Positioning Your Agency as a Legendary Brand.</h3>
           </div>
           <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
         </a>
@@ -2630,7 +2634,8 @@
                         01_COLLECTIONS</a></li>
                     <li><a href="#archive" style="color: blue; text-decoration: underline;">> 02_CASE_STUDIES</a></li>
                     <li><a href="#protocol" style="color: blue; text-decoration: underline;">> 03_PROTOCOL</a></li>
-                    <li><a href="#social" style="color: blue; text-decoration: underline;">> 04_SOCIAL_DISPATCH</a>
+                    <li><a href="#social" style="color: blue; text-decoration: underline;">> 04_SOCIAL_DISPATCH</a></li>
+                    <li><a href="#clubhouse" style="color: blue; text-decoration: underline;">> 05_THE_CLUBHOUSE</a>
                     </li>
                   </ul>
                 </div>
@@ -3447,76 +3452,6 @@
       if (document.getElementById("frank-screen")) document.getElementById("frank-screen").classList.remove("minimized");
       if (document.getElementById("taskbar")) document.getElementById("taskbar").style.display = "none";
     }
-
-    if (frank) {
-      frank.addEventListener("click", () => {
-        showPopup("Would you like help with that? Purr...");
-      });
-    }
-
-    // Unified Case Study Interactivity (Click to Open)
-    document.querySelectorAll('.desktop-folder-icon').forEach(icon => {
-      icon.addEventListener('click', function (e) {
-        e.preventDefault();
-        const content = this.nextElementSibling;
-        const overlay = document.getElementById('oracleOverlay'); // Reuse the dark overlay
-
-        if (content && content.classList.contains('desktop-folder-content')) {
-          content.classList.add('active');
-          if (overlay) overlay.classList.add('active');
-        }
-      });
-    });
-
-    // Close button logic for Case Study Modals
-    document.querySelectorAll('.case-card-close').forEach(btn => {
-      btn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        const content = this.closest('.desktop-folder-content');
-        if (content) content.classList.remove('active');
-        const overlay = document.getElementById('oracleOverlay');
-        if (overlay) overlay.classList.remove('active');
-      });
-    });
-
-    // Back to Top Visibility & Smooth Scroll
-    const btt = document.getElementById('backToTop');
-    if (btt) {
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 800) {
-          btt.style.display = 'flex';
-        } else {
-          btt.style.display = 'none';
-        }
-      });
-      btt.addEventListener('click', function (e) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    // FAQ Accordion Jump Fix
-    document.querySelectorAll('.faq-accordion details summary').forEach(summary => {
-      summary.addEventListener('click', function (e) {
-        // Stop the jump specifically toward 'Selected Works'
-        const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
-
-        // Use a slightly longer timeout and multiple checks if needed
-        const fixScroll = () => {
-          if (window.scrollY !== scrollPos) {
-            window.scrollTo(0, scrollPos);
-          }
-        };
-
-        // Run immediately after layout cycle
-        requestAnimationFrame(() => {
-          fixScroll();
-          setTimeout(fixScroll, 10);
-          setTimeout(fixScroll, 50);
-        });
-      });
-    });
-
   </script>
   <script src="script.js"></script>
   <!-- 

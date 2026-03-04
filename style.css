@@ -299,7 +299,8 @@ body::after {
         -3px 0 rgba(0, 255, 255, 0.4);
     /* Chromatic Aberration */
     position: relative;
-    padding-right: 20px;
+    padding: 0 40px;
+    overflow: visible;
 }
 
 @keyframes crtFlicker {
@@ -3156,6 +3157,24 @@ section {
     /* Ensure it overrides any inline display: none */
     pointer-events: auto;
     animation: folderPop 0.2s ease-out forwards;
+}
+
+/* Modal Overlay (Shared for Oracle and Case Studies) */
+.oracle-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 99998;
+    /* Just below the modal z-index 99999 */
+    display: none;
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.oracle-overlay.active {
+    display: block;
+    opacity: 1;
 }
 
 /* Explicitly disable any hover-triggered display if it's lurking in older browsers */
