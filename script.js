@@ -629,6 +629,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // SPECIAL NAVIGATION BUTTONS
+    const btnViewCV = document.getElementById('btn-view-cv');
+    if (btnViewCV) {
+        btnViewCV.addEventListener('click', () => {
+            const cvModal = document.getElementById('cv-modal');
+            if (cvModal) cvModal.style.display = 'flex';
+        });
+    }
+
+    const btnEnterExp = document.getElementById('btn-enter-exp');
+    if (btnEnterExp) {
+        btnEnterExp.addEventListener('click', () => {
+            const archiveSection = document.getElementById('archive');
+            if (archiveSection) archiveSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
 });
 
 // MAGAZINE HEADER DATE/TIME LOGIC
@@ -650,64 +667,7 @@ if (clockEl) {
     setInterval(updateClock, 1000);
 }
 
-// GLOBAL CLIPPY POPUP LOGIC (MARKETING PSYCHOLOGY)
-// Wait until user scrolls halfway down the page, then pop him up to drive clicks
-const globalClippy = document.getElementById('clippy-global-popup');
-if (globalClippy) {
-    let clippyTriggered = false;
-    let clippyDismissTimer = null;
-    // Add transform animation transition for the bounce
-    globalClippy.style.transition = 'bottom 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.3s ease-in-out';
 
-    function dismissClippy() {
-        globalClippy.style.bottom = '-500px';
-    }
-
-    function startClippyDismissTimer() {
-        clearTimeout(clippyDismissTimer);
-        clippyDismissTimer = setTimeout(dismissClippy, 8000);
-    }
-
-    // Hovering resets the timer so it doesn't vanish while being read
-    globalClippy.addEventListener('mouseenter', () => clearTimeout(clippyDismissTimer));
-    globalClippy.addEventListener('mouseleave', () => startClippyDismissTimer());
-
-    // Touch: reset on tap (mobile)
-    globalClippy.addEventListener('touchstart', () => startClippyDismissTimer(), { passive: true });
-
-    window.addEventListener('scroll', () => {
-        if (!clippyTriggered) {
-            // Trigger when scrolled past the FAQ section
-            const filterDiv = document.getElementById('faq-editor');
-            const triggerPoint = filterDiv ? filterDiv.offsetTop + (filterDiv.offsetHeight * 0.8) : (document.body.scrollHeight - window.innerHeight) * 0.4;
-
-            const scrollPos = window.scrollY;
-            if (scrollPos > triggerPoint) {
-                clippyTriggered = true;
-
-                // Hide the static clippy in the FAQ section
-                const staticClippy = document.getElementById('static-clippy-container');
-                if (staticClippy) staticClippy.style.display = 'none';
-
-                // Pop it up gracefully like the old days
-                globalClippy.style.bottom = '2rem';
-
-                // Add a small bouncing wiggle effect using CSS transforms mimicking classic Clippy behavior
-                setTimeout(() => {
-                    globalClippy.style.transform = 'translateY(-15px) rotate(3deg)';
-                    setTimeout(() => {
-                        globalClippy.style.transform = 'translateY(5px) rotate(-2deg)';
-                        setTimeout(() => {
-                            globalClippy.style.transform = 'translateY(0) rotate(0deg)';
-                            // Start the auto-dismiss countdown after bounce settles
-                            startClippyDismissTimer();
-                        }, 250);
-                    }, 250);
-                }, 800);
-            }
-        }
-    });
-}
 
 // BACK TO TOP BUTTON LOGIC
 const backToTopBtn = document.getElementById('back-to-top');

@@ -256,7 +256,7 @@
         <div
           style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; display: flex; justify-content: space-between; flex-shrink: 0;">
           <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">✨</span>
-            VALUABLE_INSIGHT.EXE</span><span onclick="this.closest('#vibe-check-modal').style.display='none'"
+            VALUABLE_INSIGHT.EXE</span><span class="btn-retro-close"
             style="background: silver; color: black; padding: 0 4px; cursor: pointer; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
         </div>
         <div
@@ -300,14 +300,13 @@
         <div
           style="margin-top: 3rem; display: inline-flex; align-items: center; justify-content: center; position: relative; gap: 1rem; flex-wrap: wrap;">
 
-          <button onclick="document.getElementById('cv-modal').style.display='flex';"
+          <button id="btn-view-cv"
             style="background: #000; color: #fff; padding: 0.8rem 2rem; border: 2px solid #000; font-family: var(--font-mono); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; cursor: pointer; box-shadow: 4px 4px 0 var(--pop-lime); display: flex; align-items: center; gap: 10px; transition: transform 0.1s;">
             <span style="font-size: 1.2rem;">⚡</span>
             VIEW AGENCY CV
           </button>
 
-          <button onclick="document.getElementById('archive').scrollIntoView({behavior: 'smooth'});"
-            class="btn-retro-close"
+          <button id="btn-enter-exp" class="btn-retro-close"
             style="background: silver; color: #000; padding: 0.8rem 2rem; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; font-family: var(--font-mono); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; cursor: pointer; box-shadow: 4px 4px 0 rgba(0,0,0,0.5); display: flex; align-items: center; gap: 10px; transition: transform 0.1s;">
             <span
               style="display:inline-block; border: 1px dashed #000; padding: 0 4px; font-size: 0.7rem; background: #fff;">OK</span>
@@ -2726,38 +2725,7 @@
       </div>
     </div>
 
-    <!-- GLOBAL CLIPPY WINDOW (Assistant) -->
-    <div id="clippy-global-popup"
-      style="position: fixed; bottom: -500px; right: 2rem; width: 300px; z-index: 9999; transition: bottom 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: block;">
-      <div class="clippy-window"
-        style="position: relative; top: 0; left: 0; transform: none; width: 100%; box-shadow: 10px 10px 0 rgba(0,0,0,0.5);">
-        <div class="clippy-titlebar" id="clippy-global-drag">
-          <span style="font-family: var(--font-mono); font-weight: bold;">Assistant.exe</span>
-          <div class="clippy-controls">
-            <span onclick="document.getElementById('clippy-global-popup').style.bottom='-500px';"
-              style="cursor: pointer; background: silver; color: black; padding: 0 4px; border: 2px outset #fff;">X</span>
-          </div>
-        </div>
-        <div class="clippy-screen" style="background: #d4d0c8; padding: 15px;">
-          <div class="clippy-white-box">
-            <img src="images/clippy_3d.png" alt="Clippy" style="width: 80px; mix-blend-mode: multiply;">
-          </div>
-          <div
-            style="background: #ffffe1; border: 1px solid #000; padding: 1rem; font-family: var(--font-sans); font-size: 0.9rem; box-shadow: 4px 4px 0 #000; text-align: left; color: #000;">
-            <b style="color: var(--pop-pink);">I noticed you're exploring elite tier branding.</b><br><br>
-            Are you ready to stop being basic and start dominating your market? Let's fix your digital presence.
-            <ul style="margin-top: 10px; margin-left: 20px;">
-              <li><a href="#contact-brief"
-                  onclick="document.getElementById('clippy-global-popup').style.bottom='-500px';"
-                  style="color: blue; text-decoration: underline;">Yes, launch the intake form.</a></li>
-              <li><a href="javascript:void(0)"
-                  onclick="document.getElementById('clippy-global-popup').style.bottom='-500px';"
-                  style="color: blue; text-decoration: underline;">Maybe later.</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
 
 
@@ -3468,7 +3436,7 @@
       <div
         style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.8rem; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
         <span><span style="font-size: 1rem; margin-right: 5px;">📄</span>AGENCY_CV_AND_STATS.EXE</span>
-        <span onclick="document.getElementById('cv-modal').style.display='none'"
+        <span class="btn-retro-close"
           style="cursor: pointer; background: silver; color: black; padding: 0 6px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000;">X</span>
       </div>
       <div
@@ -3540,11 +3508,11 @@
         </p>
 
         <div style="display: flex; gap: 10px; flex-direction: column;">
-          <a href="#booking-terminal" onclick="document.getElementById('cv-modal').style.display='none'"
+          <a href="#booking-terminal" class="btn-retro-close"
             style="width: 100%; background: #000; color: var(--pop-lime); border: 2px solid #000; padding: 1rem; text-align: center; font-family: var(--font-mono); font-weight: bold; text-decoration: none; display: inline-block;">
             SUBMIT INQUIRY (CONTACT FORM)
           </a>
-          <button onclick="document.getElementById('cv-modal').style.display='none'"
+          <button class="btn-retro-close"
             style="width: 100%; background: silver; color: #000; border: 2px outset #fff; padding: 0.8rem; font-size: 0.7rem; font-family: var(--font-mono); font-weight: bold; cursor: pointer;">
             CLOSE SUMMARY & BROWSE
           </button>
