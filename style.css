@@ -146,6 +146,9 @@ body::after {
 
 .preloader.finish {
     clip-path: inset(0 0 100% 0);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
 }
 
 .scanlines {
@@ -596,7 +599,8 @@ section {
 /* HALFTONE IMAGE TREATMENT */
 .halftone-img-wrap {
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
+    /* REMOVED to allow stickers and doodles to pop out */
     background: #000;
 }
 
@@ -3145,8 +3149,8 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 800px;
-    max-width: 90vw;
+    width: 850px;
+    max-width: 95vw;
     z-index: 99999;
     pointer-events: none;
 }
@@ -3183,11 +3187,9 @@ section {
 }
 
 .desktop-folder-content .case-card {
-    border: 3px solid white;
-    border-bottom-color: black;
-    border-right-color: black;
-    box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.8);
-    max-height: 85vh;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 30px 30px 60px rgba(0, 0, 0, 0.5);
+    max-height: 90vh;
     overflow-y: auto !important;
     overflow-x: hidden !important;
     scrollbar-width: thin;
@@ -3478,4 +3480,23 @@ section {
     .back-to-top.visible {
         bottom: 20px;
     }
+}
+/* ════════════════════════════════════════
+   ONLINE MAGAZINE HEADER STYLES
+   ════════════════════════════════════════ */
+#magazine-time {
+    mix-blend-mode: difference;
+    z-index: 100;
+}
+
+#magazine-editorial-top {
+    font-size: 0.65rem;
+    font-weight: 900;
+    opacity: 0.6;
+}
+
+#magazine-clock-line {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
 }

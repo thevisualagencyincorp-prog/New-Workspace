@@ -1,62 +1,5 @@
 /* ✦ THE AGENCY — MOCKUP REPLICATION LOGIC + BOOT SCREEN ✦ */
 
-// CINEMATIC BOOT LOGIC
-window.addEventListener('load', () => {
-    // Reset scroll positions
-    if ('scrollRestoration' in history) {
-        history.scrollRestoration = 'manual';
-    }
-    window.scrollTo(0, 0);
-
-    const pre = document.getElementById('preloader');
-    const progress = document.getElementById('bootProgress');
-    const status = document.getElementById('bootStatus');
-    const logs = document.getElementById('bootLogs');
-
-    if (!pre) return;
-
-    const bootSequence = [
-        { progress: 10, status: "INITIALIZING_KERNEL", log: "> CORE v1.0.8 LOADED" },
-        { progress: 25, status: "CALIBRATING_AESTHETICS", log: "> LENS_EFFECT: ENABLED" },
-        { progress: 40, status: "SCANNING_KERN_COUNTY", log: "> NODE_BFL_045: ACTIVE" },
-        { progress: 60, status: "PROTECTION_LAYER_ENGAGED", log: "> ENCRYPTION: SECURE" },
-        { progress: 85, status: "SYNCHRONIZING_ABUNDANCE", log: "> ASSETS: OPTIMIZED" },
-        { progress: 100, status: "READY_FOR_DEPLOYMENT", log: "> SYSTEM_STABLE: WELCOME" }
-    ];
-
-    let step = 0;
-    function runNextStep() {
-        if (step < bootSequence.length) {
-            const current = bootSequence[step];
-
-            // Update UI
-            if (progress) progress.style.width = `${current.progress}%`;
-            if (status) status.textContent = current.status;
-
-            // Add Log
-            if (logs) {
-                const logItem = document.createElement('div');
-                logItem.textContent = current.log;
-                logs.appendChild(logItem);
-                if (logs.children.length > 5) logs.removeChild(logs.firstChild);
-            }
-
-            step++;
-            const delay = 150 + Math.random() * 250;
-            setTimeout(runNextStep, delay);
-        } else {
-            setTimeout(finishPreloader, 300);
-        }
-    }
-
-    function finishPreloader() {
-        pre.classList.add('finish');
-        setTimeout(() => pre.remove(), 1200);
-    }
-
-    // Start with a small delay for the logo reveal animation
-    setTimeout(runNextStep, 300);
-});
 
 // SCROLL ENGINES (HORIZONTAL + REVEAL)
 const observerOptions = {
@@ -75,16 +18,21 @@ const observer = new IntersectionObserver((entries) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     function updateMagazineTime() {
-        const timeEl = document.getElementById('magazine-time');
-        if (!timeEl) return;
+        const topEl = document.getElementById('magazine-editorial-top');
+        const clockEl = document.getElementById('magazine-clock-line');
+        if (!topEl || !clockEl) return;
+
         const now = new Date();
-        const options = { month: 'long', day: 'numeric', year: 'numeric' };
+        const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
         const dateStr = now.toLocaleDateString('en-US', options).toUpperCase();
-        const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }).toUpperCase();
-        timeEl.textContent = `VOL. 1 // ${dateStr} // ${timeStr}`;
+        const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' }).toUpperCase();
+
+        // Premium editorial line formatting
+        topEl.textContent = `VOL. 1 // ISSUE: 001 // BAKERSFIELD, CA // PRICE: $0.00`;
+        clockEl.textContent = `${dateStr} // ${timeStr} // SIGNAL: STABLE`;
     }
     updateMagazineTime();
-    setInterval(updateMagazineTime, 60000);
+    setInterval(updateMagazineTime, 1000); // Update every second for the clock style
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
     // HORIZONTAL SCROLL LOGIC (DESKTOP ONLY — CSS handles mobile stacking)
@@ -648,24 +596,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// MAGAZINE HEADER DATE/TIME LOGIC
-const clockEl = document.getElementById('magazine-time');
-if (clockEl) {
-    const updateClock = () => {
-        const now = new Date();
-        const options = { month: 'long', day: 'numeric', year: 'numeric' };
-        const dateString = now.toLocaleDateString('en-US', options).toUpperCase();
-        let hours = now.getHours();
-        let minutes = now.getMinutes();
-        const ampm = hours >= 12 ? 'PM' : 'AM';
-        hours = hours % 12;
-        hours = hours ? hours : 12;
-        minutes = minutes < 10 ? '0' + minutes : minutes;
-        clockEl.textContent = `VOL. 1 // ${dateString} // ${hours}:${minutes} ${ampm}`;
-    };
-    updateClock();
-    setInterval(updateClock, 1000);
-}
+// (Removed redundant header clock logic — integrated into main engine)
 
 
 
@@ -698,6 +629,9 @@ document.addEventListener('DOMContentLoaded', () => {
     folders.forEach(folder => {
         folder.addEventListener('click', (e) => {
             e.preventDefault();
+            // Clear any existing active modals first
+            closeAllModals();
+
             const group = folder.closest('.desktop-folder-group');
             const content = group.querySelector('.desktop-folder-content');
             if (content) {
