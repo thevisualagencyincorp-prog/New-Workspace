@@ -1,6 +1,5 @@
 /* ✦ THE AGENCY — MOCKUP REPLICATION LOGIC + BOOT SCREEN ✦ */
 
-
 // SCROLL ENGINES (HORIZONTAL + REVEAL)
 const observerOptions = {
     threshold: 0.1,
@@ -41,20 +40,21 @@ const init = () => {
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 };
 
+// Start logic
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
 } else {
     init();
 }
 
+// CONSOLIDATED DOM ENGINE
 document.addEventListener('DOMContentLoaded', () => {
-    // HORIZONTAL SCROLL LOGIC (DESKTOP ONLY — CSS handles mobile stacking)
+    // HORIZONTAL SCROLL LOGIC
     const horizontalSection = document.getElementById('horizontal-section');
     const horizontalTrack = document.querySelector('.horizontal-track');
 
     if (horizontalSection && horizontalTrack) {
         const updateHorizontal = () => {
-            // Skip horizontal scroll on mobile — let CSS handle it
             if (window.innerWidth <= 768) {
                 horizontalTrack.style.transform = 'none';
             } else {
@@ -73,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const trackWidth = horizontalTrack.scrollWidth;
                 const windowWidth = window.innerWidth;
-
                 const maxTranslate = trackWidth - windowWidth + (windowWidth * 0.1);
                 const translateX = totalProgress * maxTranslate;
 
@@ -81,101 +80,67 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             requestAnimationFrame(updateHorizontal);
         };
-        // Start the loop
         updateHorizontal();
     }
 
     // INTERACTIVE ORACLE (CRYSTAL BALL)
     const oracleVisual = document.getElementById('oracleVisual');
     const fortunesListBlock = document.getElementById('fortunesList');
-
     const card = document.getElementById('physicalCard');
-    const overlay = document.getElementById('oracleOverlay');
+    const oracleOverlay = document.getElementById('oracleOverlay');
     const cardText = document.getElementById('cardFortuneText');
     const cardSerial = document.getElementById('cardSerial');
     const closeCard = document.getElementById('closeCard');
 
     if (oracleVisual && fortunesListBlock) {
         const fortuneSpans = fortunesListBlock.querySelectorAll('span');
-
         oracleVisual.addEventListener('click', () => {
-            if (card && overlay && cardText && fortuneSpans.length > 0) {
-                // Pick a random fortune
+            if (card && oracleOverlay && cardText && fortuneSpans.length > 0) {
                 const randomIndex = Math.floor(Math.random() * fortuneSpans.length);
                 const fortune = fortuneSpans[randomIndex].getAttribute('data-fortune');
-
-                // Update content
                 cardText.textContent = fortune;
                 cardSerial.textContent = `#${Math.floor(1000 + Math.random() * 9000)}-${Math.floor(10 + Math.random() * 89)}`;
 
-                // Randomize Lucky Numbers
                 const luckies = [];
                 while (luckies.length < 5) {
                     const n = Math.floor(Math.random() * 99) + 1;
                     if (!luckies.includes(n)) luckies.push(n);
                 }
-                document.getElementById('cardLuckyNums').textContent = luckies.sort((a, b) => a - b).join(', ');
+                const numEl = document.getElementById('cardLuckyNums');
+                if (numEl) numEl.textContent = luckies.sort((a, b) => a - b).join(', ');
 
-                // Randomize Lucky Color
-                const colors = ['NEON PINK', 'CYBER TEAL', 'COBALT BLUE', 'ELECTRIC LIME', 'VINTAGE GOLD', 'CRIMSON RED', 'ULTRA VIOLET'];
-                document.getElementById('cardLuckyColor').textContent = colors[Math.floor(Math.random() * colors.length)];
+                const colorEl = document.getElementById('cardLuckyColor');
+                if (colorEl) {
+                    const colors = ['NEON PINK', 'CYBER TEAL', 'COBALT BLUE', 'ELECTRIC LIME', 'VINTAGE GOLD', 'CRIMSON RED', 'ULTRA VIOLET'];
+                    colorEl.textContent = colors[Math.floor(Math.random() * colors.length)];
+                }
 
                 card.classList.add('active');
-                overlay.classList.add('active');
+                oracleOverlay.classList.add('active');
             }
         });
-
-        // Fun hover effect on the crystal ball
-        oracleVisual.addEventListener('mouseenter', () => {
-            oracleVisual.querySelector('img').style.filter = 'drop-shadow(0 0 50px var(--pop-orange)) contrast(1.1)';
-            const label = oracleVisual.querySelector('.mono-label');
-            if (label) label.style.color = 'var(--pop-orange)';
-        });
-
-        oracleVisual.addEventListener('mouseleave', () => {
-            oracleVisual.querySelector('img').style.filter = '';
-            const label = oracleVisual.querySelector('.mono-label');
-            if (label) label.style.color = '';
-        });
-
-        oracleVisual.addEventListener('mousedown', () => {
-            oracleVisual.style.transform = 'scale(0.95) translateY(5px)';
-            oracleVisual.style.transition = 'all 0.1s ease';
-        });
-
-        oracleVisual.addEventListener('mouseup', () => {
-            oracleVisual.style.transform = 'scale(1.05) translateY(-5px)';
-            oracleVisual.style.transition = 'all 0.3s ease';
-        });
     }
 
-    if (closeCard) {
-        closeCard.addEventListener('click', () => {
-            card.classList.remove('active');
-            overlay.classList.remove('active');
-        });
-    }
+    if (closeCard) closeCard.addEventListener('click', () => {
+        if (card) card.classList.remove('active');
+        if (oracleOverlay) oracleOverlay.classList.remove('active');
+    });
 
-    if (overlay) {
-        overlay.addEventListener('click', () => {
-            card.classList.remove('active');
-            overlay.classList.remove('active');
-        });
-    }
+    if (oracleOverlay) oracleOverlay.addEventListener('click', () => {
+        if (card) card.classList.remove('active');
+        oracleOverlay.classList.remove('active');
+    });
 
-    // AJAX FORM SUBMISSION (INTELLIGENT)
+    // AJAX FORMS
     const forms = document.querySelectorAll('form[action^="https://formspree.io"]');
     forms.forEach(f => {
         f.addEventListener('submit', (e) => {
-            if (f.id === 'agencyBrief') return; // Brief has special logic
+            if (f.id === 'agencyBrief') return;
             e.preventDefault();
             const btn = f.querySelector('button[type="submit"]') || f.querySelector('button');
             const originalText = btn.textContent;
             btn.textContent = "SENDING_SIGNAL...";
             btn.disabled = true;
-
-            const container = f.parentElement;
-            const destructMini = container.querySelector('.destruct-mini');
 
             fetch(f.action, {
                 method: 'POST',
@@ -183,6 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 headers: { 'Accept': 'application/json' }
             }).then(response => {
                 if (response.ok) {
+                    const destructMini = f.parentElement.querySelector('.destruct-mini');
                     if (destructMini) {
                         f.style.display = "none";
                         destructMini.style.display = "block";
@@ -196,18 +162,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         }, 3000);
                     }
                 } else {
-                    response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
-                            alert(data["errors"].map(error => error["message"]).join(", "));
-                        } else {
-                            alert("Oops! There was a problem submitting your form");
-                        }
-                    });
                     btn.textContent = "SIGNAL_ERROR";
                     btn.disabled = false;
                 }
-            }).catch(error => {
-                console.error('Signal Failure:', error);
+            }).catch(() => {
                 btn.textContent = "SIGNAL_ERROR";
                 btn.disabled = false;
             });
@@ -217,7 +175,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function startMiniDestruct(el, form) {
         let count = 5;
         const timer = el.querySelector('.timer-mini');
-        const btn = form.querySelector('button');
         if (timer) timer.textContent = count;
         const countdown = setInterval(() => {
             count--;
@@ -227,511 +184,103 @@ document.addEventListener('DOMContentLoaded', () => {
                 el.style.display = "none";
                 form.style.display = "block";
                 form.reset();
+                const btn = form.querySelector('button');
                 if (btn) {
                     btn.textContent = "SIGNAL_SENT_✓";
                     btn.disabled = false;
-                    setTimeout(() => {
-                        btn.textContent = btn.getAttribute('data-original') || btn.textContent;
-                    }, 3000);
                 }
             }
         }, 1000);
     }
 
-    // BRIEF FORM HANDLER + SELF DESTRUCT
-    const briefForm = document.getElementById('agencyBrief');
-    const destructMsg = document.getElementById('selfDestructMsg');
-    const timerDisplay = document.getElementById('destructTimer');
-
-    if (briefForm && destructMsg) {
-        briefForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            if (!briefForm.checkValidity()) {
-                // Determine which step has the invalid input to help the user
-                let invalidStep = 1;
-                const steps = document.querySelectorAll('.form-step');
-                steps.forEach((step, index) => {
-                    if (step.querySelector(':invalid')) {
-                        invalidStep = index + 1;
-                    }
-                });
-
-                alert(`Please complete the required fields on Step ${invalidStep} before submitting.`);
-
-                // If there's a nextStep function, try to navigate them there
-                if (typeof nextStep === 'function') {
-                    nextStep(invalidStep);
-                    setTimeout(() => briefForm.reportValidity(), 100);
-                } else {
-                    briefForm.reportValidity();
-                }
-                return;
-            }
-
-            const btn = briefForm.querySelector('button[type="submit"]');
-            const originalText = btn.textContent;
-            btn.textContent = "DRAFTING_BRIEF...";
-            btn.disabled = true;
-
-            const formData = new FormData(briefForm);
-
-            fetch(briefForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    briefForm.style.opacity = "0";
-                    setTimeout(() => {
-                        briefForm.style.display = "none";
-                        destructMsg.style.display = "block";
-                        destructMsg.style.opacity = "1";
-                        startDestructSequence();
-                    }, 500);
-                } else {
-                    response.json().then(data => {
-                        if (data && data.errors) {
-                            alert(data.errors.map(error => error.message).join(", "));
-                        } else if (data && data.error) {
-                            alert(data.error);
-                        } else {
-                            alert("Oops! There was a problem submitting your brief. It might be rejected by the server.");
-                        }
-                    }).catch(() => {
-                        alert("Oops! There was a problem submitting your brief. Status: " + response.status);
-                    });
-                    btn.textContent = "SYSTEM_ERROR";
-                    setTimeout(() => {
-                        btn.textContent = originalText;
-                        btn.disabled = false;
-                    }, 3000);
-                }
-            }).catch(error => {
-                console.error('Submission error:', error);
-                btn.textContent = "SIGNAL_ERROR";
-                btn.disabled = false;
-            });
-        });
-    }
-
-    function startDestructSequence() {
-        let count = 5;
-        if (timerDisplay) timerDisplay.textContent = count;
-        const countdown = setInterval(() => {
-            count--;
-            if (timerDisplay) timerDisplay.textContent = count;
-            if (count <= 0) {
-                clearInterval(countdown);
-                destructMsg.style.opacity = "0";
-                setTimeout(() => {
-                    destructMsg.style.display = "none";
-                    briefForm.style.display = "block";
-                    setTimeout(() => {
-                        briefForm.reset();
-                        briefForm.style.opacity = "1";
-                        // Restore button state
-                        const btnSubmit = briefForm.querySelector('button[type="submit"]');
-                        if (btnSubmit) {
-                            btnSubmit.textContent = "SUBMIT INQUIRY";
-                            btnSubmit.disabled = false;
-                        }
-                        // Reset to Step 1
-                        if (typeof nextStep === 'function') {
-                            nextStep(1);
-                        } else {
-                            document.querySelectorAll('.form-step').forEach(el => el.style.display = 'none');
-                            const firstStep = document.getElementById('step1');
-                            if (firstStep) firstStep.style.display = 'block';
-                            ['tab1', 'tab2', 'tab3'].forEach((t, i) => {
-                                const tab = document.getElementById(t);
-                                if (tab) {
-                                    tab.style.background = i === 0 ? '#e5e5e0' : '#ccc';
-                                    tab.style.opacity = i === 0 ? '1' : '0.7';
-                                }
-                            });
-                        }
-                    }, 50);
-                }, 500);
-            }
-        }, 1000);
-    }
-    // INTERACTIVE HOROSCOPES SELECTION
-    const horoscopeCards = document.querySelectorAll('.horoscope-card');
-    const readingModule = document.getElementById('readingModule');
-
-    const horoscopeData = {
-        aries: { title: "Aries", read: "PIONEER THE MARKET. YOUR BRANDING NEEDS MORE FIRE TO COMMAND ATTENTION. ABUNDANCE IS LOCKED BEHIND YOUR FEAR OF INNOVATION.", lucky: "09", animal: "DRAGON", vibe: "HIGH PRECISION" },
-        taurus: { title: "Taurus", read: "STABILITY IS THE NEW ELITE. BUILD ARCHITECTURES THAT LAST A DECADE. THE UNIVERSE REWARDS THE PATIENT STRATEGIST.", lucky: "06", animal: "OX", vibe: "SYSTEM STABLE" },
-        gemini: { title: "Gemini", read: "MULTIFACETED BRANDING THRIVES IN THE NOISE. ADAPT OR FADE. YOUR DUALITY IS YOUR STRONGEST ASSET THIS WEEK.", lucky: "05", animal: "MONKEY", vibe: "FLUID LOGIC" },
-        cancer: { title: "Cancer", read: "DEEP EMOTIONAL CONNECTION WINS THE MARKET. TARGET THE HEART. PROTECT YOUR ENERGY WHILE YOU SCALE.", lucky: "02", animal: "PIG", vibe: "EMPATH ARCH" },
-        leo: { title: "Leo", read: "LUXURY IS YOUR DESTINY. COMMAND THE ROOM WITH BOLD VISUAL ASSETS. THE SPOTLIGHT IS ALREADY WARMED UP FOR YOU.", lucky: "01", animal: "TIGER", vibe: "ALPHA FOCUS" },
-        virgo: { title: "Virgo", read: "PRECISION IS POWER. YOUR SYSTEM NEEDS AN AUDIT BEFORE THE SCALE. ELITE DETAIL WILL BE YOUR DIFFERENTIATOR.", lucky: "03", animal: "RABBIT", vibe: "ELITE DETAIL" },
-        libra: { title: "Libra", read: "BALANCE YOUR AESTHETIC WITH RAW CONVERSION POWER. SYMMETRY IS KEY. COLLABORATION BRINGS UNEXPECTED ABUNDANCE.", lucky: "07", animal: "HORSE", vibe: "HARMONIC ROI" },
-        scorpio: { title: "Scorpio", read: "INTENSITY BREEDS LOYALTY. DIVE DEEPER INTO CONSUMER PSYCHOLOGY. YOUR SECRETS ARE YOUR STRATEGIC ADVANTAGE.", lucky: "04", animal: "SNAKE", vibe: "SHADOW WORK" },
-        sagittarius: { title: "Sagittarius", read: "SCALE GLOBALLY. YOUR CURRENT DIGITAL UX IS TOO LOCAL FOR YOUR AMBITION. EXPLORE NEW FRONTIERS IN YOUR AD COPY.", lucky: "08", animal: "RAT", vibe: "GLOBAL REACH" },
-        capricorn: { title: "Capricorn", read: "THE VIEW IS BEST FROM THE TOP. STRATEGIZE FOR THE LONG HORIZON. YOUR AMBITION IS THE ONLY FUEL YOU NEED.", lucky: "00", animal: "ROOSTER", vibe: "ZENITH GOALS" },
-        aquarius: { title: "Aquarius", read: "THE FUTURE IS NOW. BREAK THE TRADITIONAL RULES OF YOUR INDUSTRY. RADICAL AUTHENTICITY IS YOUR CURRENT SIGNAL.", lucky: "11", animal: "DOG", vibe: "NEO VISION" },
-        pisces: { title: "Pisces", read: "ABUNDANCE COINCIDES WITH CLARITY. CLEAN YOUR DIGITAL LENS. TRUST THE INTUITION OF YOUR BRAND IDENTITY.", lucky: "22", animal: "CAT", vibe: "VIVID DREAM" }
-    };
-
-    horoscopeCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const sign = card.dataset.sign;
-            const data = horoscopeData[sign];
-
-            horoscopeCards.forEach(c => c.classList.remove('active'));
-            card.classList.add('active');
-
-            if (readingModule && data) {
-                readingModule.style.opacity = "0";
-                setTimeout(() => {
-                    document.getElementById('currentSignTitle').textContent = data.title + ".";
-                    document.getElementById('currentReadingText').textContent = data.read;
-                    document.getElementById('luckyNum').textContent = data.lucky;
-                    document.getElementById('animalSign').textContent = data.animal;
-                    document.getElementById('vibeCheck').textContent = data.vibe;
-                    readingModule.style.opacity = "1";
-                }, 300);
-            }
-        });
-    });
-    // FLOATING MOMENTS (MOUSE FOLLOW)
-    const floatingMoments = document.querySelectorAll('.floating-moment');
-    window.addEventListener('mousemove', (e) => {
-        floatingMoments.forEach((moment, idx) => {
-            const speed = (idx + 1) * 0.015;
-            const x = (window.innerWidth / 2 - e.pageX) * speed;
-            const y = (window.innerHeight / 2 - e.pageY) * speed;
-            moment.style.transform = `translate(${x}px, ${y}px) rotate(${x * 0.1}deg)`;
-        });
-    });
-
-    // SCROLL PARALLAX LOGIC
-    const parallaxLayers = document.querySelectorAll('.parallax-layer');
-
-    // Store original intrinsic rotations/transforms so the parallax doesn't overwrite them
-    parallaxLayers.forEach(layer => {
-        layer.dataset.origTransform = layer.style.transform || '';
-    });
-
-    const runParallaxOffsets = () => {
-        const windowHeight = window.innerHeight;
-        parallaxLayers.forEach(layer => {
-            if (!layer.classList.contains('parallax-layer')) return;
-            const speed = parseFloat(layer.getAttribute('data-speed') || 0.1);
-
-            // Anchor to parent so the calculation remains consistent across the page
-            const parent = layer.parentElement;
-            if (!parent) return;
-
-            const rect = parent.getBoundingClientRect();
-            const distance = (rect.top + rect.height / 2) - (windowHeight / 2);
-            const yPos = distance * -speed;
-
-            // Re-apply original rotations perfectly synced with the dynamic scroll Y
-            layer.style.transform = `${layer.dataset.origTransform} translateY(${yPos}px)`;
-        });
-    };
-
-    // Initialize parallax offsets immediately so they don't 'jump' on first scroll
-    runParallaxOffsets();
-    window.addEventListener('scroll', runParallaxOffsets);
-
-    // SOCIAL PROOF TOAST LOGIC
-    const toast = document.getElementById('socialToast');
-    const toastContent = document.getElementById('toastContent');
-    const names = ['JESSICA_M.', 'DEREK_S.', 'AMANDA_R.', 'CARLOS_V.', 'KRISTEN_L.', 'TYLER_B.', 'NATALIE_A.'];
-    const actions = [
-        'RESERVED A CREATIVE FEATURE',
-        'LAUNCHED A CURATED BRAND IDENTITY',
-        'SECURED AN EDITORIAL PHOTOSHOOT',
-        'SUBMITTED A STRATEGIC BRIEF',
-        'JOINED THE MASTERCLASS DISPATCH',
-        'CALIBRATED THEIR DIGITAL ASSETS'
-    ];
-    const locations = ['IN BAKERSFIELD', 'IN TEHACHAPI', 'IN KERN COUNTY', 'IN LOS ANGELES', 'IN THE CENTRAL VALLEY'];
-
-    function showNotification() {
-        if (!toast) return;
-        const randName = names[Math.floor(Math.random() * names.length)];
-        const randAction = actions[Math.floor(Math.random() * actions.length)];
-        const randLoc = locations[Math.floor(Math.random() * locations.length)];
-        toastContent.innerHTML = `<b>${randName}</b> ${randAction} ${randLoc}.`;
-        toast.classList.add('active');
-        setTimeout(() => {
-            toast.classList.remove('active');
-        }, 5000);
-    }
-
-    setTimeout(() => {
-        setInterval(showNotification, 45000);
-        showNotification();
-    }, 25000);
-
-    // DRAGGABLE AND CLOSABLE RETRO WINDOWS
-    const titleBars = document.querySelectorAll('div[style*="background: darkblue;"], div[style*="background: darkgreen;"], div[style*="background: darkred;"], div[style*="background: #a00;"], div[style*="background: var(--pop-green);"]');
-
-    titleBars.forEach(bar => {
-        // Ensure it looks like a window title bar (has color white)
-        if (!bar.style.color.includes('white')) return;
-        const win = bar.parentElement;
-
-        // Skip Frank's interactive pet window and the Oracle ball — those need to stay open
-        if (win.closest('#frank-window') || win.id === 'frank-window' || win.id === 'oracleVisual') return;
-
-        // Helper: fade the window out
-        function closeWindow() {
-            win.style.transition = 'opacity 0.25s ease';
-            win.style.opacity = '0';
-            setTimeout(() => win.style.display = 'none', 250);
-        }
-
-        // Find close buttons (spans with cursor: pointer or X or _ etc, AND elements with btn-retro-close)
-        const closeSelectors = '.btn-retro-close, span:last-child';
-        win.querySelectorAll(closeSelectors).forEach(btn => {
-            btn.style.cursor = 'pointer';
-            btn.addEventListener('click', (e) => {
-                // If it has its own logic (like scrolling) let it run, but then close the window
-                // Don't preventDefault unless it's strictly a closer
-                // e.preventDefault(); 
-                e.stopPropagation();
-                closeWindow();
-            });
-        });
-
-        // Also make extra inner buttons close the window (like "Cancel", "IGNORE", "Accept Fate")
-        const buttons = win.querySelectorAll('button');
-        buttons.forEach(btn => {
-            if (btn.classList.contains('btn-retro-close')) return; // handled above
-
-            const text = btn.textContent.trim().toUpperCase();
-            if (['YES', 'NO', 'CANCEL', 'IGNORE', 'ACCEPT FATE', 'OK', "I'M READY", "NOT YET", "ACCEPT OUR STRATEGY"].includes(text)) {
-                btn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    closeWindow();
-                });
-            }
-        });
-
-        // CLICK ANYWHERE ON THE WINDOW BODY TO DISMISS
-        // Skip if clicking on something interactive (links, form fields, buttons, title bar)
-        win.addEventListener('click', (e) => {
-            // Check for explicit 'no-click-close' opt-out
-            if (win.dataset.noClickClose === 'true' || win.getAttribute('data-no-click-close') === 'true') return;
-
-            if (e.target.closest('a') || e.target.closest('button') || e.target.closest('input') ||
-                e.target.closest('select') || e.target.closest('textarea') || e.target.closest('label') ||
-                e.target.closest('summary') || e.target.closest('details')) return;      // let interactive elements do their thing
-            if (bar.contains(e.target)) return;             // title bar is for dragging, not closing
-            if (e.target.closest('form')) return;           // don't close over form areas
-            closeWindow();
-        });
-
-        // Show a pointer cursor on the window body so it's obvious it's clickable
-        win.style.cursor = 'pointer';
-        // But restore default cursor over interactive elements so it doesn't look wrong
-        win.querySelectorAll('a, button, input, select, textarea').forEach(el => {
-            el.style.cursor = '';
-        });
-
-        // DRAGGING LOGIC
-        bar.style.cursor = 'grab';
-        win.style.cursor = 'default'; // override pointer for the draggable bar's parent
-
-        let isDragging = false;
-        let startX, startY;
-        let dragMoved = false;
-        let currentLeft = parseFloat(getComputedStyle(win).left) || 0;
-        let currentTop = parseFloat(getComputedStyle(win).top) || 0;
-
-        bar.addEventListener('mousedown', (e) => {
-            // Ignore if clicked on close button or other buttons
-            if (e.target.closest('span:last-child') || e.target.tagName === 'BUTTON') return;
-
-            isDragging = true;
-            dragMoved = false;
-            bar.style.cursor = 'grabbing';
-            win.style.transition = 'none';
-            // Disable parallax effect on this window so it doesn't fight our dragging
-            win.classList.remove('parallax-layer');
-
-            // Force relative or absolute so top/left works
-            const compStyle = window.getComputedStyle(win);
-            if (compStyle.position === 'static') {
-                win.style.position = 'relative';
-            }
-
-            // Re-read current position in case window was resized
-            currentLeft = parseFloat(compStyle.left) || 0;
-            currentTop = parseFloat(compStyle.top) || 0;
-
-            startX = e.clientX;
-            startY = e.clientY;
-
-            win.style.zIndex = '1000'; // Bring to front
-            e.preventDefault(); // Prevents text selection
-        });
-
-        document.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            const dx = e.clientX - startX;
-            const dy = e.clientY - startY;
-            if (Math.abs(dx) > 3 || Math.abs(dy) > 3) dragMoved = true;
-
-            win.style.left = (currentLeft + dx) + 'px';
-            win.style.top = (currentTop + dy) + 'px';
-        });
-
-        document.addEventListener('mouseup', () => {
-            if (isDragging) {
-                isDragging = false;
-                bar.style.cursor = 'grab';
-            }
-        });
-    });
-
-    // SPECIAL NAVIGATION BUTTONS
-    const btnViewCV = document.getElementById('btn-view-cv');
-    if (btnViewCV) {
-        btnViewCV.addEventListener('click', () => {
-            const cvModal = document.getElementById('cv-modal');
-            if (cvModal) cvModal.style.display = 'flex';
-        });
-    }
-
-    const btnEnterExp = document.getElementById('btn-enter-exp');
-    if (btnEnterExp) {
-        btnEnterExp.addEventListener('click', () => {
-            const archiveSection = document.getElementById('archive');
-            if (archiveSection) archiveSection.scrollIntoView({ behavior: 'smooth' });
-        });
-    }
-});
-
-// (Removed redundant header clock logic — integrated into main engine)
-
-
-
-// BACK TO TOP BUTTON LOGIC
-const backToTopBtn = document.getElementById('back-to-top');
-if (backToTopBtn) {
-    window.addEventListener('scroll', () => {
-        // Show button halfway down the page
-        if (window.scrollY > (document.documentElement.scrollHeight / 2)) {
-            backToTopBtn.classList.add('visible');
-        } else {
-            backToTopBtn.classList.remove('visible');
-        }
-    });
-
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}
-
-// CASE STUDY MODAL ENGINE
-document.addEventListener('DOMContentLoaded', () => {
+    // CASE STUDY ENGINE
     const folders = document.querySelectorAll('.desktop-folder-icon');
-    const closeButtons = document.querySelectorAll('.case-card-close');
-    const overlay = document.getElementById('oracleOverlay');
-
-    folders.forEach(folder => {
-        folder.addEventListener('click', (e) => {
-            e.preventDefault();
-            // Clear any existing active modals first
-            closeAllModals();
-
-            const group = folder.closest('.desktop-folder-group');
-            const content = group.querySelector('.desktop-folder-content');
-            if (content) {
-                if (overlay) overlay.classList.add('active');
-                content.classList.add('active');
-                document.body.style.overflow = 'hidden'; // Lock scroll
-            }
-        });
-    });
+    const caseOverlay = document.getElementById('oracleOverlay');
 
     const closeAllModals = () => {
         document.querySelectorAll('.desktop-folder-content.active').forEach(modal => {
             modal.classList.remove('active');
         });
-        if (overlay) overlay.classList.remove('active');
-        document.body.style.overflow = ''; // Unlock scroll
+        if (caseOverlay) caseOverlay.classList.remove('active');
+        document.body.style.overflow = '';
     };
 
-    closeButtons.forEach(btn => {
+    folders.forEach(folder => {
+        folder.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeAllModals();
+            const group = folder.closest('.desktop-folder-group');
+            const content = group ? group.querySelector('.desktop-folder-content') : null;
+            if (content) {
+                if (caseOverlay) caseOverlay.classList.add('active');
+                content.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    document.querySelectorAll('.case-card-close').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
             closeAllModals();
         });
     });
 
-    if (overlay) {
-        overlay.addEventListener('click', closeAllModals);
-    }
+    // DRAGGABLE WINDOWS
+    const titleBars = document.querySelectorAll('div[style*="background: darkblue;"], div[style*="background: darkgreen;"], div[style*="background: darkred;"]');
+    titleBars.forEach(bar => {
+        const win = bar.parentElement;
+        if (!win || win.id === 'frank-window') return;
 
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeAllModals();
-    });
-});
+        bar.style.cursor = 'grab';
+        let isDragging = false;
+        let startX, startY, currentLeft, currentTop;
 
-// FRANK THE PET INTERACTION
-const frank = document.getElementById("frank-pet");
-if (frank) {
-    frank.addEventListener("click", () => {
-        const popup = document.getElementById("frank-chat-bubble");
-        if (popup) {
-            popup.textContent = "Would you like help with that? Purr...";
-            popup.style.display = "block";
-            setTimeout(() => popup.style.display = "none", 4000);
-        }
-    });
-}
+        bar.addEventListener('mousedown', (e) => {
+            if (e.target.closest('.btn-retro-close')) return;
+            isDragging = true;
+            bar.style.cursor = 'grabbing';
+            const comp = window.getComputedStyle(win);
+            currentLeft = parseFloat(comp.left) || 0;
+            currentTop = parseFloat(comp.top) || 0;
+            startX = e.clientX;
+            startY = e.clientY;
+            win.style.zIndex = '1000';
+            e.preventDefault();
+        });
 
-// FAQ ACCORDION SCROLL JUMP FIX
-document.querySelectorAll('.faq-accordion details summary').forEach(summary => {
-    summary.addEventListener('click', function (e) {
-        // Prevent layout jump when details expand
-        const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
-        requestAnimationFrame(() => {
-            window.scrollTo(0, scrollPos);
-            setTimeout(() => window.scrollTo(0, scrollPos), 10);
-            setTimeout(() => window.scrollTo(0, scrollPos), 50);
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            win.style.left = (currentLeft + (e.clientX - startX)) + 'px';
+            win.style.top = (currentTop + (e.clientY - startY)) + 'px';
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            bar.style.cursor = 'grab';
         });
     });
-});
 
-// CLUBHOUSE FORM HANDLERS
-document.querySelectorAll('.club-form').forEach(form => {
-    form.addEventListener('submit', (e) => {
-        const container = form.closest('.club-card');
-        const destruct = container ? container.querySelector('.destruct-mini') : null;
-        const timerEl = destruct ? destruct.querySelector('.timer-mini') : null;
+    // BACK TO TOP
+    const btt = document.getElementById('back-to-top');
+    if (btt) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) btt.classList.add('visible');
+            else btt.classList.remove('visible');
+        });
+        btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
 
-        if (destruct) {
-            form.style.display = 'none';
-            destruct.style.display = 'block';
-            let timeLeft = 5;
-            if (timerEl) timerEl.textContent = timeLeft;
-            const countdown = setInterval(() => {
-                timeLeft--;
-                if (timerEl) timerEl.textContent = timeLeft;
-                if (timeLeft <= 0) {
-                    clearInterval(countdown);
-                    destruct.style.opacity = '0';
-                    setTimeout(() => {
-                        destruct.style.display = 'none';
-                        form.style.display = 'block';
-                        form.style.opacity = '1';
-                        // Keep success state or reset
-                        form.reset();
-                    }, 500);
-                }
-            }, 1000);
-        }
+    // SPECIAL BUTTONS
+    const cvBtn = document.getElementById('btn-view-cv');
+    if (cvBtn) cvBtn.addEventListener('click', () => {
+        const m = document.getElementById('cv-modal');
+        if (m) m.style.display = 'flex';
+    });
+
+    const enterBtn = document.getElementById('btn-enter-exp');
+    if (enterBtn) enterBtn.addEventListener('click', () => {
+        const arc = document.getElementById('archive');
+        if (arc) arc.scrollIntoView({ behavior: 'smooth' });
     });
 });
