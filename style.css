@@ -616,7 +616,7 @@ section {
 .mock-card {
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.08);
-    padding: 2.5rem;
+    padding: 2rem;
     position: relative;
     height: 100%;
     display: flex;
@@ -734,10 +734,12 @@ section {
 /* HORIZONTAL PINNING SYSTEM */
 .horizontal-scroll-section {
     position: relative;
-    height: 800vh;
+    height: 1000vh;
+    overflow: visible !important;
 }
 
 .horizontal-sticky {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     height: 100vh;
@@ -746,14 +748,16 @@ section {
     align-items: center;
     overflow: hidden;
     background: #000;
-    z-index: 5;
+    z-index: 10;
 }
 
 .horizontal-track {
     display: flex;
-    gap: 10vw;
+    gap: 12vw;
     padding-left: 40vw;
     padding-right: 50vw;
+    padding-top: 8vh;
+    padding-bottom: 8vh;
     will-change: transform;
     position: relative;
     z-index: 10;
@@ -781,7 +785,7 @@ section {
 }
 
 .horizontal-item {
-    flex: 0 0 clamp(300px, 28vw, 450px);
+    flex: 0 0 clamp(280px, 25vw, 420px);
     height: auto;
 }
 
