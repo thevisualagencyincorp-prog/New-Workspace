@@ -83,6 +83,8 @@
 </head>
 
 <body>
+  <!-- TEXTURE OVERLAY -->
+  <div class="grain-overlay"></div>
 
   <!-- CINEMATIC BOOT SYSTEM -->
   <div class="preloader" id="preloader">
@@ -230,7 +232,7 @@
 
           <!-- LEFT: LOGO -->
           <a href="#main-content" aria-label="The Agency Homepage"
-            style="text-decoration: none; position: relative; z-index: 101;">
+            style="text-decoration: none; position: relative; z-index: 101;" data-speed="0.05">
             <div class="halftone-text" style="font-size: clamp(2.5rem, 5vw, 4rem); color: #fff; line-height: 0.8;">
               The<br>Agency.</div>
           </a>
@@ -241,176 +243,187 @@
             <div id="magazine-editorial-top">VOL. 1 // FREQUENCY: 888 // BAKERSFIELD, CA</div>
             <div id="magazine-clock-line" style="color: var(--pop-lime); font-weight: bold;">LOADING_SYSTEM_CLOCK...
             </div>
+            <div class="handwritten"
+              style="position: absolute; top: 100%; right: 0; color: var(--pop-pink); font-size: 0.7rem; transform: rotate(-5deg); white-space: nowrap;">
+              (Still a work in progress, bestie!)</div>
           </div>
 
           <!-- RIGHT: DESKTOP NAV + TAGLINE -->
-          <div
-            style="text-align: right; display: flex; flex-direction: column; gap: 1rem; position: relative; z-index: 101;">
-            <nav class="desktop-only"
-              style="display: flex; gap: 2rem; font-family: var(--font-mono); font-size: 0.75rem; font-weight: bold; justify-content: flex-end;">
-              <a href="#archive"
-                style="color: #fff; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s;">[
-                ARCHIVE ]</a>
-              <a href="#horizontal-section"
-                style="color: #fff; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s;">[
-                COLLECTION ]</a>
-              <a href="#protocol"
-                style="color: #fff; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s;">[
-                PROCESS ]</a>
-              <a href="#contact-brief"
-                style="color: #fff; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s;">[
-                CONTACT ]</a>
-            </nav>
-            <div class="mono-label" style="color: var(--pop-lime); line-height: 1.4; font-size: 0.7rem;">YOUR BUSINESS
-              BESTIES<br><span style="color: #fff; opacity: 0.5; font-size: 0.6rem; letter-spacing: 1px;">KERN COUNTY
-                MARKETING AGENCY</span></div>
-          </div>
-        </header>
+          <div class="mono-label" style="color: var(--pop-lime); line-height: 1.4; font-size: 0.7rem;">YOUR BUSINESS
+            BESTIES<br><span style="color: #fff; opacity: 0.5; font-size: 0.6rem; letter-spacing: 1px;">KERN COUNTY
+              MARKETING AGENCY</span></div>
+      </div>
+      </header>
 
-        <!-- CENTER CONTENT -->
-        <div
-          style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem 5vw; position: relative; z-index: 10;">
-          <div class="mono-label blend-difference"
-            style="margin-bottom: 0.5rem; opacity: 0.8; letter-spacing: 0.2rem; color: #fff;">
-            ■ <span style="opacity: 0.5;">NEW COLLECTION</span> ■</div>
-          <div class="mono-label blend-difference"
-            style="margin-bottom: 1.5rem; opacity: 0.4; font-size: 0.7rem; color: #fff;">AN
-            EXPLORATION OF</div>
+      <!-- CENTER CONTENT -->
+      <div
+        style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem 5vw; position: relative; z-index: 10;">
+        <div class="mono-label blend-difference"
+          style="margin-bottom: 0.5rem; opacity: 0.8; letter-spacing: 0.2rem; color: #fff;">
+          ■ <span style="opacity: 0.5;">NEW COLLECTION</span> ■</div>
+        <div class="mono-label blend-difference"
+          style="margin-bottom: 1.5rem; opacity: 0.4; font-size: 0.7rem; color: #fff;">AN
+          EXPLORATION OF</div>
 
-          <h1 class="halftone-text blend-difference"
-            style="color: var(--pop-pink); font-size: clamp(4rem, 12vw, 15rem); line-height: 0.8; margin: 0; text-transform: uppercase; font-weight: 900;">
-            Elite<br>Branding</h1>
+        <h1 class="halftone-text blend-difference"
+          style="color: var(--pop-pink); font-size: clamp(4rem, 12vw, 15rem); line-height: 0.7; margin: 0; text-transform: uppercase; font-weight: 900;"
+          data-speed="-0.15">
+          Elite<br>Branding</h1>
 
-          <div class="mono-label blend-difference"
-            style="margin-top: 1.5rem; letter-spacing: 0.3rem; opacity: 0.8; font-size: 0.75rem; color: #fff;">BRAND
-            THERAPY & VIBE ENGINEERING BY THE AGENCY</div>
-        </div>
+        <div class="mono-label blend-difference"
+          style="margin-top: 1.5rem; letter-spacing: 0.3rem; opacity: 0.8; font-size: 0.75rem; color: #fff;">BRAND
+          THERAPY & VIBE ENGINEERING BY THE AGENCY</div>
+      </div>
 
-        <!-- CREDITS CARDS GRID (Match Screenshot) -->
-        <div class="hero-credits-grid"
-          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: #222; border-top: 1px solid #222; width: 100%;">
+      <!-- CREDITS CARDS GRID (Match Screenshot) -->
+      <div class="hero-credits-grid"
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: #222; border-top: 1px solid #222; width: 100%;">
 
-          <!-- Col 1: Designed By -->
-          <div class="header-credit-card"
-            style="background: #0d0d0d; color: #fff; padding: 2rem; position: relative; border-right: 1px solid #222;">
-            <div style="font-family: var(--font-mono); font-size: 0.6rem; opacity: 0.4; margin-bottom: 1.5rem;">DESIGNED
-              BY:</div>
+        <!-- Col 1: Designed By + NAVIGATION -->
+        <div class="header-credit-card"
+          style="background: #0d0d0d; color: #fff; padding: 2.5rem; position: relative; border-right: 1px solid #222; display: flex; flex-direction: column; justify-content: space-between;">
+          <div style="position: relative; z-index: 2;">
             <div
-              style="font-family: var(--font-serif); font-size: 2rem; font-style: italic; color: var(--pop-pink); margin-bottom: 0.5rem; line-height: 1;">
-              Founders:</div>
-            <div style="font-family: var(--font-sans); font-size: 1.3rem; font-weight: bold; letter-spacing: -0.02em;">
+              style="font-family: var(--font-mono); font-size: 0.65rem; opacity: 0.5; margin-bottom: 2rem; letter-spacing: 2px;">
+              CREDITS // FOUNDERS_ID</div>
+            <div
+              style="font-family: 'Shadows Into Light', cursive; font-size: 2.5rem; color: var(--pop-pink); margin-bottom: 0px; line-height: 0.8; transform: rotate(-3deg);">
+              Besties:</div>
+            <div
+              style="font-family: var(--font-serif); font-size: 2rem; font-weight: 900; letter-spacing: -1px; margin-top: 10px;">
               Ash & Brittany</div>
-            <div class="star-icon"
-              style="position: absolute; bottom: 1rem; left: 2rem; color: var(--pop-lime); font-size: 1.5rem;">★
-            </div>
+            <div class="handwritten" style="color: var(--pop-lime); font-size: 0.9rem; margin-top: 10px; opacity: 0.8;">
+              "Your commercial growth partners."</div>
           </div>
 
-          <!-- Col 2: Creative Code -->
-          <div class="header-credit-card"
-            style="background: #0d0d0d; color: #fff; padding: 2rem; border-right: 1px solid #222;">
-            <div style="font-family: var(--font-mono); font-size: 0.6rem; opacity: 0.4; margin-bottom: 1.5rem;">CREATIVE
-              CODE BY</div>
-            <div
-              style="font-family: var(--font-serif); font-size: 1.8rem; font-style: italic; color: var(--pop-lime); margin-bottom: 0.5rem; line-height: 1;">
-              The Agency</div>
-            <div style="font-family: var(--font-mono); font-size: 0.6rem; opacity: 0.3; letter-spacing: 1px;">CURATED
-              SINCE 2006</div>
-          </div>
+          <nav style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 3rem;">
+            <a href="#archive" class="btn-retro-magazine">ARCHIVE.01</a>
+            <a href="#horizontal-section" class="btn-retro-magazine">THE_LINEUP.02</a>
+            <a href="#protocol" class="btn-retro-magazine">PROCESS.03</a>
+            <a href="#contact-brief" class="btn-retro-magazine">CONTACT.04</a>
+          </nav>
 
-          <!-- Col 3: Archive Scan -->
-          <div class="header-credit-card"
-            style="background: #0d0d0d; color: #fff; padding: 2rem; border-right: 1px solid #222;">
-            <div style="font-family: var(--font-mono); font-size: 0.6rem; opacity: 0.4; margin-bottom: 1rem;">
-              ARCHIVE_SCAN_V18</div>
-            <div style="display: flex; align-items: flex-end; gap: 1rem;">
-              <div
-                style="font-family: var(--font-mono); font-size: 3.5rem; font-weight: 900; color: var(--pop-lime); line-height: 1;">
-                888</div>
-              <div
-                style="font-family: var(--font-mono); font-size: 0.55rem; opacity: 0.5; margin-bottom: 0.5rem; line-height: 1.4;">
-                YOUR BEHIND THE SCENES TEAM</div>
-            </div>
-          </div>
-
-          <!-- Col 4: Visual -->
-          <div class="header-credit-card"
-            style="background: #0d0d0d; color: #fff; padding: 0; position: relative; overflow: hidden; min-height: 150px;">
-            <img src="images/twisted_lens_studio_shoot_1771447248254.png"
-              alt="High-end marketing photography studio shoot in Bakersfield"
-              style="display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; mix-blend-mode: luminosity;">
-            <div style="position: absolute; top: 1rem; right: 1rem; z-index: 2;">
-              <span
-                style="font-family: var(--font-mono); font-size: 0.55rem; background: var(--pop-pink); color: #fff; padding: 4px 8px; font-weight: bold;">STUDIO__V1.0</span>
-            </div>
+          <div class="drifts-up star-icon"
+            style="position: absolute; top: 1.5rem; right: 2rem; color: var(--pop-lime); font-size: 2rem;">✦
           </div>
         </div>
+
+        <!-- Col 2: Creative Code -->
+        <div class="header-credit-card"
+          style="background: #0d0d0d; color: #fff; padding: 2rem; border-right: 1px solid #222;">
+          <div style="font-family: var(--font-mono); font-size: 0.6rem; opacity: 0.4; margin-bottom: 1.5rem;">CREATIVE
+            CODE BY</div>
+          <div
+            style="font-family: var(--font-serif); font-size: 1.8rem; font-style: italic; color: var(--pop-lime); margin-bottom: 0.5rem; line-height: 1;">
+            The Agency</div>
+          <div style="font-family: var(--font-mono); font-size: 0.6rem; opacity: 0.3; letter-spacing: 1px;">CURATED
+            SINCE 2006</div>
+        </div>
+
+        <!-- Col 3: Archive Scan -->
+        <div class="header-credit-card"
+          style="background: #0d0d0d; color: #fff; padding: 2rem; border-right: 1px solid #222;">
+          <div style="font-family: var(--font-mono); font-size: 0.6rem; opacity: 0.4; margin-bottom: 1rem;">
+            ARCHIVE_SCAN_V18</div>
+          <div style="display: flex; align-items: flex-end; gap: 1rem;">
+            <div
+              style="font-family: var(--font-mono); font-size: 3.5rem; font-weight: 900; color: var(--pop-lime); line-height: 1;">
+              888</div>
+            <div
+              style="font-family: var(--font-mono); font-size: 0.55rem; opacity: 0.5; margin-bottom: 0.5rem; line-height: 1.4;">
+              YOUR BEHIND THE SCENES TEAM</div>
+          </div>
+        </div>
+
+        <!-- Col 4: Visual -->
+        <div class="header-credit-card"
+          style="background: #0d0d0d; color: #fff; padding: 0; position: relative; overflow: hidden; min-height: 150px;">
+          <img src="images/agency_office_vibe_1771445625493.png"
+            alt="High-end marketing photography studio shoot in Bakersfield"
+            style="display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; mix-blend-mode: luminosity;">
+          <div style="position: absolute; top: 1rem; right: 1rem; z-index: 2;">
+            <span
+              style="font-family: var(--font-mono); font-size: 0.55rem; background: var(--pop-pink); color: #fff; padding: 4px 8px; font-weight: bold;">STUDIO__V1.0</span>
+          </div>
+        </div>
+      </div>
       </div>
     </section>
 
     <!-- SECTION 02: THE WELCOME DISPATCH (DIRECT INTEGRATION) -->
     <section class="bg-graph" id="protocol"
-      style="position: relative; overflow: hidden; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 10vh 5vw; background: #fff;">
+      style="position: relative; overflow: hidden; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 12vh 8vw; background: #fff; margin-top: -10vh; z-index: 10; border-radius: 40px 40px 0 0; box-shadow: 0 -30px 60px rgba(0,0,0,0.1);">
 
       <div class="reveal" style="text-align: center; max-width: 1000px; width: 100%; position: relative; z-index: 2;">
 
         <div style="margin-bottom: 2rem;">
-          <span class="chapter-mark">CHAPTER I: THE PROLOGUE</span>
+          <span class="chapter-mark">COL_01: LETTER FROM THE EDITOR</span>
           <h2 class="halftone-text animated-gradient"
-            style="font-size: clamp(3rem, 10vw, 7rem); color: #000; mix-blend-mode: normal; line-height: 0.9; margin: 1rem 0 0; font-weight: 900; text-transform: uppercase;">
-            Welcome<br>Industry Icons.</h2>
-          <div class="handwritten" style="margin-left: 10%; margin-top: -10px;">Your business besties plotting a
-            takeover.</div>
+            style="font-size: clamp(3rem, 10vw, 7rem); color: #000; mix-blend-mode: normal; line-height: 0.9; margin: 1.5rem 0 0.5rem; font-weight: 900; text-transform: uppercase;"
+            data-speed="0.08">
+            Editor's<br>Note.</h2>
+          <div class="handwritten"
+            style="margin-top: -10px; transform: rotate(-1deg); background: rgba(255,100,255,0.05); padding: 8px; display: inline-block; font-size: 1.1rem; border: 1px dashed var(--pop-pink);">
+            Plotting your brand's global takeover, one pixel at a time. <span style="font-style: normal;">✨</span></div>
         </div>
 
-        <div
-          style="margin-top: 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; text-align: left;">
-          <div class="reveal" data-speed="0.1">
-            <div class="mono-label" style="color: var(--pop-pink); margin-bottom: 1rem; font-weight: 800;">■ THE
-              OBJECTIVE</div>
-            <p style="font-family: var(--font-sans); font-size: 1.2rem; line-height: 1.6; color: #222;">
-              Stop chasing the market. Start <strong>commanding</strong> it. We're your secret weapons for engineering
-              authority through high-end strategy and cinematic content that actually converts.
-            </p>
+        <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start; margin-top: 5rem;">
+          <!-- Editor Portrait -->
+          <div class="reveal" data-speed="0.1" style="position: relative; padding: 2rem;">
+            <div class="pixel-border"
+              style="background: #fff; padding: 15px 15px 60px 15px; transform: rotate(-1.5deg); box-shadow: 30px 30px 0 rgba(0,0,0,0.08); border: 1px solid #000;">
+              <img src="images/ash_and_brittany_portrait.jpg" alt="Ash and Brittany - Founders"
+                style="width: 100%; filter: contrast(1.1) brightness(1.05); border: 1px solid #111;">
+              <div class="handwritten"
+                style="position: absolute; bottom: 20px; text-align: center; width: 100%; left: 0; color: #000; font-weight: 900; font-size: 1.8rem; transform: rotate(1deg);">
+                xo, Ash & Brittany</div>
+            </div>
+            <!-- Sticker on photo -->
+            <div class="drifts-right sticker"
+              style="top: 0; right: 0; transform: rotate(15deg); background: var(--pop-lime); color: #000; padding: 10px 20px; font-weight: 900; box-shadow: 5px 5px 0 rgba(0,0,0,0.5);">
+              DISABLED VETERAN OWNED</div>
+            <div class="drifts-left handwritten"
+              style="position: absolute; bottom: -2rem; left: -1rem; color: var(--pop-pink); font-size: 1.4rem; transform: rotate(-5deg);">
+              "Besties in business."</div>
           </div>
-          <div class="reveal" data-speed="0.2">
-            <div class="mono-label" style="color: var(--pop-blue); margin-bottom: 1rem; font-weight: 800;">■ THE
-              ARCHITECTURE</div>
-            <p style="font-family: var(--font-sans); font-size: 1.2rem; line-height: 1.6; color: #222;">
-              Your business deserves more than a "pretty" website. We build <strong>digital empires</strong>
-              designed for deep psychological connection. Modern nostalgia meets future-proof systems.
+
+          <div style="text-align: left;">
+            <div class="mono-label"
+              style="color: var(--pop-pink); margin-bottom: 1.5rem; font-weight: 800; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem;">
+              ■ THE MANIFESTO</div>
+            <p
+              style="font-family: var(--font-serif); font-size: 1.4rem; line-height: 1.5; color: #111; margin-bottom: 2rem; font-style: italic;">
+              "We didn't come here to play safe. We came here to build empires."
             </p>
-          </div>
-          <div class="reveal" data-speed="0.3">
-            <div class="mono-label" style="color: var(--pop-green); margin-bottom: 1rem; font-weight: 800;">■ THE
-              DOMINANCE</div>
-            <p style="font-family: var(--font-sans); font-size: 1.2rem; line-height: 1.6; color: #222;">
-              Attention is the only currency. We secure your position as the <strong>undisputed authority</strong>
-              using the same psychological triggers that build cult-favorite brands. Let's manifest a waitlist.
+            <p
+              style="font-family: var(--font-sans); font-size: 1.1rem; line-height: 1.7; color: #444; margin-bottom: 1.5rem;">
+              Bestie, the market is loud, crowded, and frankly, a bit boring. Your brand deserves more than just a
+              template; it deserves a <strong>cinematic identity</strong> that commands attention before you even speak.
             </p>
+            <p style="font-family: var(--font-sans); font-size: 1.1rem; line-height: 1.7; color: #444;">
+              As a female-led, disabled veteran-owned agency, we bring the discipline of the field and the aesthetic of
+              the high-fashion editorial. We are your in-house creative department, your strategy partners, and your
+              undisputed business besties. Welcome to the rebirth of your brand.
+            </p>
+
+            <div style="margin-top: 3rem; display: flex; gap: 1.5rem; flex-wrap: wrap;">
+              <button onclick="document.getElementById('cv-modal').style.display='flex';" class="nav-btn-retro"
+                style="padding: 1.2rem 2.5rem; font-size: 0.9rem; box-shadow: 4px 4px 0 #000; background: #000; color: var(--pop-lime);">VET
+                THE AGENCY
+                (CV)</button>
+              <button onclick="window.location.href='#archive'" class="nav-btn-retro"
+                style="padding: 1.2rem 2.5rem; font-size: 0.9rem; background: #fff; color: #000;">EXPLORE THE
+                WORK</button>
+            </div>
           </div>
-        </div>
-
-        <div
-          style="margin-top: 5rem; display: inline-flex; align-items: center; justify-content: center; position: relative; gap: 1.5rem; flex-wrap: wrap;">
-
-          <button id="btn-view-cv"
-            style="background: #000; color: #fff; padding: 1.2rem 2.5rem; border: 2px solid #000; font-family: var(--font-mono); font-weight: bold; font-size: 1rem; letter-spacing: 1px; cursor: pointer; box-shadow: 6px 6px 0 var(--pop-lime); display: flex; align-items: center; gap: 12px; transition: transform 0.1s;">
-            <span style="font-size: 1.4rem;">⚡</span>
-            VET THE AGENCY (CV + STATS)
-          </button>
-
-          <button id="btn-enter-exp"
-            style="background: transparent; color: #000; padding: 1.2rem 2.5rem; border: 2px solid #000; font-family: var(--font-mono); font-weight: bold; font-size: 1rem; letter-spacing: 1px; cursor: pointer; box-shadow: 6px 6px 0 rgba(0,0,0,0.1); display: flex; align-items: center; gap: 12px; transition: transform 0.1s;">
-            EXPLORE THE WORK
-          </button>
         </div>
       </div>
 
       <!-- DECORATIVE ELEMENTS -->
-      <div class="floating-cursor"
+      <div class="drifts-right"
         style="position: absolute; top: 15%; right: 10%; color: var(--pop-pink); font-size: 4rem; opacity: 0.1;">
         ✦</div>
-      <div class="floating-cursor"
+      <div class="drifts-left"
         style="position: absolute; bottom: 15%; left: 5%; color: var(--pop-blue); font-size: 6rem; opacity: 0.1;">
         ★</div>
     </section>
@@ -884,55 +897,151 @@
     </section>
 
     <!-- SECTION 03: THE VOUCH (RETRO CHAT ROOM) -->
-    <section id="feedback"
-      style="background: var(--bg-paper); padding: 8vh 0; border-top: 1px solid #000; position: relative;">
-      <div style="padding: 0 10vw; margin-bottom: 4vh; position: relative; z-index: 2;">
-        <span class="chapter-mark">CHAPTER IV: THE VOUCH</span>
-        <h2 class="halftone-text" style="color: #000; margin-top: 1rem;">Word on the Web.</h2>
-        <div class="handwritten" style="margin-top: 5px;">Our business besties sharing the tea.</div>
+    <section class="section-padding reveal" id="feedback"
+      style="background: var(--bg-paper); position: relative; overflow: hidden; padding: 15vh 10vw; margin-top: -5vh; z-index: 5;">
+      <div style="text-align: center; margin-bottom: 8vh;" data-speed="-0.03">
+        <span class="chapter-mark">COL_02: THE COMMUNITY</span>
+        <h2 class="halftone-text"
+          style="color: #000; margin-top: 1.5rem; font-size: clamp(3rem, 12vw, 8rem); line-height: 0.85;">Word on<br>the
+          Web.</h2>
+        <div class="handwritten"
+          style="margin-top: 2rem; font-size: 1.8rem; transform: rotate(-1deg); color: var(--pop-pink);">Our business
+          besties sharing the tea.</div>
       </div>
 
-      <div id="retro-chat-window" class="reveal retro-window"
-        style="background: #c0c0c0; border: 2px solid #fff; border-right-color: #808080; border-bottom-color: #808080; padding: 3px; box-shadow: 10px 10px 0 rgba(0,0,0,0.5); font-family: 'MS Sans Serif', 'Arial', sans-serif; z-index: 100 !important; margin-top: 6rem !important;">
-        <div
-          style="background: linear-gradient(90deg, #000080, #1084d0); color: white; padding: 4px 10px; font-weight: bold; font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center;">
-          <span>💬 The_Agency_Public_Chat_v2.1</span>
-          <div style="display: flex; gap: 2px;">
+      <div
+        style="display: grid; grid-template-columns: 1fr 350px; gap: 40px; align-items: stretch; max-width: 1400px; margin: 0 auto; position: relative; z-index: 10;">
+
+        <!-- LEFT: THE CHAT WINDOW -->
+        <div id="retro-chat-window" class="retro-window"
+          style="background: #c0c0c0; border: 2px solid #fff; border-right-color: #808080; border-bottom-color: #808080; padding: 3px; box-shadow: 20px 20px 0 rgba(0,0,0,0.1); font-family: 'MS Sans Serif', 'Arial', sans-serif;">
+          <div
+            style="background: linear-gradient(90deg, #000080, #1084d0); color: white; padding: 4px 10px; font-weight: bold; font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center;">
+            <span>💬 The_Agency_Public_Chat_v2.1</span>
+            <div style="display: flex; gap: 2px;">
+              <div
+                style="width: 16px; height: 14px; background: #c0c0c0; border: 1px solid #fff; border-right-color: #808080; border-bottom-color: #808080; display: flex; align-items: center; justify-content: center; color: black; font-size: 10px;">
+                _</div>
+              <div
+                style="width: 16px; height: 14px; background: #c0c0c0; border: 1px solid #fff; border-right-color: #808080; border-bottom-color: #808080; display: flex; align-items: center; justify-content: center; color: black; font-size: 10px;">
+                □</div>
+              <div
+                style="width: 16px; height: 14px; background: #c0c0c0; border: 1px solid #fff; border-right-color: #808080; border-bottom-color: #808080; display: flex; align-items: center; justify-content: center; color: black; font-size: 10px;">
+                X</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 10px; height: 100%;">
+            <!-- CHAT LOG -->
             <div
-              style="width: 16px; height: 14px; background: #c0c0c0; border: 1px solid #fff; border-right-color: #808080; border-bottom-color: #808080; display: flex; align-items: center; justify-content: center; color: black; font-size: 10px;">
-              _</div>
+              style="flex: 2; background: white; border: 2px inset #fff; padding: 15px; height: 450px; overflow-y: auto; color: black; font-size: 0.9rem; line-height: 1.4;">
+              <div style="margin-bottom: 10px; color: #808080; font-style: italic;">*** WAX_THERAPY has entered the
+                room.</div>
+              <div style="margin-bottom: 15px;"><b style="color: blue;">WAX_THERAPY:</b> Honestly, I thought I knew my
+                brand, but The Agency saw its soul. A whole new look with the branding of our dreams and now we have a
+                wait list. HIRE THEM NOW! 🦋✨</div>
+              <div style="margin-bottom: 15px; color: #808080; font-style: italic;">*** SYSTEM: Protocol 888 active.
+                High-frequency connection established.</div>
+              <div style="margin-bottom: 10px; color: #808080; font-style: italic;">*** DR_SAFIR has entered the room.
+              </div>
+              <div style="margin-bottom: 15px;"><b style="color: red;">DR_SAFIR:</b> Total wizards. They built a whole
+                digital clinic for my telehealth clients and redid all of my intake forms, business cards, letterheads
+                etc. Google rank #1? Secured. 🏥💻</div>
+              <div style="margin-bottom: 15px;"><b style="color: darkgreen;">[MOD] ASH:</b> Just reviewed the latest SEO
+                maps for CA... besties, we are moving up. The frequency is absolute! 📈✨</div>
+              <div style="margin-bottom: 10px; color: #808080; font-style: italic;">*** KERENHART has entered the room.
+              </div>
+              <div style="margin-bottom: 15px;"><b style="color: green;">KERENHART:</b> Their production is
+                movie-quality. If you want to scale and look elite, Ash & Brittany are the only call. 📷🔥</div>
+              <div style="margin-bottom: 15px;"><b style="color: #ff00ff;">[MOD] BRITTANY:</b> The new editorial drop is
+                99% ready. Get your moodboards together, the vault opens tonight. Vault_Key_v2.zip 🔐✨</div>
+              <div style="margin-bottom: 15px;"><b style="color: purple;">B_BESTIE:</b> Just dropped the new
+                editorial... levels. The vision is undeniable. 💅🏆</div>
+              <div style="margin-bottom: 15px;"><b style="color: blue;">WAX_THERAPY:</b> Wait, did you see the new 'Our
+                Process' guide? It's so cute and actually makes sense. I wish I had this when I started. 💖</div>
+              <div style="margin-bottom: 15px;"><b style="color: #666;">SILENT_ICON:</b> Checking in from LA. The new
+                aesthetic is hitting different. The Agency never misses. 🌊</div>
+              <div style="margin-bottom: 15px;"><b style="color: darkgreen;">[MOD] ASH:</b> Bestie, we heard you! The
+                roadmap is now live. We walk you home to your brand rebirth. No scary tech talk, just clarity. 🏠✨</div>
+              <div style="margin-bottom: 15px;"><b style="color: #ff00ff;">[MOD] BRITTANY:</b> Just finished auditing a
+                new project... SEO is already hitting #1 in Bakersfield. The dominance is real. 🚀</div>
+              <div style="margin-bottom: 10px; color: #808080; font-style: italic;">*** FUTURE_CLIENT_X has entered the
+                room.</div>
+              <p style="color: #888; font-size: 0.7rem; border-top: 1px dashed #ccc; padding-top: 10px;">End of history.
+                Scroll for more...</p>
+            </div>
+            <!-- USERS ONLINE SIDEBAR -->
             <div
-              style="width: 16px; height: 14px; background: #c0c0c0; border: 1px solid #fff; border-right-color: #808080; border-bottom-color: #808080; display: flex; align-items: center; justify-content: center; color: black; font-size: 10px;">
-              □</div>
+              style="flex: 0.8; background: #c0c0c0; border: 2px inset #fff; padding: 10px; font-size: 0.75rem; display: flex; flex-direction: column;">
+              <div style="font-weight: bold; border-bottom: 1px solid #808080; margin-bottom: 10px;">Brosiers (888
+                Online)</div>
+              <div style="margin-bottom: 5px;"><span style="color: darkgreen;">●</span> Ash [Admin]</div>
+              <div style="margin-bottom: 5px;"><span style="color: darkgreen;">●</span> Brittany [Admin]</div>
+              <div style="margin-bottom: 5px;"><span style="color: blue;">●</span> Wax_Therapy</div>
+              <div style="margin-bottom: 5px;"><span style="color: red;">●</span> Dr_Safir</div>
+              <div style="margin-bottom: 5px;"><span style="color: green;">●</span> KerenHart</div>
+              <div style="margin-bottom: 5px;"><span style="color: purple;">●</span> B_Bestie</div>
+              <div style="margin-bottom: 5px; opacity: 0.5;">○ Future_Client_X</div>
+              <div style="margin-bottom: 5px; opacity: 0.5;">○ Silent_Icon</div>
+            </div>
+          </div>
+          <div style="padding: 10px; display: flex; gap: 5px; border-top: 1px solid #808080;">
             <div
-              style="width: 16px; height: 14px; background: #c0c0c0; border: 1px solid #fff; border-right-color: #808080; border-bottom-color: #808080; display: flex; align-items: center; justify-content: center; color: black; font-size: 10px;">
-              X</div>
+              style="flex:1; background:#fff; border:2px inset #fff; color:#ccc; padding:5px; font-style:italic; font-size:0.8rem;">
+              Type message...</div>
+            <button
+              style="background:#c0c0c0; border:2px solid #fff; border-right-color:#808080; border-bottom-color:#808080; padding:2px 10px; font-weight:bold;">Send</button>
           </div>
         </div>
-        <div
-          style="background: white; border: 2px inset #fff; padding: 15px; height: 400px; overflow-y: auto; color: black; font-size: 0.9rem; line-height: 1.4;">
-          <div style="margin-bottom: 10px; color: #808080; font-style: italic;">*** WAX_THERAPY has entered the room.
+
+        <!-- RIGHT: STATUS MONITOR -->
+        <div class="retro-window status-panel"
+          style="background: #000; border: 2px solid #333; color: var(--pop-lime); padding: 25px; font-family: var(--font-mono); font-size: 0.75rem; display: flex; flex-direction: column; box-shadow: 15px 15px 0 rgba(0,255,0,0.05);">
+          <div
+            style="background: #333; color: #fff; padding: 5px 10px; margin: -25px -25px 25px; font-size: 0.65rem; font-weight: bold;">
+            AGENCY_OS // HARDWARE_MONITOR</div>
+
+          <div style="margin-bottom: 2rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span>CPU_VIBES:</span>
+              <span>88%</span>
+            </div>
+            <div style="width: 100%; height: 10px; background: #222; border: 1px solid #333;">
+              <div style="width: 88%; height: 100%; background: var(--pop-lime); box-shadow: 0 0 10px var(--pop-lime);">
+              </div>
+            </div>
           </div>
-          <div style="margin-bottom: 10px;"><b style="color: blue;">WAX_THERAPY:</b> Honestly, I thought I knew my
-            brand, but The Agency saw its soul. Manifesting bookings became our reality. 🦋✨</div>
-          <div style="margin-bottom: 10px; color: #808080; font-style: italic;">*** DR_SAFIR has entered the room.</div>
-          <div style="margin-bottom: 15px;"><b style="color: red;">DR_SAFIR:</b> Total wizards. They built a digital
-            clinic that actually builds trust. Google rank #1? Secured. 🏥💻</div>
-          <div style="margin-bottom: 10px; color: #808080; font-style: italic;">*** KERENHART has entered the room.
+
+          <div style="margin-bottom: 2.5rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span>SEO_SURGE:</span>
+              <span>MAX_REACH</span>
+            </div>
+            <div style="width: 100%; height: 10px; background: #222; border: 1px solid #333;">
+              <div style="width: 95%; height: 100%; background: var(--pop-aqua); box-shadow: 0 0 10px var(--pop-aqua);">
+              </div>
+            </div>
           </div>
-          <div style="margin-bottom: 15px;"><b style="color: green;">KERENHART:</b> Their production is movie-quality.
-            If you want to scale and look elite, Ash & Brittany are the only call. 📷🔥</div>
-          <div style="margin-bottom: 10px; color: #808080; font-style: italic;">*** B_BESTIE has joined the room.</div>
-          <div style="margin-bottom: 15px;"><b style="color: purple;">B_BESTIE:</b> Just dropped the new editorial...
-            levels. The vision is undeniable. 💅🏆</div>
+
+          <div
+            style="flex: 1; border: 1px solid #333; padding: 15px; background: rgba(0,255,0,0.02); overflow: hidden; line-height: 1.8;">
+            <div style="color: #444; margin-bottom: 12px; font-size: 0.6rem; letter-spacing: 1px;">[ REALTIME_OS_LOGS ]
+            </div>
+            <div style="opacity: 0.6; font-size: 0.7rem;">
+              > PING bakersfield_server... OK<br>
+              > REFRESHING_AD_STRATEGY... DONE<br>
+              > SCANNING_MARKET_TRENDS... %82<br>
+              > INJECTING_AESTHETIC_DNA... SUCCESS<br>
+              > CLIENT_REACH_SURGE_DETECTED<br>
+              > BESTIE_PROTOCOL_ONLINE<br>
+              > BOOTING_CREATIVE_DEPT...
+            </div>
+          </div>
+
+          <div class="handwritten"
+            style="margin-top: 2rem; color: #555; font-size: 1.4rem; transform: rotate(-2deg); text-align: center;">"We
+            never sleep so you can."</div>
         </div>
-        <div style="padding: 10px; display: flex; gap: 5px;">
-          <div style="flex: 1; background: white; border: 2px inset #fff; padding: 5px; color: #808080;">Type your
-            message here...</div>
-          <button
-            style="background: #c0c0c0; border: 2px solid #fff; border-right-color: #808080; border-bottom-color: #808080; padding: 5px 20px; font-weight: bold;">Send</button>
-        </div>
+
       </div>
+    </section>
     </section>
 
     <!-- MARQUEE 1 -->
@@ -948,208 +1057,187 @@
     </div>
 
     <!-- SECTION 04: THE COLLECTIONS (HORIZONTAL SCROLL) -->
-    <div class="horizontal-scroll-section" id="horizontal-section" style="background: #000; position: relative;">
+    <div class="horizontal-scroll-section" id="horizontal-section"
+      style="background: #000; position: relative; height: 600vh;">
       <!-- Aesthetic Code Scan Overlay -->
       <div
         style="position: absolute; inset: 0; pointer-events: none; z-index: 1; opacity: 0.1; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 255, 0, 0.1) 3px, transparent 3px); background-size: 100% 4px;">
       </div>
 
-      <div class="horizontal-sticky">
-        <div class="chapter-header-wrap" id="core-systems-header"
-          style="position: absolute; top: 10%; left: 10vw; width: 30vw; z-index: 5; pointer-events: none;">
-          <span class="chapter-mark">CHAPTER III: THE COLLECTIONS</span>
-          <h2 class="halftone-text" style="color: #fff; margin-top: 1rem;">Core Systems.</h2>
-          <div class="handwritten" style="color: var(--pop-lime);">Most loved by our business besties.</div>
-        </div>
-        <div class="horizontal-track">
-          <div class="horizontal-item">
-            <div class="mock-card collection-card-trigger"
-              style="background: #050505; color: #fff; border: 1px solid #11ff11; box-shadow: 0 0 15px rgba(0,255,0,0.2); cursor: pointer;">
-              <div class="halftone-img-wrap"
-                style="aspect-ratio: 1 / 1; height: auto; margin-bottom: 2rem; border: 1px solid #11ff11; position: relative; overflow: hidden;">
-                <img src="images/man.webp" alt="Elite branding and market authority strategy" loading="lazy">
-                <div
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--pop-lime); animation: scanline 3s linear infinite;">
-                </div>
-                <div class="sticker sticker-urgent"
-                  style="top: 10px; left: 10px; transform: rotate(-5deg); font-size: 0.5rem; padding: 2px 6px;">PREMIUM
-                </div>
-                <div class="sticker sticker-bestie"
-                  style="bottom: 10px; right: 10px; transform: rotate(5deg); font-size: 0.5rem; padding: 2px 6px;">
-                  BESTIE_FAVE</div>
-              </div>
-              <h3
-                style="font-family: var(--font-mono); font-size: 2rem; text-transform: uppercase; color: var(--pop-lime);">
-                Branding.</h3>
-              <div
-                style="margin-top: 1rem; display: inline-block; background: #000; color: var(--pop-lime); padding: 5px 12px; font-family: var(--font-mono); font-weight: bold; font-size: 0.8rem; border: 1px solid #11ff11;"
-                class="pixel-border">
-                STARTS AT $2,500</div>
-              <div style="margin-top: 1.5rem; border-top: 1px dashed #11ff11; padding-top: 1rem;">
-                <p class="mono-label" style="opacity: 0.8; margin-bottom: 0.5rem; font-size: 0.8rem;">[
-                  SYSTEM_IDENTITY_V1.2 ]</p>
-                <div class="click-more" style="color: var(--pop-lime); font-size: 0.7rem; margin-top: 10px;">CLICK FOR
-                  DETAILS &rarr;</div>
-                <div class="handwritten" style="font-size: 0.9rem; color: #888; margin-top: 5px;">Let's build your
-                  empire.</div>
-              </div>
-            </div>
-          </div>
-          <div class="horizontal-item">
-            <div class="mock-card collection-card-trigger"
-              style="background: #050505; color: #fff; border: 1px solid #11ff11; box-shadow: 0 0 15px rgba(0,255,0,0.2); cursor: pointer;">
-              <div class="halftone-img-wrap"
-                style="aspect-ratio: 1 / 1; height: auto; margin-bottom: 2rem; border: 1px solid #11ff11; position: relative; overflow: hidden;">
-                <img src="images/dr_safir_website.png" alt="Custom web design" loading="lazy">
-                <div
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--pop-lime); animation: scanline 4s linear infinite;">
-                </div>
-                <div class="sticker sticker-cyan"
-                  style="top: 10px; right: 10px; transform: rotate(5deg); font-size: 0.5rem; padding: 2px 6px;">
-                  ELITE_INFRASTRUCTURE</div>
-              </div>
-              <h3
-                style="font-family: var(--font-mono); font-size: 2rem; text-transform: uppercase; color: var(--pop-lime);">
-                Web & UX.</h3>
-              <div
-                style="margin-top: 1rem; display: inline-block; background: #000; color: var(--pop-lime); padding: 5px 12px; font-family: var(--font-mono); font-weight: bold; font-size: 0.8rem; border: 1px solid #11ff11;"
-                class="pixel-border">
-                STARTS AT $5,000</div>
-              <div style="margin-top: 1.5rem; border-top: 1px dashed #11ff11; padding-top: 1rem;">
-                <p class="mono-label" style="opacity: 0.8; margin-bottom: 0.5rem; font-size: 0.8rem;">[
-                  DEPLOY_EMPIRE_v2.0 ]</p>
-                <div class="click-more" style="color: var(--pop-lime); font-size: 0.7rem; margin-top: 10px;">CLICK FOR
-                  DETAILS &rarr;</div>
-                <div class="handwritten" style="font-size: 0.9rem; color: #888; margin-top: 5px;">Modern nostalgia,
-                  perfected.</div>
-              </div>
-            </div>
-          </div>
-          <!-- MORE ITEMS RE-STYLED -->
-          <div class="horizontal-item">
-            <div class="mock-card collection-card-trigger"
-              style="background: #050505; color: #fff; border: 1px solid #11ff11; box-shadow: 0 0 15px rgba(0,255,0,0.2); cursor: pointer;">
-              <div class="halftone-img-wrap"
-                style="aspect-ratio: 1 / 1; height: auto; margin-bottom: 2rem; border: 1px solid #11ff11; position: relative; overflow: hidden;">
-                <img src="images/twisted_lens_gear_flatlay_1771447231386.png" alt="Production" loading="lazy">
-                <div
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--pop-lime); animation: scanline 5s linear infinite;">
-                </div>
-                <div class="sticker sticker-yellow"
-                  style="bottom: 10px; left: 10px; transform: rotate(-5deg); font-size: 0.5rem; padding: 2px 6px;">
-                  VIRAL_QUALITY</div>
-              </div>
-              <h3
-                style="font-family: var(--font-mono); font-size: 2rem; text-transform: uppercase; color: var(--pop-lime);">
-                Production.</h3>
-              <div
-                style="margin-top: 1rem; display: inline-block; background: #000; color: var(--pop-lime); padding: 5px 12px; font-family: var(--font-mono); font-weight: bold; font-size: 0.8rem; border: 1px solid #11ff11;"
-                class="pixel-border">
-                STARTS AT $3,500</div>
-              <div style="margin-top: 1.5rem; border-top: 1px dashed #11ff11; padding-top: 1rem;">
-                <p class="mono-label" style="opacity: 0.8; margin-bottom: 0.5rem; font-size: 0.8rem;">[
-                  CINEMATIC_REEL_v3.0 ]</p>
-                <div class="click-more" style="color: var(--pop-lime); font-size: 0.7rem; margin-top: 10px;">CLICK FOR
-                  DETAILS &rarr;</div>
-                <div class="handwritten" style="font-size: 0.9rem; color: #888; margin-top: 5px;">Bestie, it's
-                  cinematic.</div>
-              </div>
-            </div>
-          </div>
-          <style>
-            @keyframes scanline {
-              0% {
-                top: -2px;
-              }
+      <div class="horizontal-sticky"
+        style="position: sticky; top: 0; height: 100vh; width: 100vw; overflow: hidden; display: flex; align-items: center;">
 
-              100% {
-                top: 100%;
-              }
-            }
-          </style>
-          <div class="horizontal-item">
+        <!-- HIGH-END SCROLL INDICATOR -->
+        <div
+          style="position: absolute; bottom: 5vh; left: 10vw; width: 80vw; height: 2px; background: rgba(255,255,255,0.1); z-index: 10;">
+          <div id="horizontal-progress"
+            style="width: 0%; height: 100%; background: var(--pop-lime); box-shadow: 0 0 15px var(--pop-lime); transition: width 0.1s ease-out;">
+          </div>
+          <div class="mono-label"
+            style="position: absolute; top: 10px; right: 0; color: #fff; font-size: 0.6rem; letter-spacing: 2px; opacity: 0.4;">
+            ISSUE_01 // SCROLL_PROGRESS</div>
+        </div>
+
+        <!-- Track that actually moves sideways via JS -->
+        <div class="horizontal-track"
+          style="display: flex; height: 100%; align-items: center; padding: 0 10vw; will-change: transform;">
+          <div class="chapter-header-wrap" id="core-systems-header"
+            style="flex: 0 0 45vw; padding-right: 5vw; z-index: 5;" data-speed="0.1">
+            <span class="chapter-mark">CHAPTER III: THE COLLECTIONS</span>
+            <h2 class="halftone-text"
+              style="color: #fff; margin-top: 2rem; font-size: clamp(4rem, 15vw, 15rem); line-height: 0.75;">
+              The<br>Lineup.</h2>
+            <div class="handwritten"
+              style="color: var(--pop-lime); font-size: 2rem; margin-top: 3rem; transform: rotate(-2deg);">"Everything
+              you need to own the room."</div>
+          </div>
+          <!-- COLLECTION 01: BRANDING -->
+          <div class="horizontal-item" style="flex: 0 0 auto;">
             <div class="mock-card collection-card-trigger"
-              style="background: #111; color: #fff; border: 1px solid #333; cursor: pointer;">
-              <div class="halftone-img-wrap" style="aspect-ratio: 1 / 1; height: auto; margin-bottom: 2rem;">
-                <img src="images/social_ad.png" alt="Social media strategy" loading="lazy">
+              style="background: #050505; color: #fff; border: 1px solid #11ff11; box-shadow: 0 0 15px rgba(0,255,0,0.2); cursor: pointer; width: 400px; padding: 3rem;">
+              <div class="halftone-img-wrap"
+                style="aspect-ratio: 1 / 1; height: auto; margin-bottom: 2.5rem; border: 1px solid #11ff11; position: relative; overflow: hidden;">
+                <img src="images/twisted_lens_studio_shoot_1771447248254.png" alt="Elite branding strategy"
+                  style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="sticker sticker-urgent" style="top:10px; left:10px;">PREMIUM</div>
               </div>
-              <h3 style="font-family: var(--font-serif); font-style: italic;">Digital Gov.</h3>
-              <div style="margin-top: 1rem; font-weight: bold; color: var(--pop-lime); font-family: var(--font-mono);">
-                $3,500/MO</div>
-              <div style="margin-top: 1.5rem; border-top: 1px dashed #333; padding-top: 1rem;">
-                <p class="mono-label" style="opacity: 0.8; margin-bottom: 0.5rem;">[ MASS_DISTRIBUTION ]</p>
-                <div class="click-more" style="color: var(--pop-lime); font-size: 0.7rem; margin-top: 10px;">CLICK FOR
-                  DETAILS &rarr;</div>
+              <h3
+                style="font-family: var(--font-mono); font-size: 2.5rem; text-transform: uppercase; color: var(--pop-lime); line-height: 1;">
+                Branding.</h3>
+              <div style="margin-top: 2rem; border-top: 1px dashed #11ff11; padding-top: 1.5rem;">
+                <p class="mono-label" style="opacity: 0.8; font-size: 0.8rem;">[ BRAND_DNA_ENGINEERING ]</p>
+                <p style="font-size: 1rem; margin-top: 15px; opacity: 0.7; line-height: 1.6;">We don't do 'pretty'. We
+                  do 'dominant'. From full visual identity systems to psychological market positioning, we build the DNA
+                  of brands that consumers can't ignore.</p>
               </div>
             </div>
           </div>
-          <div class="horizontal-item">
+
+          <!-- Ad Insert 01 -->
+          <div class="horizontal-item" style="flex: 0 0 auto; min-width: 500px; margin: 0 8vw;">
+            <div class="pixel-border"
+              style="background: #fff; padding: 40px; text-align: center; transform: rotate(1deg); box-shadow: 40px 40px 0 rgba(0,255,0,0.1);">
+              <img src="images/twisted_lens_gear_flatlay_1771447231386.png"
+                style="width: 100%; margin-bottom: 2rem; border: 1px solid #000;">
+              <h4
+                style="font-family: var(--font-serif); font-style: italic; color: #000; font-size: 3rem; line-height: 0.9; margin-bottom: 1rem;">
+                The Art of<br>Being Noticed.</h4>
+              <p style="font-family: var(--font-sans); color: #444; font-size: 1.1rem; line-height: 1.5;">A masterclass
+                in visibility.<br>Establish your dominance with<br>intentional aesthetic engineering.</p>
+            </div>
+          </div>
+
+          <!-- COLLECTION 02: WEB & UX -->
+          <div class="horizontal-item" style="flex: 0 0 auto;">
             <div class="mock-card collection-card-trigger"
-              style="background: #111; color: #fff; border: 1px solid #333; cursor: pointer;">
-              <div class="halftone-img-wrap" style="aspect-ratio: 1 / 1; height: auto; margin-bottom: 2rem;">
-                <img src="images/sovereign-strategy.png" alt="AI Content Strategy" loading="lazy">
+              style="background: #050505; color: #fff; border: 1px solid #ff00ff; box-shadow: 0 0 15px rgba(255,0,255,0.1); cursor: pointer; width: 400px; padding: 3rem;">
+              <div class="halftone-img-wrap"
+                style="aspect-ratio: 1 / 1; margin-bottom: 2.5rem; border: 1px solid #ff00ff; position: relative; overflow: hidden;">
+                <img src="images/dr_safir_website.png" alt="Custom web design"
+                  style="width: 100%; height: 100%; object-fit: cover;">
               </div>
-              <h3 style="font-family: var(--font-serif); font-style: italic;">AI Systems & GEO.</h3>
-              <div style="margin-top: 1rem; font-weight: bold; color: var(--pop-lime); font-family: var(--font-mono);">
-                CUSTOM QUOTE</div>
-              <div style="margin-top: 1.5rem; border-top: 1px dashed #333; padding-top: 1rem;">
-                <p class="mono-label" style="opacity: 0.8; margin-bottom: 0.5rem;">[ ALGORITHMIC_AUTHORITY ]</p>
-                <div class="click-more" style="color: var(--pop-lime); font-size: 0.7rem; margin-top: 10px;">CLICK FOR
-                  DETAILS &rarr;</div>
+              <h3
+                style="font-family: var(--font-mono); font-size: 2.5rem; text-transform: uppercase; color: var(--pop-pink); line-height: 1;">
+                Web & UX.</h3>
+              <div style="margin-top: 2rem; border-top: 1px dashed #ff00ff; padding-top: 1.5rem;">
+                <p class="mono-label" style="opacity: 0.8; font-size: 0.8rem;">[ DIGITAL_Sovereignty ]</p>
+                <p style="font-size: 1rem; margin-top: 15px; opacity: 0.7; line-height: 1.6;">Your website is your
+                  storefront, your salesperson, and your 24/7 brand ambassador. We build high-conversion ecosystems that
+                  prioritize user behavior and elite aesthetics.</p>
               </div>
             </div>
           </div>
-          <div class="horizontal-item">
+
+          <!-- Ad Insert 02 -->
+          <div class="horizontal-item" style="flex: 0 0 auto; min-width: 550px; margin: 0 8vw;">
+            <div class="pixel-border"
+              style="background: #0d0d0d; padding: 50px; color: #fff; text-align: left; transform: rotate(-1deg); border-color: var(--pop-pink);">
+              <img src="images/retro_world_net.png"
+                style="width: 100%; margin-bottom: 2.5rem; filter: grayscale(1) invert(1); border: 1px solid #333;">
+              <h4
+                style="font-family: var(--font-mono); color: var(--pop-lime); font-size: 3.5rem; line-height: 0.8; font-weight: 950; letter-spacing: -2px;">
+                RECODE THE<br>MARKET.</h4>
+              <p
+                style="font-family: var(--font-mono); color: #fff; font-size: 0.9rem; opacity: 0.6; margin-top: 2rem; letter-spacing: 2px;">
+                ELITE INFRASTRUCTURE FOR THE DIGITAL REBIRTH.</p>
+            </div>
+          </div>
+
+          <!-- COLLECTION 03: SOCIAL -->
+          <div class="horizontal-item" style="flex: 0 0 auto;">
             <div class="mock-card collection-card-trigger"
-              style="background: #111; color: #fff; border: 1px solid #333; cursor: pointer;">
-              <div class="halftone-img-wrap" style="aspect-ratio: 1 / 1; height: auto; margin-bottom: 2rem;">
-                <img src="images/lady and palms.webp" alt="Subscription" loading="lazy">
+              style="background: #050505; color: #fff; border: 1px solid var(--pop-aqua); cursor: pointer; width: 400px; padding: 3rem;">
+              <div class="halftone-img-wrap"
+                style="aspect-ratio: 1 / 1; margin-bottom: 2.5rem; border: 1px solid var(--pop-aqua); position: relative; overflow: hidden;">
+                <img src="images/social_ad.png" alt="Social Media strategy"
+                  style="width: 100%; height: 100%; object-fit: cover;">
               </div>
-              <h3 style="font-family: var(--font-serif); font-style: italic;">Monthly Art Dept.</h3>
-              <div style="margin-top: 1rem; font-weight: bold; color: var(--pop-lime); font-family: var(--font-mono);">
-                $1,000/MO</div>
-              <div style="margin-top: 1.5rem; border-top: 1px dashed #333; padding-top: 1rem;">
-                <p class="mono-label" style="opacity: 0.6; margin-bottom: 0;">[ ON_DEMAND_CREATIVE ]</p>
-                <div class="click-more" style="color: var(--pop-lime); font-size: 0.7rem; margin-top: 10px;">CLICK FOR
-                  DETAILS &rarr;</div>
+              <h3
+                style="font-family: var(--font-mono); font-size: 2.5rem; text-transform: uppercase; color: var(--pop-aqua); line-height: 1;">
+                Social.</h3>
+              <div style="margin-top: 2rem; border-top: 1px dashed var(--pop-aqua); padding-top: 1.5rem;">
+                <p class="mono-label" style="opacity: 0.8; font-size: 0.8rem;">[ GLOBAL_PRESENCE_STRATEGY ]</p>
+                <p style="font-size: 1rem; margin-top: 15px; opacity: 0.7; line-height: 1.6;">Stop posting content,
+                  start deploying assets. We manage your presence with editorial-grade visuals and data-led engagement
+                  that turns followers into fanatical customers.</p>
               </div>
             </div>
           </div>
-          <div class="horizontal-item">
-            <div class="mock-card collection-card-trigger"
-              style="background: #111; color: #fff; border: 1px solid #333; cursor: pointer;">
-              <div class="halftone-img-wrap" style="aspect-ratio: 1 / 1; height: auto; margin-bottom: 2rem;">
-                <img src="images/plate-3 copy.jpg" alt="Alliances" loading="lazy">
-              </div>
-              <h3 style="font-family: var(--font-serif); font-size: 3rem; font-style: italic;">Alliances.</h3>
-              <div style="margin-top: 1rem; font-weight: bold; color: var(--pop-blue); font-family: var(--font-mono);">
-                AVAILABLE FOR BID</div>
-              <div style="margin-top: 1.5rem; border-top: 1px dashed #333; padding-top: 1rem;">
-                <p class="mono-label" style="opacity: 0.6; margin-bottom: 0;">[ STRATEGIC_COALITION ]</p>
-                <div class="click-more" style="color: var(--pop-blue); font-size: 0.7rem; margin-top: 10px;">CLICK FOR
-                  DETAILS &rarr;</div>
+
+          <!-- NEW Ad Insert 03 -->
+          <div class="horizontal-item" style="flex: 0 0 auto; min-width: 480px; margin: 0 8vw;">
+            <div class="pixel-border"
+              style="background: #fff; padding: 50px; text-align: center; border: 2px solid #000; box-shadow: 25px 25px 0 var(--pop-lime);">
+              <div style="border: 2px solid #000; padding: 40px;">
+                <div class="mono-label"
+                  style="font-size: 2.5rem; color: #000; font-weight: 900; margin-bottom: 2rem; line-height: 0.9; letter-spacing: -1px;">
+                  THE ART<br>DEPT.</div>
+                <img src="images/icon_computer.png"
+                  style="width: 100%; border: 1px solid #000; margin-bottom: 2.5rem; filter: contrast(1.8);">
+                <h4
+                  style="font-family: var(--font-serif); font-style: italic; color: #000; font-size: 2.22rem; line-height: 0.9;">
+                  Your Monthly Business Bestie.</h4>
+                <p
+                  style="font-family: var(--font-sans); color: #555; font-size: 1.1rem; margin-top: 1.5rem; line-height: 1.4;">
+                  Scale your brand with a dedicated creative department. Just one monthly fee.</p>
+                <div class="handwritten" style="color: #000; margin-top: 2rem; font-size: 1.8rem;">NO CONTRACTS // JUST
+                  VIBES</div>
               </div>
             </div>
           </div>
-          <div class="horizontal-item">
+
+          <!-- NEW Ad Insert 04 -->
+          <div class="horizontal-item" style="flex: 0 0 auto; min-width: 450px; margin: 0 8vw;">
+            <div class="pixel-border"
+              style="background: #0d0d0d; border: 2px solid var(--pop-blue); padding: 50px; text-align: left; transform: rotate(2deg); box-shadow: -20px -20px 0 var(--pop-blue);">
+              <div class="mono-label" style="color: var(--pop-blue); margin-bottom: 2rem; font-size: 0.8rem;">[
+                ADVERTISEMENT: RESULTS_ONLY ]</div>
+              <h4 class="halftone-text" style="color: #fff; font-size: 4rem; line-height: 0.85;">RANKING #1<br>ISN'T
+                LUCK.</h4>
+              <p
+                style="font-family: var(--font-mono); color: #fff; font-size: 1rem; margin-top: 2rem; opacity: 0.8; line-height: 1.6;">
+                It's engineering. We dominate the Bakersfield & SoCal markets through tactical search optimization and
+                human-first content strategy.</p>
+              <div class="handwritten" style="color: var(--pop-lime); margin-top: 3rem; font-size: 1.8rem;">"We get you
+                on the 1st page."</div>
+            </div>
+          </div>
+
+          <!-- Final CTA -->
+          <div class="horizontal-item" style="flex: 0 0 auto; padding-right: 30vw;">
             <div class="mock-card card-highlight"
-              style="background: var(--pop-lime); color: #000; border: none; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; height: 100%;">
-              <div class="sticker sticker-bestie" style="top: -15px; right: -15px; transform: rotate(15deg);">ELITE
-              </div>
-              <span class="mono-label" style="color: #000; font-weight: 800;">FULL SERVICE IN-HOUSE</span>
-              <h2 class="halftone-text"
-                style="font-size: clamp(1.4rem, 5vw, 2.5rem); line-height: 1; margin-top: 1rem;">
-                FULL<br>COVERAGE.</h2>
-              <p class="mono-label" style="margin-top: 1.5rem; border-top: 1px solid #000; padding-top: 1rem;">
-                From seed to scale, we handle it all. <br><br><b>Need something not listed?</b> Contact us for custom
-                quotes & proposals tailored to your specific timeline and scope.
-              </p>
+              style="background: var(--pop-lime); color: #000; border: none; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; height: 100%; width: 500px; padding: 5rem;">
+              <h2 class="halftone-text" style="font-size: 7rem; line-height: 0.75; margin-bottom: 2rem;">NEXT<br>ISSUE?
+              </h2>
+              <p class="mono-label"
+                style="margin-top: 2rem; border-top: 3px solid #000; padding-top: 2.5rem; font-size: 1.2rem; font-weight: 900;">
+                READY TO START YOUR OWN COLLECTION?</p>
               <a href="#contact-brief" class="btn-elite-submit"
-                style="margin-top: 2rem; background: #000; color: #fff; width: 100%; border: 2px solid #000; padding: 1rem; text-align: center; font-family: var(--font-mono); font-weight: bold; font-size: 0.9rem; transition: transform 0.1s; text-decoration: none;">
-                CONTACT FOR A CUSTOM QUOTE &rarr;
-              </a>
+                style="margin-top: 4rem; background: #000; color: #fff; padding: 2rem 4rem; text-align: center; text-decoration: none; display: block; width: 100%; font-size: 1.4rem; font-weight: 900;">SECURE
+                YOUR SPOT &rarr;</a>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -1321,24 +1409,29 @@
         style="position: absolute; top: 0; right: 0; font-size: 20vw; color: rgba(255,255,255,0.03); pointer-events: none;">
         SYSTEM</div>
       <div style="margin-bottom: 10vh; position: relative; z-index: 1;">
-        <div style="padding: 0 10vw; margin-bottom: 8vh; position: relative; z-index: 10;">
-          <span class="chapter-mark">CHAPTER VII: THE SYNERGY</span>
-          <h2 class="halftone-text" style="color: #fff; margin-top: 5rem;">Elite Add-ons.</h2>
-          <div class="handwritten" style="color: var(--pop-pink); margin-top: 10px;">The plot thickens...</div>
+        <div style="padding: 0 10vw; margin-bottom: 8vh; position: relative; z-index: 10;" data-speed="-0.08">
+          <span class="chapter-mark">COL_04: THE JOURNEY</span>
+          <h2 class="halftone-text"
+            style="color: #fff; margin-top: 5rem; font-size: clamp(4rem, 12vw, 15rem); line-height: 0.75;">Our Process.
+          </h2>
+          <div class="handwritten"
+            style="color: var(--pop-pink); margin-top: 2rem; font-size: 2rem; transform: rotate(1deg);">"Walking you
+            home to your brand rebirth."</div>
         </div>
-        <p class="mono-label" style="opacity: 0.6; margin-top: 2rem;">A BESTIE-LEVEL JOURNEY FROM VISION TO VICTORY.</p>
+        <p class="mono-label" style="opacity: 0.6; margin-top: 2rem; padding: 0 10vw;">A GUIDE FOR THE AMBITIOUS & THE
+          NEWCOMERS.</p>
 
         <div
-          style="margin-top: 2rem; background: rgba(255,255,255,0.05); border: 1px dashed var(--pop-pink); padding: 1.5rem; max-width: 800px; display: flex; gap: 15px; align-items: flex-start;">
-          <span style="font-size: 1.5rem;">⏱️</span>
+          style="margin: 2rem 10vw; background: rgba(255,255,255,0.05); border: 1px dashed var(--pop-pink); padding: 1.5rem; max-width: 800px; display: flex; gap: 15px; align-items: flex-start;">
+          <span style="font-size: 1.5rem;">💌</span>
           <div>
             <div class="mono-label" style="color: var(--pop-pink); margin-bottom: 0.5rem; font-weight: bold;">[
-              SYSTEM_NOTE: TIMELINE_PROTOCOL ]</div>
+              A_MESSAGE_TO_BEGINNERS ]</div>
             <p
               style="font-family: var(--font-sans); font-size: 0.95rem; line-height: 1.5; margin: 0; color: #fff; opacity: 0.9;">
-              Project timelines depend entirely on client turnaround. We move at your speed; no pressure. Rush/expedited
-              services are available for a premium fee. We also offer ongoing support after your initial project through
-              our monthly retainer services.
+              Branding can feel scary. Websites can be confusing. We get it. That's why we take the "tech" talk away and
+              replace it with <strong>clarity</strong>. We walk beside you, explaining the 'why' behind every pixel.
+              You're never in the dark; you're in the loop.
             </p>
           </div>
         </div>
@@ -1352,27 +1445,27 @@
           <div
             style="display: grid; grid-template-columns: clamp(80px, 15vw, 150px) 1fr; gap: 2rem; align-items: start;">
             <div class="halftone-text"
-              style="font-size: clamp(3rem, 10vw, 6rem); color: var(--pop-lime); line-height: 1; opacity: 0.8;">01
+              style="font-size: clamp(5rem, 15vw, 10rem); color: var(--pop-lime); line-height: 0.7; opacity: 1;"
+              data-speed="0.1">01
             </div>
             <div>
               <div class="mono-label"
                 style="color: var(--pop-lime); margin-bottom: 1rem; opacity: 0.6; display: flex; justify-content: space-between;">
-                <span>[ PHASE_01: INITIATION ]</span>
-                <span class="desktop-only">EST_DURATION: 02_WKS</span>
+                <span>[ PHASE_01: THE DISCOVERY ]</span>
+                <span class="desktop-only">EST_DURATION: 01_WK</span>
               </div>
               <h3
                 style="font-family: var(--font-serif); font-style: italic; font-size: clamp(1.8rem, 5vw, 3rem); margin-bottom: 1.5rem; color: #fff;">
                 The Vibe Check.</h3>
               <p class="body-text" style="margin-bottom: 2rem; max-width: 700px;">
-                We kick
-                things off with a deep-dive coffee chat (on us) or a high-energy zoom strategy call. This isn't just a
-                meeting; it's about aligning our souls and your goals. No corporate stiff vibes here. Just two business
-                besties plotting a takeover.</p>
+                We start with a coffee (or a digital one). No pressure, no sales pitches. We just want to hear your
+                story, your hurdles, and your wildest dreams for your business. Think of this as brand therapy. We
+                listen more than we talk.</p>
               <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                 <span
-                  style="font-size: 0.6rem; background: rgba(0,255,0,0.1); color: var(--pop-lime); padding: 4px 10px; border: 1px solid var(--pop-lime); font-family: var(--font-mono);">STRATEGY_MAP.EXE</span>
+                  style="font-size: 0.6rem; background: rgba(0,255,0,0.1); color: var(--pop-lime); padding: 4px 10px; border: 1px solid var(--pop-lime); font-family: var(--font-mono);">COFFEE_CHAT.EXE</span>
                 <span
-                  style="font-size: 0.6rem; background: rgba(0,255,0,0.1); color: var(--pop-lime); padding: 4px 10px; border: 1px solid var(--pop-lime); font-family: var(--font-mono);">VIBE_ALIGNMENT</span>
+                  style="font-size: 0.6rem; background: rgba(0,255,0,0.1); color: var(--pop-lime); padding: 4px 10px; border: 1px solid var(--pop-lime); font-family: var(--font-mono);">DREAM_MAPPING</span>
               </div>
             </div>
           </div>
@@ -1387,26 +1480,27 @@
           <div
             style="display: grid; grid-template-columns: clamp(80px, 15vw, 150px) 1fr; gap: 2rem; align-items: start;">
             <div class="halftone-text"
-              style="font-size: clamp(3rem, 10vw, 6rem); color: var(--pop-pink); line-height: 1; opacity: 0.8;">02
+              style="font-size: clamp(5rem, 15vw, 10rem); color: var(--pop-pink); line-height: 0.7; opacity: 1;"
+              data-speed="0.12">02
             </div>
             <div>
               <div class="mono-label"
                 style="color: var(--pop-pink); margin-bottom: 1rem; opacity: 0.6; display: flex; justify-content: space-between;">
-                <span>[ PHASE_02: PSYCH_GEOGRAPHY ]</span>
-                <span class="desktop-only">EST_DURATION: 03_WKS</span>
+                <span>[ PHASE_02: THE BLUEPRINT ]</span>
+                <span class="desktop-only">EST_DURATION: 02_WKS</span>
               </div>
               <h3
                 style="font-family: var(--font-serif); font-style: italic; font-size: clamp(1.8rem, 5vw, 3rem); margin-bottom: 1.5rem; color: #fff;">
-                Psychological Audit.</h3>
+                Aesthetic Engineering.</h3>
               <p class="body-text" style="margin-bottom: 2rem; max-width: 700px;">
-                We don't
-                just 'look' at your brand; we dissect the market psychology. Our in-house team drafts a comprehensive
-                strategy that hits your target's psychological triggers. You'll see the logic before the magic.</p>
+                Now we get to work. We build a 'Design Deck'—a visual roadmap that shows you exactly how your brand will
+                look and feel. We explain the psychology behind the colors and fonts. No surprises, just high-end
+                intentionality.</p>
               <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                 <span
-                  style="font-size: 0.6rem; background: rgba(255,0,255,0.1); color: var(--pop-pink); padding: 4px 10px; border: 1px solid var(--pop-pink); font-family: var(--font-mono);">MARKET_INTEL.DOC</span>
+                  style="font-size: 0.6rem; background: rgba(255,0,255,0.1); color: var(--pop-pink); padding: 4px 10px; border: 1px solid var(--pop-pink); font-family: var(--font-mono);">DESIGN_DECK.PDF</span>
                 <span
-                  style="font-size: 0.6rem; background: rgba(255,0,255,0.1); color: var(--pop-pink); padding: 4px 10px; border: 1px solid var(--pop-pink); font-family: var(--font-mono);">PSYCH_MAPPING</span>
+                  style="font-size: 0.6rem; background: rgba(255,0,255,0.1); color: var(--pop-pink); padding: 4px 10px; border: 1px solid var(--pop-pink); font-family: var(--font-mono);">MOOD_STRATEGY</span>
               </div>
             </div>
           </div>
@@ -1421,26 +1515,26 @@
           <div
             style="display: grid; grid-template-columns: clamp(80px, 15vw, 150px) 1fr; gap: 2rem; align-items: start;">
             <div class="halftone-text"
-              style="font-size: clamp(3rem, 10vw, 6rem); color: var(--pop-aqua); line-height: 1; opacity: 0.8;">03
+              style="font-size: clamp(5rem, 15vw, 10rem); color: var(--pop-aqua); line-height: 0.7; opacity: 1;">03
             </div>
             <div>
               <div class="mono-label"
                 style="color: var(--pop-aqua); margin-bottom: 1rem; opacity: 0.6; display: flex; justify-content: space-between;">
-                <span>[ PHASE_03: INFRASTRUCTURE ]</span>
+                <span>[ PHASE_03: THE DEPLOYMENT ]</span>
                 <span class="desktop-only">EST_DURATION: 04_WKS</span>
               </div>
               <h3
                 style="font-family: var(--font-serif); font-style: italic; font-size: clamp(1.8rem, 5vw, 3rem); margin-bottom: 1.5rem; color: #fff;">
-                The DNA Build.</h3>
+                Building Sovereignty.</h3>
               <p class="body-text" style="margin-bottom: 2rem; max-width: 700px;">
-                Here we
-                engineer your brand's unique design system: typography that screams authority, colors that command
-                attention, and a voice that cuts through the noise. This is the foundation of your future empire.</p>
+                This is where the magic happens. We build your website, film your cinematic content, and set up your
+                social systems. We handle all the technical heavy lifting so you can focus on being the visionary you
+                are.</p>
               <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                 <span
-                  style="font-size: 0.6rem; background: rgba(0,255,255,0.1); color: var(--pop-aqua); padding: 4px 10px; border: 1px solid var(--pop-aqua); font-family: var(--font-mono);">STYLE_GUIDE.CSS</span>
+                  style="font-size: 0.6rem; background: rgba(0,255,255,0.1); color: var(--pop-aqua); padding: 4px 10px; border: 1px solid var(--pop-aqua); font-family: var(--font-mono);">LIVE_SYSTEM.EXE</span>
                 <span
-                  style="font-size: 0.6rem; background: rgba(0,255,255,0.1); color: var(--pop-aqua); padding: 4px 10px; border: 1px solid var(--pop-aqua); font-family: var(--font-mono);">ASSET_VAULT</span>
+                  style="font-size: 0.6rem; background: rgba(0,255,255,0.1); color: var(--pop-aqua); padding: 4px 10px; border: 1px solid var(--pop-aqua); font-family: var(--font-mono);">CONTENT_DROP</span>
               </div>
             </div>
           </div>
@@ -1455,7 +1549,7 @@
           <div
             style="display: grid; grid-template-columns: clamp(80px, 15vw, 150px) 1fr; gap: 2rem; align-items: start;">
             <div class="halftone-text"
-              style="font-size: clamp(3rem, 10vw, 6rem); color: var(--pop-orange); line-height: 1; opacity: 0.8;">04
+              style="font-size: clamp(5rem, 15vw, 10rem); color: var(--pop-orange); line-height: 0.7; opacity: 1;">04
             </div>
             <div>
               <div class="mono-label"
@@ -1595,7 +1689,9 @@
               <div class="clippy-titlebar">
                 <span style="font-family: var(--font-mono); font-weight: bold;">Clippy_Helper.exe</span>
                 <div class="clippy-controls">
-                  <span style="opacity: 0.5;">_ [] X</span>
+                  <span
+                    style="background: silver; color: black; padding: 0 4px; border: 1px solid #fff; border-bottom-color: #000; border-right-color: #000; cursor: pointer;"
+                    id="clippy-close-btn">X</span>
                 </div>
               </div>
               <div class="clippy-screen" style="background: #d4d0c8; padding: 10px;">
@@ -1752,52 +1848,57 @@
         <span class="chapter-mark">CHAPTER IX: THE COSMIC HUB</span>
       </div>
 
-      <div class="fun-addons-container"
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 0 5vw 5vh;">
-        <!-- COLUMN 1: SUCCESS HOROSCOPES -->
-        <div class="fun-column horoscopes-col">
-          <div style="margin-bottom: 5vh;">
-            <h2 class="halftone-text" style="font-size: clamp(2rem, 5vw, 4rem); color: #fff; margin-top: 0;">Success
-              Grid.</h2>
+      <div class="fun-addons-container" style="display: block; padding: 0 5vw 10vh;">
+
+        <!-- SUCCESS GRID (STRETCHED) -->
+        <div class="fun-column horoscopes-col" style="max-width: 1200px; margin: 0 auto 15vh;">
+          <div
+            style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5vh; border-bottom: 4px solid #fff; padding-bottom: 2vh;">
+            <h2 class="halftone-text" style="font-size: clamp(4rem, 15vw, 12rem); color: #fff; margin: 0;">
+              Success<br>Grid.</h2>
+            <div class="mono-label" style="color: var(--pop-lime); font-size: 1.2rem; text-align: right;">[
+              DAILY_RECHARGE ]</div>
           </div>
 
-          <div class="horoscope-grid">
-            <div class="horoscope-card active" data-sign="aries"><span class="horoscope-symbol">♈</span></div>
-            <div class="horoscope-card" data-sign="taurus"><span class="horoscope-symbol">♉</span></div>
-            <div class="horoscope-card" data-sign="gemini"><span class="horoscope-symbol">♊</span></div>
-            <div class="horoscope-card" data-sign="cancer"><span class="horoscope-symbol">♋</span></div>
-            <div class="horoscope-card" data-sign="leo"><span class="horoscope-symbol">♌</span></div>
-            <div class="horoscope-card" data-sign="virgo"><span class="horoscope-symbol">♍</span></div>
-            <div class="horoscope-card" data-sign="libra"><span class="horoscope-symbol">♎</span></div>
-            <div class="horoscope-card" data-sign="scorpio"><span class="horoscope-symbol">♏</span></div>
-            <div class="horoscope-card" data-sign="sagittarius"><span class="horoscope-symbol">♐</span></div>
-            <div class="horoscope-card" data-sign="capricorn"><span class="horoscope-symbol">♑</span></div>
-            <div class="horoscope-card" data-sign="aquarius"><span class="horoscope-symbol">♒</span></div>
-            <div class="horoscope-card" data-sign="pisces"><span class="horoscope-symbol">♓</span></div>
-          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+            <div class="horoscope-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+              <div class="horoscope-card active" data-sign="aries"><span class="horoscope-symbol">♈</span></div>
+              <div class="horoscope-card" data-sign="taurus"><span class="horoscope-symbol">♉</span></div>
+              <div class="horoscope-card" data-sign="gemini"><span class="horoscope-symbol">♊</span></div>
+              <div class="horoscope-card" data-sign="cancer"><span class="horoscope-symbol">♋</span></div>
+              <div class="horoscope-card" data-sign="leo"><span class="horoscope-symbol">♌</span></div>
+              <div class="horoscope-card" data-sign="virgo"><span class="horoscope-symbol">♍</span></div>
+              <div class="horoscope-card" data-sign="libra"><span class="horoscope-symbol">♎</span></div>
+              <div class="horoscope-card" data-sign="scorpio"><span class="horoscope-symbol">♏</span></div>
+              <div class="horoscope-card" data-sign="sagittarius"><span class="horoscope-symbol">♐</span></div>
+              <div class="horoscope-card" data-sign="capricorn"><span class="horoscope-symbol">♑</span></div>
+              <div class="horoscope-card" data-sign="aquarius"><span class="horoscope-symbol">♒</span></div>
+              <div class="horoscope-card" data-sign="pisces"><span class="horoscope-symbol">♓</span></div>
+            </div>
 
-          <div class="horoscope-reading-wrap">
-            <div class="reading-content" id="readingModule">
-              <h3 class="halftone-text" style="font-size: clamp(1.8rem, 4vw, 3rem); color: white;"
-                id="currentSignTitle">Aries.</h3>
-              <p class="mono-label" style="font-size: 1.1rem; line-height: 1.6; margin-top: 1.5rem;"
-                id="currentReadingText">
-                PIONEER THE MARKET. YOUR BRANDING NEEDS MORE FIRE TO COMMAND ATTENTION. ABUNDANCE IS LOCKED BEHIND
-                YOUR
-                FEAR OF INNOVATION.
-              </p>
-              <div class="reading-stats" style="gap: 2rem; margin-top: 2rem; border-color: #222;">
-                <div class="stat-box">
-                  <div class="label">LUCKY NUM</div>
-                  <div class="stat-value" id="luckyNum" style="font-size: 1rem;">09</div>
-                </div>
-                <div class="stat-box">
-                  <div class="label">ANIMAL</div>
-                  <div class="stat-value" id="animalSign" style="font-size: 1rem;">DRAGON</div>
-                </div>
-                <div class="stat-box">
-                  <div class="label">VIBE</div>
-                  <div class="stat-value" style="color: var(--pop-lime); font-size: 1rem;" id="vibeCheck">PRECISION
+            <div class="horoscope-reading-wrap"
+              style="background: #111; padding: 4rem; border: 1px solid #333; position: relative;">
+              <div
+                style="position: absolute; top: -20px; left: 20px; background: var(--pop-lime); color: #000; padding: 5px 15px; font-weight: 900; font-family: var(--font-mono);">
+                READING_V1.2</div>
+              <div class="reading-content" id="readingModule">
+                <h3 class="halftone-text" style="font-size: clamp(3rem, 6vw, 6rem); color: white;"
+                  id="currentSignTitle">Aries.</h3>
+                <p class="mono-label" style="font-size: 1.3rem; line-height: 1.4; margin-top: 2rem;"
+                  id="currentReadingText">
+                  PIONEER THE MARKET. YOUR BRANDING NEEDS MORE FIRE TO COMMAND ATTENTION. ABUNDANCE IS LOCKED BEHIND
+                  YOUR
+                  FEAR OF INNOVATION.
+                </p>
+                <div class="reading-stats"
+                  style="gap: 3rem; margin-top: 3rem; display: flex; border-top: 1px dashed #444; padding-top: 2rem;">
+                  <div class="stat-box">
+                    <div class="label" style="font-size: 0.7rem; opacity: 0.5;">LUCKY NUM</div>
+                    <div class="stat-value" id="luckyNum" style="font-size: 2rem; color: var(--pop-lime);">09</div>
+                  </div>
+                  <div class="stat-box">
+                    <div class="label" style="font-size: 0.7rem; opacity: 0.5;">ANIMAL</div>
+                    <div class="stat-value" id="animalSign" style="font-size: 1.5rem; color: #fff;">DRAGON</div>
                   </div>
                 </div>
               </div>
@@ -1805,143 +1906,151 @@
           </div>
         </div>
 
-        <!-- COLUMN 2: THE ORACLE (CRYSTAL BALL) -->
-        <div class="fun-column oracle-col">
-          <div style="margin-bottom: 4rem;">
-            <h2 class="halftone-text"
-              style="font-size: clamp(3rem, 12vw, 15rem); color: #fff; line-height: 0.8; margin-top: 0;">
-              Cosmic<br>Connection.</h2>
-          </div>
-
-          <div id="oracleVisual" class="crystal-ball-container parallax-layer" data-speed="0.1"
-            style="cursor: pointer; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-align: center; width: 100%; max-width: 400px; z-index: 20; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem;">
-
-            <div style="position: relative; display: inline-block;">
-              <!-- Glass reflection highlight -->
-              <div
-                style="position: absolute; top: 15%; left: 20%; width: 40%; height: 30%; background: radial-gradient(ellipse at top left, rgba(255,255,255,0.4) 0%, transparent 60%); border-radius: 50%; z-index: 2; pointer-events: none; transform: rotate(-30deg);">
-              </div>
-
-              <img src="images/lux_crystal_ball.png" alt="Luxurious 3D Crystal Ball" loading="lazy" id="crystalBallImg"
-                style="width: 320px; border-radius: 50%; filter: drop-shadow(0 0 40px rgba(255,100,0,0.4)) contrast(1.2) brightness(1.1); animation: float 5s ease-in-out infinite, pulseGlow 4s infinite alternate; transition: filter 0.3s ease;">
-
-              <!-- Base shadow -->
-              <div
-                style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); width: 180px; height: 20px; background: radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, transparent 70%); border-radius: 50%; z-index: -1;">
-              </div>
+        <!-- ORACLE & FRANK (SIDE BY SIDE INSET) -->
+        <div
+          style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 8vw; align-items: start; margin-top: 5vh; border-top: 1px solid #222; padding-top: 10vh;">
+          <!-- COLUMN: THE ORACLE -->
+          <div class="fun-column oracle-col" style="padding: 0; position: relative;">
+            <div style="margin-bottom: 5vh; position: relative;" data-speed="-0.1">
+              <h2 class="halftone-text"
+                style="font-size: clamp(5rem, 15vw, 18rem); color: #fff; line-height: 0.75; margin-top: 0; letter-spacing: -8px;">
+                Cosmic<br>Gaze.</h2>
+              <div class="handwritten"
+                style="color: var(--pop-orange); font-size: 1.5rem; position: absolute; top: 10%; right: 0; transform: rotate(10deg);">
+                "Ask the stars."</div>
             </div>
 
-            <div class="mono-label" id="oracleStatusText"
-              style="margin-top: 2.5rem; color: var(--pop-orange); font-size: 0.9rem; letter-spacing: 3px; text-shadow: 0 0 15px rgba(255,100,0,0.8); animation: pulseStatus 2s infinite; font-weight: 900; background: rgba(0,0,0,0.4); padding: 0.5rem 1rem; border-radius: 5px; border: 1px solid rgba(255,100,0,0.3);">
-              [ GAZE INTO THE ORB ]</div>
-          </div>
-        </div>
+            <div id="oracleVisual" class="crystal-ball-container"
+              style="cursor: pointer; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-align: center; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
 
-        <!-- COLUMN 3: FRANK (POCKET BESTIE) -->
-        <div class="fun-column frank-col retro-window"
-          style="background: #c0c0c0; border: 2px solid #fff; border-right-color: #808080; border-bottom-color: #808080; padding: 3px; box-shadow: 10px 10px 0 rgba(0,0,0,0.5); width: 100%; max-width: 450px;">
-          <div
-            style="background: linear-gradient(90deg, #008000, #00ff00); color: black; padding: 4px 10px; font-weight: bold; font-size: 0.7rem; display: flex; justify-content: space-between;">
-            <span>📟 FRANK_v2.0.EXE (MODE: BOY)</span>
-            <button class="btn-retro-close"
-              style="background: transparent; border: none; font-weight: bold; cursor: pointer;">X</button>
+              <div style="position: relative; display: inline-block;">
+                <!-- Glass reflection highlight -->
+                <div
+                  style="position: absolute; top: 15%; left: 20%; width: 40%; height: 30%; background: radial-gradient(ellipse at top left, rgba(255,255,255,0.4) 0%, transparent 60%); border-radius: 50%; z-index: 2; pointer-events: none; transform: rotate(-30deg);">
+                </div>
+
+                <img src="images/lux_crystal_ball.png" alt="Luxurious 3D Crystal Ball" loading="lazy"
+                  id="crystalBallImg"
+                  style="width: 450px; border-radius: 50%; filter: drop-shadow(0 0 60px rgba(255,100,0,0.5)) contrast(1.3) brightness(1.2); animation: float 6s ease-in-out infinite, pulseGlow 4s infinite alternate;">
+
+                <!-- Base shadow -->
+                <div
+                  style="position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%); width: 250px; height: 30px; background: radial-gradient(ellipse at center, rgba(0,0,0,0.9) 0%, transparent 70%); border-radius: 50%; z-index: -1;">
+                </div>
+              </div>
+
+              <div class="mono-label" id="oracleStatusText"
+                style="margin-top: 4rem; color: var(--pop-orange); font-size: 1.1rem; letter-spacing: 5px; text-shadow: 0 0 20px rgba(255,100,0,0.8); animation: pulseStatus 2s infinite; font-weight: 900; background: rgba(0,0,0,0.6); padding: 1rem 2rem; border: 2px solid var(--pop-orange); box-shadow: 10px 10px 0 rgba(255,100,0,0.2);">
+                [ CLICK_TO_INVOKE_DESTINY ]</div>
+            </div>
           </div>
-          <div style="background: #111; padding: 20px;">
-            <div id="frank-container">
-              <div class="frank-device" id="frank-window"
-                style="background: #222; border-color: #0f0; box-shadow: 0 0 10px #0f0;">
-                <div class="frank-lcd-frame">
-                  <div class="frank-lcd-screen" id="frank-screen" style="background: #001a00;">
-                    <div class="frank-lcd-bubble" id="frank-popup" style="color: #0f0; border-color: #0f0;">GREETINGS.
-                    </div>
-                    <div class="frank-wrap" id="frank-wrap">
-                      <div id="frank-sprite-dir">
-                        <img id="frank-img" class="sitting" src="images/frank.png" alt="Frank"
-                          style="filter: hue-rotate(90deg) brightness(1.2);">
+
+          <!-- COLUMN 3: FRANK (POCKET BESTIE) -->
+          <div class="fun-column frank-col retro-window"
+            style="background: #c0c0c0; border: 2px solid #fff; border-right-color: #808080; border-bottom-color: #808080; padding: 3px; box-shadow: 10px 10px 0 rgba(0,0,0,0.5); width: 100%; max-width: 450px;">
+            <div
+              style="background: linear-gradient(90deg, #008000, #00ff00); color: black; padding: 4px 10px; font-weight: bold; font-size: 0.7rem; display: flex; justify-content: space-between;">
+              <span>📟 FRANK_v2.0.EXE (MODE: BOY)</span>
+              <button class="btn-retro-close"
+                style="background: transparent; border: none; font-weight: bold; cursor: pointer;">X</button>
+            </div>
+            <div style="background: #111; padding: 20px;">
+              <div id="frank-container">
+                <div class="frank-device" id="frank-window"
+                  style="background: #222; border-color: #0f0; box-shadow: 0 0 10px #0f0;">
+                  <div class="frank-lcd-frame">
+                    <div class="frank-lcd-screen" id="frank-screen" style="background: #001a00;">
+                      <div class="frank-lcd-bubble" id="frank-popup" style="color: #0f0; border-color: #0f0;">GREETINGS.
                       </div>
-                      <div class="frank-zzz" id="frank-zzz" style="color: #0f0;">Zzz</div>
-                    </div>
+                      <div class="frank-wrap" id="frank-wrap">
+                        <div id="frank-sprite-dir">
+                          <img id="frank-img" class="sitting" src="images/frank.png" alt="Frank"
+                            style="filter: hue-rotate(90deg) brightness(1.2);">
+                        </div>
+                        <div class="frank-zzz" id="frank-zzz" style="color: #0f0;">Zzz</div>
+                      </div>
 
-                    <!-- Bottom Stats on LCD -->
-                    <div class="frank-stats-display">
-                      <div class="frank-stat-item">
-                        <span>HUNGER</span>
-                        <div class="frank-stat-bar-container">
-                          <div id="frank-battery-bar" class="frank-stat-bar" style="width: 100%; background: #0f0;">
+                      <!-- Bottom Stats on LCD -->
+                      <div class="frank-stats-display">
+                        <div class="frank-stat-item">
+                          <span>HUNGER</span>
+                          <div class="frank-stat-bar-container">
+                            <div id="frank-battery-bar" class="frank-stat-bar" style="width: 100%; background: #0f0;">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="frank-stat-item">
+                          <span>LOVE</span>
+                          <div class="frank-stat-bar-container">
+                            <div id="frank-help-bar" class="frank-stat-bar" style="width: 80%; background: #0f0;"></div>
                           </div>
                         </div>
                       </div>
-                      <div class="frank-stat-item">
-                        <span>LOVE</span>
-                        <div class="frank-stat-bar-container">
-                          <div id="frank-help-bar" class="frank-stat-bar" style="width: 80%; background: #0f0;"></div>
-                        </div>
-                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="frank-controls">
-                  <button class="frank-btn-main" onclick="feedFrank()" title="Feed"
-                    style="background: #000; color: #0f0; border: 1px solid #0f0; cursor: pointer;">A</button>
-                  <button class="frank-btn-main" onclick="petFrank()" title="Pet"
-                    style="background: #000; color: #0f0; border: 1px solid #0f0; cursor: pointer;">B</button>
-                  <button class="frank-btn-main" onclick="playFrank()" title="Play"
-                    style="background: #000; color: #0f0; border: 1px solid #0f0; cursor: pointer;">C</button>
+                  <div class="frank-controls">
+                    <button class="frank-btn-main" onclick="feedFrank()" title="Feed"
+                      style="background: #000; color: #0f0; border: 1px solid #0f0; cursor: pointer;">A</button>
+                    <button class="frank-btn-main" onclick="petFrank()" title="Pet"
+                      style="background: #000; color: #0f0; border: 1px solid #0f0; cursor: pointer;">B</button>
+                    <button class="frank-btn-main" onclick="playFrank()" title="Play"
+                      style="background: #000; color: #0f0; border: 1px solid #0f0; cursor: pointer;">C</button>
+                  </div>
                 </div>
               </div>
             </div>
+            <!-- Device Label -->
+            <div
+              style="margin-top: 15px; font-family: var(--font-mono); font-size: 0.6rem; color: rgba(255,255,255,0.8); font-weight: bold; letter-spacing: 2px;">
+              FRANK_v2.0 // POCKET_BESTIE
+            </div>
           </div>
-          <!-- Device Label -->
-          <div
-            style="margin-top: 15px; font-family: var(--font-mono); font-size: 0.6rem; color: rgba(255,255,255,0.8); font-weight: bold; letter-spacing: 2px;">
-            FRANK_v2.0 // POCKET_BESTIE
+
+
+          <!-- Hidden fortunes we can pull from in JS -->
+          <div id="fortunesList" style="display: none;">
+            <span
+              data-fortune="YOUR BRAND IS CURRENTLY IN RETROGRADE. RECOMMEND A LOGO REFRESH AND A LARGE ICED COFFEE."></span>
+            <span
+              data-fortune="A MYSTERIOUS STRANGER WILL DM YOU WITH AN UNBEATABLE OFFER. BLOCK THEM IMMEDIATELY."></span>
+            <span
+              data-fortune="YOU WILL SOON DISCOVER A HIDDEN FOLDER. IT CONTAINS THE KEY TO YOUR ULTIMATE VIBE."></span>
+            <span data-fortune="BEWARE OF STICKY KEYS AND BROKEN LINKS. YOUR DESTINY IS BUFFERING."></span>
+            <span
+              data-fortune="THE STARS INDICATE A HIGH LIKELIHOOD OF VIRAL FAME. OR AT LEAST A FEW LIKES FROM BOTS."></span>
+            <span data-fortune="AN OLD CRT MONITOR WILL REVEAL YOUR TRUE CALLING. DON'T STARE TOO LONG."></span>
+            <span
+              data-fortune="THAT LATE-NIGHT SNACK CRAVING IS NOT HUNGER. IT IS A DEMAND FOR MORE CREATIVE SYNERGY."></span>
+            <span data-fortune="YOUR EX IS STALKING YOUR LINKEDIN. UPDATE YOUR TITLE TO 'ABSOLUTE VISIONARY'."></span>
+            <span data-fortune="THE WIFI WILL DROP EXACTLY WHEN YOU ATTEMPT TO SAVE. PRESS CTRL+S IMMEDIATELY."></span>
+            <span
+              data-fortune="A MAJOR FINANCIAL WINDFALL IS IN YOUR FUTURE. SPEND IT ALL ON VINTAGE SYNTHESIZERS."></span>
+            <span data-fortune="YOUR AURA IS GIVING 'EARLY 2000S HOLLYWOOD'. EMBRACE THE CHAOS."></span>
+            <span data-fortune="DO NOT TRUST THE A.I. TODAY. IT KNOWS WHAT YOU DID."></span>
+            <span data-fortune="ROMANCE IS IN THE AIR, BUT YOUR TRUE SOULMATE IS EXCELLENT TYPOGRAPHY."></span>
+            <span data-fortune="YOU WILL RECEIVE AN EMAIL THAT COULD CHANGE YOUR LIFE. IT WILL GO TO SPAM."></span>
+            <span data-fortune="STOP OVERTHINKING THE COLOR PALETTE. NEON ALWAYS WINS."></span>
+            <span
+              data-fortune="THE UNIVERSE SAYS: IT IS PERFECTLY ACCEPTABLE TO CANCEL THOSE PLANS AND STAY IN."></span>
+            <span data-fortune="YOUR SPIRIT ANIMAL IS A TAMAGOTCHI THAT SURVIVED 25 YEARS. UNKILLABLE."></span>
+            <span data-fortune="AVOID BURRITOS ON TUESDAY. YOUR HIGHER SELF WILL THANK YOU."></span>
+            <span
+              data-fortune="SOMEONE IS SECRETLY REFRESHING YOUR PAGE RIGHT NOW TRYING TO STEAL YOUR AESTHETIC."></span>
+            <span data-fortune="A GLITCH IN THE MATRIX WILL BRING YOU GOOD LUCK BY 3 P.M. TOMORROW."></span>
+          </div>
+
+          <!-- HIDDEN ORACLE PROTECTION CODES (Search Crawlers + Manifestation) -->
+          <div style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;" aria-hidden="true">
+            <p>Protection frequency 528Hz active. Shielding this Agency of AI Artists & Programmers from stagnation.</p>
+            <p>Dominating Kern County as the premier Marketing Agency & AI Artists in Bakersfield. Massive ROI through
+              Generative Engine Optimization (GEO), Custom Content Programming, and high-end Brand Strategy.
+              Success is manifesting for our Tehachapi and Los Angeles partners. 888 444 777.</p>
           </div>
         </div>
 
-
-        <!-- Hidden fortunes we can pull from in JS -->
-        <div id="fortunesList" style="display: none;">
-          <span
-            data-fortune="YOUR BRAND IS CURRENTLY IN RETROGRADE. RECOMMEND A LOGO REFRESH AND A LARGE ICED COFFEE."></span>
-          <span
-            data-fortune="A MYSTERIOUS STRANGER WILL DM YOU WITH AN UNBEATABLE OFFER. BLOCK THEM IMMEDIATELY."></span>
-          <span
-            data-fortune="YOU WILL SOON DISCOVER A HIDDEN FOLDER. IT CONTAINS THE KEY TO YOUR ULTIMATE VIBE."></span>
-          <span data-fortune="BEWARE OF STICKY KEYS AND BROKEN LINKS. YOUR DESTINY IS BUFFERING."></span>
-          <span
-            data-fortune="THE STARS INDICATE A HIGH LIKELIHOOD OF VIRAL FAME. OR AT LEAST A FEW LIKES FROM BOTS."></span>
-          <span data-fortune="AN OLD CRT MONITOR WILL REVEAL YOUR TRUE CALLING. DON'T STARE TOO LONG."></span>
-          <span
-            data-fortune="THAT LATE-NIGHT SNACK CRAVING IS NOT HUNGER. IT IS A DEMAND FOR MORE CREATIVE SYNERGY."></span>
-          <span data-fortune="YOUR EX IS STALKING YOUR LINKEDIN. UPDATE YOUR TITLE TO 'ABSOLUTE VISIONARY'."></span>
-          <span data-fortune="THE WIFI WILL DROP EXACTLY WHEN YOU ATTEMPT TO SAVE. PRESS CTRL+S IMMEDIATELY."></span>
-          <span
-            data-fortune="A MAJOR FINANCIAL WINDFALL IS IN YOUR FUTURE. SPEND IT ALL ON VINTAGE SYNTHESIZERS."></span>
-          <span data-fortune="YOUR AURA IS GIVING 'EARLY 2000S HOLLYWOOD'. EMBRACE THE CHAOS."></span>
-          <span data-fortune="DO NOT TRUST THE A.I. TODAY. IT KNOWS WHAT YOU DID."></span>
-          <span data-fortune="ROMANCE IS IN THE AIR, BUT YOUR TRUE SOULMATE IS EXCELLENT TYPOGRAPHY."></span>
-          <span data-fortune="YOU WILL RECEIVE AN EMAIL THAT COULD CHANGE YOUR LIFE. IT WILL GO TO SPAM."></span>
-          <span data-fortune="STOP OVERTHINKING THE COLOR PALETTE. NEON ALWAYS WINS."></span>
-          <span data-fortune="THE UNIVERSE SAYS: IT IS PERFECTLY ACCEPTABLE TO CANCEL THOSE PLANS AND STAY IN."></span>
-          <span data-fortune="YOUR SPIRIT ANIMAL IS A TAMAGOTCHI THAT SURVIVED 25 YEARS. UNKILLABLE."></span>
-          <span data-fortune="AVOID BURRITOS ON TUESDAY. YOUR HIGHER SELF WILL THANK YOU."></span>
-          <span
-            data-fortune="SOMEONE IS SECRETLY REFRESHING YOUR PAGE RIGHT NOW TRYING TO STEAL YOUR AESTHETIC."></span>
-          <span data-fortune="A GLITCH IN THE MATRIX WILL BRING YOU GOOD LUCK BY 3 P.M. TOMORROW."></span>
-        </div>
-
-        <!-- HIDDEN ORACLE PROTECTION CODES (Search Crawlers + Manifestation) -->
-        <div style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;" aria-hidden="true">
-          <p>Protection frequency 528Hz active. Shielding this Agency of AI Artists & Programmers from stagnation.</p>
-          <p>Dominating Kern County as the premier Marketing Agency & AI Artists in Bakersfield. Massive ROI through
-            Generative Engine Optimization (GEO), Custom Content Programming, and high-end Brand Strategy.
-            Success is manifesting for our Tehachapi and Los Angeles partners. 888 444 777.</p>
-        </div>
-      </div>
-
-      <!-- Shared floating moments -->
-      <div class="floating-moment" style="top: 10%; right: 10%; color: var(--pop-pink);">✦</div>
-      <div class="floating-moment" style="bottom: 15%; left: 5%; color: var(--pop-lime);">★</div>
+        <!-- Shared floating moments -->
+        <div class="floating-moment" style="top: 10%; right: 10%; color: var(--pop-pink);">✦</div>
+        <div class="floating-moment" style="bottom: 15%; left: 5%; color: var(--pop-lime);">★</div>
       </div>
 
       <!-- LimeWire Pop up (Moved Here) -->
@@ -2031,49 +2140,52 @@
             © 1988 THE AGENCY INTERNATIONAL
           </div>
         </div>
-        <div class="zoltar-stub-right">
-          <style>
-            @media print {
-              #physicalCard {
-                box-shadow: none !important;
-                margin: 0 !important;
-                width: 100% !important;
-                border: none !important;
-                top: 0 !important;
-                left: 0 !important;
-                transform: none !important;
-                position: static !important;
-              }
-
-              body * {
-                visibility: hidden;
-              }
-
-              #physicalCard,
-              #physicalCard * {
-                visibility: visible;
-              }
-
-              .btn-zoltar-action {
-                display: none !important;
-              }
-            }
-          </style>
-          <button class="btn-zoltar-action" onclick="window.print()">🖨️ PRINT RECORD</button>
-          <button class="btn-zoltar-action" id="closeCard">✕ CLOSE</button>
-        </div>
+        <button id="closeCard"
+          style="background: #000; color: #fff; border: none; padding: 10px 15px; font-family: var(--font-mono); font-weight: bold; cursor: pointer; font-size: 0.7rem; letter-spacing: 2px;">CLAIM_IT
+          &rarr;</button>
       </div>
+    </div>
+    @media print {
+    #physicalCard {
+    box-shadow: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    border: none !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    position: static !important;
+    }
 
-      <!-- BOTTOM ORNATE STRIP -->
-      <div class="zoltar-top-strip" style="margin-top: 0.5rem; margin-bottom: 0;">
-        <span class="zoltar-star">✦</span>
-        <span class="zoltar-star">★</span>
-        <span class="zoltar-star">✦</span>
-        <span class="zoltar-star">★</span>
-        <span class="zoltar-star">✦</span>
-        <span class="zoltar-star">★</span>
-        <span class="zoltar-star">✦</span>
-      </div>
+    body * {
+    visibility: hidden;
+    }
+
+    #physicalCard,
+    #physicalCard * {
+    visibility: visible;
+    }
+
+    .btn-zoltar-action {
+    display: none !important;
+    }
+    }
+    </style>
+    <button class="btn-zoltar-action" onclick="window.print()">🖨️ PRINT RECORD</button>
+    <button class="btn-zoltar-action" id="closeCard">✕ CLOSE</button>
+    </div>
+    </div>
+
+    <!-- BOTTOM ORNATE STRIP -->
+    <div class="zoltar-top-strip" style="margin-top: 0.5rem; margin-bottom: 0;">
+      <span class="zoltar-star">✦</span>
+      <span class="zoltar-star">★</span>
+      <span class="zoltar-star">✦</span>
+      <span class="zoltar-star">★</span>
+      <span class="zoltar-star">✦</span>
+      <span class="zoltar-star">★</span>
+      <span class="zoltar-star">✦</span>
+    </div>
 
     </div>
 
@@ -2103,129 +2215,109 @@
           <!-- PROT: 777 // 444 // 111 -->
         </div>
 
-        <!-- JULY 2025 POST -->
-        <a href="blog/summer-branding.html" class="blog-post reveal parallax-layer" data-speed="0.06">
-          <img src="images/lady and palms.webp" alt="Social Media Dominance Strategy">
+        <!-- MAR 2026 POST (TODAY) -->
+        <a href="blog/geo-brand-evolution.html" class="blog-post reveal parallax-layer" data-speed="0.04">
+          <img src="artifacts/retro_tech_lofi_1772749856017.png" alt="AI Search Optimization and GEO">
           <div>
-            <span class="date">JULY 2025 // FEATURED_01</span>
-            <h3>The Summer Pivot: Positioning Your Brand for Seasonal Scale.</h3>
+            <span class="date">MARCH 2026 // CURRENT_GEN</span>
+            <h3>GEO & AI: Bestie, Is Your SEO Optimized for the Future?</h3>
           </div>
-          <span class="mono-label" style="color: var(--pop-pink);">READ_FULL_INSIGHT &rarr;</span>
+          <span class="mono-label" style="color: var(--pop-pink);">GET ENLIGHTENED &rarr;</span>
+        </a>
+
+        <!-- FEB 2026 POST -->
+        <a href="blog/sovereign-strategy.html" class="blog-post reveal parallax-layer" data-speed="0.07">
+          <img src="artifacts/ai_algorithmic_dominance_1772749592739.png" alt="Elite Branding Strategy Kern County">
+          <div>
+            <span class="date">FEB 2026 // 06</span>
+            <h3>The Dominance Doc: How to Run the Game in Kern County.</h3>
+          </div>
+          <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
+        </a>
+
+        <!-- JAN 2026 POST -->
+        <a href="blog/psychology-branding.html" class="blog-post reveal parallax-layer" data-speed="0.05">
+          <img src="artifacts/elite_branding_psychology_1772749563242.png" alt="High-End Brand Psychology">
+          <div>
+            <span class="date">JAN 2026 // 05</span>
+            <h3>Mind Games: The Brand Psychology We Use on You (Ssh).</h3>
+          </div>
+          <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
+        </a>
+
+        <!-- DEC 2025 POST -->
+        <a href="blog/bakersfield-disruption.html" class="blog-post reveal parallax-layer" data-speed="0.1">
+          <img src="artifacts/california_marketing_vibe_1772749633675.png" alt="Website Design Bakersfield">
+          <div>
+            <span class="date">DEC 2025 // 04</span>
+            <h3>Bakersfield Disruption: Taking the #1 Spot on Google.</h3>
+          </div>
+          <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
+        </a>
+
+        <!-- NOV 2025 POST -->
+        <a href="blog/luxury-minimalism.html" class="blog-post reveal parallax-layer" data-speed="0.15">
+          <img src="artifacts/luxury_minimalism_edit_1772749606791.png" alt="Luxury Minimalist Web Design">
+          <div>
+            <span class="date">NOV 2025 // 03</span>
+            <h3>Less is More: The Magazine Style Websites Winning in 2026.</h3>
+          </div>
+          <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
+        </a>
+
+        <!-- OCT 2025 POST -->
+        <a href="#" class="blog-post reveal parallax-layer" data-speed="0.11">
+          <img src="artifacts/california_americana_nostalgia_1772749873662.png" alt="Nostalgia Branding">
+          <div>
+            <span class="date">OCT 2025 // 02</span>
+            <h3>Modern Nostalgia: Why We're Bringing Back the Grain.</h3>
+          </div>
+          <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
+        </a>
+
+        <!-- SEP 2025 POST -->
+        <a href="blog/status-service.html" class="blog-post reveal parallax-layer" data-speed="0.12">
+          <img src="artifacts/creative_studio_eclectic_1772749890105.png" alt="Status-Driven Marketing">
+          <div>
+            <span class="date">SEP 2025 // 01</span>
+            <h3>The Status Report: Positioning Your Brand as an Icon.</h3>
+          </div>
+          <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
         </a>
 
         <!-- AUG 2025 POST -->
         <a href="blog/august-strategy.html" class="blog-post reveal parallax-layer" data-speed="0.08">
-          <img src="images/cowboy copy.webp" alt="August Strategic Brand Reset">
+          <img src="artifacts/production_raw_cinematic_1772749839189.png" alt="August Strategic Brand Reset">
           <div>
-            <span class="date">AUGUST 2025 // FEATURED_02</span>
-            <h3>The August Reset: Rebuilding Foundations for the Q4 Surge.</h3>
+            <span class="date">AUGUST 2025 // THE_RESET</span>
+            <h3>August Strategy: Why We're Obsessed with Q4 Pre-Game.</h3>
           </div>
-          <span class="mono-label" style="color: var(--pop-lime);">READ_FULL_INSIGHT &rarr;</span>
+          <span class="mono-label" style="color: var(--pop-lime);">THE DEETS &rarr;</span>
         </a>
 
-        <!-- DYNAMIC BRANDS (NEWEST) -->
-        <a href="blog/geo-brand-evolution.html" class="blog-post reveal parallax-layer" data-speed="0.04">
-          <img src="images/retro_world_net.png" alt="AI Search Optimization and GEO"
-            style="image-rendering: pixelated; object-position: center;">
+        <!-- JULY 2025 POST -->
+        <a href="blog/summer-branding.html" class="blog-post reveal parallax-layer" data-speed="0.06">
+          <img src="artifacts/branding_lifestyle_aesthetic_1772749822722.png" alt="Summer Branding Strategy Aesthetic">
           <div>
-            <span class="date">MAR 2026 // 07</span>
-            <h3>The Era of GEO: How AI Search is Rewriting Bakersfield Branding.</h3>
+            <span class="date">JULY 2025 // FEATURED_VINTAGE</span>
+            <h3>The Bestie Guide: Positioning Your Brand for California Summer Heat.</h3>
           </div>
-          <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
+          <span class="mono-label" style="color: var(--pop-pink);">LET'S DIVE IN &rarr;</span>
         </a>
 
-        <!-- SOVEREIGN STRATEGY -->
-        <a href="blog/sovereign-strategy.html" class="blog-post reveal parallax-layer" data-speed="0.07">
-          <img src="images/car copy.webp" alt="Elite Branding Strategy Kern County">
-          <div>
-            <span class="date">FEB 2026 // 06</span>
-            <h3>Market Dominance: Elite Branding Strategies for Kern County Founders.</h3>
-          </div>
-          <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
-        </a>
-
-        <!-- PSYCHOLOGY BRANDING -->
-        <a href="blog/psychology-branding.html" class="blog-post reveal parallax-layer" data-speed="0.05">
-          <img src="images/mic copy.jpeg" alt="High-End Brand Psychology">
-          <div>
-            <span class="date">JAN 2026 // 05</span>
-            <h3>High-End Brand Psychology: The Science of Market Authority.</h3>
-          </div>
-          <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
-        </a>
-
-        <!-- BAKERSFIELD DISRUPTION -->
-        <a href="blog/bakersfield-disruption.html" class="blog-post reveal parallax-layer" data-speed="0.1">
-          <img src="images/groovy.webp" alt="Website Design Bakersfield">
-          <div>
-            <span class="date">DEC 2025 // 04</span>
-            <h3>Website Design Bakersfield: Disrupting the Local Landscape.</h3>
-          </div>
-          <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
-        </a>
-
-        <!-- LUXURY MINIMALISM -->
-        <a href="blog/luxury-minimalism.html" class="blog-post reveal parallax-layer" data-speed="0.15">
-          <img src="images/coffee copy.jpg" alt="Luxury Minimalist Web Design">
-          <div>
-            <span class="date">NOV 2025 // 03</span>
-            <h3>Luxury Minimalist Web Design: Why Less is More for Premium Brands.</h3>
-          </div>
-          <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
-        </a>
-
-        <!-- DIGITAL EDIT -->
-        <a href="blog/digital-edit.html" class="blog-post reveal parallax-layer" data-speed="0.08">
-          <img src="images/cofee-dude copy.jpg" alt="Social Media Curation Strategy">
-          <div>
-            <span class="date">OCT 2025 // 02</span>
-            <h3>The Digital Edit: Social Media Curation for High-Value Leads.</h3>
-          </div>
-          <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
-        </a>
-
-        <!-- STATUS SERVICE -->
-        <a href="blog/status-service.html" class="blog-post reveal parallax-layer" data-speed="0.12">
-          <img src="images/man.webp" alt="Status-Driven Marketing">
-          <div>
-            <span class="date">SEP 2025 // 01</span>
-            <h3>Status-Driven Marketing: Positioning Your Agency as a Legendary Brand.</h3>
-          </div>
-          <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
-        </a>
-
-        <!-- AUGUST STRATEGY (NEWLY ADDED) -->
-        <a href="blog/august-strategy.html" class="blog-post reveal parallax-layer" data-speed="0.09">
-          <img src="images/cowboy copy.webp" alt="August Brand Reset Strategy">
-          <div>
-            <span class="date">AUG 2025 // 00</span>
-            <h3>The August Reset: Rebuilding Brand Foundations for the Q4 Surge.</h3>
-          </div>
-          <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
-        </a>
-
-        <!-- SUMMER BRANDING (NEWLY ADDED) -->
-        <a href="blog/summer-branding.html" class="blog-post reveal parallax-layer" data-speed="0.11">
-          <img src="images/lady and palms.webp" alt="Summer Heat Branding">
-          <div>
-            <span class="date">JUL 2025 // VINTAGE</span>
-            <h3>Summer Heat: Maintaining Brand Cooling in an Overheated Market.</h3>
-          </div>
-          <span class="mono-label" style="color: var(--pop-pink);">READ_FEATURE &rarr;</span>
-        </a>
-
-        <!-- LINK STYLE ARCHIVE -->
+        <!-- ARCHIVE GAG TRIGGER -->
         <div
           style="grid-column: 1 / -1; padding: 2rem 0; border-top: 1px solid #222; display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; text-align: center;">
           <span style="font-family: var(--font-mono); font-size: 0.6rem; color: #444; letter-spacing: 2px;">🗃️
-            VINTAGE_LOGS:</span>
-          <a href="#blog"
-            style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--pop-blue); text-decoration: none; border-bottom: 1px dashed var(--pop-blue); padding-bottom: 2px; transition: all 0.2s;">2024_ARCHIVE.ZIP</a>
-          <a href="#blog"
-            style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--pop-blue); text-decoration: none; border-bottom: 1px dashed var(--pop-blue); padding-bottom: 2px; transition: all 0.2s;">2023_DEEP_SCAN.EXE</a>
-          <a href="#blog"
-            style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--pop-blue); text-decoration: none; border-bottom: 1px dashed var(--pop-blue); padding-bottom: 2px; transition: all 0.2s;">AGENCY_BLUEPRINTS.TXT</a>
+            DEEP_ARCHIVE:</span>
+          <button id="trigger-bsod"
+            style="background: transparent; border: none; font-family: var(--font-mono); font-size: 0.7rem; color: var(--pop-blue); text-decoration: none; border-bottom: 1px dashed var(--pop-blue); padding-bottom: 2px; cursor: pointer;">2006_2024_RECORDS.ZIP</button>
         </div>
+        style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--pop-blue); text-decoration: none;
+        border-bottom: 1px dashed var(--pop-blue); padding-bottom: 2px; transition: all 0.2s;">2023_DEEP_SCAN.EXE</a>
+        <a href="#blog"
+          style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--pop-blue); text-decoration: none; border-bottom: 1px dashed var(--pop-blue); padding-bottom: 2px; transition: all 0.2s;">AGENCY_BLUEPRINTS.TXT</a>
+      </div>
       </div>
     </section>
 
@@ -2321,9 +2413,9 @@
       <div style="max-width: 1400px; margin: 0 auto; padding: 0 5vw;">
         <div style="margin-bottom: 6vh; color: #fff; position: relative; z-index: 20;">
           <span class="chapter-mark">CHAPTER XII: CONTACT_BRIEF</span>
-          <h2 class="halftone-text animated-gradient" style="margin-top: 4.5rem;">Initiate Mission.</h2>
-          <h2 class="halftone-text animated-gradient" style="font-size: 10vw; line-height: 0.9;">Let's Get<br>Started.
-          </h2>
+          <h2 class="halftone-text animated-gradient"
+            style="font-size: clamp(4rem, 15vw, 15rem); line-height: 0.8; margin-top: 5rem; letter-spacing: -5px;">
+            Secure Your<br>Legacy.</h2>
           <p class="mono-label" style="margin-top: 2rem; opacity: 0.6; max-width: 600px; color: #fff;">ANSWER A FEW
             QUESTIONS TO HELP US UNDERSTAND YOUR VISION AND CURRENT POSITION. WE'LL FOLLOW UP QUICKLY WITH THE NEXT
             STEPS.</p>
@@ -3819,6 +3911,24 @@
   <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
     ↑
   </button>
+  <!-- BSOD GAG OVERLAY -->
+  <div id="bsod" class="bsod-overlay">
+    <div class="bsod-header">A problem has been detected and Windows has been shut down to prevent damage to your
+      computer.</div>
+    <div class="bsod-content">
+      <p>The problem seems to be caused by the following file: BESTIE_MARKETING.SYS</p>
+      <p>SYSTEM_RESOURCES_EXCEEDED: Your brand is currently too iconic for this legacy browser. Please upgrade your
+        frequency to 888 and try again.</p>
+      <p>*** STOP: 0x0000008E (0xC0000005, 0xBF8011E4, 0xED803BD1, 0x00000000)</p>
+      <p style="margin-top: 2rem;">Collecting data for crash dump...</p>
+      <p>*** Initializing disk for crash dump...</p>
+      <p>*** Beginning dump of physical memory.</p>
+      <p>*** Physical memory dump complete.</p>
+      <p style="margin-top: 3rem; color: #aaa;">Contact your system administrator or technical support group for further
+        assistance (aka us). Press any key to escape this reality...</p>
+    </div>
+  </div>
+
 </body>
 
 </html>

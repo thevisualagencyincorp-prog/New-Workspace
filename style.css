@@ -1,6 +1,169 @@
 /* ✦ THE AGENCY — MOCKUP REPLICATION ✦ */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;700&family=Shadows+Into+Light&display=swap');
 
+/* RETRO NAVIGATION BUTTONS */
+.nav-btn-retro {
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    padding: 8px 12px;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 2px 2px 0 #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn-retro:hover {
+    background: var(--pop-lime);
+    color: #000;
+    border-color: #000;
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 #000;
+}
+
+/* BSOD GAG */
+.bsod-overlay {
+    position: fixed;
+    inset: 0;
+    background: #0000aa;
+    color: #fff;
+    z-index: 99999;
+    display: none;
+    flex-direction: column;
+    padding: 10vw;
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    line-height: 1.4;
+    overflow: hidden;
+    cursor: none;
+}
+
+.bsod-overlay .bsod-header {
+    background: #fff;
+    color: #0000aa;
+    padding: 2px 10px;
+    width: fit-content;
+    margin-bottom: 2rem;
+}
+
+.bsod-overlay .loading-dots::after {
+    content: '';
+    animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+    0% {
+        content: '';
+    }
+
+    25% {
+        content: '.';
+    }
+
+    50% {
+        content: '..';
+    }
+
+    75% {
+        content: '...';
+    }
+}
+
+/* RETRO NAVIGATION BUTTONS */
+.nav-btn-retro {
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    padding: 10px 15px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 3px 3px 0 #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-btn-retro:hover {
+    background: var(--pop-lime);
+    color: #000;
+    border-color: #000;
+    transform: translate(-3px, -3px);
+    box-shadow: 6px 6px 0 #000;
+}
+
+/* BSOD GAG */
+.bsod-overlay {
+    position: fixed;
+    inset: 0;
+    background: #0000aa;
+    color: #fff;
+    z-index: 100000;
+    display: none;
+    flex-direction: column;
+    padding: 8vw;
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    overflow: hidden;
+    cursor: default;
+}
+
+.bsod-header {
+    background: #aaa;
+    color: #0000aa;
+    padding: 2px 10px;
+    width: fit-content;
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.bsod-content {
+    max-width: 800px;
+}
+
+/* MAGAZINE AESTHETICS */
+.magazine-container {
+    background-color: var(--bg-paper);
+    position: relative;
+}
+
+.scrapbook-scribble {
+    font-family: 'Handwritten', cursive;
+    color: var(--pop-pink);
+    position: absolute;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.pixel-border {
+    border: 2px solid #000;
+    position: relative;
+    background: #fff;
+}
+
+.pixel-border::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: -4px;
+    bottom: -4px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
 :root {
     --bg-paper: #F8F8F8;
     --text-primary: #000000;
@@ -437,28 +600,142 @@ html {
 
     h1.halftone-text,
     .pixel-header {
-        font-size: clamp(4rem, 10vw, 9rem) !important;
-        line-height: 0.8 !important;
+        font-size: clamp(5rem, 15vw, 15rem) !important;
+        line-height: 0.7 !important;
         white-space: normal !important;
+        letter-spacing: -5px;
+        transition: transform 0.1s ease-out;
+    }
+}
+
+/* ── LIQUID MOTION SYSTEM ── */
+.reveal {
+    opacity: 0;
+    transform: translateY(100px) rotate(2deg);
+    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+    pointer-events: auto;
+}
+
+/* Drifting Assets */
+.drifts-left {
+    animation: driftLeft 15s ease-in-out infinite alternate;
+}
+
+.drifts-right {
+    animation: driftRight 20s ease-in-out infinite alternate;
+}
+
+.drifts-up {
+    animation: driftUp 10s ease-in-out infinite alternate;
+}
+
+@keyframes driftLeft {
+    0% {
+        transform: translateX(0) rotate(-2deg);
     }
 
-    h2.halftone-text,
-    #booking-terminal h2 {
-        font-size: clamp(2.5rem, 4.5vw, 5rem) !important;
-        line-height: 0.85 !important;
+    100% {
+        transform: translateX(-40px) rotate(3deg);
+    }
+}
+
+@keyframes driftRight {
+    0% {
+        transform: translateX(0) rotate(1deg);
     }
 
-    h3.halftone-text,
-    .mock-card h3,
-    .horizontal-item h3,
-    .protocol-row h3,
-    .case-card h3,
-    .horoscopes-col h2,
-    .oracle-col h2,
-    .blog-post h3 {
-        font-size: clamp(2rem, 3.5vw, 4rem) !important;
-        line-height: 0.9 !important;
+    100% {
+        transform: translateX(50px) rotate(-4deg);
     }
+}
+
+@keyframes driftUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-30px) rotate(2deg);
+    }
+}
+
+/* Texture Flow */
+.grain-overlay {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    opacity: 0.05;
+    z-index: 9999;
+    pointer-events: none;
+    animation: grain-shift 8s steps(10) infinite;
+}
+
+@keyframes grain-shift {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(-5%, -5%);
+    }
+
+    40% {
+        transform: translate(-10%, 5%);
+    }
+
+    60% {
+        transform: translate(5%, -10%);
+    }
+
+    80% {
+        transform: translate(-5%, 5%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Flow Connectors */
+.section-padding {
+    padding: 12vh 8vw !important;
+    /* Slightly tighter for better flow */
+}
+
+h1.halftone-text,
+.pixel-header {
+    font-size: clamp(5rem, 15vw, 15rem) !important;
+    line-height: 0.7 !important;
+    white-space: normal !important;
+    letter-spacing: -5px;
+}
+
+h2.halftone-text,
+#booking-terminal h2 {
+    font-size: clamp(4rem, 8vw, 8rem) !important;
+    line-height: 0.8 !important;
+}
+
+h3.halftone-text,
+.mock-card h3,
+.horizontal-item h3,
+.protocol-row h3,
+.case-card h3,
+.horoscopes-col h2,
+.oracle-col h2,
+.blog-post h3 {
+    font-size: clamp(3rem, 5vw, 6rem) !important;
+    line-height: 0.85 !important;
+}
 }
 
 .animated-gradient {
@@ -561,7 +838,7 @@ p {
 
 /* LAYOUT SECTIONS */
 section {
-    padding: 10vh 5vw;
+    padding: 15vh 8vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -3559,4 +3836,46 @@ section {
     font-size: 0.8rem;
     font-weight: 700;
     text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+/* ── RETRO MAGAZINE NAV BUTTONS ── */
+.btn-retro-magazine {
+    display: block;
+    padding: 1.2rem;
+    text-align: center;
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-weight: 800;
+    z-index: 1;
+}
+
+.btn-retro-magazine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--pop-lime);
+    transition: all 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+    z-index: -1;
+}
+
+.btn-retro-magazine:hover {
+    color: #000;
+    border-color: var(--pop-lime);
+    box-shadow: 8px 8px 0 rgba(0, 255, 0, 0.2);
+    transform: translate(-4px, -4px);
+}
+
+.btn-retro-magazine:hover::before {
+    left: 0;
 }

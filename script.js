@@ -1,19 +1,43 @@
 /* ✦ THE AGENCY — MOCKUP REPLICATION LOGIC + BOOT SCREEN ✦ */
 
-// SCROLL ENGINES (HORIZONTAL + REVEAL)
+// LIQUID MOTION ENGINE (PARALLAX + REVEAL)
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: '0px 0px -100px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
+            // Add a slight delay for staggered siblings if needed
+            if (entry.target.hasAttribute('data-stagger')) {
+                const delay = entry.target.getAttribute('data-stagger') || 0.1;
+                entry.target.style.transitionDelay = `${delay}s`;
+            }
         }
     });
 }, observerOptions);
+
+// PARALLAX ENGINE
+const updateParallax = () => {
+    const scrollY = window.pageYOffset;
+    document.querySelectorAll('[data-speed]').forEach(el => {
+        const speed = parseFloat(el.getAttribute('data-speed')) || 0;
+        const yPos = -(scrollY * speed);
+        el.style.transform = `translate3d(0, ${yPos}px, 0)`;
+
+        // If it's the main large header, add a slight tilt
+        if (el.classList.contains('halftone-text') && Math.abs(speed) > 0.1) {
+            const rot = scrollY * 0.01 * speed;
+            el.style.transform += ` rotate(${rot}deg)`;
+        }
+    });
+};
+
+window.addEventListener('scroll', () => {
+    requestAnimationFrame(updateParallax);
+});
 
 function updateMagazineTime() {
     const topEl = document.getElementById('magazine-editorial-top');
@@ -54,6 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const horizontalTrack = document.querySelector('.horizontal-track');
 
     if (horizontalSection && horizontalTrack) {
+        let currentX = 0;
+        let targetX = 0;
+        const lerp = 0.08; // Smooth factor
+
         const updateHorizontal = () => {
             if (window.innerWidth <= 768) {
                 horizontalTrack.style.transform = 'none';
@@ -74,9 +102,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 const trackWidth = horizontalTrack.scrollWidth;
                 const windowWidth = window.innerWidth;
                 const maxTranslate = trackWidth - windowWidth + (windowWidth * 0.1);
-                const translateX = totalProgress * maxTranslate;
+                targetX = totalProgress * maxTranslate;
 
-                horizontalTrack.style.transform = `translateX(-${translateX}px)`;
+                // Lerp for liquid feel
+                currentX += (targetX - currentX) * lerp;
+
+                horizontalTrack.style.transform = `translate3d(-${currentX}px, 0, 0)`;
+
+                // Update Progress Indicator
+                const progressEl = document.getElementById('horizontal-progress');
+                if (progressEl) {
+                    progressEl.style.width = `${totalProgress * 100}%`;
+                }
             }
             requestAnimationFrame(updateHorizontal);
         };
@@ -464,4 +501,57 @@ document.addEventListener('DOMContentLoaded', () => {
             popup.style.color = "var(--pop-lime)";
         }
     };
+    // CLIPPY CLOSE LOGIC
+    const clippyClose = document.getElementById('clippy-close-btn');
+    const clippyWindow = document.querySelector('.clippy-window');
+
+    if (clippyClose && clippyWindow) {
+        clippyClose.addEventListener('click', (e) => {
+            e.stopPropagation();
+            clippyWindow.style.display = 'none';
+        });
+    }
+
+    // Handle clippy links
+    const clippyLinks = clippyWindow ? clippyWindow.querySelectorAll('a') : [];
+    clippyLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (clippyWindow) clippyWindow.style.display = 'none';
+        });
+    });
+
+    // CV MODAL LOGIC
+    const closeCV = document.getElementById('closeCV');
+    const cvModal = document.getElementById('cv-modal');
+    if (closeCV && cvModal) {
+        closeCV.addEventListener('click', () => {
+            cvModal.style.display = 'none';
+        });
+    }
+
+    // BSOD GAG LOGIC
+    const triggerBsod = document.getElementById('trigger-bsod');
+    const bsod = document.getElementById('bsod');
+
+    if (triggerBsod && bsod) {
+        triggerBsod.addEventListener('click', (e) => {
+            e.preventDefault();
+            bsod.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+
+            // Allow escape by click or key
+            const closeBsod = () => {
+                bsod.style.display = 'none';
+                document.body.style.overflow = '';
+                document.removeEventListener('keydown', closeBsodKey);
+            };
+
+            const closeBsodKey = (ev) => {
+                closeBsod();
+            };
+
+            bsod.onclick = closeBsod;
+            document.addEventListener('keydown', closeBsodKey, { once: true });
+        });
+    }
 });
