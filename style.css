@@ -1312,14 +1312,33 @@ section {
     color: var(--pop-pink);
 }
 
+/* MODAL & WINDOW RESPONSIVENESS */
+.retro-window {
+    width: 95% !important;
+    max-width: 900px;
+    margin: 20px auto !important;
+    left: auto !important;
+    right: auto !important;
+    position: relative !important;
+}
+
+@media (max-width: 768px) {
+    .retro-window {
+        width: 100% !important;
+        box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5) !important;
+        margin: 10px 0 !important;
+    }
+}
+
 @media (max-width: 1024px) {
     .fun-addons-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
     }
 
-    .horoscopes-col {
-        border-right: none;
-        border-bottom: 1px solid #222;
+    .fun-column {
+        border-right: none !important;
+        border-bottom: 2px solid #222 !important;
     }
 }
 
@@ -3481,6 +3500,7 @@ section {
         bottom: 20px;
     }
 }
+
 /* ════════════════════════════════════════
    ONLINE MAGAZINE HEADER STYLES
    ════════════════════════════════════════ */

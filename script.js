@@ -29,7 +29,7 @@ function updateMagazineTime() {
     const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' }).toUpperCase();
 
     // Premium editorial line formatting
-    topEl.textContent = `VOL. 1 // ISSUE: 001 // BAKERSFIELD, CA // PRICE: $0.00`;
+    topEl.textContent = `VOL. 1 // ISSUE: 001 // BAKERSFIELD, CA // LIMITED EDITION`;
     clockEl.textContent = `${dateStr} // ${timeStr} // SIGNAL: STABLE`;
 }
 
@@ -87,48 +87,72 @@ document.addEventListener('DOMContentLoaded', () => {
     const oracleVisual = document.getElementById('oracleVisual');
     const fortunesListBlock = document.getElementById('fortunesList');
     const card = document.getElementById('physicalCard');
+    const oracleOverlayArr = document.querySelectorAll('.oracle-overlay');
     const oracleOverlay = document.getElementById('oracleOverlay');
     const cardText = document.getElementById('cardFortuneText');
     const cardSerial = document.getElementById('cardSerial');
     const closeCard = document.getElementById('closeCard');
+    const oracleStatus = document.getElementById('oracleStatusText');
 
     if (oracleVisual && fortunesListBlock) {
         const fortuneSpans = fortunesListBlock.querySelectorAll('span');
         oracleVisual.addEventListener('click', () => {
-            if (card && oracleOverlay && cardText && fortuneSpans.length > 0) {
-                const randomIndex = Math.floor(Math.random() * fortuneSpans.length);
-                const fortune = fortuneSpans[randomIndex].getAttribute('data-fortune');
-                cardText.textContent = fortune;
-                cardSerial.textContent = `#${Math.floor(1000 + Math.random() * 9000)}-${Math.floor(10 + Math.random() * 89)}`;
+            // New Visual Feedback
+            if (oracleStatus) oracleStatus.textContent = "[ GAZING INTO THE ORB... ]";
+            oracleVisual.style.filter = "brightness(1.5) drop-shadow(0 0 50px rgba(255,100,0,0.8))";
 
-                const luckies = [];
-                while (luckies.length < 5) {
-                    const n = Math.floor(Math.random() * 99) + 1;
-                    if (!luckies.includes(n)) luckies.push(n);
+            setTimeout(() => {
+                if (card && oracleOverlay && cardText && fortuneSpans.length > 0) {
+                    const randomIndex = Math.floor(Math.random() * fortuneSpans.length);
+                    const fortune = fortuneSpans[randomIndex].getAttribute('data-fortune');
+                    cardText.textContent = fortune;
+                    cardSerial.textContent = `#${Math.floor(1000 + Math.random() * 9000)}-${Math.floor(10 + Math.random() * 89)}`;
+
+                    if (oracleStatus) {
+                        oracleStatus.textContent = "[ FORTUNE REVEALED ]";
+                        oracleStatus.style.color = "var(--pop-lime)";
+                    }
+
+                    const luckies = [];
+                    while (luckies.length < 5) {
+                        const n = Math.floor(Math.random() * 99) + 1;
+                        if (!luckies.includes(n)) luckies.push(n);
+                    }
+                    const numEl = document.getElementById('cardLuckyNums');
+                    if (numEl) numEl.textContent = luckies.sort((a, b) => a - b).join(', ');
+
+                    const colorEl = document.getElementById('cardLuckyColor');
+                    if (colorEl) {
+                        const colors = ['NEON PINK', 'CYBER TEAL', 'COBALT BLUE', 'ELECTRIC LIME', 'VINTAGE GOLD', 'CRIMSON RED', 'ULTRA VIOLET'];
+                        colorEl.textContent = colors[Math.floor(Math.random() * colors.length)];
+                    }
+
+                    card.classList.add('active');
+                    oracleOverlay.classList.add('active');
+                    oracleVisual.style.filter = "drop-shadow(0 0 30px rgba(255,100,0,0.3))";
                 }
-                const numEl = document.getElementById('cardLuckyNums');
-                if (numEl) numEl.textContent = luckies.sort((a, b) => a - b).join(', ');
+            }, 1500);
+        });
+    }
 
-                const colorEl = document.getElementById('cardLuckyColor');
-                if (colorEl) {
-                    const colors = ['NEON PINK', 'CYBER TEAL', 'COBALT BLUE', 'ELECTRIC LIME', 'VINTAGE GOLD', 'CRIMSON RED', 'ULTRA VIOLET'];
-                    colorEl.textContent = colors[Math.floor(Math.random() * colors.length)];
-                }
-
-                card.classList.add('active');
-                oracleOverlay.classList.add('active');
+    if (closeCard) {
+        closeCard.addEventListener('click', () => {
+            if (card) card.classList.remove('active');
+            if (oracleOverlay) oracleOverlay.classList.remove('active');
+            if (oracleStatus) {
+                oracleStatus.textContent = "[ GAZE INTO THE ORB ]";
+                oracleStatus.style.color = "";
             }
         });
     }
 
-    if (closeCard) closeCard.addEventListener('click', () => {
-        if (card) card.classList.remove('active');
-        if (oracleOverlay) oracleOverlay.classList.remove('active');
-    });
-
     if (oracleOverlay) oracleOverlay.addEventListener('click', () => {
         if (card) card.classList.remove('active');
         oracleOverlay.classList.remove('active');
+        if (oracleStatus) {
+            oracleStatus.textContent = "[ GAZE INTO THE ORB ]";
+            oracleStatus.style.color = "";
+        }
     });
 
     // AJAX FORMS
@@ -283,4 +307,161 @@ document.addEventListener('DOMContentLoaded', () => {
         const arc = document.getElementById('archive');
         if (arc) arc.scrollIntoView({ behavior: 'smooth' });
     });
+
+    // GLOBAL RETRO CLOSE HANDLER
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.btn-retro-close')) {
+            const btn = e.target.closest('.btn-retro-close');
+            // Check if it's meant to close a modal/window
+            const modal = btn.closest('#cv-modal, #collection-modal, #vibe-check-modal, #welcome-doc-modal, .desktop-folder-content, .oracle-card-wrap');
+            if (modal) {
+                if (modal.id === 'cv-modal' || modal.id === 'collection-modal') {
+                    modal.style.display = 'none';
+                } else {
+                    modal.classList.remove('active');
+                    if (modal.classList.contains('desktop-folder-content')) {
+                        document.body.style.overflow = '';
+                        if (caseOverlay) caseOverlay.classList.remove('active');
+                    }
+                }
+            }
+        }
+    });
+
+    // HOROSCOPE ENGINE
+    const horoscopeCards = document.querySelectorAll('.horoscope-card');
+    const readingTitle = document.getElementById('currentSignTitle');
+    const readingText = document.getElementById('currentReadingText');
+    const luckyNumEl = document.getElementById('luckyNum');
+
+    const readings = {
+        aries: "PIONEER THE MARKET. YOUR BRANDING NEEDS MORE FIRE TO COMMAND ATTENTION. ABUNDANCE IS LOCKED BEHIND YOUR FEAR OF INNOVATION.",
+        taurus: "STABILITY THROUGH LUXURY. YOUR PHYSICAL ASSETS AND DIGITAL PRESENCE MUST REFLECT THE ELITE VALUE YOU PROVIDE. INVEST IN QUALITY.",
+        gemini: "MULTIPLY YOUR VOICES. ONE BRAND IS NOT ENOUGH; YOU NEED A SYMPHONY. SYNC YOUR SOCIALS AND WATCH THE DOMINANCE UNFOLD.",
+        cancer: "PROTECT THE VISION. YOUR INTUITION IS YOUR BEST STRATEGY. BUILD A BRAND THAT FEELS LIKE A FORTRESS FOR YOUR CLIENTS.",
+        leo: "THE STAGE IS YOURS. COMMAND THE SPOTLIGHT WITH RADIANT CONTENT. SHYNESS IS FOR THOSE WHO DON'T WANT TO LEAD.",
+        virgo: "PRECISION IN EVERY PIXEL. YOUR ATTENTION TO DETAIL IS YOUR COMPETITIVE EDGE. OPTIMIZE THE INFRASTRUCTURE FOR MAXIMUM SCALE.",
+        libra: "BALANCE THE VIBE. HARMONY BETWEEN STRATEGY AND AESTHETICS WILL CREATE IRRESISTIBLE MAGNETISM. LEVELLING UP NOW.",
+        scorpio: "INTENSE TRANSFORMATION. SHED THE OLD BRAND IDENTITY. RADIATE POWER THROUGH REBIRTH AND REFINED PSYCHOLOGY.",
+        sagittarius: "EXPAND THE HORIZON. YOUR TARGET MARKET IS GLOBAL. BREAK THE GEOGRAPHIC BARRIERS WITH ELITE DIGITAL SYSTEMS.",
+        capricorn: "MASTER THE PEAK. YOU ARE AT THE TOP OF THE HIERARCHY. ACT LIKE THE INDUSTRY ICON YOU ARE BECOMING.",
+        aquarius: "REVOLUTIONIZE THE NORM. YOUR UNIQUE QUIRKS ARE YOUR STRONGEST BRAND ASSETS. DISRUPT THE TRADITIONAL PATHWAY.",
+        pisces: "DREAM IN DIGITAL. YOUR VISION IS BEYOND THE PHYSICAL. MANIFEST YOUR BRAND GOALS THROUGH ELITE STORYTELLING."
+    };
+
+    horoscopeCards.forEach(card => {
+        card.addEventListener('click', () => {
+            horoscopeCards.forEach(c => c.classList.remove('active'));
+            card.classList.add('active');
+            const sign = card.getAttribute('data-sign');
+            if (readingTitle) readingTitle.textContent = sign.charAt(0).toUpperCase() + sign.slice(1) + ".";
+            if (readingText) readingText.textContent = readings[sign] || "STAY TUNED FOR YOUR ELITE TRANSFORMATION.";
+            if (luckyNumEl) luckyNumEl.textContent = Math.floor(Math.random() * 99) + 1;
+        });
+    });
+
+    // COLLECTION MODAL ENGINE
+    const collectionTriggers = document.querySelectorAll('.collection-card-trigger');
+    const collectionModal = document.getElementById('collection-modal');
+    const collectionContent = document.getElementById('collection-modal-content');
+
+    collectionTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const h3 = trigger.querySelector('h3').textContent;
+            const img = trigger.querySelector('img').src;
+            const p = trigger.querySelector('.mono-label').innerText;
+
+            if (collectionContent) {
+                collectionContent.innerHTML = `
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; align-items: start;">
+                        <div>
+                            <img src="${img}" style="width: 100%; border: 1px solid #333; margin-bottom: 20px;">
+                            <h2 class="halftone-text" style="color: var(--pop-lime); font-size: 3rem; line-height: 1;">${h3}</h2>
+                        </div>
+                        <div>
+                            <p class="mono-label" style="font-size: 1.1rem; line-height: 1.6; color: #ccc; text-transform:none;">${p}</p>
+                            <div style="margin-top: 30px; padding: 20px; border: 1px dashed var(--pop-lime); font-family: var(--font-mono); font-size: 0.8rem;">
+                                <b style="color: var(--pop-lime); text-transform:uppercase;">THE AGENCY ADVANTAGE:</b><br><br>
+                                - Elite Strategy Workshop (Psychology Focus)<br>
+                                - Custom Identity & Visual Architecture<br>
+                                - Full Technical Deployment & QA<br>
+                                - 30 Days of Strategic Support Post-Launch<br><br>
+                                <a href="#contact-brief" onclick="document.getElementById('collection-modal').style.display='none';" style="display: block; width: 100%; text-align: center; background: var(--pop-lime); color: #000; padding: 15px; text-decoration: none; font-weight: bold;">SECURE YOUR POSITION &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            if (collectionModal) collectionModal.style.display = 'flex';
+        });
+    });
+
+    // FRANK (POCKET BESTIE) ENGINE
+    const frankTalk = document.getElementById('icon-talk');
+    const frankStats = document.getElementById('icon-stats');
+    const frankPopup = document.getElementById('frank-popup');
+    const frankImg = document.getElementById('frank-img');
+
+    const frankDialogues = [
+        "SYSTEM_CHECK: 100% OPTIMIZED.",
+        "WOULD YOU LIKE ME TO SCAN YOUR CURRENT BRAND DNA?",
+        "I HAVE CALCULATED YOUR SUCCESS PROBABILITY: INEVITABLE.",
+        "ERROR: COMPETITION NOT FOUND. THEY MUST BE TOO SLOW.",
+        "REMEMBER: AESTHETICS ARE THE NEW CURRENCY."
+    ];
+
+    if (frankTalk) {
+        frankTalk.addEventListener('click', () => {
+            if (frankPopup) {
+                const diag = frankDialogues[Math.floor(Math.random() * frankDialogues.length)];
+                frankPopup.textContent = diag;
+                frankPopup.style.display = 'block';
+                frankPopup.style.color = "var(--pop-lime)";
+                if (frankImg) frankImg.style.transform = "scale(1.1) rotate(5deg)";
+                setTimeout(() => {
+                    if (frankImg) frankImg.style.transform = "none";
+                }, 500);
+            }
+        });
+    }
+
+    if (frankStats) {
+        frankStats.addEventListener('click', () => {
+            if (frankPopup) {
+                frankPopup.textContent = "SCANNING_MARKET... ROI_THRESHOLD: MAXIMUM. BRAND_AUTHORITY: ELITE.";
+                frankPopup.style.display = 'block';
+                frankPopup.style.color = "var(--pop-lime)";
+            }
+        });
+    }
+
+    window.feedFrank = function () {
+        const popup = document.getElementById('frank-popup');
+        const img = document.getElementById('frank-img');
+        if (popup) {
+            popup.textContent = "ABUNDANCE_SYNTHESIZED. [+10 HAPPINESS]";
+            popup.style.display = 'block';
+            popup.style.color = "var(--pop-lime)";
+            if (img) img.style.transform = "scale(1.2)";
+            setTimeout(() => { if (img) img.style.transform = "none"; }, 500);
+        }
+    };
+
+    window.petFrank = function () {
+        const popup = document.getElementById('frank-popup');
+        if (popup) {
+            popup.textContent = "AESTHETIC_RESONANCE_DETECTED. <3";
+            popup.style.display = 'block';
+            popup.style.color = "var(--pop-lime)";
+        }
+    };
+
+    window.playFrank = function () {
+        const popup = document.getElementById('frank-popup');
+        if (popup) {
+            popup.textContent = "CALCULATING_DOMINANCE... 99.9%.";
+            popup.style.display = 'block';
+            popup.style.color = "var(--pop-lime)";
+        }
+    };
 });
