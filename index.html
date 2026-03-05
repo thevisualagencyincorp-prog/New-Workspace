@@ -446,7 +446,10 @@
       <div class="desktop-case-grid">
         <!-- 01: Wax Therapy -->
         <div class="desktop-folder-group">
-          <div class="desktop-folder-icon" tabindex="0">
+          <div class="desktop-folder-icon" tabindex="0" style="position: relative;">
+            <div class="handwritten"
+              style="position: absolute; top: -60px; left: -20px; font-size: 1rem; width: 120px; color: var(--pop-lime); transform: rotate(-15deg); pointer-events: none;">
+              Start here! →</div>
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="65" height="65"
               style="fill: #000080; filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.8)); margin-bottom: 0.5rem; flex-shrink: 0;">
               <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
@@ -890,7 +893,7 @@
       </div>
 
       <div id="retro-chat-window" class="reveal retro-window"
-        style="background: #c0c0c0; border: 2px solid #fff; border-right-color: #808080; border-bottom-color: #808080; padding: 3px; box-shadow: 10px 10px 0 rgba(0,0,0,0.5); font-family: 'MS Sans Serif', 'Arial', sans-serif;">
+        style="background: #c0c0c0; border: 2px solid #fff; border-right-color: #808080; border-bottom-color: #808080; padding: 3px; box-shadow: 10px 10px 0 rgba(0,0,0,0.5); font-family: 'MS Sans Serif', 'Arial', sans-serif; z-index: 100 !important; margin-top: 6rem !important;">
         <div
           style="background: linear-gradient(90deg, #000080, #1084d0); color: white; padding: 4px 10px; font-weight: bold; font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center;">
           <span>💬 The_Agency_Public_Chat_v2.1</span>
@@ -1319,9 +1322,9 @@
         style="position: absolute; top: 0; right: 0; font-size: 20vw; color: rgba(255,255,255,0.03); pointer-events: none;">
         SYSTEM</div>
       <div style="margin-bottom: 10vh; position: relative; z-index: 1;">
-        <div style="padding: 0 10vw; margin-bottom: 8vh;">
+        <div style="padding: 0 10vw; margin-bottom: 8vh; position: relative; z-index: 10;">
           <span class="chapter-mark">CHAPTER VII: THE SYNERGY</span>
-          <h2 class="halftone-text" style="color: #fff; margin-top: 1rem;">Elite Add-ons.</h2>
+          <h2 class="halftone-text" style="color: #fff; margin-top: 5rem;">Elite Add-ons.</h2>
           <div class="handwritten" style="color: var(--pop-pink); margin-top: 10px;">The plot thickens...</div>
         </div>
         <p class="mono-label" style="opacity: 0.6; margin-top: 2rem;">A BESTIE-LEVEL JOURNEY FROM VISION TO VICTORY.</p>
@@ -1746,15 +1749,16 @@
       </div>
       <div class="hub-noise"></div>
 
+      <div style="padding: 0 5vw 4vh; text-align: left; position: relative; z-index: 100;">
+        <span class="chapter-mark">CHAPTER IX: THE COSMIC HUB</span>
+      </div>
+
       <div class="fun-addons-container"
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 5vh 5vw;">
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 0 5vw 5vh;">
         <!-- COLUMN 1: SUCCESS HOROSCOPES -->
         <div class="fun-column horoscopes-col">
           <div style="margin-bottom: 5vh;">
-            <span class="chapter-mark" style="color: var(--pop-lime); border-color: var(--pop-lime);">CHAPTER IX: THE
-              COSMIC
-              HUB</span>
-            <h2 class="halftone-text" style="font-size: clamp(2rem, 5vw, 4rem); color: #fff; margin-top: 1rem;">Success
+            <h2 class="halftone-text" style="font-size: clamp(2rem, 5vw, 4rem); color: #fff; margin-top: 0;">Success
               Grid.</h2>
           </div>
 
@@ -1805,10 +1809,8 @@
         <!-- COLUMN 2: THE ORACLE (CRYSTAL BALL) -->
         <div class="fun-column oracle-col">
           <div style="margin-bottom: 4rem;">
-            <span class="chapter-mark" style="color: var(--pop-lime); border-color: var(--pop-lime);">CHAPTER IX: THE
-              COSMIC HUB</span>
             <h2 class="halftone-text"
-              style="font-size: clamp(3rem, 12vw, 15rem); color: #fff; line-height: 0.8; margin-top: 1rem;">
+              style="font-size: clamp(3rem, 12vw, 15rem); color: #fff; line-height: 0.8; margin-top: 0;">
               Cosmic<br>Connection.</h2>
           </div>
 
@@ -2230,10 +2232,9 @@
 
     <!-- SECTION 10: SOCIAL DISPATCH -->
     <section id="social" style="padding: 0; background: #000; min-height: auto;">
-      <div style="padding: 6vh 5vw 2vh; background: #000; color: #fff;">
-        <span class="chapter-mark" style="color: #fff; border-color: #fff; white-space: nowrap;">CHAPTER XI:
-          SOCIAL_SYNC</span>
-        <h2 class="halftone-text" style="color: #fff; margin-top: 1rem;">The Culture Link.</h2>
+      <div style="padding: 6vh 5vw 2vh; background: #000; color: #fff; position: relative; z-index: 20;">
+        <span class="chapter-mark">CHAPTER XI: SOCIAL_SYNC</span>
+        <h2 class="halftone-text" style="color: #fff; margin-top: 3.5rem;">The Culture Link.</h2>
         <h2 class="halftone-text">The Gram.</h2>
       </div>
       <div class="social-widget-container" style="padding: 0 2rem 4rem; background: #000;">
@@ -2319,9 +2320,9 @@
     <!-- SECTION 11: EDITORIAL BRIEF (WE READ MINDS) -->
     <section id="contact-brief" class="bg-graph-dark" style="padding: 6vh 0; min-height: auto;">
       <div style="max-width: 1400px; margin: 0 auto; padding: 0 5vw;">
-        <div style="margin-bottom: 6vh; color: #fff;">
-          <span class="chapter-mark" style="color: #fff; border-color: #fff;">CHAPTER XII: CONTACT_BRIEF</span>
-          <h2 class="halftone-text animated-gradient" style="margin-top: 1rem;">Initiate Mission.</h2>
+        <div style="margin-bottom: 6vh; color: #fff; position: relative; z-index: 20;">
+          <span class="chapter-mark">CHAPTER XII: CONTACT_BRIEF</span>
+          <h2 class="halftone-text animated-gradient" style="margin-top: 4.5rem;">Initiate Mission.</h2>
           <h2 class="halftone-text animated-gradient" style="font-size: 10vw; line-height: 0.9;">Let's Get<br>Started.
           </h2>
           <p class="mono-label" style="margin-top: 2rem; opacity: 0.6; max-width: 600px; color: #fff;">ANSWER A FEW
@@ -2669,10 +2670,8 @@
       </div>
 
       <div style="padding: 0 10vw; margin-bottom: 8vh; position: relative; z-index: 10; color: #fff;">
-        <span class="chapter-mark" style="color: var(--pop-lime); border-color: var(--pop-lime);">CHAPTER XIII: THE
-          CLUBHOUSE</span>
-        <h2 class="halftone-text" style="color: #fff; margin-top: 1rem;">Join the Inner
-          Circle.</h2>
+        <span class="chapter-mark">CHAPTER XIII: THE CLUBHOUSE</span>
+        <h2 class="halftone-text" style="color: #fff; margin-top: 4.5rem;">Join the Inner Circle.</h2>
         <p class="mono-label" style="opacity: 0.7; margin-top: 1rem; color: #fff;">EXCLUSIVE EXPERIENCES FOR OUR
           BUSINESS BESTIES.
         </p>
@@ -2775,7 +2774,7 @@
 
         <!-- Retro AIM Away Message (Nostalgia Driver) -->
         <div class="reveal parallax-layer" data-speed="0.15"
-          style="position: absolute; top: 0%; right: 5%; width: 260px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 3px; z-index: 50; font-family: Arial, sans-serif; font-size: 0.8rem; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); transform: rotate(-4deg);">
+          style="position: absolute; top: 5%; right: 2%; width: 260px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 3px; z-index: 100; font-family: Arial, sans-serif; font-size: 0.8rem; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); transform: rotate(-4deg);">
           <div
             style="background: darkblue; color: white; padding: 2px 6px; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
             <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">💬</span>
@@ -2802,7 +2801,7 @@
             ]</span>
           <h2 class="halftone-text"
             style="font-size: clamp(2.5rem, 8vw, 6rem); color: var(--pop-lime); line-height: 0.9; margin: 2rem 0;">
-            Unlock Your Brands<br>Full Potential.</h2>
+            Unlock Your Brand's<br>Full Potential.</h2>
           <!-- SYSTEM DIRECTORY FOOTER -->
           <div
             style="margin-top: 5rem; text-align: left; max-width: 1200px; margin-left: auto; margin-right: auto; padding-bottom: 2rem;">
@@ -2904,8 +2903,8 @@
                   </div>
                   <div style="font-size: 0.8rem; font-weight: bold; margin-top: 1rem;">
                     EST. 2006<br>
-                    <span style="opacity: 0.6; font-weight: normal; font-size: 0.7rem;">FEMALE VETERAN
-                      OWNED</span><br>
+                    <span style="opacity: 0.6; font-weight: normal; font-size: 0.7rem;">FEMALE DISABLED VETERAN
+                      OWNED BUSINESS</span><br>
                   </div>
                 </div>
 
