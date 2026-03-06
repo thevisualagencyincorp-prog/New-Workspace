@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const oracleOverlay = document.getElementById('oracleOverlay');
     const cardText = document.getElementById('cardFortuneText');
     const cardSerial = document.getElementById('cardSerial');
-    const closeCard = document.getElementById('closeCard');
+    const closeCardBtns = document.querySelectorAll('.close-card-btn');
     const oracleStatus = document.getElementById('oracleStatusText');
 
     if (oracleVisual && fortunesListBlock) {
@@ -172,15 +172,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (closeCard) {
-        closeCard.addEventListener('click', () => {
+    if (closeCardBtns) {
+        closeCardBtns.forEach(btn => btn.addEventListener('click', () => {
             if (card) card.classList.remove('active');
             if (oracleOverlay) oracleOverlay.classList.remove('active');
             if (oracleStatus) {
                 oracleStatus.textContent = "[ GAZE INTO THE ORB ]";
                 oracleStatus.style.color = "";
             }
-        });
+        }));
     }
 
     if (oracleOverlay) oracleOverlay.addEventListener('click', () => {
