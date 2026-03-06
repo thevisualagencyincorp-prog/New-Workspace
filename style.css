@@ -577,6 +577,16 @@ html {
     cursor: crosshair;
 }
 
+/* Hide scrollbars globally */
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 /* HALFTONE TEXT & IMAGE EFFECT */
 .halftone-text {
     font-family: var(--font-serif);
@@ -600,9 +610,9 @@ html {
 
     h1.halftone-text,
     .pixel-header {
-        font-size: clamp(5rem, 15vw, 15rem) !important;
-        line-height: 0.7 !important;
-        white-space: normal !important;
+        font-size: clamp(5rem, 15vw, 15rem);
+        line-height: 0.7;
+        white-space: normal;
         letter-spacing: -5px;
         transition: transform 0.1s ease-out;
     }
@@ -707,22 +717,21 @@ html {
 
 /* Flow Connectors */
 .section-padding {
-    padding: 12vh 8vw !important;
-    /* Slightly tighter for better flow */
+    padding: 8vh 8vw !important;
 }
 
 h1.halftone-text,
 .pixel-header {
     font-size: clamp(5rem, 15vw, 15rem) !important;
-    line-height: 0.7 !important;
+    line-height: 0.85 !important;
     white-space: normal !important;
     letter-spacing: -5px;
 }
 
 h2.halftone-text,
 #booking-terminal h2 {
-    font-size: clamp(4rem, 8vw, 8rem) !important;
-    line-height: 0.8 !important;
+    font-size: clamp(3.5rem, 8vw, 8rem);
+    line-height: 0.8;
 }
 
 h3.halftone-text,
@@ -733,8 +742,8 @@ h3.halftone-text,
 .horoscopes-col h2,
 .oracle-col h2,
 .blog-post h3 {
-    font-size: clamp(3rem, 5vw, 6rem) !important;
-    line-height: 0.85 !important;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 0.85;
 }
 
 .animated-gradient {
@@ -801,6 +810,8 @@ p {
     position: relative;
     box-shadow: 4px 4px 0 rgba(0, 255, 0, 0.4);
     margin-bottom: 3rem;
+    margin-top: 1.5rem;
+    /* Allow space for ::before SIDE_A */
     z-index: 50;
     text-transform: uppercase;
     line-height: 1;
@@ -809,7 +820,8 @@ p {
 .chapter-mark::before {
     content: 'SIDE_A';
     position: absolute;
-    top: -12px;
+    top: -16px;
+    /* Push up slightly more */
     left: 8px;
     font-size: 0.55rem;
     color: var(--pop-pink);
@@ -819,6 +831,12 @@ p {
     font-weight: 900;
     letter-spacing: 1px;
     z-index: 51;
+}
+
+.editor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
 }
 
 .handwritten {
@@ -1068,6 +1086,11 @@ section {
 @media (max-width: 1024px) {
     .horizontal-item {
         flex: 0 0 55vw;
+    }
+
+    .editor-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
 
@@ -3964,9 +3987,26 @@ section {
     .halftone-text {
         letter-spacing: -1.5px !important;
     }
-    .retro-sidebar,
-    .chat-sidebar {
+
+    .retro-sidebar {
         display: none !important;
+    }
+
+    .chat-sidebar {
+        display: block !important;
+        height: 150px !important;
+        margin-top: 10px !important;
+        flex: none !important;
+    }
+
+    .chat-inner {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+
+    .chat-content {
+        height: 300px !important;
+        flex: none !important;
     }
 
     .horizontal-scroll-section {

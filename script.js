@@ -410,20 +410,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (collectionContent) {
                 collectionContent.innerHTML = `
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; align-items: start;">
-                        <div>
-                            <img src="${img}" style="width: 100%; border: 1px solid #333; margin-bottom: 20px;">
-                            <h2 class="halftone-text" style="color: var(--pop-lime); font-size: 3rem; line-height: 1;">${h3}</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(30px, 5vw, 60px); align-items: center;">
+                        <div style="position: relative;">
+                            <img src="${img}" style="width: 100%; border: 1px solid #333; margin-bottom: 2rem; box-shadow: 10px 10px 0 rgba(0,0,0,0.2);">
+                            <div class="sticker sticker-urgent" style="top:-10px; right:-10px;">MISSION_CRITICAL</div>
                         </div>
                         <div>
-                            <p class="mono-label" style="font-size: 1.1rem; line-height: 1.6; color: #ccc; text-transform:none;">${p}</p>
-                            <div style="margin-top: 30px; padding: 20px; border: 1px dashed var(--pop-lime); font-family: var(--font-mono); font-size: 0.8rem;">
-                                <b style="color: var(--pop-lime); text-transform:uppercase;">THE AGENCY ADVANTAGE:</b><br><br>
-                                - Elite Strategy Workshop (Psychology Focus)<br>
-                                - Custom Identity & Visual Architecture<br>
-                                - Full Technical Deployment & QA<br>
-                                - 30 Days of Strategic Support Post-Launch<br><br>
-                                <a href="#contact-brief" onclick="document.getElementById('collection-modal').style.display='none';" style="display: block; width: 100%; text-align: center; background: var(--pop-lime); color: #000; padding: 15px; text-decoration: none; font-weight: bold;">SECURE YOUR POSITION &rarr;</a>
+                            <h2 class="halftone-text" style="color: var(--pop-lime); font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 0.9; margin-bottom: 1.5rem;">${h3}</h2>
+                            <p class="mono-label" style="font-size: 1rem; line-height: 1.6; color: #eee; text-transform:none; margin-bottom: 2rem; opacity: 0.8;">${p}</p>
+                            <div style="margin-top: 2rem; padding: 2rem; border: 1px dashed var(--pop-lime); font-family: var(--font-mono); font-size: 0.85rem; background: rgba(0,255,0,0.02);">
+                                <b style="color: var(--pop-lime); text-transform:uppercase; letter-spacing: 2px;">THE AGENCY ADVANTAGE:</b><br><br>
+                                <ul style="list-style: none; padding: 0; display: grid; gap: 8px;">
+                                    <li>✦ Elite Strategy Workshop (Psychology Focus)</li>
+                                    <li>✦ Custom Identity & Visual Architecture</li>
+                                    <li>✦ Full Technical Deployment & QA</li>
+                                    <li>✦ 30 Days of Strategic Support Post-Launch</li>
+                                </ul>
+                                <br>
+                                <a href="#contact-brief" class="nav-btn-retro" onclick="document.getElementById('collection-modal').style.display='none';" 
+                                   style="display: block; width: 100%; height: auto; padding: 1.2rem; background: var(--pop-lime); color: #000; font-weight: 900; font-size: 1rem; border: none; box-shadow: 6px 6px 0 #000;">
+                                   SECURE YOUR POSITION &rarr;
+                                </a>
                             </div>
                         </div>
                     </div>

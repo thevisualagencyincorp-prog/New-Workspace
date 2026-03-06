@@ -180,17 +180,19 @@
 
   <!-- COLLECTIONS DETAIL MODAL -->
   <div id="collection-modal"
-    style="position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 12000; display: none; align-items: center; justify-content: center; backdrop-filter: blur(10px);">
+    style="position: fixed; inset: 0; background: rgba(0,0,0,0.98); z-index: 12100; display: none; align-items: center; justify-content: center; backdrop-filter: blur(20px);">
     <div
-      style="background: #111; color: #fff; width: 600px; max-width: 95vw; border: 1px solid #333; box-shadow: 0 0 50px rgba(0,255,0,0.2); position: relative;">
+      style="background: #000; color: #fff; width: 800px; max-width: 95vw; border: 1px solid #333; box-shadow: 0 0 100px rgba(0,255,100,0.15); position: relative; overflow: hidden;">
       <div
-        style="background: #222; padding: 10px 20px; border-bottom: 1px solid #333; display: flex; justify-content: space-between; align-items: center;">
-        <span class="mono-label" style="font-size: 0.7rem; color: var(--pop-lime);">COLLECTION_DETAIL.EXE</span>
-        <span class="btn-retro-close"
-          style="cursor: pointer; font-family: var(--font-mono); font-weight: bold; padding: 5px 10px; background: #333; border: 1px solid #444;">CLOSE
-          [X]</span>
+        style="background: #111; padding: 12px 25px; border-bottom: 2px solid #222; display: flex; justify-content: space-between; align-items: center;">
+        <span class="mono-label" style="font-size: 0.75rem; color: var(--pop-lime); letter-spacing: 3px;">[
+          COLLECTION_DETAIL.EXE ]</span>
+        <button class="btn-retro-close" id="closeCollection"
+          style="cursor: pointer; font-family: var(--font-mono); font-weight: bold; padding: 6px 15px; background: #222; color: #fff; border: 1px solid #444; font-size: 0.8rem; transition: all 0.2s;">CLOSE
+          [X]</button>
       </div>
-      <div id="collection-modal-content" style="padding: 40px; max-height: 80vh; overflow-y: auto;">
+      <div id="collection-modal-content"
+        style="padding: clamp(2rem, 6vw, 4rem); max-height: 85vh; overflow-y: auto; scroll-behavior: smooth;">
         <!-- Dynamic Content -->
       </div>
     </div>
@@ -211,7 +213,7 @@
 
     <!-- SECTION 01: HERO SPREAD -->
     <section class="hero-section" id="hero"
-      style="padding: 0; min-height: 100vh; display: flex; flex-direction: column; background: #000; color: #fff; position: relative; overflow: hidden;">
+      style="padding: 0; min-height: 90vh; display: flex; flex-direction: column; background: #000; color: #fff; position: relative; overflow: hidden;">
 
       <!-- BACKGROUND VIDEO (Enhanced Parallax-Ready Structure) -->
       <div class="video-bg-container" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0;">
@@ -225,10 +227,10 @@
       </div>
 
       <div class="video-bg-content"
-        style="position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; min-height: 100vh; margin: 0;">
+        style="position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; margin: 0;">
         <!-- TOP NAV LOGO -->
         <header role="banner" aria-label="The Agency — Site Navigation"
-          style="padding: 2.5rem 5vw; display: flex; justify-content: space-between; align-items: flex-start; position: relative; z-index: 100; min-height: 120px;">
+          style="padding: 1.5rem 5vw; display: flex; justify-content: space-between; align-items: flex-start; position: relative; z-index: 100;">
 
           <!-- LEFT: LOGO -->
           <a href="#main-content" aria-label="The Agency Homepage"
@@ -237,14 +239,14 @@
               The<br>Agency.</div>
           </a>
 
-          <!-- CENTER: MAGAZINE DATE/TIME HEADER (Absolute center to avoid push) -->
+          <!-- CENTER: MAGAZINE DATE/TIME HEADER -->
           <div id="magazine-time" class="mono-label"
-            style="position: absolute; left: 50%; top: 3.5rem; transform: translateX(-50%); text-align: center; font-size: 0.65rem; pointer-events: none; white-space: nowrap; letter-spacing: 2.5px; display: flex; flex-direction: column; gap: 4px; color: #fff; opacity: 0.9; z-index: 102;">
+            style="flex: 1; margin: 0 2rem; align-items: center; text-align: center; font-size: 0.65rem; pointer-events: none; letter-spacing: 2px; display: flex; flex-direction: column; gap: 4px; color: #fff; opacity: 0.9; z-index: 102; position: relative; padding-top: 1.5rem;">
             <div id="magazine-editorial-top">VOL. 1 // FREQUENCY: 888 // BAKERSFIELD, CA</div>
             <div id="magazine-clock-line" style="color: var(--pop-lime); font-weight: bold;">LOADING_SYSTEM_CLOCK...
             </div>
             <div class="handwritten"
-              style="position: absolute; top: 100%; right: 0; color: var(--pop-pink); font-size: 0.7rem; transform: rotate(-5deg); white-space: nowrap;">
+              style="position: absolute; top: calc(100% + 5px); color: var(--pop-pink); font-size: 0.7rem; transform: rotate(-5deg); white-space: nowrap;">
               (Still a work in progress, bestie!)</div>
           </div>
 
@@ -257,17 +259,17 @@
 
       <!-- CENTER CONTENT -->
       <div
-        style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem 5vw; position: relative; z-index: 10;">
+        style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; padding: 2vh 5vw; padding-bottom: 10vh; position: relative; z-index: 10;">
         <div class="mono-label blend-difference"
-          style="margin-bottom: 0.5rem; opacity: 0.8; letter-spacing: 0.2rem; color: #fff;">
+          style="margin-bottom: 0.2rem; opacity: 0.8; letter-spacing: 0.2rem; color: #fff;">
           ■ <span style="opacity: 0.5;">NEW COLLECTION</span> ■</div>
         <div class="mono-label blend-difference"
-          style="margin-bottom: 1.5rem; opacity: 0.4; font-size: 0.7rem; color: #fff;">AN
+          style="margin-bottom: 0.5rem; opacity: 0.4; font-size: 0.7rem; color: #fff;">AN
           EXPLORATION OF</div>
 
         <h1 class="halftone-text blend-difference"
-          style="color: var(--pop-pink); font-size: clamp(4rem, 12vw, 15rem); line-height: 0.7; margin: 0; text-transform: uppercase; font-weight: 900;"
-          data-speed="-0.15">
+          style="color: var(--pop-pink); margin: 0; padding-bottom: 2vh; text-transform: uppercase; font-weight: 900;"
+          data-speed="-0.10">
           Elite<br>Branding</h1>
 
         <div class="mono-label blend-difference"
@@ -281,7 +283,7 @@
 
         <!-- Col 1: Designed By + NAVIGATION -->
         <div class="header-credit-card"
-          style="background: #0d0d0d; color: #fff; padding: 2.5rem; position: relative; border-right: 1px solid #222; display: flex; flex-direction: column; justify-content: space-between;">
+          style="background: #0d0d0d; color: #fff; padding: 1.5rem 2rem; position: relative; border-right: 1px solid #222; display: flex; flex-direction: column; justify-content: space-between;">
           <div style="position: relative; z-index: 2;">
             <div
               style="font-family: var(--font-mono); font-size: 0.65rem; opacity: 0.5; margin-bottom: 2rem; letter-spacing: 2px;">
@@ -310,7 +312,7 @@
 
         <!-- Col 2: Creative Code -->
         <div class="header-credit-card"
-          style="background: #0d0d0d; color: #fff; padding: 2rem; border-right: 1px solid #222;">
+          style="background: #0d0d0d; color: #fff; padding: 1.2rem 1.5rem; border-right: 1px solid #222;">
           <div style="font-family: var(--font-mono); font-size: 0.6rem; opacity: 0.4; margin-bottom: 1.5rem;">CREATIVE
             CODE BY</div>
           <div
@@ -322,7 +324,7 @@
 
         <!-- Col 3: Archive Scan -->
         <div class="header-credit-card"
-          style="background: #0d0d0d; color: #fff; padding: 2rem; border-right: 1px solid #222;">
+          style="background: #0d0d0d; color: #fff; padding: 1.2rem 1.5rem; border-right: 1px solid #222;">
           <div style="font-family: var(--font-mono); font-size: 0.6rem; opacity: 0.4; margin-bottom: 1rem;">
             ARCHIVE_SCAN_V18</div>
           <div style="display: flex; align-items: flex-end; gap: 1rem;">
@@ -337,7 +339,7 @@
 
         <!-- Col 4: Visual -->
         <div class="header-credit-card"
-          style="background: #0d0d0d; color: #fff; padding: 0; position: relative; overflow: hidden; min-height: 150px;">
+          style="background: #0d0d0d; color: #fff; padding: 0; position: relative; overflow: hidden; min-height: 120px;">
           <img src="images/agency_office_vibe_1771445625493.png"
             alt="High-end marketing photography studio shoot in Bakersfield"
             style="display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; mix-blend-mode: luminosity;">
@@ -367,7 +369,7 @@
             Plotting your brand's global takeover, one pixel at a time. <span style="font-style: normal;">✨</span></div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start; margin-top: 5rem;">
+        <div class="editor-grid" style="align-items: start; margin-top: 5rem;">
           <!-- Editor Portrait -->
           <div class="reveal" data-speed="0.1" style="position: relative; padding: 2rem;">
             <div class="pixel-border"
@@ -899,7 +901,7 @@
     <!-- SECTION 03: THE VOUCH (RETRO CHAT ROOM) -->
     <section class="section-padding reveal" id="feedback"
       style="background: var(--bg-paper); position: relative; overflow: hidden; padding: 15vh 10vw; margin-top: -5vh; z-index: 5;">
-      <div style="text-align: center; margin-bottom: 8vh;" data-speed="-0.03">
+      <div style="text-align: center; margin-bottom: 12vh;">
         <span class="chapter-mark">COL_02: THE COMMUNITY</span>
         <h2 class="halftone-text"
           style="color: #000; margin-top: 1.5rem; font-size: clamp(3rem, 12vw, 8rem); line-height: 0.85;">Word on<br>the
@@ -1330,7 +1332,7 @@
 
 
     <!-- SECTION 03: THE PHILOSOPHY -->
-    <section class="bg-grid-holo" style="padding: 15vh 10vw; border-top: 1px solid #000;">
+    <section class="bg-grid-holo" style="padding: 10vh 10vw; border-top: 1px solid #000;">
       <div
         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(2rem, 5vw, 10vw); align-items: start; position: relative;">
         <!-- DECORATIVE ARROW -->
@@ -1343,9 +1345,9 @@
         <div>
           <div style="margin-bottom: 4rem;">
             <span class="chapter-mark">CHAPTER VI: THE PHILOSOPHY</span>
-            <h2 class="halftone-text" style="margin-top: 1rem;">What to Expect.</h2>
+            <h2 class="halftone-text" style="margin-top: 1rem; margin-bottom: 3rem;">What to Expect.</h2>
           </div>
-          <h2 class="halftone-text pixel-header" style="color: var(--pop-green);">Ash
+          <h2 class="halftone-text pixel-header" style="color: var(--pop-green); margin-top: 5rem;">Ash
             &<br>Brittany</h2>
           <div class="mono-label" style="margin-top: 2rem; color: var(--pop-pink);">TEHACHAPI // BAKERSFIELD // LA //
             &
@@ -1403,16 +1405,17 @@
       </div>
     </section>
     <section id="protocol" class="bg-graph-dark"
-      style="padding: 15vh 10vw; border-top: 1px solid #222; position: relative; overflow: hidden; color: #fff;">
+      style="padding: 10vh 10vw; border-top: 1px solid #222; position: relative; overflow: hidden; color: #fff;">
       <!-- TOP PARALLAX DECOR -->
       <div class="parallax-layer halftone-text" data-speed="0.1"
-        style="position: absolute; top: 0; right: 0; font-size: 20vw; color: rgba(255,255,255,0.03); pointer-events: none;">
+        style="position: absolute; top: 15rem; right: 0; font-size: 15vw; color: rgba(255,255,255,0.02); pointer-events: none; z-index: 1;">
         SYSTEM</div>
       <div style="margin-bottom: 10vh; position: relative; z-index: 1;">
         <div style="padding: 0 10vw; margin-bottom: 8vh; position: relative; z-index: 10;" data-speed="-0.08">
           <span class="chapter-mark">COL_04: THE JOURNEY</span>
           <h2 class="halftone-text"
-            style="color: #fff; margin-top: 5rem; font-size: clamp(4rem, 12vw, 15rem); line-height: 0.75;">Our Process.
+            style="color: #fff; margin-top: 10rem; font-size: clamp(3.5rem, 10vw, 10rem); line-height: 0.75; position: relative; z-index: 10;">
+            Our Process.
           </h2>
           <div class="handwritten"
             style="color: var(--pop-pink); margin-top: 2rem; font-size: 2rem; transform: rotate(1deg);">"Walking you
@@ -1652,7 +1655,7 @@
 
     <!-- SECTION 04.75: FAQ (CLIPPY EDITOR) MOVED AFTER PROCESS -->
     <section id="faq-editor" class="bg-grid-holo"
-      style="padding: 15vh 5vw; border-top: 1px solid #000; position: relative;">
+      style="padding: 10vh 5vw; border-top: 1px solid #000; position: relative;">
       <div class="reveal parallax-layer" data-speed="0.05" data-no-click-close="true"
         style="max-width: 900px; margin: 0 auto; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); position: relative; z-index: 10;">
         <div
@@ -2190,7 +2193,7 @@
     </div>
 
     <!-- SECTION 08: THE DISPATCH (BLOG) -->
-    <section id="blog" style="background: var(--bg-paper); padding: 12vh 0; min-height: auto;">
+    <section id="blog" style="background: var(--bg-paper); padding: 8vh 0; min-height: auto;">
       <div class="section-header-wrap" style="padding: 0 10vw; margin-bottom: 8vh;">
         <span class="chapter-mark">CHAPTER X: THE DISPATCH</span>
         <h2 class="halftone-text" style="margin-top: 1rem;">Editorial Insights.</h2>
