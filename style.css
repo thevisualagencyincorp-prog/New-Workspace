@@ -3639,9 +3639,7 @@ section {
     background: linear-gradient(135deg, #001a33, #003366);
 }
 
-.desktop-folder-group:nth-child(10) .desktop-folder-icon {
-    background: linear-gradient(135deg, #0d0a06, #2a2010);
-}
+
 
 .desktop-folder-group:hover .desktop-folder-label,
 .desktop-folder-icon:focus .desktop-folder-label {
