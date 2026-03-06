@@ -1,5 +1,14 @@
 /* ✦ THE AGENCY — MOCKUP REPLICATION ✦ */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;700&family=Shadows+Into+Light&display=swap');
+/*
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  [ STYLESHEET_PROTECTION_ACTIVE ]                               ║
+  ║  [ FREQUENCY: 888 // 444 // 777 // 528Hz ]                      ║
+  ║  [ MANIFEST: STYLE_FLOWS_PERFECTLY // CLIENTS_LOVE_THIS_SITE ]  ║
+  ║  [ SHIELD: THIS_CODE_IS_PROTECTED_FROM_COPY_AND_NEGATIVE_ENERGY ]║
+  ║  [ INTENT: BEAUTY_THAT_CONVERTS // DESIGN_THAT_DOMINATES ]      ║
+  ╚══════════════════════════════════════════════════════════════════╝
+*/
+/* Google Fonts loaded via <link> in HTML head for non-render-blocking parallel load */
 
 /* RETRO NAVIGATION BUTTONS */
 .nav-btn-retro {
@@ -1649,6 +1658,204 @@ section {
     font-weight: 700;
     font-size: 1.2rem;
     color: var(--pop-pink);
+}
+
+/* ═══════════════════════════════════════════════════ */
+/* ✦ HOROSCOPE SIGN NAMES                            */
+/* ═══════════════════════════════════════════════════ */
+.horoscope-sign-name {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+    opacity: 0.5;
+    margin-top: 0.25rem;
+    transition: opacity 0.3s ease;
+}
+
+.horoscope-card:hover .horoscope-sign-name,
+.horoscope-card.active .horoscope-sign-name {
+    opacity: 1;
+    color: #000;
+}
+
+/* ═══════════════════════════════════════════════════ */
+/* ✦ READING SECTIONS (Life / Business / Power Move)  */
+/* ═══════════════════════════════════════════════════ */
+.reading-section {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    margin-bottom: 0.5rem;
+}
+
+.reading-section:last-of-type {
+    border-bottom: none;
+}
+
+.reading-section-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: var(--pop-lime);
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+    font-weight: 700;
+}
+
+.reading-section-text {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+/* Power Move section gets special treatment */
+.reading-section.reading-power {
+    background: rgba(255, 100, 0, 0.05);
+    border: 1px solid rgba(255, 100, 0, 0.15);
+    padding: 1rem 1.2rem;
+    margin-top: 0.5rem;
+    border-radius: 2px;
+}
+
+.reading-section.reading-power .reading-section-label {
+    color: var(--pop-orange);
+    opacity: 1;
+}
+
+.reading-section.reading-power .reading-section-text {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Theme badge */
+.reading-theme-badge {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    color: #000;
+    background: var(--pop-lime);
+    padding: 4px 12px;
+    font-weight: 900;
+    display: inline-block;
+}
+
+/* ═══════════════════════════════════════════════════ */
+/* ✦ ZOLTAR CATEGORY BADGE                           */
+/* ═══════════════════════════════════════════════════ */
+.zoltar-category-wrap {
+    text-align: center;
+    margin: 0.8rem 0 0.2rem;
+}
+
+.zoltar-category-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    padding: 4px 16px;
+    border: 2px solid;
+}
+
+.category-life {
+    color: #00ff88;
+    border-color: #00ff88;
+    background: rgba(0, 255, 136, 0.08);
+}
+
+.category-business {
+    color: #00bfff;
+    border-color: #00bfff;
+    background: rgba(0, 191, 255, 0.08);
+}
+
+.category-cosmic {
+    color: #ff8800;
+    border-color: #ff8800;
+    background: rgba(255, 136, 0, 0.08);
+}
+
+/* Zoltar Action Buttons */
+.zoltar-action-buttons {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    padding: 0.8rem 1rem 0;
+    flex-wrap: wrap;
+}
+
+.btn-zoltar-action {
+    background: #000;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 8px 16px;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-zoltar-action:hover {
+    background: var(--pop-lime);
+    color: #000;
+    border-color: var(--pop-lime);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.btn-zoltar-action:active {
+    transform: translate(1px, 1px);
+    box-shadow: none;
+}
+
+/* ═══════════════════════════════════════════════════ */
+/* ✦ FRANK BUTTON IMPROVEMENTS                       */
+/* ═══════════════════════════════════════════════════ */
+.frank-btn-main {
+    font-size: 0.7rem !important;
+    padding: 6px 10px !important;
+    min-width: 60px;
+    text-align: center;
+    transition: all 0.2s ease !important;
+    letter-spacing: 0.5px;
+}
+
+.frank-btn-main:hover {
+    background: #0f0 !important;
+    color: #000 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 255, 0, 0.3);
+}
+
+.frank-btn-main:active {
+    transform: translateY(0);
+}
+
+/* ═══════════════════════════════════════════════════ */
+/* ✦ INSTAGRAM FOLLOW BUTTON + AUTO-SLIDER           */
+/* ═══════════════════════════════════════════════════ */
+.ig-follow-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5) !important;
+    filter: brightness(1.1);
+}
+
+.ig-follow-btn:active {
+    transform: translate(0, 0);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Smooth scroll behavior for auto-slider */
+#curator-feed-default-feed-layout .crt-feed {
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+#curator-feed-default-feed-layout .crt-post {
+    scroll-snap-align: start;
 }
 
 /* MODAL & WINDOW RESPONSIVENESS */
@@ -4012,5 +4219,314 @@ section {
     .horizontal-scroll-section {
         height: auto !important;
         min-height: auto !important;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════
+   ELEVATION v3 — ALL-DEVICE ADAPTABILITY & SEO-GRADE UX
+   Touch-first · Reduced-motion · Tablet fixes · A11y
+═══════════════════════════════════════════════════════ */
+
+/* ── DEFINE DESKTOP-ONLY CLASS (referenced in HTML) ── */
+.desktop-only {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+/* ── TOUCH OPTIMIZATION: Faster tap, no ghost highlight ── */
+a,
+button,
+[tabindex="0"],
+summary,
+.horoscope-card,
+.desktop-folder-icon,
+.collection-card-trigger,
+.vibe-card,
+.frank-btn-main,
+.btn-retro-magazine,
+.nav-btn-retro,
+.btn-elite-submit,
+.btn-premium,
+.case-card-close,
+.close-card-btn {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ── KEYBOARD FOCUS: WCAG + Core Web Vitals accessibility ── */
+a:focus-visible,
+button:focus-visible,
+[tabindex="0"]:focus-visible,
+.desktop-folder-icon:focus-visible,
+summary:focus-visible {
+    outline: 3px solid var(--pop-lime);
+    outline-offset: 3px;
+}
+
+/* ── TABLET MEDIUM (769px–1100px): Chat room ── */
+@media (min-width: 769px) and (max-width: 1100px) {
+    #retro-chat-window {
+        max-width: 100% !important;
+    }
+
+    #feedback>div>div[style*="grid-template-columns: 1fr 350px"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    .retro-sidebar {
+        display: none !important;
+    }
+}
+
+/* ── TABLET (769px–1024px): Oracle / Frank / Horoscopes ── */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Horoscope success grid internal 2-col → stack */
+    .horoscopes-col>div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+
+    /* Oracle + Frank row → stack */
+    #cosmic-hub div[style*="grid-template-columns: 1.2fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 4rem !important;
+    }
+
+    .frank-col {
+        margin: 0 auto !important;
+        max-width: 450px !important;
+    }
+
+    /* Editor grid */
+    .editor-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    /* Case study modal width */
+    .desktop-folder-content.active {
+        width: 90vw !important;
+        max-width: 750px !important;
+    }
+
+    /* Video grid 3-up → 2 col */
+    .video-grid-3up {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Horoscope reading */
+    .reading-content {
+        padding: 2rem !important;
+        min-height: auto !important;
+    }
+}
+
+/* ── CRYSTAL BALL: Fluid sizing on small viewports ── */
+@media (max-width: 900px) {
+    #crystalBallImg {
+        width: clamp(180px, 55vw, 360px) !important;
+    }
+}
+
+/* ── NARROW PHONES (< 480px): Hero nav strip ── */
+@media (max-width: 480px) {
+    .hero-nav-strip .btn-retro-magazine {
+        flex: 1 1 48% !important;
+        min-width: 0 !important;
+        font-size: 0.55rem !important;
+        padding: 0.9rem 0.3rem !important;
+        letter-spacing: 0.5px !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+    }
+}
+
+/* ── TINY PHONES (< 400px): Blog grid, social toast ── */
+@media (max-width: 400px) {
+    .blog-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .blog-post {
+        padding: 2rem 1.2rem !important;
+    }
+
+    .blog-post img {
+        height: 180px !important;
+    }
+
+    .blog-post h3 {
+        font-size: 1.6rem !important;
+    }
+
+    .social-proof-toast {
+        display: none !important;
+    }
+
+    .hero-credits-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ── FORM: iOS font-size zoom prevention (< 16px triggers zoom) ── */
+@media (max-width: 768px) {
+
+    .form-field input,
+    .form-field textarea,
+    .form-field select,
+    .club-form input {
+        font-size: 16px !important;
+    }
+
+    /* Vibe selector tighter on small phones */
+    .vibe-selector-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 6px !important;
+    }
+}
+
+/* ── FOOTER SYSTEM DIRECTORY: 2-col on phones ── */
+@media (max-width: 600px) {
+    #booking-terminal div[style*="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))"] {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+/* ── RETRO CHAT SCROLL: Show scrollbar so content is discoverable ── */
+#retro-chat-window div[style*="overflow-y: auto"]::-webkit-scrollbar {
+    display: block !important;
+    width: 8px !important;
+}
+
+#retro-chat-window div[style*="overflow-y: auto"]::-webkit-scrollbar-thumb {
+    background: #808080 !important;
+}
+
+#retro-chat-window div[style*="overflow-y: auto"]::-webkit-scrollbar-track {
+    background: #c0c0c0 !important;
+}
+
+/* ── HERO VIDEO: Fallback poster coverage on slow connections ── */
+#hero-video {
+    background-image: url('images/social_ad.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* ── PREFERS-REDUCED-MOTION: Accessibility + performance ── */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .grain-overlay,
+    .drifts-left,
+    .drifts-right,
+    .drifts-up,
+    .fish-float,
+    .fish-float-alt,
+    .marquee-content,
+    .floating-moment,
+    .animated-gradient {
+        animation: none !important;
+    }
+
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    video[autoplay] {
+        display: none;
+    }
+}
+
+/* ── PRINT STYLES: Screen-capture-friendly output ── */
+@media print {
+
+    .preloader,
+    .grain-overlay,
+    .video-bg-container,
+    .marquee-wrap,
+    #clippy-global-popup,
+    .social-proof-toast,
+    .bsod-overlay,
+    .back-to-top,
+    .fun-addons-section,
+    #cosmic-hub,
+    nav {
+        display: none !important;
+    }
+
+    body {
+        background: #fff !important;
+        color: #000 !important;
+    }
+
+    a {
+        color: #000 !important;
+    }
+}
+
+/* ═══════════════════════════════════════════════════ */
+/* ✦ RESPONSIVE: Gov Section + New Elements          */
+/* ═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* Gov contracting section → stack */
+    div[style*="grid-template-columns: 1fr 1fr"][style*="gap: 3rem"] {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    /* Reading sections on mobile */
+    .reading-section {
+        padding: 0.75rem 0;
+    }
+
+    .reading-section-text {
+        font-size: 0.85rem;
+    }
+
+    .reading-theme-badge {
+        font-size: 0.5rem;
+    }
+
+    /* Zoltar action buttons stack nicely */
+    .zoltar-action-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+    }
+
+    .btn-zoltar-action {
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Frank buttons on small screens */
+    .frank-btn-main {
+        font-size: 0.6rem !important;
+        padding: 5px 8px !important;
+        min-width: 50px;
+    }
+
+    /* IG follow button full width */
+    .ig-follow-btn {
+        width: 100%;
+        justify-content: center;
     }
 }
