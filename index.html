@@ -494,7 +494,7 @@
           // Suppress hero video on mobile — poster image covers it, saves ~10MB of bandwidth
           if (window.innerWidth <= 768 || navigator.connection && navigator.connection.saveData) {
             var v = document.getElementById('hero-video');
-            if (v) { v.removeAttribute('autoplay'); v.pause(); v.querySelectorAll('source').forEach(function(s){ s.removeAttribute('src'); }); v.load(); }
+            if (v) { v.removeAttribute('autoplay'); v.pause(); v.querySelectorAll('source').forEach(function (s) { s.removeAttribute('src'); }); v.load(); }
           }
         </script>
         <div class="video-bg-overlay"
@@ -621,8 +621,8 @@
           <!-- Col 4: Visual -->
           <div class="header-credit-card"
             style="background: #0d0d0d; color: #fff; padding: 0; position: relative; overflow: hidden; min-height: 120px;">
-            <img src="images/ed_agency_header.jpg"
-              alt="High-end marketing photography studio shoot in Bakersfield" loading="lazy" width="400" height="120"
+            <img src="images/ed_agency_header.jpg" alt="High-end marketing photography studio shoot in Bakersfield"
+              loading="lazy" width="400" height="120"
               style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.6; mix-blend-mode: luminosity;">
             <div style="position: absolute; top: 1rem; right: 1rem; z-index: 2;">
               <span
@@ -720,14 +720,15 @@
               style="background: #fff; padding: 15px 15px 60px 15px; transform: rotate(-1.5deg); box-shadow: 30px 30px 0 rgba(0,0,0,0.08); border: 1px solid #000;">
               <img src="images/ash_and_brittany_portrait.jpg"
                 alt="Ash and Brittany, founders of The Agency — Bakersfield branding studio" loading="lazy" width="600"
-                height="750" style="width: 100%; height: auto; display: block; filter: contrast(1.1) brightness(1.05); border: 1px solid #111;">
+                height="750"
+                style="width: 100%; height: auto; display: block; filter: contrast(1.1) brightness(1.05); border: 1px solid #111;">
               <div class="handwritten"
                 style="position: absolute; bottom: 20px; text-align: center; width: 100%; left: 0; color: #000; font-weight: 900; font-size: 1.8rem; transform: rotate(1deg);">
                 xo, Ash & Brittany</div>
             </div>
             <!-- Sticker on photo -->
             <div class="drifts-right sticker"
-              style="top: 0; right: 0; transform: rotate(15deg); background: var(--pop-lime); color: #000; padding: 10px 20px; font-weight: 900; box-shadow: 5px 5px 0 rgba(0,0,0,0.5);">
+              style="top: 15px; right: 15px; transform: rotate(15deg); background: var(--pop-lime); color: #000; padding: 10px 20px; font-weight: 900; box-shadow: 5px 5px 0 rgba(0,0,0,0.5);">
               DISABLED VETERAN OWNED</div>
             <div class="drifts-left handwritten"
               style="position: absolute; bottom: -2rem; left: -1rem; color: var(--pop-pink); font-size: 1.4rem; transform: rotate(-5deg);">
@@ -789,7 +790,8 @@
     <!-- ✦ [ NODE_528: REPAIR_AND_TRANSFORM ] [ EVERY_BRAND_WE_TOUCH_IS_HEALED_AND_ELEVATED ] ✦ -->
     <!-- ✦ SIGNAL_02: PROOF IS A MAGNET. EVIDENCE OF EXCELLENCE ATTRACTS MORE EXCELLENCE. -->
     <!-- SECTION 05: THE ARCHIVE (CASE STUDIES) -->
-    <section id="archive" class="bg-graph-dark" style="padding: 8vh 0; border-top: 1px solid #000; animation-delay: -6s;">
+    <section id="archive" class="bg-graph-dark"
+      style="padding: 8vh 0; border-top: 1px solid #000; animation-delay: -6s;">
       <div style="text-align: center; margin-bottom: 6vh; position: relative; z-index: 2;">
         <span class="chapter-mark">CHAPTER II: THE ARCHIVE</span>
         <h2 class="halftone-text" style="color: white; position: relative; z-index: 10; margin-top: 1rem;">Selected
@@ -840,7 +842,8 @@
                     <div class="mb-tagline handwritten">"Where luxury becomes accessible"</div>
                   </div>
                   <div class="mb-hero-img">
-                    <img src="images/ed_wax_luxury.jpg" alt="Wax Therapy luxury beauty brand aesthetic" loading="lazy" style="object-position: center top;">
+                    <img src="images/ed_wax_luxury.jpg" alt="Wax Therapy luxury beauty brand aesthetic" loading="lazy"
+                      style="object-position: center top;">
                     <div class="mb-grain"></div>
                   </div>
                 </div>
@@ -878,7 +881,9 @@
                   </div>
                   <div class="mb-outcome-col">
                     <span class="mb-section-label">The Outcome</span>
-                    <p class="mb-outcome-text">90% increase in bookings within 14 days and an immediate commanding presence in a crowded market. Brand positioning redefined from generic to unmistakably elevated.</p>
+                    <p class="mb-outcome-text">90% increase in bookings within 14 days and an immediate commanding
+                      presence in a crowded market. Brand positioning redefined from generic to unmistakably elevated.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -908,7 +913,8 @@
                     <div class="mb-tagline handwritten">"Healing deserves a brand that feels like safety"</div>
                   </div>
                   <div class="mb-hero-img">
-                    <img src="images/ed_dr_safir_therapy.jpg" alt="Dr. Safir therapist San Diego brand and web design" loading="lazy" style="object-position: center top;">
+                    <img src="images/ed_dr_safir_therapy.jpg" alt="Dr. Safir therapist San Diego brand and web design"
+                      loading="lazy" style="object-position: center top;">
                     <div class="mb-grain"></div>
                   </div>
                 </div>
@@ -946,10 +952,14 @@
                   </div>
                   <div class="mb-outcome-col">
                     <span class="mb-section-label">The Outcome</span>
-                    <p class="mb-outcome-text">A private therapy practice in San Diego elevated from invisible to the #1 Google result in her market. The brand now communicates warmth, safety, and expertise — before a client ever books a session.</p>
+                    <p class="mb-outcome-text">A private therapy practice in San Diego elevated from invisible to the #1
+                      Google result in her market. The brand now communicates warmth, safety, and expertise — before a
+                      client ever books a session.</p>
                     <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem;">
-                      <a href="https://www.drpaulajimenezsafir.com/" target="_blank" class="mb-site-link">VIEW DR. SAFIR'S SITE →</a>
-                      <a href="https://www.sandiego.gov/" target="_blank" class="mb-site-link" style="opacity: 0.65; font-size: 0.55rem;">CITY OF SAN DIEGO, CA →</a>
+                      <a href="https://www.drpaulajimenezsafir.com/" target="_blank" class="mb-site-link">VIEW DR.
+                        SAFIR'S SITE →</a>
+                      <a href="https://www.sandiego.gov/" target="_blank" class="mb-site-link"
+                        style="opacity: 0.65; font-size: 0.55rem;">CITY OF SAN DIEGO, CA →</a>
                     </div>
                   </div>
                 </div>
@@ -980,7 +990,8 @@
                     <div class="mb-tagline handwritten">"Cinema as a brand weapon"</div>
                   </div>
                   <div class="mb-hero-img">
-                    <img src="images/ed_camera_gear.jpg" alt="Twisted Lens Studios cinematic photography gear" loading="lazy">
+                    <img src="images/ed_camera_gear.jpg" alt="Twisted Lens Studios cinematic photography gear"
+                      loading="lazy">
                     <div class="mb-grain"></div>
                   </div>
                 </div>
@@ -1018,7 +1029,9 @@
                   </div>
                   <div class="mb-outcome-col">
                     <span class="mb-section-label">The Outcome</span>
-                    <p class="mb-outcome-text">Transformed fragmented creative output into beautifully organized, high-impact legacy campaigns. Audience loyalty engineered through premium visual storytelling at scale.</p>
+                    <p class="mb-outcome-text">Transformed fragmented creative output into beautifully organized,
+                      high-impact legacy campaigns. Audience loyalty engineered through premium visual storytelling at
+                      scale.</p>
                   </div>
                 </div>
               </div>
@@ -1048,7 +1061,8 @@
                     <div class="mb-tagline handwritten">"Boutique authority, scaled"</div>
                   </div>
                   <div class="mb-hero-img">
-                    <img src="images/ed_fashion_model.jpg" alt="Keren Hart fashion brand development editorial" loading="lazy">
+                    <img src="images/ed_fashion_model.jpg" alt="Keren Hart fashion brand development editorial"
+                      loading="lazy">
                     <div class="mb-grain"></div>
                   </div>
                 </div>
@@ -1086,7 +1100,8 @@
                   </div>
                   <div class="mb-outcome-col">
                     <span class="mb-section-label">The Outcome</span>
-                    <p class="mb-outcome-text">Elevated market positioning and consistent aesthetic authority across all segments. The brand now speaks to its clientele before a single word is read.</p>
+                    <p class="mb-outcome-text">Elevated market positioning and consistent aesthetic authority across all
+                      segments. The brand now speaks to its clientele before a single word is read.</p>
                   </div>
                 </div>
               </div>
@@ -1119,7 +1134,8 @@
                     <div class="mb-tagline handwritten">"Elite space, impossible to ignore"</div>
                   </div>
                   <div class="mb-hero-img">
-                    <img src="images/ed_loft_interior.jpg" alt="The Loft Studios editorial interior space" loading="lazy">
+                    <img src="images/ed_loft_interior.jpg" alt="The Loft Studios editorial interior space"
+                      loading="lazy">
                     <div class="mb-grain"></div>
                   </div>
                 </div>
@@ -1156,7 +1172,8 @@
                   </div>
                   <div class="mb-outcome-col">
                     <span class="mb-section-label">The Outcome</span>
-                    <p class="mb-outcome-text">Immediate waitlist status post-rebrand and 100% occupancy within 30 days. A premium creative space finally looked as good as it felt.</p>
+                    <p class="mb-outcome-text">Immediate waitlist status post-rebrand and 100% occupancy within 30 days.
+                      A premium creative space finally looked as good as it felt.</p>
                   </div>
                 </div>
               </div>
@@ -1190,7 +1207,8 @@
                     <div class="mb-tagline handwritten">"Care deserves a brand that shows it"</div>
                   </div>
                   <div class="mb-hero-img">
-                    <img src="images/ed_wellness_spa.jpg" alt="Wellness Collective clean brand aesthetic" loading="lazy">
+                    <img src="images/ed_wellness_spa.jpg" alt="Wellness Collective clean brand aesthetic"
+                      loading="lazy">
                     <div class="mb-grain"></div>
                   </div>
                 </div>
@@ -1228,7 +1246,8 @@
                   </div>
                   <div class="mb-outcome-col">
                     <span class="mb-section-label">The Outcome</span>
-                    <p class="mb-outcome-text">45% increase in online inquiries and optimized conversion funnels for new patients. The brand now leads with trust before a patient walks through the door.</p>
+                    <p class="mb-outcome-text">45% increase in online inquiries and optimized conversion funnels for new
+                      patients. The brand now leads with trust before a patient walks through the door.</p>
                   </div>
                 </div>
               </div>
@@ -1258,7 +1277,8 @@
                     <div class="mb-tagline handwritten">"We build the DNA of dominant brands"</div>
                   </div>
                   <div class="mb-hero-img">
-                    <img src="images/ash_and_brittany_portrait.jpg" alt="Ash and Brittany — The Agency founders" loading="lazy">
+                    <img src="images/ash_and_brittany_portrait.jpg" alt="Ash and Brittany — The Agency founders"
+                      loading="lazy">
                     <div class="mb-grain"></div>
                   </div>
                 </div>
@@ -1295,7 +1315,8 @@
                   </div>
                   <div class="mb-outcome-col">
                     <span class="mb-section-label">The Process</span>
-                    <p class="mb-outcome-text">Every brand we build starts with why it should exist — then we engineer the visual language to make the market feel that reason before they can articulate it.</p>
+                    <p class="mb-outcome-text">Every brand we build starts with why it should exist — then we engineer
+                      the visual language to make the market feel that reason before they can articulate it.</p>
                   </div>
                 </div>
               </div>
@@ -1321,8 +1342,10 @@
                     <h3 class="mb-client-name">Daylily<br>Events.</h3>
                     <div class="mb-tagline handwritten">"A 2010 site reborn for a new era"</div>
                   </div>
-                  <div class="mb-hero-img" style="background: linear-gradient(135deg, #1a0a0f 0%, #3d1a2a 100%); display:flex; align-items:center; justify-content:center;">
-                    <span style="font-family:var(--font-serif); font-size:4rem; color: #F4A7B9; opacity:0.4; font-style:italic;">daylilyevents.com</span>
+                  <div class="mb-hero-img"
+                    style="background: linear-gradient(135deg, #1a0a0f 0%, #3d1a2a 100%); display:flex; align-items:center; justify-content:center;">
+                    <span
+                      style="font-family:var(--font-serif); font-size:4rem; color: #F4A7B9; opacity:0.4; font-style:italic;">daylilyevents.com</span>
                     <div class="mb-grain"></div>
                   </div>
                 </div>
@@ -1359,7 +1382,9 @@
                   </div>
                   <div class="mb-outcome-col">
                     <span class="mb-section-label">The Outcome</span>
-                    <p class="mb-outcome-text">A site that had been functioning since 2010 was transformed into a modern, multi-revenue platform with new collections and a coaching program — honoring the legacy while building the next chapter.</p>
+                    <p class="mb-outcome-text">A site that had been functioning since 2010 was transformed into a
+                      modern, multi-revenue platform with new collections and a coaching program — honoring the legacy
+                      while building the next chapter.</p>
                     <a href="https://www.daylilyevents.com/" target="_blank" class="mb-site-link">VIEW LIVE SITE →</a>
                   </div>
                 </div>
@@ -1386,8 +1411,10 @@
                     <h3 class="mb-client-name">Keene<br>Water Systems.</h3>
                     <div class="mb-tagline handwritten">"Industrial authority, digitally elevated"</div>
                   </div>
-                  <div class="mb-hero-img" style="background: linear-gradient(135deg, #001a33 0%, #003366 100%); display:flex; align-items:center; justify-content:center;">
-                    <span style="font-family:var(--font-mono); font-size:2rem; color: #00BFFF; opacity:0.35; letter-spacing:4px;">KEENEWATERSYSTEMS.NET</span>
+                  <div class="mb-hero-img"
+                    style="background: linear-gradient(135deg, #001a33 0%, #003366 100%); display:flex; align-items:center; justify-content:center;">
+                    <span
+                      style="font-family:var(--font-mono); font-size:2rem; color: #00BFFF; opacity:0.35; letter-spacing:4px;">KEENEWATERSYSTEMS.NET</span>
                     <div class="mb-grain"></div>
                   </div>
                 </div>
@@ -1424,7 +1451,8 @@
                   </div>
                   <div class="mb-outcome-col">
                     <span class="mb-section-label">The Outcome</span>
-                    <p class="mb-outcome-text">Industrial credibility meets modern digital authority. A business built on quality now has a digital presence that communicates that standard from the first click.</p>
+                    <p class="mb-outcome-text">Industrial credibility meets modern digital authority. A business built
+                      on quality now has a digital presence that communicates that standard from the first click.</p>
                     <a href="https://keenewatersystems.net" target="_blank" class="mb-site-link">VIEW LIVE SITE →</a>
                   </div>
                 </div>
@@ -1571,7 +1599,9 @@
                 High-frequency connection established.</div>
               <div style="margin-bottom: 10px; color: #808080; font-style: italic;">*** DR_SAFIR has entered the room.
               </div>
-              <div style="margin-bottom: 15px;"><b style="color: red;">DR_SAFIR:</b> As a therapist in San Diego I needed a brand that felt safe and warm — not corporate. They nailed it. New site, new presence, Google rank #1 in my market. My practice has never felt more me. 🌊💙</div>
+              <div style="margin-bottom: 15px;"><b style="color: red;">DR_SAFIR:</b> As a therapist in San Diego I
+                needed a brand that felt safe and warm — not corporate. They nailed it. New site, new presence, Google
+                rank #1 in my market. My practice has never felt more me. 🌊💙</div>
               <div style="margin-bottom: 15px;"><b style="color: darkgreen;">[MOD] ASH:</b> Just reviewed the latest SEO
                 maps for CA... besties, we are moving up. The frequency is absolute! 📈✨</div>
               <div style="margin-bottom: 10px; color: #808080; font-style: italic;">*** KERENHART has entered the room.
@@ -1945,8 +1975,9 @@
       </div>
 
       <!-- FEATURED VIDEO (full width) -->
-      <div style="position: relative; width: 100%; aspect-ratio: 16/9; background: #111; overflow: hidden;">
-        <video autoplay muted loop playsinline preload="none"
+      <div
+        style="position: relative; width: 100%; aspect-ratio: 16/9; max-height: 70vh; background: #111; overflow: hidden;">
+        <video autoplay muted loop playsinline preload="auto"
           style="width: 100%; height: 100%; object-fit: cover; display: block;"
           aria-label="The Agency commercial production showreel">
           <source src="images/Website Mens Fashion copy.mp4" type="video/mp4">
@@ -1967,31 +1998,36 @@
         style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #111;">
 
         <div style="position: relative; aspect-ratio: 9/16; background: #0a0a0a; overflow: hidden;">
-          <video autoplay muted loop playsinline preload="none" style="width: 100%; height: 100%; object-fit: cover;">
+          <video autoplay muted loop playsinline preload="auto" poster="images/ed_wax_luxury.jpg"
+            style="width: 100%; height: 100%; object-fit: cover;">
             <source src="images/6430754-hd_1080_1920_30fps copy.mp4" type="video/mp4">
           </video>
           <div
-            style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.8rem; background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+            style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.8rem; background: linear-gradient(transparent, rgba(0,0,0,0.8)); z-index: 2;">
             <div class="mono-label" style="color: #fff; font-size: 0.5rem; opacity: 0.8;">COMMERCIAL PRODUCTION</div>
           </div>
         </div>
 
         <div style="position: relative; aspect-ratio: 9/16; background: #0a0a0a; overflow: hidden;">
-          <video autoplay muted loop playsinline preload="none" style="width: 100%; height: 100%; object-fit: cover;">
+          <video autoplay muted loop playsinline preload="auto" poster="images/lady and palms.webp"
+            style="width: 100%; height: 100%; object-fit: cover;">
             <source src="images/Retro camcorder travel Instagram video story copy.mp4" type="video/mp4">
           </video>
+          <!-- Additional dark overlay to improve readability of baked-in video text -->
+          <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.3); z-index: 1;"></div>
           <div
-            style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.8rem; background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+            style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.8rem; background: linear-gradient(transparent, rgba(0,0,0,0.8)); z-index: 2;">
             <div class="mono-label" style="color: #fff; font-size: 0.5rem; opacity: 0.8;">SOCIAL CONTENT</div>
           </div>
         </div>
 
         <div style="position: relative; aspect-ratio: 9/16; background: #0a0a0a; overflow: hidden;">
-          <video autoplay muted loop playsinline preload="none" style="width: 100%; height: 100%; object-fit: cover;">
+          <video autoplay muted loop playsinline preload="auto" poster="images/ed_fashion_model.jpg"
+            style="width: 100%; height: 100%; object-fit: cover;">
             <source src="images/promo copy.mp4" type="video/mp4">
           </video>
           <div
-            style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.8rem; background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+            style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.8rem; background: linear-gradient(transparent, rgba(0,0,0,0.8)); z-index: 2;">
             <div class="mono-label" style="color: #fff; font-size: 0.5rem; opacity: 0.8;">BRAND PROMO</div>
           </div>
         </div>
@@ -2019,7 +2055,8 @@
       <div class="vi-masthead">
         <span class="chapter-mark vi-chapter-label">CHAPTER VI</span>
         <span class="vi-rule-line"></span>
-        <span class="mono-label vi-issue-stamp">THE PHILOSOPHY &nbsp;·&nbsp; EST. 2006 &nbsp;·&nbsp; BAKERSFIELD CA</span>
+        <span class="mono-label vi-issue-stamp">THE PHILOSOPHY &nbsp;·&nbsp; EST. 2006 &nbsp;·&nbsp; BAKERSFIELD
+          CA</span>
       </div>
 
       <!-- Main editorial grid -->
@@ -2040,7 +2077,8 @@
           <div class="vi-polaroid-outer parallax-layer" data-speed="0.03">
             <div class="vi-tape"></div>
             <div class="vi-polaroid-frame">
-              <img src="images/ash_and_brittany_portrait.jpg" alt="Ash and Brittany — your business besties" class="vi-polaroid-img">
+              <img src="images/ash_and_brittany_portrait.jpg" alt="Ash and Brittany — your business besties"
+                class="vi-polaroid-img">
               <div class="vi-polaroid-caption">xoxox Your Business Besties</div>
             </div>
           </div>
@@ -2053,17 +2091,20 @@
 
           <!-- Pull quote -->
           <blockquote class="vi-pullquote">
-            <span class="vi-quote-mark">"</span>Your business besties<br>and aesthetic engineers.<span class="vi-quote-mark">"</span>
+            <span class="vi-quote-mark">"</span>Your business besties<br>and aesthetic engineers.<span
+              class="vi-quote-mark">"</span>
           </blockquote>
 
           <!-- Win95 Notepad card -->
           <div class="vi-notepad">
             <div class="vi-notepad-bar">
-              <span><span style="font-size:1.1rem; vertical-align:middle; margin-right:4px;">📝</span> NOTEPAD.EXE</span>
+              <span><span style="font-size:1.1rem; vertical-align:middle; margin-right:4px;">📝</span>
+                NOTEPAD.EXE</span>
               <span class="vi-notepad-x">X</span>
             </div>
             <div class="vi-notepad-body">
-              <p>Brand therapy meets tactical execution. We help ambitious ideas stand out and scale strategically. No burnout. Just absolute dominance.</p>
+              <p>Brand therapy meets tactical execution. We help ambitious ideas stand out and scale strategically. No
+                burnout. Just absolute dominance.</p>
               <div class="vi-notepad-cta">
                 <button onclick="document.getElementById('cv-modal').style.display='flex';" class="vi-cv-btn">
                   <span>⚡</span> VIEW AGENCY CV
@@ -2076,7 +2117,7 @@
           <!-- Decorative annotation -->
           <div class="annotation-graphic" style="position: absolute; bottom: 2rem; right: 0; top: auto;">
             <svg class="arrow-vector" viewBox="0 0 100 100">
-              <path d="M10,50 L90,50 M70,30 L90,50 L70,70" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M10,50 L90,50 M70,30 L90,50 L70,70" fill="none" stroke="currentColor" stroke-width="2" />
             </svg>
             <span style="display:block; margin-top:8px;">VIBE_CHECK_STATION</span>
           </div>
@@ -2086,7 +2127,11 @@
 
       <!-- Bottom ticker -->
       <div class="vi-ticker-wrap">
-        <div class="vi-ticker mono-label">FEMALE DISABLED VETERAN OWNED &nbsp;·&nbsp; YOUR BUSINESS BESTIES &nbsp;·&nbsp; BRAND THERAPY MEETS TACTICAL EXECUTION &nbsp;·&nbsp; ABSOLUTE DOMINANCE &nbsp;·&nbsp; BAKERSFIELD CA EST 2006 &nbsp;·&nbsp; &nbsp;&nbsp;FEMALE DISABLED VETERAN OWNED &nbsp;·&nbsp; YOUR BUSINESS BESTIES &nbsp;·&nbsp; BRAND THERAPY MEETS TACTICAL EXECUTION &nbsp;·&nbsp; ABSOLUTE DOMINANCE &nbsp;·&nbsp; BAKERSFIELD CA EST 2006 &nbsp;·&nbsp;</div>
+        <div class="vi-ticker mono-label">FEMALE DISABLED VETERAN OWNED &nbsp;·&nbsp; YOUR BUSINESS BESTIES
+          &nbsp;·&nbsp; BRAND THERAPY MEETS TACTICAL EXECUTION &nbsp;·&nbsp; ABSOLUTE DOMINANCE &nbsp;·&nbsp;
+          BAKERSFIELD CA EST 2006 &nbsp;·&nbsp; &nbsp;&nbsp;FEMALE DISABLED VETERAN OWNED &nbsp;·&nbsp; YOUR BUSINESS
+          BESTIES &nbsp;·&nbsp; BRAND THERAPY MEETS TACTICAL EXECUTION &nbsp;·&nbsp; ABSOLUTE DOMINANCE &nbsp;·&nbsp;
+          BAKERSFIELD CA EST 2006 &nbsp;·&nbsp;</div>
       </div>
 
     </section>
@@ -2542,19 +2587,39 @@
         <!-- MOTIVATIONAL WIN95 POPUPS — animated over section header -->
         <style>
           @keyframes winPopIn {
-            0%   { opacity: 0; transform: scale(0.85) rotate(var(--win-rot, -2deg)); }
-            12%  { opacity: 1; transform: scale(1)    rotate(var(--win-rot, -2deg)); }
-            78%  { opacity: 1; transform: scale(1)    rotate(var(--win-rot, -2deg)); }
-            95%  { opacity: 0; transform: scale(0.95) rotate(var(--win-rot, -2deg)); }
-            100% { opacity: 0; transform: scale(0.85) rotate(var(--win-rot, -2deg)); }
+            0% {
+              opacity: 0;
+              transform: scale(0.85) rotate(var(--win-rot, -2deg));
+            }
+
+            12% {
+              opacity: 1;
+              transform: scale(1) rotate(var(--win-rot, -2deg));
+            }
+
+            78% {
+              opacity: 1;
+              transform: scale(1) rotate(var(--win-rot, -2deg));
+            }
+
+            95% {
+              opacity: 0;
+              transform: scale(0.95) rotate(var(--win-rot, -2deg));
+            }
+
+            100% {
+              opacity: 0;
+              transform: scale(0.85) rotate(var(--win-rot, -2deg));
+            }
           }
+
           .win-motivational {
             position: absolute;
             width: 240px;
             background: silver;
             border: 2px solid;
             border-color: #fff #000 #000 #fff;
-            box-shadow: 6px 6px 0 rgba(0,0,0,0.6);
+            box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.6);
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.68rem;
             animation: winPopIn 7s ease-in-out infinite;
@@ -2562,6 +2627,7 @@
             opacity: 0;
             z-index: 300;
           }
+
           .win-motivational .wm-title {
             background: darkblue;
             color: #fff;
@@ -2572,6 +2638,7 @@
             align-items: center;
             user-select: none;
           }
+
           .win-motivational .wm-x {
             background: silver;
             color: #000;
@@ -2580,16 +2647,19 @@
             padding: 0 4px;
             line-height: 1.4;
           }
+
           .win-motivational .wm-body {
             padding: 10px 12px;
             color: #000;
             line-height: 1.6;
           }
+
           .win-motivational .wm-footer {
             padding: 5px;
             text-align: center;
             border-top: 1px solid #aaa;
           }
+
           .win-motivational .wm-btn {
             background: silver;
             border: 2px solid;
@@ -2599,14 +2669,26 @@
             padding: 2px 16px;
             cursor: default;
           }
-          @media (max-width: 768px) { .cosmic-popup-layer { display: none; } }
-          @media (prefers-reduced-motion: reduce) { .win-motivational { display: none; } }
+
+          @media (max-width: 768px) {
+            .cosmic-popup-layer {
+              display: none;
+            }
+          }
+
+          @media (prefers-reduced-motion: reduce) {
+            .win-motivational {
+              display: none;
+            }
+          }
         </style>
 
-        <div class="cosmic-popup-layer" style="position: absolute; inset: 0; overflow: visible; pointer-events: none; height: 0;">
+        <div class="cosmic-popup-layer"
+          style="position: absolute; inset: 0; overflow: visible; pointer-events: none; height: 0;">
 
           <!-- Popup 1: Frequency Check -->
-          <div class="win-motivational" style="top: 20px; right: 6%; --win-rot: -3deg; animation-delay: 0.5s; pointer-events: auto;">
+          <div class="win-motivational"
+            style="top: 20px; right: 6%; --win-rot: -3deg; animation-delay: 0.5s; pointer-events: auto;">
             <div class="wm-title">
               <span>✦ FREQUENCY_CHECK.EXE</span>
               <span class="wm-x">X</span>
@@ -2620,7 +2702,8 @@
           </div>
 
           <!-- Popup 2: Brand Loader -->
-          <div class="win-motivational" style="top: 10px; left: 3%; --win-rot: 2deg; animation-delay: 2.8s; pointer-events: auto;">
+          <div class="win-motivational"
+            style="top: 10px; left: 3%; --win-rot: 2deg; animation-delay: 2.8s; pointer-events: auto;">
             <div class="wm-title">
               <span>💫 BRAND_LOADER.EXE</span>
               <span class="wm-x">X</span>
@@ -2634,7 +2717,8 @@
           </div>
 
           <!-- Popup 3: Oracle Message -->
-          <div class="win-motivational" style="top: 40px; right: 32%; --win-rot: 1deg; animation-delay: 5s; pointer-events: auto;">
+          <div class="win-motivational"
+            style="top: 40px; right: 32%; --win-rot: 1deg; animation-delay: 5s; pointer-events: auto;">
             <div class="wm-title">
               <span>🌙 ORACLE_MSG.EXE</span>
               <span class="wm-x">X</span>
@@ -2661,83 +2745,84 @@
               DAILY_RECHARGE ]</div>
           </div>
 
-          <div class="horoscope-grid" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-bottom: 10px;">
-              <div class="horoscope-card active" data-sign="aries"><span class="horoscope-symbol">♈</span><span
-                  class="horoscope-sign-name">ARIES</span></div>
-              <div class="horoscope-card" data-sign="taurus"><span class="horoscope-symbol">♉</span><span
-                  class="horoscope-sign-name">TAURUS</span></div>
-              <div class="horoscope-card" data-sign="gemini"><span class="horoscope-symbol">♊</span><span
-                  class="horoscope-sign-name">GEMINI</span></div>
-              <div class="horoscope-card" data-sign="cancer"><span class="horoscope-symbol">♋</span><span
-                  class="horoscope-sign-name">CANCER</span></div>
-              <div class="horoscope-card" data-sign="leo"><span class="horoscope-symbol">♌</span><span
-                  class="horoscope-sign-name">LEO</span></div>
-              <div class="horoscope-card" data-sign="virgo"><span class="horoscope-symbol">♍</span><span
-                  class="horoscope-sign-name">VIRGO</span></div>
-              <div class="horoscope-card" data-sign="libra"><span class="horoscope-symbol">♎</span><span
-                  class="horoscope-sign-name">LIBRA</span></div>
-              <div class="horoscope-card" data-sign="scorpio"><span class="horoscope-symbol">♏</span><span
-                  class="horoscope-sign-name">SCORPIO</span></div>
-              <div class="horoscope-card" data-sign="sagittarius"><span class="horoscope-symbol">♐</span><span
-                  class="horoscope-sign-name">SAGITT.</span></div>
-              <div class="horoscope-card" data-sign="capricorn"><span class="horoscope-symbol">♑</span><span
-                  class="horoscope-sign-name">CAPRIC.</span></div>
-              <div class="horoscope-card" data-sign="aquarius"><span class="horoscope-symbol">♒</span><span
-                  class="horoscope-sign-name">AQUAR.</span></div>
-              <div class="horoscope-card" data-sign="pisces"><span class="horoscope-symbol">♓</span><span
-                  class="horoscope-sign-name">PISCES</span></div>
-            </div>
+          <div class="horoscope-grid"
+            style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-bottom: 10px;">
+            <div class="horoscope-card active" data-sign="aries"><span class="horoscope-symbol">♈</span><span
+                class="horoscope-sign-name">ARIES</span></div>
+            <div class="horoscope-card" data-sign="taurus"><span class="horoscope-symbol">♉</span><span
+                class="horoscope-sign-name">TAURUS</span></div>
+            <div class="horoscope-card" data-sign="gemini"><span class="horoscope-symbol">♊</span><span
+                class="horoscope-sign-name">GEMINI</span></div>
+            <div class="horoscope-card" data-sign="cancer"><span class="horoscope-symbol">♋</span><span
+                class="horoscope-sign-name">CANCER</span></div>
+            <div class="horoscope-card" data-sign="leo"><span class="horoscope-symbol">♌</span><span
+                class="horoscope-sign-name">LEO</span></div>
+            <div class="horoscope-card" data-sign="virgo"><span class="horoscope-symbol">♍</span><span
+                class="horoscope-sign-name">VIRGO</span></div>
+            <div class="horoscope-card" data-sign="libra"><span class="horoscope-symbol">♎</span><span
+                class="horoscope-sign-name">LIBRA</span></div>
+            <div class="horoscope-card" data-sign="scorpio"><span class="horoscope-symbol">♏</span><span
+                class="horoscope-sign-name">SCORPIO</span></div>
+            <div class="horoscope-card" data-sign="sagittarius"><span class="horoscope-symbol">♐</span><span
+                class="horoscope-sign-name">SAGITT.</span></div>
+            <div class="horoscope-card" data-sign="capricorn"><span class="horoscope-symbol">♑</span><span
+                class="horoscope-sign-name">CAPRIC.</span></div>
+            <div class="horoscope-card" data-sign="aquarius"><span class="horoscope-symbol">♒</span><span
+                class="horoscope-sign-name">AQUAR.</span></div>
+            <div class="horoscope-card" data-sign="pisces"><span class="horoscope-symbol">♓</span><span
+                class="horoscope-sign-name">PISCES</span></div>
+          </div>
 
-            <div class="horoscope-reading-wrap"
-              style="background: #111; padding: 0; border: 1px solid #333; position: relative; max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.16,1,0.3,1), padding 0.3s ease;">
-              <div
-                style="position: absolute; top: -20px; left: 20px; background: var(--pop-lime); color: #000; padding: 5px 15px; font-weight: 900; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 2px;">
-                DAILY_READING // <span id="readingDateLabel">TODAY</span></div>
-              <div class="reading-content" id="readingModule">
-                <div style="display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
-                  <h3 class="halftone-text"
-                    style="font-size: clamp(2.5rem, 5vw, 5rem); color: white; line-height: 1; margin: 0;"
-                    id="currentSignTitle">Aries.</h3>
-                  <span class="reading-theme-badge" id="readingTheme">IGNITION</span>
+          <div class="horoscope-reading-wrap"
+            style="background: #111; padding: 0; border: 1px solid #333; position: relative; max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.16,1,0.3,1), padding 0.3s ease;">
+            <div
+              style="position: absolute; top: -20px; left: 20px; background: var(--pop-lime); color: #000; padding: 5px 15px; font-weight: 900; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 2px;">
+              DAILY_READING // <span id="readingDateLabel">TODAY</span></div>
+            <div class="reading-content" id="readingModule">
+              <div style="display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+                <h3 class="halftone-text"
+                  style="font-size: clamp(2.5rem, 5vw, 5rem); color: white; line-height: 1; margin: 0;"
+                  id="currentSignTitle">Aries.</h3>
+                <span class="reading-theme-badge" id="readingTheme">IGNITION</span>
+              </div>
+              <div class="reading-section" id="sectionLife">
+                <div class="reading-section-label">💫 LIFE</div>
+                <p class="reading-section-text" id="readingLife">Your fire is showing. Someone needs your boldness to
+                  remind them what's possible. Let them see it.</p>
+              </div>
+              <div class="reading-section" id="sectionBusiness">
+                <div class="reading-section-label">💼 BUSINESS</div>
+                <p class="reading-section-text" id="readingBusiness">New client or opportunity is already en route.
+                  Don't underprice yourself at the door.</p>
+              </div>
+              <div class="reading-section reading-power" id="sectionPower">
+                <div class="reading-section-label">⚡ POWER MOVE</div>
+                <p class="reading-section-text" id="readingPowerMove">Make the ask you've been delaying. The answer is
+                  yes.</p>
+              </div>
+              <div class="reading-stats"
+                style="gap: 2rem; margin-top: 1.5rem; display: flex; border-top: 1px dashed #333; padding-top: 1.5rem; flex-wrap: wrap;">
+                <div class="stat-box">
+                  <div class="label" style="font-size: 0.65rem; opacity: 0.5; letter-spacing: 1px;">LUCKY #</div>
+                  <div class="stat-value" id="luckyNum"
+                    style="font-size: 2rem; color: var(--pop-lime); font-family: var(--font-mono); font-weight: 900;">
+                    09</div>
                 </div>
-                <div class="reading-section" id="sectionLife">
-                  <div class="reading-section-label">💫 LIFE</div>
-                  <p class="reading-section-text" id="readingLife">Your fire is showing. Someone needs your boldness to
-                    remind them what's possible. Let them see it.</p>
+                <div class="stat-box">
+                  <div class="label" style="font-size: 0.65rem; opacity: 0.5; letter-spacing: 1px;">ELEMENT</div>
+                  <div class="stat-value" id="readingElement"
+                    style="font-size: 1.1rem; color: var(--pop-orange); font-family: var(--font-mono); font-weight: 900; margin-top: 0.4rem;">
+                    FIRE</div>
                 </div>
-                <div class="reading-section" id="sectionBusiness">
-                  <div class="reading-section-label">💼 BUSINESS</div>
-                  <p class="reading-section-text" id="readingBusiness">New client or opportunity is already en route.
-                    Don't underprice yourself at the door.</p>
-                </div>
-                <div class="reading-section reading-power" id="sectionPower">
-                  <div class="reading-section-label">⚡ POWER MOVE</div>
-                  <p class="reading-section-text" id="readingPowerMove">Make the ask you've been delaying. The answer is
-                    yes.</p>
-                </div>
-                <div class="reading-stats"
-                  style="gap: 2rem; margin-top: 1.5rem; display: flex; border-top: 1px dashed #333; padding-top: 1.5rem; flex-wrap: wrap;">
-                  <div class="stat-box">
-                    <div class="label" style="font-size: 0.65rem; opacity: 0.5; letter-spacing: 1px;">LUCKY #</div>
-                    <div class="stat-value" id="luckyNum"
-                      style="font-size: 2rem; color: var(--pop-lime); font-family: var(--font-mono); font-weight: 900;">
-                      09</div>
-                  </div>
-                  <div class="stat-box">
-                    <div class="label" style="font-size: 0.65rem; opacity: 0.5; letter-spacing: 1px;">ELEMENT</div>
-                    <div class="stat-value" id="readingElement"
-                      style="font-size: 1.1rem; color: var(--pop-orange); font-family: var(--font-mono); font-weight: 900; margin-top: 0.4rem;">
-                      FIRE</div>
-                  </div>
-                  <div class="stat-box">
-                    <div class="label" style="font-size: 0.65rem; opacity: 0.5; letter-spacing: 1px;">DATES</div>
-                    <div class="stat-value" id="readingDates"
-                      style="font-size: 0.7rem; color: #fff; font-family: var(--font-mono); opacity: 0.6; margin-top: 0.4rem; line-height: 1.3;">
-                      MAR 21<br>APR 19</div>
-                  </div>
+                <div class="stat-box">
+                  <div class="label" style="font-size: 0.65rem; opacity: 0.5; letter-spacing: 1px;">DATES</div>
+                  <div class="stat-value" id="readingDates"
+                    style="font-size: 0.7rem; color: #fff; font-family: var(--font-mono); opacity: 0.6; margin-top: 0.4rem; line-height: 1.3;">
+                    MAR 21<br>APR 19</div>
                 </div>
               </div>
             </div>
+          </div>
         </div>
 
         <!-- ORACLE & FRANK (SIDE BY SIDE INSET) -->
@@ -2799,7 +2884,8 @@
                       <div class="frank-lcd-bubble" id="frank-popup" style="color: #0f0; border-color: #0f0;">GREETINGS.
                       </div>
                       <div class="frank-wrap" id="frank-wrap">
-                        <div id="frank-sprite-dir" style="display:flex; justify-content:center; align-items:flex-end; height:80px;">
+                        <div id="frank-sprite-dir"
+                          style="display:flex; justify-content:center; align-items:flex-end; height:80px;">
                           <!-- CSS pixel art Frank — 12×14 grid, 5px per pixel, Siamese cat in LCD green -->
                           <div id="frank-img" class="sitting" style="
                             width:5px; height:5px; position:relative; display:block;
@@ -4984,9 +5070,12 @@
 
   <!-- Accessibility: Brand identity and service summary for assistive technology -->
   <div class="sr-only" role="complementary" aria-label="About The Agency — Bakersfield branding studio">
-    The Agency is Bakersfield's premier branding and marketing studio, owned by female disabled veterans Ash and Brittany.
-    We provide brand strategy, brand identity design, logo design, web design, website development, social media management,
-    content marketing, SEO, local SEO, AI content creation, Generative Engine Optimization (GEO), commercial photography,
+    The Agency is Bakersfield's premier branding and marketing studio, owned by female disabled veterans Ash and
+    Brittany.
+    We provide brand strategy, brand identity design, logo design, web design, website development, social media
+    management,
+    content marketing, SEO, local SEO, AI content creation, Generative Engine Optimization (GEO), commercial
+    photography,
     video production, and monthly marketing retainer services.
     We serve small businesses, startups, and enterprise clients in Bakersfield, Tehachapi, Kern County, Los Angeles,
     and nationwide. We hold federal government contracting capabilities.

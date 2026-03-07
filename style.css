@@ -198,12 +198,29 @@
 }
 
 @keyframes graphPulse {
-    0%   { background-color: #ffffff; }
-    20%  { background-color: #fff5fe; }
-    40%  { background-color: #f5fff8; }
-    60%  { background-color: #f5f8ff; }
-    80%  { background-color: #fffdf5; }
-    100% { background-color: #ffffff; }
+    0% {
+        background-color: #ffffff;
+    }
+
+    20% {
+        background-color: #fff5fe;
+    }
+
+    40% {
+        background-color: #f5fff8;
+    }
+
+    60% {
+        background-color: #f5f8ff;
+    }
+
+    80% {
+        background-color: #fffdf5;
+    }
+
+    100% {
+        background-color: #ffffff;
+    }
 }
 
 .bg-graph-dark {
@@ -216,11 +233,25 @@
 }
 
 @keyframes darkPulse {
-    0%   { background-color: #070707; }
-    25%  { background-color: #04040e; }
-    50%  { background-color: #060a06; }
-    75%  { background-color: #0a0408; }
-    100% { background-color: #070707; }
+    0% {
+        background-color: #070707;
+    }
+
+    25% {
+        background-color: #04040e;
+    }
+
+    50% {
+        background-color: #060a06;
+    }
+
+    75% {
+        background-color: #0a0408;
+    }
+
+    100% {
+        background-color: #070707;
+    }
 }
 
 /* DESIGNER ANNOTATIONS */
@@ -670,7 +701,7 @@ html {
 
 h1.halftone-text,
 .pixel-header {
-    font-size: clamp(5rem, 15vw, 15rem) !important;
+    font-size: clamp(4rem, 12vw, 10rem) !important;
     line-height: 0.85 !important;
     white-space: normal !important;
     letter-spacing: -5px;
@@ -996,7 +1027,7 @@ section {
 }
 
 .vi-headline {
-    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     line-height: 0.88;
     color: #fff;
     margin: 0 0 2.5rem;
@@ -1037,6 +1068,7 @@ section {
 .vi-polaroid-outer {
     position: relative;
     margin-top: 3rem;
+    margin-bottom: 2rem;
     transform: rotate(-4deg);
     width: fit-content;
     max-width: 82%;
@@ -1229,8 +1261,13 @@ section {
 }
 
 @keyframes viTicker {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 /* Responsive */
@@ -1240,12 +1277,32 @@ section {
         padding: 5vh 6vw 7vh;
         gap: 3rem;
     }
-    .vi-deco-num { display: none; }
-    .vi-col-right { padding-top: 0; }
-    .vi-pullquote { font-size: 1.5rem; border-left-width: 3px; }
-    .vi-headline { font-size: clamp(2.8rem, 10vw, 4rem); }
-    .vi-masthead { gap: 1rem; flex-wrap: wrap; }
-    .vi-issue-stamp { display: none; }
+
+    .vi-deco-num {
+        display: none;
+    }
+
+    .vi-col-right {
+        padding-top: 0;
+    }
+
+    .vi-pullquote {
+        font-size: 1.5rem;
+        border-left-width: 3px;
+    }
+
+    .vi-headline {
+        font-size: clamp(2.8rem, 10vw, 4rem);
+    }
+
+    .vi-masthead {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .vi-issue-stamp {
+        display: none;
+    }
 }
 
 /* MARQUEE SYSTEM */
@@ -4733,14 +4790,14 @@ section {
 
     /* Ensure massive headers don't cause overflow */
     h1.halftone-text {
-        font-size: clamp(3rem, 12vw, 15rem) !important;
+        font-size: clamp(3rem, 12vw, 10rem) !important;
         line-height: 0.8 !important;
         max-width: 100%;
         word-wrap: break-word;
     }
 
     h2.halftone-text {
-        font-size: clamp(2.5rem, 10vw, 8rem) !important;
+        font-size: clamp(2.5rem, 10vw, 6rem) !important;
         line-height: 0.85 !important;
         max-width: 100%;
         word-wrap: break-word;
@@ -5127,15 +5184,19 @@ summary:focus-visible {
         gap: 3rem;
         padding: 6vh 5vw 8vh;
     }
+
     .vi-headline {
         font-size: clamp(2.8rem, 6vw, 4.5rem);
     }
+
     .vi-pullquote {
         font-size: clamp(1.4rem, 2.5vw, 2rem);
     }
+
     .vi-polaroid-outer {
         max-width: 90%;
     }
+
     .vi-deco-num {
         font-size: clamp(8rem, 14vw, 12rem);
         right: -1rem;
@@ -5147,17 +5208,20 @@ summary:focus-visible {
     .vi-ticker-wrap {
         overflow: hidden;
     }
+
     .vi-ticker {
         font-size: 0.55rem;
         letter-spacing: 2px;
         padding: 0.55rem 0;
     }
+
     .vi-cv-btn {
         width: 100%;
         justify-content: center;
         padding: 1rem;
         font-size: 0.8rem;
     }
+
     .vi-notepad-body {
         padding: 1.5rem;
     }
@@ -5166,31 +5230,39 @@ summary:focus-visible {
     .mb-hero {
         flex-direction: column !important;
     }
+
     .mb-hero-img {
         width: 100% !important;
         height: 220px !important;
     }
+
     .mb-title-block {
         padding: 1.5rem !important;
     }
+
     .mb-client-name {
         font-size: clamp(2.5rem, 10vw, 4rem) !important;
     }
+
     .mb-stats-row {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 1rem !important;
     }
+
     .mb-bottom-row {
         flex-direction: column !important;
         gap: 1.5rem !important;
     }
+
     .mb-palette-col,
     .mb-outcome-col {
         width: 100% !important;
     }
+
     .mb-deliverables-row {
         gap: 0.4rem !important;
     }
+
     .mb-tag {
         font-size: 0.55rem !important;
     }
@@ -5208,18 +5280,23 @@ summary:focus-visible {
         grid-template-columns: repeat(3, 1fr) !important;
         gap: 5px !important;
     }
+
     .vi-grid {
         padding: 4vh 5vw 6vh !important;
     }
+
     .vi-headline {
         font-size: clamp(2.2rem, 11vw, 3rem) !important;
     }
+
     .vi-pullquote {
         font-size: 1.25rem !important;
     }
+
     .vi-founders-name {
         font-size: 1.2rem !important;
     }
+
     .mb-stats-row {
         grid-template-columns: 1fr !important;
     }
@@ -5231,6 +5308,7 @@ summary:focus-visible {
         padding: 10vh 10vw 12vh;
         gap: 10rem;
     }
+
     .vi-headline {
         font-size: 8rem;
     }
@@ -5238,11 +5316,13 @@ summary:focus-visible {
 
 /* HIGH CONTRAST / FORCED COLORS: ensure brand text stays readable */
 @media (forced-colors: active) {
+
     .vi-pullquote,
     .vi-headline,
     .vi-founders-name {
         forced-color-adjust: none;
     }
+
     .vi-cv-btn {
         border: 2px solid ButtonText;
     }
@@ -5254,13 +5334,16 @@ summary:focus-visible {
         min-height: 60px !important;
         padding: 0.6rem !important;
     }
+
     .vi-cv-btn,
     .vi-polaroid-outer {
         cursor: default;
     }
+
     .mb-tag {
         padding: 0.4rem 0.7rem !important;
     }
+
     /* Prevent hover transforms from firing on tap */
     .vi-polaroid-outer:hover {
         transform: rotate(-4deg) !important;
