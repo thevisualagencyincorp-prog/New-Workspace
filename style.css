@@ -1013,7 +1013,7 @@ section {
 .vi-grid {
     display: grid;
     grid-template-columns: 1fr 1.25fr;
-    gap: clamp(3rem, 6vw, 9rem);
+    gap: clamp(1rem, 3vw, 4rem);
     padding: 8vh 8vw 10vh;
     position: relative;
     z-index: 1;
@@ -4439,11 +4439,12 @@ section {
 }
 
 .mb-outcome-text {
-    font-family: var(--font-serif);
-    font-size: 1rem;
-    font-style: italic;
+    font-family: var(--font-mono), 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     line-height: 1.65;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     margin: 0;
     padding-left: 1.2rem;
     border-left: 2px solid var(--mb-accent);

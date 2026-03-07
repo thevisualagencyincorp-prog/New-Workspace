@@ -714,8 +714,27 @@
         </div>
 
         <div class="editor-grid" style="align-items: start; margin-top: 5rem;">
-          <!-- Editor Portrait -->
+          <!-- Editor Portrait and Immersive Desk Elements -->
           <div class="reveal" style="position: relative; padding: 2rem;">
+
+            <!-- Sticky Note -->
+            <div class="sticker sticker-postit drifts-right"
+              style="position: absolute; top: -10px; left: -10px; transform: rotate(-8deg); z-index: 20; padding: 15px; font-family: 'Comic Sans MS', cursive; font-size: 0.9rem;">
+              <b>To-Do:</b><br>- Plot global takeover<br>- Approve moodboards
+            </div>
+
+            <!-- Design Palettes -->
+            <div class="drifts-left"
+              style="position: absolute; bottom: 30px; right: -20px; background: #fff; padding: 8px; border: 1px solid #ccc; box-shadow: 4px 4px 0 rgba(0,0,0,0.1); z-index: 15; transform: rotate(5deg);">
+              <span class="mono-label"
+                style="font-size: 0.5rem; display: block; margin-bottom: 5px;">CURRENT_PALETTE</span>
+              <div style="display: flex; gap: 4px;">
+                <div style="width: 20px; height: 20px; background: #FF00FF;"></div>
+                <div style="width: 20px; height: 20px; background: #00FF00;"></div>
+                <div style="width: 20px; height: 20px; background: #000080;"></div>
+              </div>
+            </div>
+
             <div class="pixel-border"
               style="background: #fff; padding: 15px 15px 60px 15px; transform: rotate(-1.5deg); box-shadow: 30px 30px 0 rgba(0,0,0,0.08); border: 1px solid #000;">
               <img src="images/ash_and_brittany_portrait.jpg"
@@ -726,6 +745,7 @@
                 style="position: absolute; bottom: 20px; text-align: center; width: 100%; left: 0; color: #000; font-weight: 900; font-size: 1.8rem; transform: rotate(1deg);">
                 xo, Ash & Brittany</div>
             </div>
+
             <!-- Sticker on photo -->
             <div class="drifts-right sticker"
               style="top: 15px; right: 15px; transform: rotate(15deg); background: var(--pop-lime); color: #000; padding: 10px 20px; font-weight: 900; box-shadow: 5px 5px 0 rgba(0,0,0,0.5);">
@@ -737,8 +757,25 @@
 
           <div style="text-align: left;">
             <div class="mono-label"
-              style="color: var(--pop-pink); margin-bottom: 1.5rem; font-weight: 800; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem;">
-              ■ THE MANIFESTO</div>
+              style="color: var(--pop-pink); margin-bottom: 1.5rem; font-weight: 800; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem; display: flex; justify-content: space-between;">
+              <span>■ THE MANIFESTO</span>
+              <span style="font-size:0.6rem; color:red; animation: pulseStatus 2s infinite;">[ CLASSIFIED INFO DETECTED
+                ]</span>
+            </div>
+
+            <!-- Editing Window that disappears -->
+            <div id="editing-window"
+              onmouseover="this.innerHTML='<div style=\'color:red; font-size:1.5rem; text-align:center; padding-top:2rem;\'>RESTRICTED ACCESS</div>'; setTimeout(() => this.style.opacity='0', 800);"
+              style="position: absolute; top: 20%; left: 40%; width: 280px; height: 180px; background: rgba(0,0,255,0.9); border: 2px solid #ccc; box-shadow: 10px 10px 0 rgba(0,0,0,0.3); z-index: 50; transition: opacity 0.5s ease; cursor: pointer; padding: 5px; font-family: var(--font-mono);">
+              <div
+                style="background: #fff; color: #000; padding: 4px; display: flex; justify-content: space-between; font-weight: bold; font-size: 0.7rem;">
+                <span>vibe_edit.exe</span><span>X</span>
+              </div>
+              <div style="color: #fff; padding: 10px; font-size: 0.8rem; opacity: 0.8;">
+                Analyzing core brand frequencies...<br>> Loading aesthetic profiles<br>> Updating DNA...
+              </div>
+            </div>
+
             <p
               style="font-family: var(--font-serif); font-size: 1.4rem; line-height: 1.5; color: #111; margin-bottom: 2rem; font-style: italic;">
               "We didn't come here to play safe. We came here to build empires."
@@ -1045,7 +1082,7 @@
               style="fill: #000080; filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.8)); margin-bottom: 0.5rem; flex-shrink: 0;">
               <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
             </svg>
-            <span class="desktop-folder-label">KERENHART_PROMO</span>
+            <span class="desktop-folder-label">KERENHART_CAMPAIGN</span>
           </div>
           <div class="desktop-folder-content">
             <div class="case-card moodboard" style="--mb-accent: #C9A84C;">
@@ -1277,8 +1314,8 @@
                     <div class="mb-tagline handwritten">"We build the DNA of dominant brands"</div>
                   </div>
                   <div class="mb-hero-img">
-                    <img src="images/ash_and_brittany_portrait.jpg" alt="Ash and Brittany — The Agency founders"
-                      loading="lazy">
+                    <img src="images/twisted_lens_studio_shoot_1771447248254.png"
+                      alt="Ash and Brittany — The Agency founders" loading="lazy">
                     <div class="mb-grain"></div>
                   </div>
                 </div>
@@ -1342,10 +1379,8 @@
                     <h3 class="mb-client-name">Daylily<br>Events.</h3>
                     <div class="mb-tagline handwritten">"A 2010 site reborn for a new era"</div>
                   </div>
-                  <div class="mb-hero-img"
-                    style="background: linear-gradient(135deg, #1a0a0f 0%, #3d1a2a 100%); display:flex; align-items:center; justify-content:center;">
-                    <span
-                      style="font-family:var(--font-serif); font-size:4rem; color: #F4A7B9; opacity:0.4; font-style:italic;">daylilyevents.com</span>
+                  <div class="mb-hero-img">
+                    <img src="images/ed_studio_shoot.jpg" alt="Daylily Events" loading="lazy">
                     <div class="mb-grain"></div>
                   </div>
                 </div>
@@ -1411,10 +1446,8 @@
                     <h3 class="mb-client-name">Keene<br>Water Systems.</h3>
                     <div class="mb-tagline handwritten">"Industrial authority, digitally elevated"</div>
                   </div>
-                  <div class="mb-hero-img"
-                    style="background: linear-gradient(135deg, #001a33 0%, #003366 100%); display:flex; align-items:center; justify-content:center;">
-                    <span
-                      style="font-family:var(--font-mono); font-size:2rem; color: #00BFFF; opacity:0.35; letter-spacing:4px;">KEENEWATERSYSTEMS.NET</span>
+                  <div class="mb-hero-img">
+                    <img src="images/mechanic-tehachapi-bakersfield copy.jpg" alt="Keene Water Systems" loading="lazy">
                     <div class="mb-grain"></div>
                   </div>
                 </div>
@@ -1784,7 +1817,7 @@
             </div>
           </div>
 
-          <!-- Ad Insert 01 -->
+          <!-- Feature Insert 01 -->
           <div class="horizontal-item" style="flex: 0 0 auto; min-width: 500px; margin: 0 8vw;">
             <div class="pixel-border"
               style="background: #fff; padding: 40px; text-align: center; transform: rotate(1deg); box-shadow: 40px 40px 0 rgba(0,255,0,0.1);">
@@ -1804,7 +1837,7 @@
               style="background: #050505; color: #fff; border: 1px solid #ff00ff; box-shadow: 0 0 15px rgba(255,0,255,0.1); cursor: pointer; width: 400px; padding: 3rem;">
               <div class="halftone-img-wrap"
                 style="aspect-ratio: 1 / 1; margin-bottom: 2.5rem; border: 1px solid #ff00ff; position: relative; overflow: hidden;">
-                <img src="images/ed_loft_interior.jpg" alt="Custom web design editorial"
+                <img src="images/dr_safir_website.png" alt="Custom web design editorial"
                   style="width: 100%; height: 100%; object-fit: cover;">
               </div>
               <h3
@@ -1833,11 +1866,11 @@
             </div>
           </div>
 
-          <!-- Ad Insert 02 -->
+          <!-- Feature Insert 02 -->
           <div class="horizontal-item" style="flex: 0 0 auto; min-width: 550px; margin: 0 8vw;">
             <div class="pixel-border"
               style="background: #0d0d0d; padding: 50px; color: #fff; text-align: left; transform: rotate(-1deg); border-color: var(--pop-pink);">
-              <img src="images/ed_camera_gear.jpg"
+              <img src="images/twisted_lens_gear_flatlay_1771447231386.png"
                 style="width: 100%; margin-bottom: 2.5rem; filter: grayscale(1) contrast(1.2); border: 1px solid #333; object-fit: cover; aspect-ratio: 4/3;">
               <h4
                 style="font-family: var(--font-mono); color: var(--pop-lime); font-size: 3.5rem; line-height: 0.8; font-weight: 950; letter-spacing: -2px;">
@@ -1854,7 +1887,7 @@
               style="background: #050505; color: #fff; border: 1px solid var(--pop-aqua); cursor: pointer; width: 400px; padding: 3rem;">
               <div class="halftone-img-wrap"
                 style="aspect-ratio: 1 / 1; margin-bottom: 2.5rem; border: 1px solid var(--pop-aqua); position: relative; overflow: hidden;">
-                <img src="images/ed_fashion_model.jpg" alt="Social Media strategy editorial"
+                <img src="images/social_campaign.png" alt="Social Media strategy editorial"
                   style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
               </div>
               <h3
@@ -1883,7 +1916,7 @@
             </div>
           </div>
 
-          <!-- NEW Ad Insert 03 -->
+          <!-- NEW Feature Insert 03 -->
           <div class="horizontal-item" style="flex: 0 0 auto; min-width: 480px; margin: 0 8vw;">
             <div class="pixel-border"
               style="background: #fff; padding: 50px; text-align: center; border: 2px solid #000; box-shadow: 25px 25px 0 var(--pop-lime);">
@@ -1911,7 +1944,7 @@
             </div>
           </div>
 
-          <!-- NEW Ad Insert 04 -->
+          <!-- NEW Feature Insert 04 -->
           <div class="horizontal-item" style="flex: 0 0 auto; min-width: 450px; margin: 0 8vw;">
             <div class="pixel-border"
               style="background: #0d0d0d; border: 2px solid var(--pop-blue); padding: 50px; text-align: left; transform: rotate(2deg); box-shadow: -20px -20px 0 var(--pop-blue);">
@@ -2022,9 +2055,9 @@
         </div>
 
         <div style="position: relative; aspect-ratio: 9/16; background: #0a0a0a; overflow: hidden;">
-          <video autoplay muted loop playsinline preload="auto" poster="images/ed_fashion_model.jpg"
+          <video autoplay muted loop playsinline preload="auto" poster="images/social_campaign.png"
             style="width: 100%; height: 100%; object-fit: cover;">
-            <source src="images/promo copy.mp4" type="video/mp4">
+            <source src="images/campaign_video.mp4" type="video/mp4">
           </video>
           <div
             style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.8rem; background: linear-gradient(transparent, rgba(0,0,0,0.8)); z-index: 2;">
@@ -2077,8 +2110,7 @@
           <div class="vi-polaroid-outer parallax-layer" data-speed="0.03">
             <div class="vi-tape"></div>
             <div class="vi-polaroid-frame">
-              <img src="images/ash_and_brittany_portrait.jpg" alt="Ash and Brittany — your business besties"
-                class="vi-polaroid-img">
+              <img src="images/collab copy.jpg" alt="Ash and Brittany — your business besties" class="vi-polaroid-img">
               <div class="vi-polaroid-caption">xoxox Your Business Besties</div>
             </div>
           </div>
@@ -4860,7 +4892,7 @@
             style="font-size: 1rem; background: #000; color: #fff; padding: 5px 10px; display: inline-block; margin-bottom: 1rem;">
             THE FOUNDERS</h3>
           <div style="margin-bottom: 20px; border: 4px double #000; padding: 5px; background: #eee;">
-            <img src="images/ash_and_brittany_portrait.jpg" alt="Ash and Brittany - Founders of The Agency"
+            <img src="images/agency_office_vibe_1771445625493.png" alt="Ash and Brittany - Founders of The Agency"
               style="width: 100%; border: 1px solid #000;">
           </div>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
